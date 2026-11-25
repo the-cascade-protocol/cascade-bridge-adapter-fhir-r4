@@ -28,8 +28,7 @@ in no record's dataset, since each entry is lifted alone, so a Bundle of
 another type whose first entry is a `Composition` reads as a document too. A
 `DocumentReference`'s custodian and authors are those of the document it
 describes, not of the file read, so they name no organization. It is named by
-the vocabulary's `OrganizationNamingRule` from one `identifier`, as the
-vocabulary's `decisions/naming.md` maps and picks it, never by its `id`, which
+the vocabulary's `OrganizationNamingRule` from one `identifier`, never by its `id`, which
 only its document gives it: a `system` `urn:oid:2.16.840.1.113883.4.6` is the
 NPI's URI, `http://hl7.org/fhir/sid/us-npi`, as FHIR's
 [identifier registry](https://hl7.org/fhir/R4/identifier-registry.html) gives
@@ -81,8 +80,7 @@ code alone may have to tell a lab result from a vital sign: the
 read on 2026-10-06, fixes the LOINC code of each vital sign. An `Observation`
 with `hasMember` groups others, as a panel does, and is no record: its members
 are, and it yields `fhirr4:observationNotLabResult`. It is not made a report,
-since FHIR holds it as an `Observation` and every member is already a record
-(cascade-vocabulary's `decisions/reports-and-notes.md`).
+since FHIR holds it as an `Observation` and every member is already a record.
 
 ## Reports and notes
 
@@ -352,8 +350,7 @@ resource's type (`/resourceType`). A path is one place in each form it is writte
 A record's name is one of cascade-vocabulary's naming rules, each the body of
 its `tests/vectors/naming/<rule>.rq` there, copied into
 [`in/sparql/record.rq`](../in/sparql/record.rq) and hashed once for the rule
-picked. The rules and why they are what they are are
-[cascade-vocabulary's naming note](https://github.com/the-cascade-protocol/cascade-vocabulary/blob/alpha/naming/decisions/naming.md).
+picked.
 
 | a resource | its rule | its inputs, after the rule |
 |---|---|---|
@@ -401,9 +398,7 @@ its `id`.
 
 ## Dates, and values absent for a reason
 
-As cascade-vocabulary's
-[ruling on partial dates and absent reasons](https://github.com/the-cascade-protocol/cascade-vocabulary/blob/main/decisions/partial-dates-and-absent-reasons.md)
-says, read on 2026-10-24:
+As cascade-vocabulary says, read on 2026-10-24:
 
 - **A date is typed by the precision FHIR wrote it to.** A `date` or `dateTime`
   is "YYYY, YYYY-MM, or YYYY-MM-DD", or a time ([datatypes](https://hl7.org/fhir/R4/datatypes.html)):
@@ -483,9 +478,7 @@ Coding.system" ([RDF](https://hl7.org/fhir/R5/rdf.html#iri-stem), read on
 2026-10-10). A code's IRI is the stem
 [`vocab/fhir-code-systems.ttl`](../vocab/fhir-code-systems.ttl) gives its
 `Coding.system`, which the row holds as `cascade:codingSystemUri`, then the code
-percent-encoded. The stem is cascade-vocabulary's `void:uriSpace`, as its
-[code IRIs ruling](https://github.com/the-cascade-protocol/cascade-vocabulary/blob/main/decisions/code-iris.md)
-gives it, and is never the `Coding.system` URI: SNOMED CT's `http://snomed.info/sct`
+percent-encoded. The stem is cascade-vocabulary's `void:uriSpace`, and is never the `Coding.system` URI: SNOMED CT's `http://snomed.info/sct`
 names the code system, and its concepts are under `http://snomed.info/id/`.
 
 An NDC is the exception to "then the code": FHIR's NDC code is "the 10 digit NDC

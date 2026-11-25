@@ -2337,12 +2337,12 @@
       "@type": "File",
       "name": "Document table: Organizations, the document references naming them, and their keys",
       "encodingFormat": "application/sparql-query",
-      "contentSize": "10147",
-      "sha256": "1f2dd2ac6cd1fa2f927f082885e43c7915cd6db6323deab03e3fc16a38795411",
+      "contentSize": "10098",
+      "sha256": "1779b9f3ee7d44c54c8b9d38d137010ab4a92270d41438afb12df10c88acc2c8",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A bridge:documentTableQuery: a row for each key an Organization of a record can be referenced by, within the scope it holds there; a row for each custodian and author reference of the document's Composition, the first entry of a Bundle or one standing alone, the key it names, that key's scope and the role, and for each performer reference of a Diagnostic Implication, with no role, a version stripped; and a row for each Organization from a server, one at the top of an entry with an id and a fullUrl that is no urn:uuid where the server is known, with its id, and for each other Organization with an identifier it can be named by, that identifier, picked as cascade-vocabulary's decisions/naming.md says, and its place in the document. And a row for each name, identifier and address an Organization's version would carry, which organization-findings.rq compares. organization.rq and resource-type-findings.rq resolve a reference by joining them, to the one Organization holding its key in its scope."
+      "description": "A bridge:documentTableQuery: a row for each key an Organization of a record can be referenced by, within the scope it holds there; a row for each custodian and author reference of the document's Composition, the first entry of a Bundle or one standing alone, the key it names, that key's scope and the role, and for each performer reference of a Diagnostic Implication, with no role, a version stripped; and a row for each Organization from a server, one at the top of an entry with an id and a fullUrl that is no urn:uuid where the server is known, with its id, and for each other Organization with an identifier it can be named by, that identifier, and its place in the document. And a row for each name, identifier and address an Organization's version would carry, which organization-findings.rq compares. organization.rq and resource-type-findings.rq resolve a reference by joining them, to the one Organization holding its key in its scope."
     },
     {
       "@id": "in/sparql/note-or-document-table.rq",
@@ -3012,8 +3012,8 @@
       "@type": "File",
       "name": "FHIR R4 code systems",
       "encodingFormat": "text/turtle",
-      "contentSize": "13448",
-      "sha256": "356ff952cff77b4420c4a396a8e1a1308904daac04e75d4ece6e7acbd3d7b03b",
+      "contentSize": "12538",
+      "sha256": "7774452464e5db6ff244a4ea5097ad5244d19db2e254d75bfa99e06abab81fd3",
       "isBasedOn": [
         {
           "@id": "https://terminology.hl7.org/SNOMEDCT.html"
@@ -3046,7 +3046,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "The bridge:table every mapping reads for the system a Coding.system is read as and for the IRI stem of a code it writes as an IRI: one skos:Concept per system, its cascade:codingSystemUri the system URI as FHIR writes it, its skos:notation the system's HL7 OID, which a Coding.system may give after urn:oid:, any URI HL7 Terminology lists for it as not preferred as a skos:hiddenLabel, and, for a system whose codes a mapping writes as IRIs, its void:uriSpace the stem, which is never the system URI, each as cascade-vocabulary's cascade:CodeSystem for it states them and its decisions/code-iris.md rules them. The rows the system table of https://github.com/the-cascade-protocol/cascade-vocabulary/issues/290 gives are the C-CDA adapter's too, so one code from either adapter is one term: ICD-9-CM under its four OIDs and HL7 Terminology's retired URI, HCPCS Level II, ICD-10-PCS, CDT and UNII with no stem, read in HL7's UTG at 777bba6 and on terminology.hl7.org on 2026-10-29; and v3 ObservationInterpretation (https://github.com/the-cascade-protocol/cascade-vocabulary/issues/298). SNOMED CT's stem is HL7 Terminology's (SNOMEDCT.html, section RDF) and LOINC's is THO's iri-stem (v3-loinc.xml), authoritative though FHIR R5's table writes https; RxNorm's, ICD-10-CM's, CVX's, CPT's and ObservationInterpretation's are Cascade's own under https://ns.cascadeprotocol.org/codes/, THO stating none. NDC's is the 11-digit space cascade-vocabulary registers, the code normalised into it, since FHIR's NDC code is the 10-digit label code (https://hl7.org/fhir/R4/ndc.html, https://github.com/the-cascade-protocol/cascade-vocabulary/issues/104). OIDs read in FHIR R4's terminologies-systems.html on 2026-10-29. Not a concept map: no code maps to a Cascade term, and no entry of the source accounting looks a value up in it."
+      "description": "The bridge:table every mapping reads for the system a Coding.system is read as and for the IRI stem of a code it writes as an IRI: one skos:Concept per system, its cascade:codingSystemUri the system URI as FHIR writes it, its skos:notation the system's HL7 OID, which a Coding.system may give after urn:oid:, any URI HL7 Terminology lists for it as not preferred as a skos:hiddenLabel, and, for a system whose codes a mapping writes as IRIs, its void:uriSpace the stem, which is never the system URI, each as cascade-vocabulary's cascade:CodeSystem for it states them. The rows the system table of https://github.com/the-cascade-protocol/cascade-vocabulary/issues/290 gives are the C-CDA adapter's too, so one code from either adapter is one term: ICD-9-CM under its four OIDs and HL7 Terminology's retired URI, HCPCS Level II, ICD-10-PCS, CDT and UNII with no stem, read in HL7's UTG at 777bba6 and on terminology.hl7.org on 2026-10-29; and v3 ObservationInterpretation (https://github.com/the-cascade-protocol/cascade-vocabulary/issues/298). SNOMED CT's stem is HL7 Terminology's (SNOMEDCT.html, section RDF) and LOINC's is THO's iri-stem (v3-loinc.xml), authoritative though FHIR R5's table writes https; RxNorm's, ICD-10-CM's, CVX's, CPT's and ObservationInterpretation's are Cascade's own under https://ns.cascadeprotocol.org/codes/, THO stating none. NDC's is the 11-digit space cascade-vocabulary registers, the code normalised into it, since FHIR's NDC code is the 10-digit label code (https://hl7.org/fhir/R4/ndc.html, https://github.com/the-cascade-protocol/cascade-vocabulary/issues/104). OIDs read in FHIR R4's terminologies-systems.html on 2026-10-29. Not a concept map: no code maps to a Cascade term, and no entry of the source accounting looks a value up in it."
     },
     {
       "@id": "vocab/fhir-acmg-classifications.ttl",
@@ -11520,8 +11520,8 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "What a record is, reports and notes, medication dispenses, the two envelopes, how a record is named, JSON as FHIR writes it, the schema, the versions in and out of scope, and what is known about the committed inputs. Read from hl7.org/fhir/R4/ on 2026-09-27, reports and notes on 2026-10-30, medication dispenses on 2026-10-31.",
-      "contentSize": "37224",
-      "sha256": "a66db620339510aeec5e410f0f796feb96afea598621445e3147484dd5704507"
+      "contentSize": "36636",
+      "sha256": "6dd1adbcefc62d9cf8c6c2b7d914f48c7c6d86186a043d3d916c9935fa6701cd"
     },
     {
       "@id": "CONTRIBUTING.md",

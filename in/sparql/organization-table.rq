@@ -28,7 +28,7 @@ PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 # Each other Organization with an identifier organization.rq can name it by is a row
 # too, with that identifier and its place in the document, so two Organizations
 # naming one record can tell which of them gives its version. The identifier is
-# picked as cascade-vocabulary's decisions/naming.md says: a system urn:oid: and
+# picked: a system urn:oid: and
 # the NPI's OID is the NPI's URI, as FHIR's identifier registry gives it; of the
 # identifiers that are an NPI, or whose system is an OID or a UUID, or a URI
 # that is one, the NPI, else the least by code point of system, then value, so
