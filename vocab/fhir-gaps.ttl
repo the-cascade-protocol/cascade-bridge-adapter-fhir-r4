@@ -231,7 +231,7 @@ fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:issuedNotCarried a skos:Concept ;
-  skos:prefLabel "A result carries the time it was issued, which is not when it was performed, and only a diagnostic implication's is carried, as its date, and a report's, as its issued time."@en ;
+  skos:prefLabel "A lab result or a variant carries the time it was issued, which is not when it was performed, and no Cascade term carries it; only a diagnostic implication's is carried, as its date, and a report's, as its issued time."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss .
 
@@ -311,7 +311,7 @@ fhirr4:medicationNumberNotCarried a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:dateNotCarried a skos:Concept ;
-  skos:prefLabel "A date or time a mapping reads is one FHIR does not allow, such as a day the calendar lacks, month 00 or 13, year 0000, hour 24 or a time with no zone, or one FHIR allows that no xsd:date or xsd:dateTime carries, a leap second, so it is not carried."@en ;
+  skos:prefLabel "A date or time a mapping reads is one FHIR does not allow, such as a day the calendar lacks, month 00 or 13, year 0000, hour 24, a time with no zone, or a report's issued, an instant, written as a day or to the minute, or one FHIR allows that no xsd:date or xsd:dateTime carries, a leap second, so it is not carried."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .

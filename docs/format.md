@@ -429,7 +429,10 @@ As cascade-vocabulary says, read on 2026-10-24:
   `fhirr4:performedPeriodStartBesideDate` reports it. A birth date holds no time. A schema violation may
   report the same date as well. The test is looser than FHIR in two ways: a time to the minute is accepted, as above,
   though FHIR asks for seconds (it needs its zone), and a date alone is accepted where FHIR
-  types the field `instant` and asks for a time, such as `issued`.
+  types the field `instant` and asks for a time, such as a diagnostic implication's `issued`, which is carried as
+  its date. A report's `issued` is carried as an instant, only with its seconds: a day or a time to the minute is
+  `fhirr4:dateNotCarried` too. A lab result's and a variant's `issued` is carried by no mapping, and is
+  `fhirr4:issuedNotCarried`.
 - **A lab result's `dataAbsentReason`** stands for its value, which obs-6 says
   it has none of ([Observation](https://hl7.org/fhir/R4/observation-definitions.html)),
   and is a `cascade:ValueAbsentForReason` node of the version naming

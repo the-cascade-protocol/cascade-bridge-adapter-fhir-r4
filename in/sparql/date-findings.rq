@@ -21,7 +21,10 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # medication-dispense-findings.rq make it for a medication. A procedure's period start
 # is read only where the procedure has no performedDateTime, as procedure.rq does; beside
 # one it is no date of the procedure's, readable or not, and is reported as
-# fhirr4:performedPeriodStartBesideDate.
+# fhirr4:performedPeriodStartBesideDate. A report's issued is an instant, which
+# report.rq carries only with its seconds: a day or a time to the minute is
+# reported here as no value, as a date is. A lab result's and a variant's issued is
+# carried by no mapping, and is reported as fhirr4:issuedNotCarried.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -100,7 +103,14 @@ WHERE {
     ?resource xyz:performedPeriod ?period . ?period xyz:start ?value .
     ?resource xyz:performedDateTime ?dateTime .
     BIND ("/performedPeriod/start" AS ?step)
-    BIND (fhirr4:performedPeriodStartBesideDate AS ?besideDate)
+    BIND (fhirr4:performedPeriodStartBesideDate AS ?fixedGap)
+  }
+  UNION
+  {
+    VALUES (?type ?scope) { ("Observation" "lab") ("Observation" "variant") }
+    ?resource xyz:issued ?value .
+    BIND ("/issued" AS ?step)
+    BIND (fhirr4:issuedNotCarried AS ?fixedGap)
   }
   UNION
   {
@@ -144,7 +154,7 @@ WHERE {
     }
   }))
   BIND (STR(?value) AS ?written)
-  BIND (COALESCE(?besideDate, fhirr4:dateNotCarried) AS ?gap)
-  FILTER (BOUND(?besideDate) || IF(?step = "/birthDate",!REGEX(?written, "^(([0-9]{3}[1-9]|[0-9]{2}[1-9]0|[0-9][1-9]00|[1-9]000)(-(0[1-9]|1[0-2])|-((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01])|(0[469]|11)-(0[1-9]|[12][0-9]|30)|02-(0[1-9]|1[0-9]|2[0-8])))?|([0-9]{2}(0[48]|[2468][048]|[13579][26])|(0[48]|[2468][048]|[13579][26])00)-02-29)$"), !REGEX(?written, "^(([0-9]{3}[1-9]|[0-9]{2}[1-9]0|[0-9][1-9]00|[1-9]000)(-(0[1-9]|1[0-2])|-((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01])|(0[469]|11)-(0[1-9]|[12][0-9]|30)|02-(0[1-9]|1[0-9]|2[0-8]))(T([01][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9]([.][0-9]+)?)?(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?|([0-9]{2}(0[48]|[2468][048]|[13579][26])|(0[48]|[2468][048]|[13579][26])00)-02-29(T([01][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9]([.][0-9]+)?)?(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)$") || (?step = "/meta/lastUpdated" && STRLEN(?written) <= 10)))
+  BIND (COALESCE(?fixedGap, fhirr4:dateNotCarried) AS ?gap)
+  FILTER (BOUND(?fixedGap) || (?step = "/issued" && ?type = "DiagnosticReport" && SUBSTR(?written, 17, 1) != ":") || IF(?step = "/birthDate",!REGEX(?written, "^(([0-9]{3}[1-9]|[0-9]{2}[1-9]0|[0-9][1-9]00|[1-9]000)(-(0[1-9]|1[0-2])|-((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01])|(0[469]|11)-(0[1-9]|[12][0-9]|30)|02-(0[1-9]|1[0-9]|2[0-8])))?|([0-9]{2}(0[48]|[2468][048]|[13579][26])|(0[48]|[2468][048]|[13579][26])00)-02-29)$"), !REGEX(?written, "^(([0-9]{3}[1-9]|[0-9]{2}[1-9]0|[0-9][1-9]00|[1-9]000)(-(0[1-9]|1[0-2])|-((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01])|(0[469]|11)-(0[1-9]|[12][0-9]|30)|02-(0[1-9]|1[0-9]|2[0-8]))(T([01][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9]([.][0-9]+)?)?(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?|([0-9]{2}(0[48]|[2468][048]|[13579][26])|(0[48]|[2468][048]|[13579][26])00)-02-29(T([01][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9]([.][0-9]+)?)?(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)$") || (?step = "/meta/lastUpdated" && STRLEN(?written) <= 10)))
   BIND (CONCAT(?topStep, ?containedStep, ?step) AS ?pointer)
 }
