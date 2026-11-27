@@ -881,6 +881,39 @@
           "@id": "fixtures/in/document-reference-author-names-no-organization.json"
         },
         {
+          "@id": "fixtures/in/variant-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-interpretation-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/condition-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/diagnostic-report-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/document-reference-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/medication-request-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/patient-identifier-and-address-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/medication-request-contained-medication-identifier-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-effective-date-time-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-effective-instant-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-effective-period-start-not-carried.json"
+        },
+        {
           "@id": "fixtures/in/lab-potassium-performed-elsewhere.json"
         },
         {
@@ -1823,6 +1856,39 @@
           "@id": "fixtures/expected/document-reference-author-names-no-organization.ttl"
         },
         {
+          "@id": "fixtures/expected/variant-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-interpretation-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/condition-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/diagnostic-report-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/document-reference-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/medication-request-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/patient-identifier-and-address-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/medication-request-contained-medication-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-effective-date-time-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-effective-instant-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-effective-period-start-not-carried.ttl"
+        },
+        {
           "@id": "fixtures/expected/Bundle-bundle-cgexample.ttl"
         },
         {
@@ -1944,6 +2010,39 @@
         },
         {
           "@id": "fixtures/findings/document-reference-author-names-no-organization.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-interpretation-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/condition-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/diagnostic-report-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/document-reference-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/medication-request-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/patient-identifier-and-address-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/medication-request-contained-medication-identifier-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-effective-date-time-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-effective-instant-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-effective-period-start-not-carried.ttl"
         },
         {
           "@id": "fixtures/findings/Bundle-bundle-cgexample.ttl"
@@ -4933,6 +5032,127 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A DocumentReference note whose only author is Practitioner?identifier=..., a reference that names no Organization. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a note's author that names no organization."
+    },
+    {
+      "@id": "fixtures/in/variant-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant with an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a genetic variant Observation, with an identifier of a system and a value. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier no mapping carries, which the accounting names fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly."
+    },
+    {
+      "@id": "fixtures/in/variant-interpretation-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A diagnostic implication with an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a diagnostic implication Observation, with an identifier of a system and a value. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier no mapping carries, which the accounting names fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly."
+    },
+    {
+      "@id": "fixtures/in/condition-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A Condition with an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a Condition, with an identifier of a system and a value. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier no mapping carries, which the accounting names fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly."
+    },
+    {
+      "@id": "fixtures/in/diagnostic-report-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A DiagnosticReport with an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a DiagnosticReport, with an identifier of a system and a value. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier no mapping carries, which the accounting names fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly."
+    },
+    {
+      "@id": "fixtures/in/document-reference-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A note with an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a DocumentReference note, with an identifier of a system and a value. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier no mapping carries, which the accounting names fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly."
+    },
+    {
+      "@id": "fixtures/in/medication-request-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A MedicationRequest with an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a MedicationRequest, with an identifier of a system and a value. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier no mapping carries, which the accounting names fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly."
+    },
+    {
+      "@id": "fixtures/in/patient-identifier-and-address-not-carried.json",
+      "@type": "File",
+      "name": "A Patient with an identifier and an address",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a Patient, with an identifier and an address. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a patient's identifier and address, which no mapping carries."
+    },
+    {
+      "@id": "fixtures/in/medication-request-contained-medication-identifier-not-carried.json",
+      "@type": "File",
+      "name": "A MedicationRequest whose contained Medication has an identifier",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a MedicationRequest whose drug is a contained Medication with an identifier. Authored here on 2026-11-26, for a case the conformance corpus does not hold: an identifier of a Medication a request resolves to, which no mapping carries."
+    },
+    {
+      "@id": "fixtures/in/variant-effective-date-time-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant with an effective date time",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a genetic variant Observation, with an effectiveDateTime. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's effective time, which no Cascade term carries on a variant."
+    },
+    {
+      "@id": "fixtures/in/variant-effective-instant-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant with an effective instant",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a genetic variant Observation, with an effectiveInstant. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's effective time, which no Cascade term carries on a variant."
+    },
+    {
+      "@id": "fixtures/in/variant-effective-period-start-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant with an effective period",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a genetic variant Observation, with an effectivePeriod of a start and an end. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's effective period, which no Cascade term carries on a variant."
     },
     {
       "@id": "fixtures/in/lab-potassium-performed-elsewhere.json",
@@ -8600,6 +8820,160 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/variant-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-interpretation-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-interpretation-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-interpretation-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/condition-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for condition-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/condition-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/diagnostic-report-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for diagnostic-report-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/diagnostic-report-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/document-reference-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for document-reference-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/document-reference-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/medication-request-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for medication-request-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/patient-identifier-and-address-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for patient-identifier-and-address-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/patient-identifier-and-address-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/medication-request-contained-medication-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for medication-request-contained-medication-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-contained-medication-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-effective-date-time-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-effective-date-time-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-date-time-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-effective-instant-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-effective-instant-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-instant-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-effective-period-start-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-effective-period-start-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-period-start-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/Bundle-bundle-cgexample.ttl",
       "@type": "File",
       "name": "Expected graph for Bundle-bundle-cgexample",
@@ -9054,6 +9428,160 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/document-reference-author-names-no-organization.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-interpretation-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-interpretation-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-interpretation-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/condition-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for condition-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/condition-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/diagnostic-report-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for diagnostic-report-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/diagnostic-report-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/document-reference-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for document-reference-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/document-reference-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/medication-request-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for medication-request-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/patient-identifier-and-address-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for patient-identifier-and-address-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/patient-identifier-and-address-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/medication-request-contained-medication-identifier-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for medication-request-contained-medication-identifier-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-contained-medication-identifier-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-effective-date-time-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-effective-date-time-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-date-time-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-effective-instant-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-effective-instant-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-instant-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-effective-period-start-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-effective-period-start-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-period-start-not-carried.json"
       },
       "dateCreated": "2026-11-26",
       "license": {

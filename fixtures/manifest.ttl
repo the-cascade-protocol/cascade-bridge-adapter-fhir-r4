@@ -135,6 +135,17 @@
     <#document-reference-subject-names-no-patient>
     <#lab-result-contained-organization-with-identifier>
     <#document-reference-author-names-no-organization>
+    <#variant-identifier-not-carried>
+    <#variant-interpretation-identifier-not-carried>
+    <#condition-identifier-not-carried>
+    <#diagnostic-report-identifier-not-carried>
+    <#document-reference-identifier-not-carried>
+    <#medication-request-identifier-not-carried>
+    <#patient-identifier-and-address-not-carried>
+    <#medication-request-contained-medication-identifier-not-carried>
+    <#variant-effective-date-time-not-carried>
+    <#variant-effective-instant-not-carried>
+    <#variant-effective-period-start-not-carried>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
     <#Bundle-bundle-compound-heterozygote>
@@ -1816,6 +1827,149 @@
   mf:result [
     bridge:expectedGraph <expected/document-reference-author-names-no-organization.ttl> ;
     bridge:expectedFindings <findings/document-reference-author-names-no-organization.ttl>
+  ] .
+
+<#variant-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-identifier-not-carried" ;
+  rdfs:comment "A genetic variant with an identifier: no mapping carries it, as it carries a lab result's and an Organization's, so the identifier is a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly finding." ;
+  mf:action [
+    bridge:input <in/variant-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-identifier-not-carried.ttl>
+  ] .
+
+<#variant-interpretation-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-interpretation-identifier-not-carried" ;
+  rdfs:comment "A diagnostic implication with an identifier: no mapping carries it, as it carries a lab result's and an Organization's, so the identifier is a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly finding." ;
+  mf:action [
+    bridge:input <in/variant-interpretation-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-interpretation-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-interpretation-identifier-not-carried.ttl>
+  ] .
+
+<#condition-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "condition-identifier-not-carried" ;
+  rdfs:comment "A Condition with an identifier: no mapping carries it, as it carries a lab result's and an Organization's, so the identifier is a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly finding." ;
+  mf:action [
+    bridge:input <in/condition-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/condition-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/condition-identifier-not-carried.ttl>
+  ] .
+
+<#diagnostic-report-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "diagnostic-report-identifier-not-carried" ;
+  rdfs:comment "A DiagnosticReport with an identifier: no mapping carries it, as it carries a lab result's and an Organization's, so the identifier is a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly finding." ;
+  mf:action [
+    bridge:input <in/diagnostic-report-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/diagnostic-report-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/diagnostic-report-identifier-not-carried.ttl>
+  ] .
+
+<#document-reference-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "document-reference-identifier-not-carried" ;
+  rdfs:comment "A note with an identifier: no mapping carries it, as it carries a lab result's and an Organization's, so the identifier is a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly finding." ;
+  mf:action [
+    bridge:input <in/document-reference-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/document-reference-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/document-reference-identifier-not-carried.ttl>
+  ] .
+
+<#medication-request-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-identifier-not-carried" ;
+  rdfs:comment "A MedicationRequest with an identifier: no mapping carries it, as it carries a lab result's and an Organization's, so the identifier is a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly finding." ;
+  mf:action [
+    bridge:input <in/medication-request-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/medication-request-identifier-not-carried.ttl>
+  ] .
+
+<#patient-identifier-and-address-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-identifier-and-address-not-carried" ;
+  rdfs:comment "A Patient with an identifier and an address: no mapping carries either, so each is a finding, the identifier a fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly and the address a fhirr4:addressCarriedForOrganizationsOnly." ;
+  mf:action [
+    bridge:input <in/patient-identifier-and-address-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-identifier-and-address-not-carried.ttl> ;
+    bridge:expectedFindings <findings/patient-identifier-and-address-not-carried.ttl>
+  ] .
+
+<#medication-request-contained-medication-identifier-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-contained-medication-identifier-not-carried" ;
+  rdfs:comment "A MedicationRequest whose drug is a contained Medication with an identifier: the Medication is read for its code and its identifier is not carried, so it is a finding." ;
+  mf:action [
+    bridge:input <in/medication-request-contained-medication-identifier-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-contained-medication-identifier-not-carried.ttl> ;
+    bridge:expectedFindings <findings/medication-request-contained-medication-identifier-not-carried.ttl>
+  ] .
+
+<#variant-effective-date-time-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-effective-date-time-not-carried" ;
+  rdfs:comment "A genetic variant with an effectiveDateTime: no Cascade term carries a variant's time, so it is a fhirr4:variantTimeNotCarried finding." ;
+  mf:action [
+    bridge:input <in/variant-effective-date-time-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-effective-date-time-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-effective-date-time-not-carried.ttl>
+  ] .
+
+<#variant-effective-instant-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-effective-instant-not-carried" ;
+  rdfs:comment "A genetic variant with an effectiveInstant: no Cascade term carries a variant's time, so it is a fhirr4:variantTimeNotCarried finding." ;
+  mf:action [
+    bridge:input <in/variant-effective-instant-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-effective-instant-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-effective-instant-not-carried.ttl>
+  ] .
+
+<#variant-effective-period-start-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-effective-period-start-not-carried" ;
+  rdfs:comment "A genetic variant with an effectivePeriod: no Cascade term carries a variant's time, so its start is a fhirr4:variantTimeNotCarried finding." ;
+  mf:action [
+    bridge:input <in/variant-effective-period-start-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-effective-period-start-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-effective-period-start-not-carried.ttl>
   ] .
 
 <#lab-performer-differs-names-one-record> a bridge:IdentityRelationTest ;
