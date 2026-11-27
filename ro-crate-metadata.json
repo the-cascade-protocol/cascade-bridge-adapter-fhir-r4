@@ -46,7 +46,7 @@
       "identifier": "fhir-r4",
       "name": "FHIR R4 JSON",
       "version": "0.1.0",
-      "description": "The Cascade Bridge Adapter for FHIR R4 JSON: the package of data a Cascade Bridge runs to turn FHIR R4 resources, alone or as the entries of a Bundle, into Cascade records. Import-only. This crate is the adapter's manifest: a Bridge reads the root entity first, for the format id, the source media type, the source schema, the two envelopes, the detect rule, the document table queries, the mappings, the findings queries and the table they read, the profile the Bridge must offer, the vocabulary repository and the paths, in it, of the ontology and shapes files the adapter is read against, the gap scheme every finding takes its body from, each gap declaring the sh:resultSeverity its findings carry where that is not sh:Info, the source accounting, and the test manifest. The data entities carry provenance for every committed file, and a sha256 computed locally over the committed bytes of each copied input, of the schema and of each benchmark input; a file written here has none, because git holds its bytes. Twenty-seven inputs are copied byte for byte from the conformance repository's fixtures/clinical-fhir and three from its fixtures/genomics/fhir-genomics-ig, at the commit isBasedOn names; the others are authored here, and each says so.",
+      "description": "The Cascade Bridge Adapter for FHIR R4 JSON: the package of data a Cascade Bridge runs to turn FHIR R4 resources, alone or as the entries of a Bundle, into Cascade records. Import-only. This crate is the adapter's manifest: a Bridge reads the root entity first, for the format id, the source media type, the source schema, the two envelopes, the detect rule, the document table queries, the mappings, the findings queries and the table they read, the profile the Bridge must offer, the vocabulary repository and the paths, in it, of the ontology and shapes files the adapter is read against, the gap scheme every finding takes its body from, each gap declaring the sh:resultSeverity its findings carry where that is not sh:Info, the source accounting, and the test manifest. The data entities carry provenance for every committed file, and a sha256 checksum of each copied input and of the schema. Twenty-seven inputs are copied byte for byte from the conformance repository's fixtures/clinical-fhir and three from its fixtures/genomics/fhir-genomics-ig, at the commit isBasedOn names; the others are authored here, and each says so.",
       "datePublished": "2026-09-27",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
@@ -2258,7 +2258,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/CC0-1.0"
       },
-      "description": "HL7's published JSON Schema for FHIR R4 (4.0.1), draft-06, its id http://hl7.org/fhir/json-schema/4.0. Downloaded over HTTPS on 2026-09-27; dateModified is the HTTPS Last-Modified. HL7 publishes no digest beside it; the copy inside fhir.schema.json.zip on the same site, read the same day, has the same sha256."
+      "description": "HL7's published JSON Schema for FHIR R4 (4.0.1), draft-06, its id http://hl7.org/fhir/json-schema/4.0. Downloaded over HTTPS on 2026-09-27; dateModified is the HTTPS Last-Modified. HL7 publishes no checksum beside it; the copy inside fhir.schema.json.zip on the same site, read the same day, has the same sha256."
     },
     {
       "@id": "in/sparql/detect.rq",
@@ -5166,15 +5166,13 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "The inputs a benchmark harness runs on this adapter, in the shape of bench/manifest.schema.json in cascade-bridge-spec. Each input's sha256 and bytes are of its gunzipped document; the crate's are of the committed file."
+      "description": "The inputs a benchmark harness runs on this adapter, in the shape of bench/manifest.schema.json in cascade-bridge-spec. Each input's sha256 and bytes are of its gunzipped document."
     },
     {
       "@id": "bench/syn-c521b4f4b8f5b303.json.gz",
       "@type": "File",
       "name": "FHIR R4 benchmark input: the trimmed ten-year Synthea record of the demo hospitals",
       "encodingFormat": "application/gzip",
-      "contentSize": "60774",
-      "sha256": "7de65487c87c6c27d8576d7031876fcf43172969ec0bfef119f735b685dd750f",
       "isBasedOn": {
         "@id": "https://github.com/the-cascade-protocol/cascade-sandbox/tree/6b46cd7b593a46fbc9a6a693a569c5ef81ad61cf"
       },
@@ -5189,8 +5187,6 @@
       "@type": "File",
       "name": "FHIR R4 benchmark input: the lifetime Synthea record of one person",
       "encodingFormat": "application/gzip",
-      "contentSize": "4732316",
-      "sha256": "4bfb6e61f1b9a66f59d05c836e57d50c333cb150f6d2b7dbf4e724ee2407d468",
       "isBasedOn": {
         "@id": "https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/651fe561867f1260b9b1144e8f431fba05eb9c7b/bench/synthea/generate.sh"
       },
@@ -5205,8 +5201,6 @@
       "@type": "File",
       "name": "FHIR R4 benchmark input: the lifetime Synthea record of Justa Moore",
       "encodingFormat": "application/gzip",
-      "contentSize": "1047941",
-      "sha256": "ac48ff2434abcf09cb9ef16879f4873cdfd40ab8d8a938531999c5cf31d03ef6",
       "isBasedOn": {
         "@id": "https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/f4e6ca3badd4e63715b3c672e9167d8fd5e52674/bench/synthea/generate.sh"
       },
@@ -5214,15 +5208,13 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "Synthea's simulated person Justa Moore, id ab74ec30-d9c2-144f-0a0d-fd3dd6c0760a, her untrimmed lifetime record to 2026-10-01, the smaller new size of the scale curve, about 4,000 entries: a transaction Bundle of 3,987 entries, 14,900,379 bytes gunzipped, one of the 40 people of the generator's lifetime run, made by the generator isBasedOn names and gzipped with Python gzip level 9, mtime 0. The crate's sha256 is of the committed file; a regeneration on another system can differ in one header byte, and only the gunzipped digest in bench/manifest.json is then sure to match. Synthea v4.0.0 is by The MITRE Corporation, under the Apache License 2.0; the person is simulated and none is a real person. Provider names, street lines, cities, nine-digit ZIP codes and phone numbers are replaced by placeholders; every other identifier is Synthea's own, kept as written. The record keeps the public insurer names in its claims (Cigna Health, Medicare, Medicaid) and Synthea's provider identifiers in its conditional references. SNOMED CT identifiers and terms stand as Synthea's output writes them, under Synthea's licence terms: this material includes SNOMED Clinical Terms (SNOMED CT) concept identifiers and terms; SNOMED and SNOMED CT are registered trademarks of SNOMED International. This material contains content from LOINC (http://loinc.org), copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee, available at no cost under the license at http://loinc.org/license; LOINC is a registered United States trademark of Regenstrief Institute, Inc."
+      "description": "Synthea's simulated person Justa Moore, id ab74ec30-d9c2-144f-0a0d-fd3dd6c0760a, her untrimmed lifetime record to 2026-10-01, the smaller new size of the scale curve, about 4,000 entries: a transaction Bundle of 3,987 entries, 14,900,379 bytes gunzipped, one of the 40 people of the generator's lifetime run, made by the generator isBasedOn names and gzipped with Python gzip level 9, mtime 0. A regeneration on another system can differ in one header byte; only the gunzipped checksum in bench/manifest.json is then sure to match. Synthea v4.0.0 is by The MITRE Corporation, under the Apache License 2.0; the person is simulated and none is a real person. Provider names, street lines, cities, nine-digit ZIP codes and phone numbers are replaced by placeholders; every other identifier is Synthea's own, kept as written. The record keeps the public insurer names in its claims (Cigna Health, Medicare, Medicaid) and Synthea's provider identifiers in its conditional references. SNOMED CT identifiers and terms stand as Synthea's output writes them, under Synthea's licence terms: this material includes SNOMED Clinical Terms (SNOMED CT) concept identifiers and terms; SNOMED and SNOMED CT are registered trademarks of SNOMED International. This material contains content from LOINC (http://loinc.org), copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee, available at no cost under the license at http://loinc.org/license; LOINC is a registered United States trademark of Regenstrief Institute, Inc."
     },
     {
       "@id": "bench/synthea-lifetime-3541f47c.json.gz",
       "@type": "File",
       "name": "FHIR R4 benchmark input: the lifetime Synthea record of Dona Okuneva",
       "encodingFormat": "application/gzip",
-      "contentSize": "4551714",
-      "sha256": "e23ae5c8f23daafcf161c0e5e2ccb37b86775383739df1cc1f98c4d13ef9de09",
       "isBasedOn": {
         "@id": "https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/f4e6ca3badd4e63715b3c672e9167d8fd5e52674/bench/synthea/generate.sh"
       },
@@ -5230,15 +5222,13 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "Synthea's simulated person Dona Okuneva, id 3541f47c-010b-2ead-6d13-bc2c69ada25c, her untrimmed lifetime record to 2026-10-01, a transaction Bundle of 19,728 entries, 56,150,281 bytes gunzipped, one of the 40 people of the generator's lifetime run, made by the generator isBasedOn names and gzipped with Python gzip level 9, mtime 0. The crate's sha256 is of the committed file; a regeneration on another system can differ in one header byte, and only the gunzipped digest in bench/manifest.json is then sure to match. With the records of Xochitl Corkery and Cole Gaylord it is imported as one pod of 42,784 entries, the larger new size of the scale curve. The three are unrelated people. Synthea v4.0.0 is by The MITRE Corporation, under the Apache License 2.0; the person is simulated and none is a real person. Provider names, street lines, cities, nine-digit ZIP codes and phone numbers are replaced by placeholders; every other identifier is Synthea's own, kept as written. The record keeps the public insurer names in its claims (Cigna Health, Medicare, Medicaid) and Synthea's provider identifiers in its conditional references. SNOMED CT identifiers and terms stand as Synthea's output writes them, under Synthea's licence terms: this material includes SNOMED Clinical Terms (SNOMED CT) concept identifiers and terms; SNOMED and SNOMED CT are registered trademarks of SNOMED International. This material contains content from LOINC (http://loinc.org), copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee, available at no cost under the license at http://loinc.org/license; LOINC is a registered United States trademark of Regenstrief Institute, Inc."
+      "description": "Synthea's simulated person Dona Okuneva, id 3541f47c-010b-2ead-6d13-bc2c69ada25c, her untrimmed lifetime record to 2026-10-01, a transaction Bundle of 19,728 entries, 56,150,281 bytes gunzipped, one of the 40 people of the generator's lifetime run, made by the generator isBasedOn names and gzipped with Python gzip level 9, mtime 0. A regeneration on another system can differ in one header byte; only the gunzipped checksum in bench/manifest.json is then sure to match. With the records of Xochitl Corkery and Cole Gaylord it is imported as one pod of 42,784 entries, the larger new size of the scale curve. The three are unrelated people. Synthea v4.0.0 is by The MITRE Corporation, under the Apache License 2.0; the person is simulated and none is a real person. Provider names, street lines, cities, nine-digit ZIP codes and phone numbers are replaced by placeholders; every other identifier is Synthea's own, kept as written. The record keeps the public insurer names in its claims (Cigna Health, Medicare, Medicaid) and Synthea's provider identifiers in its conditional references. SNOMED CT identifiers and terms stand as Synthea's output writes them, under Synthea's licence terms: this material includes SNOMED Clinical Terms (SNOMED CT) concept identifiers and terms; SNOMED and SNOMED CT are registered trademarks of SNOMED International. This material contains content from LOINC (http://loinc.org), copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee, available at no cost under the license at http://loinc.org/license; LOINC is a registered United States trademark of Regenstrief Institute, Inc."
     },
     {
       "@id": "bench/synthea-lifetime-4f159b52.json.gz",
       "@type": "File",
       "name": "FHIR R4 benchmark input: the lifetime Synthea record of Cole Gaylord",
       "encodingFormat": "application/gzip",
-      "contentSize": "1422853",
-      "sha256": "9befffca6cd2a67bdc90ae87320c0ef5dccbd302f19fe31ec97ebf9c6f121ba2",
       "isBasedOn": {
         "@id": "https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/f4e6ca3badd4e63715b3c672e9167d8fd5e52674/bench/synthea/generate.sh"
       },
@@ -5246,15 +5236,13 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "Synthea's simulated person Cole Gaylord, id 4f159b52-15d2-04bd-8ba7-69bfa3dfa6b5, his untrimmed lifetime record to 2026-10-01, a transaction Bundle of 6,223 entries, 19,009,113 bytes gunzipped, one of the 40 people of the generator's lifetime run, made by the generator isBasedOn names and gzipped with Python gzip level 9, mtime 0. The crate's sha256 is of the committed file; a regeneration on another system can differ in one header byte, and only the gunzipped digest in bench/manifest.json is then sure to match. With the records of Xochitl Corkery and Dona Okuneva it is imported as one pod of 42,784 entries, the larger new size of the scale curve. The three are unrelated people. Synthea v4.0.0 is by The MITRE Corporation, under the Apache License 2.0; the person is simulated and none is a real person. Provider names, street lines, cities, nine-digit ZIP codes and phone numbers are replaced by placeholders; every other identifier is Synthea's own, kept as written. The record keeps the public insurer names in its claims (Cigna Health, Medicare, Medicaid) and Synthea's provider identifiers in its conditional references. SNOMED CT identifiers and terms stand as Synthea's output writes them, under Synthea's licence terms: this material includes SNOMED Clinical Terms (SNOMED CT) concept identifiers and terms; SNOMED and SNOMED CT are registered trademarks of SNOMED International. This material contains content from LOINC (http://loinc.org), copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee, available at no cost under the license at http://loinc.org/license; LOINC is a registered United States trademark of Regenstrief Institute, Inc."
+      "description": "Synthea's simulated person Cole Gaylord, id 4f159b52-15d2-04bd-8ba7-69bfa3dfa6b5, his untrimmed lifetime record to 2026-10-01, a transaction Bundle of 6,223 entries, 19,009,113 bytes gunzipped, one of the 40 people of the generator's lifetime run, made by the generator isBasedOn names and gzipped with Python gzip level 9, mtime 0. A regeneration on another system can differ in one header byte; only the gunzipped checksum in bench/manifest.json is then sure to match. With the records of Xochitl Corkery and Dona Okuneva it is imported as one pod of 42,784 entries, the larger new size of the scale curve. The three are unrelated people. Synthea v4.0.0 is by The MITRE Corporation, under the Apache License 2.0; the person is simulated and none is a real person. Provider names, street lines, cities, nine-digit ZIP codes and phone numbers are replaced by placeholders; every other identifier is Synthea's own, kept as written. The record keeps the public insurer names in its claims (Cigna Health, Medicare, Medicaid) and Synthea's provider identifiers in its conditional references. SNOMED CT identifiers and terms stand as Synthea's output writes them, under Synthea's licence terms: this material includes SNOMED Clinical Terms (SNOMED CT) concept identifiers and terms; SNOMED and SNOMED CT are registered trademarks of SNOMED International. This material contains content from LOINC (http://loinc.org), copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee, available at no cost under the license at http://loinc.org/license; LOINC is a registered United States trademark of Regenstrief Institute, Inc."
     },
     {
       "@id": "bench/lab-pull-3000.json.gz",
       "@type": "File",
       "name": "FHIR R4 benchmark input: a pull of 3,000 lab results in one searchset Bundle",
       "encodingFormat": "application/gzip",
-      "contentSize": "47055",
-      "sha256": "d088bd2d540bca949037b56b3cb737af2e953b707862cedbfa7fc785f3cde9ea",
       "dateCreated": "2026-10-25",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
@@ -10385,7 +10373,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "How the fixtures are treated: a copied input carries its digest, an input is copied or authored here and never edited, an expected graph or findings file is the Bridge's output committed unedited, and the checks the specification's lint cannot run: copied inputs against conformance, and each expected version's name against the hash of its own triples."
+      "description": "How the fixtures are treated: a copied input carries its checksum, an input is copied or authored here and never edited, an expected graph or findings file is the Bridge's output committed unedited, and the checks the specification's lint cannot run: copied inputs against conformance, and each expected version's name against the hash of its own triples."
     },
     {
       "@id": "in/CLAUDE.md",

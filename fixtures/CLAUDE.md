@@ -4,20 +4,20 @@ The cases a Bridge's harness runs, and the inputs and expected outputs they name
 Nothing here executes; `manifest.ttl` declares the cases and the rule each is
 judged by, and the crate records where every file came from.
 
-## A copied input carries its digest, and no input is edited
+## A copied input carries its checksum, and no input is edited
 
 An input is one of two kinds, and the crate says which:
 
 - **Copied**: from `../../conformance`, `fixtures/clinical-fhir/` or
   `fixtures/genomics/fhir-genomics-ig/` at the commit the crate's `isBasedOn`
   names, byte for byte under the same file name, with a `sameAs` to its blob
-  and its digest. Never edited.
+  and its checksum. Never edited.
 - **Authored here**: written for a case the conformance corpus does not hold,
-  with its date and no digest, because git holds its bytes. Replaced under a
+  with its date and no checksum, because git holds its bytes. Replaced under a
   new name, never edited.
 
 Both kinds share `in/`, so `.gitattributes` and `.editorconfig` leave every
-file under `in/`, `facts/`, `expected/` and `findings/` unnormalised.
+file under `in/` unnormalised.
 
 An input is committed once. A case that needs the same bytes twice names one
 file in both of its entries.
@@ -36,7 +36,7 @@ version names by the check below.
 
 - Each `sameAs` copy is byte-identical to conformance. Compare against the
   **blobs**, never the worktree: a clone with `core.autocrlf=true` holds those
-  files as CRLF, and "fixing" that would break the recorded digests.
+  files as CRLF, and "fixing" that would break each copy's recorded checksum.
 
   ```
   git -C ../../conformance show <commit>:fixtures/<folder>/X.json | cmp - in/X.json

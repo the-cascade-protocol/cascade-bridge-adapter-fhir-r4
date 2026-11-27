@@ -499,7 +499,7 @@ HL7 publishes one JSON Schema for R4, `fhir.schema.json`, pinned byte for byte
 at `schema/fhir.schema.json`. It is draft-06, a `oneOf` over every resource
 type discriminated by `resourceType`, and its `id` is
 `http://hl7.org/fhir/json-schema/4.0`. HL7 serves the same bytes zipped at
-`fhir.schema.json.zip`, and publishes no digest beside either. The schema
+`fhir.schema.json.zip`, and publishes no checksum beside either. The schema
 checks structure and cardinality; FHIR's invariants are FHIRPath, not JSON
 Schema, and it checks none of them.
 

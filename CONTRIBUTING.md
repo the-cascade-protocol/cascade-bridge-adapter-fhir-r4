@@ -48,7 +48,7 @@ repository names its source and date. Do not put a closing keyword (`closes`, `f
 pull request does not finish: GitHub closes it whatever the rest of the sentence says.
 
 Every file has its origin in [`ro-crate-metadata.json`](ro-crate-metadata.json), the adapter's manifest, and a change to
-a file updates its entry in the same commit. A file copied from a source also has its digest there; a file written here
+a file updates its entry in the same commit. A file copied from a source also has its checksum there; a file written here
 has none, because git holds its bytes.
 
 ## A change that spans two repositories
