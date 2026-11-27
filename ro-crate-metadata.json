@@ -278,6 +278,9 @@
         },
         {
           "@id": "in/sparql/identifier-and-address-findings.rq"
+        },
+        {
+          "@id": "in/sparql/organization-telecom-findings.rq"
         }
       ],
       "bridge:table": [
@@ -480,6 +483,9 @@
         },
         {
           "@id": "in/sparql/identifier-and-address-findings.rq"
+        },
+        {
+          "@id": "in/sparql/organization-telecom-findings.rq"
         },
         {
           "@id": "vocab/fhir-accounting.ttl"
@@ -3272,12 +3278,12 @@
     {
       "@id": "in/sparql/allergy-and-condition-findings.rq",
       "@type": "File",
-      "name": "Findings: an allergy's and a condition's repeats",
+      "name": "Findings: an allergy's and a condition's repeats, and an allergy reaction's members",
       "encodingFormat": "application/sparql-query",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A finding for each category of an allergy or a condition after the first, fhirr4:conditionOrAllergyCategoryRepeated, and for the severity of each reaction of an allergy after the first, fhirr4:allergyReactionSeverityRepeated, which allergy-intolerance.rq and condition.rq do not carry as the vocabulary holds one of each."
+      "description": "A finding for each category of an allergy or a condition after the first, fhirr4:conditionOrAllergyCategoryRepeated, and for the severity of each reaction of an allergy after the first, fhirr4:allergyReactionSeverityRepeated, which allergy-intolerance.rq and condition.rq do not carry as the vocabulary holds one of each; and for each substance, onset, description, exposure route and note of a reaction of an allergy with something in it, fhirr4:allergyReactionMemberNotCarried, which the vocabulary has no term for."
     },
     {
       "@id": "in/sparql/observation-component-findings.rq",
@@ -3398,6 +3404,16 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "Reports fhirr4:duplicateOrganizationNotCarried for an Organization organization.rq makes a record whose version another Organization of the document gives, as organization.rq picks it, when it holds a name, an identifier or an address that version lacks, as organization-table.rq lists them. Its value is the identifier the record is named by, typed by its system."
+    },
+    {
+      "@id": "in/sparql/organization-telecom-findings.rq",
+      "@type": "File",
+      "name": "Findings: an Organization's contact points",
+      "encodingFormat": "application/sparql-query",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "Reports fhirr4:organizationTelecomNotCarried at each contact point with a value of an Organization a mapping reads, which no Cascade predicate carries; an Organization no mapping reads is reported whole by resource-type-findings.rq."
     },
     {
       "@id": "in/sparql/report-and-note-findings.rq",

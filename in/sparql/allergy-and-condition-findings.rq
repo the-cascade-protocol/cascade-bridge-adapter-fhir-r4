@@ -16,6 +16,12 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # a condition states with a coding, at the category, and each other reaction's severity, at
 # the severity. A category a condition gives as text alone is reported by
 # category-text-findings.rq.
+#
+# A reaction's substance, onset, description, exposure route and each note have no home in
+# the vocabulary, whose allergen, onset and note are the allergy's own, so each with
+# something in it is reported at the member, at the note for a note: a substance or an
+# exposure route holds something where its text or the code or display of one of its codings
+# is not blank, the others where their text is not blank.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -99,6 +105,47 @@ WHERE {
     }
     BIND (CONCAT("/reaction/", STR(xsd:integer(STRAFTER(STR(?reactionSlot), "#_")) - 1), "/severity") AS ?step)
     BIND (fhirr4:allergyReactionSeverityRepeated AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:resourceType "AllergyIntolerance" .
+    ?resource xyz:reaction ?reactions . ?reactions ?reactionSlot ?reaction .
+    FILTER (STRSTARTS(STR(?reactionSlot), STR(rdf:_)))
+    BIND (CONCAT("/reaction/", STR(xsd:integer(STRAFTER(STR(?reactionSlot), "#_")) - 1)) AS ?reactionStep)
+    {
+      ?reaction ?member ?value .
+      FILTER (?member IN (xyz:description, xyz:onset) && isLiteral(?value) && REPLACE(STR(?value), "^\\s+|\\s+$", "") != "")
+      BIND (CONCAT("/", STRAFTER(STR(?member), "http://sparql.xyz/facade-x/data/")) AS ?memberStep)
+    }
+    UNION
+    {
+      ?reaction ?member ?concept .
+      FILTER (?member IN (xyz:substance, xyz:exposureRoute))
+      FILTER (EXISTS { ?concept xyz:text ?conceptHeld . FILTER (REPLACE(STR(?conceptHeld), "^\\s+|\\s+$", "") != "") }
+              || EXISTS {
+                   ?concept xyz:coding ?codings . ?codings ?codingSlot ?coding .
+                   { ?coding xyz:code ?codingHeld } UNION { ?coding xyz:display ?codingHeld }
+                   FILTER (STRSTARTS(STR(?codingSlot), STR(rdf:_)) && REPLACE(STR(?codingHeld), "^\\s+|\\s+$", "") != "")
+                 })
+      OPTIONAL { ?concept xyz:text ?conceptText . FILTER (REPLACE(STR(?conceptText), "^\\s+|\\s+$", "") != "") }
+      OPTIONAL {
+        ?concept xyz:coding ?firstCodings . ?firstCodings rdf:_1 ?firstCoding .
+        OPTIONAL { ?firstCoding xyz:display ?firstDisplay }
+        OPTIONAL { ?firstCoding xyz:code ?firstCode }
+      }
+      BIND (COALESCE(?conceptText,
+                     IF(REPLACE(STR(?firstDisplay), "^\\s+|\\s+$", "") != "", ?firstDisplay, 1/0),
+                     IF(REPLACE(STR(?firstCode), "^\\s+|\\s+$", "") != "", ?firstCode, 1/0)) AS ?value)
+      BIND (CONCAT("/", STRAFTER(STR(?member), "http://sparql.xyz/facade-x/data/")) AS ?memberStep)
+    }
+    UNION
+    {
+      ?reaction xyz:note ?notes . ?notes ?noteSlot ?note . ?note xyz:text ?value .
+      FILTER (STRSTARTS(STR(?noteSlot), STR(rdf:_)) && REPLACE(STR(?value), "^\\s+|\\s+$", "") != "")
+      BIND (CONCAT("/note/", STR(xsd:integer(STRAFTER(STR(?noteSlot), "#_")) - 1)) AS ?memberStep)
+    }
+    BIND (CONCAT(?reactionStep, ?memberStep) AS ?step)
+    BIND (fhirr4:allergyReactionMemberNotCarried AS ?gap)
   }
   BIND (CONCAT(?topStep, ?containedStep, ?step) AS ?pointer)
 }
