@@ -2,48 +2,63 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:b98fd28b1a9e38db5390f2dd6adfad36 a oa:FragmentSelector ;
+_:b7322c5f57987acc2dd4d5080ce67db2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:c127032efbdc944ad21fbb84cf2028cb oa:hasSource <../in/condition-codings-not-carried.json> .
-_:b98fd28b1a9e38db5390f2dd6adfad36 oa:refinedBy _:d1865dbef155e73792100c91169c727 .
-_:d1865dbef155e73792100c91169c727 a oa:FragmentSelector ;
+_:ce5d11657678b44326ee2f0b051f1572 oa:hasSource <../in/condition-codings-not-carried.json> .
+_:b7322c5f57987acc2dd4d5080ce67db2 oa:refinedBy _:f2e0a9294b2e848fce8c10c586ae2121 .
+_:f2e0a9294b2e848fce8c10c586ae2121 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/code/coding/2/system" .
-_:c127032efbdc944ad21fbb84cf2028cb oa:hasSelector _:b98fd28b1a9e38db5390f2dd6adfad36 .
-_:a332052e9ac74cec05fe8f4a90bcc70 oa:hasTarget _:c127032efbdc944ad21fbb84cf2028cb .
-_:e861877f543f534b75b3ce7629e059bd a oa:FragmentSelector ;
+_:ce5d11657678b44326ee2f0b051f1572 oa:hasSelector _:b7322c5f57987acc2dd4d5080ce67db2 .
+_:d3a67cb3c83d254401ed312500c88d00 oa:hasTarget _:ce5d11657678b44326ee2f0b051f1572 .
+_:e83117384526799c04add7db67af82a6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:f38a0b8b02e53e833d8af3b3df5c3b73 oa:hasSource <../in/condition-codings-not-carried.json> .
-_:e861877f543f534b75b3ce7629e059bd oa:refinedBy _:b8000762ac1289bb3eda55574b127a59 .
-_:b8000762ac1289bb3eda55574b127a59 a oa:FragmentSelector ;
+_:b5e81c82eb6d18c8bc7c777af039ef61 oa:hasSource <../in/condition-codings-not-carried.json> .
+_:e83117384526799c04add7db67af82a6 oa:refinedBy _:d41a7ccaaacb415a3898e5260ab63c40 .
+_:d41a7ccaaacb415a3898e5260ab63c40 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/code/coding/1/system" .
-_:f38a0b8b02e53e833d8af3b3df5c3b73 oa:hasSelector _:e861877f543f534b75b3ce7629e059bd .
-_:ad8f782bf61f0508638afe007c680639 oa:hasTarget _:f38a0b8b02e53e833d8af3b3df5c3b73 .
-_:f9b9c52cbe07ebb3c44b331c7ce27af1 a oa:FragmentSelector ;
+_:b5e81c82eb6d18c8bc7c777af039ef61 oa:hasSelector _:e83117384526799c04add7db67af82a6 .
+_:c2c648d623b181ba6c33961534d53350 oa:hasTarget _:b5e81c82eb6d18c8bc7c777af039ef61 .
+_:cf65700f5ca4fdb6ec4af0111d300cd3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:d3d35c21d0f487d7786d2488b0977f38 oa:hasSource <../in/condition-codings-not-carried.json> .
-_:f9b9c52cbe07ebb3c44b331c7ce27af1 oa:refinedBy _:e3dd2af8874667919b3227a557ecea59 .
-_:e3dd2af8874667919b3227a557ecea59 a oa:FragmentSelector ;
+_:c6adeec18fc2a226a5cad9dd00e793bf oa:hasSource <../in/condition-codings-not-carried.json> .
+_:cf65700f5ca4fdb6ec4af0111d300cd3 oa:refinedBy _:e1ccee52027a3c757e67f4ad3bef4a13 .
+_:e1ccee52027a3c757e67f4ad3bef4a13 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/code/coding/1/code" .
+_:c6adeec18fc2a226a5cad9dd00e793bf oa:hasSelector _:cf65700f5ca4fdb6ec4af0111d300cd3 .
+_:ef8b67cdf458130d4cb7d67e14e0e043 oa:hasTarget _:c6adeec18fc2a226a5cad9dd00e793bf .
+_:fc330fea63baba8d79ccccd638814d95 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+_:b89c33144994645343163b424e2e9039 oa:hasSource <../in/condition-codings-not-carried.json> .
+_:fc330fea63baba8d79ccccd638814d95 oa:refinedBy _:d00dd98212946dc8ab81b100d339f88b .
+_:d00dd98212946dc8ab81b100d339f88b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/code/coding/0/code" .
-_:d3d35c21d0f487d7786d2488b0977f38 oa:hasSelector _:f9b9c52cbe07ebb3c44b331c7ce27af1 .
-_:c7cfe84ac9bc17d2047478215e874de2 oa:hasTarget _:d3d35c21d0f487d7786d2488b0977f38 .
-_:a332052e9ac74cec05fe8f4a90bcc70 sh:resultSeverity sh:Info .
-_:ad8f782bf61f0508638afe007c680639 sh:resultSeverity sh:Info .
-_:c7cfe84ac9bc17d2047478215e874de2 sh:resultSeverity sh:Info .
-_:a332052e9ac74cec05fe8f4a90bcc70 a oa:Annotation ;
+_:b89c33144994645343163b424e2e9039 oa:hasSelector _:fc330fea63baba8d79ccccd638814d95 .
+_:db32bea117b63d3845b4b0fc4e209157 oa:hasTarget _:b89c33144994645343163b424e2e9039 .
+_:d3a67cb3c83d254401ed312500c88d00 sh:resultSeverity sh:Info .
+_:c2c648d623b181ba6c33961534d53350 sh:resultSeverity sh:Info .
+_:ef8b67cdf458130d4cb7d67e14e0e043 sh:resultSeverity sh:Info .
+_:db32bea117b63d3845b4b0fc4e209157 sh:resultSeverity sh:Info .
+_:d3a67cb3c83d254401ed312500c88d00 a oa:Annotation ;
 	oa:hasBody fhirr4:codingNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "http://snomed.info/sct" .
-_:ad8f782bf61f0508638afe007c680639 a oa:Annotation ;
+_:c2c648d623b181ba6c33961534d53350 a oa:Annotation ;
 	oa:hasBody fhirr4:codingNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "meridian-problem-list" .
-_:c7cfe84ac9bc17d2047478215e874de2 a oa:Annotation ;
+_:ef8b67cdf458130d4cb7d67e14e0e043 a oa:Annotation ;
+	oa:hasBody fhirr4:codingNotCarried ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "DM2" .
+_:db32bea117b63d3845b4b0fc4e209157 a oa:Annotation ;
 	oa:hasBody fhirr4:codingNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "E11.9" .

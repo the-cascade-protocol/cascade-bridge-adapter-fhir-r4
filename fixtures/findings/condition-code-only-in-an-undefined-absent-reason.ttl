@@ -2,18 +2,33 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:c69c33227c593011c8bfb603b86427be a oa:FragmentSelector ;
+_:d8ae74d93dc997d0bea91911163c5940 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:ee569846c528698abc661399d5f29896 oa:hasSource <../in/condition-code-only-in-an-undefined-absent-reason.json> .
-_:c69c33227c593011c8bfb603b86427be oa:refinedBy _:c9c2b77bb9a59d29628632608d6141c9 .
-_:c9c2b77bb9a59d29628632608d6141c9 a oa:FragmentSelector ;
+_:e277bf2c003f927ad26f600955f40b23 oa:hasSource <../in/condition-code-only-in-an-undefined-absent-reason.json> .
+_:d8ae74d93dc997d0bea91911163c5940 oa:refinedBy _:ce4cb0ccd2748ab35a613840b323f801 .
+_:ce4cb0ccd2748ab35a613840b323f801 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/code/coding/0" .
-_:ee569846c528698abc661399d5f29896 oa:hasSelector _:c69c33227c593011c8bfb603b86427be .
-_:ca862c73443f5be4a5f83a5985c19bd oa:hasTarget _:ee569846c528698abc661399d5f29896 ;
-	sh:resultSeverity sh:Info ;
-	a oa:Annotation ;
+	rdf:value "/code/coding/0/code" .
+_:e277bf2c003f927ad26f600955f40b23 oa:hasSelector _:d8ae74d93dc997d0bea91911163c5940 .
+_:d57ddc269243aab11931b6b84567ce16 oa:hasTarget _:e277bf2c003f927ad26f600955f40b23 .
+_:c89fd31c8415eb536a2d999b56ba4bcd a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+_:c3c41e9dc3bafb48372023bc998eb2ef oa:hasSource <../in/condition-code-only-in-an-undefined-absent-reason.json> .
+_:c89fd31c8415eb536a2d999b56ba4bcd oa:refinedBy _:cb327bc0aad580526be9615cb4a75107 .
+_:cb327bc0aad580526be9615cb4a75107 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/code/coding/0/system" .
+_:c3c41e9dc3bafb48372023bc998eb2ef oa:hasSelector _:c89fd31c8415eb536a2d999b56ba4bcd .
+_:d23dae919e6e848355940c3d30effef oa:hasTarget _:c3c41e9dc3bafb48372023bc998eb2ef .
+_:d57ddc269243aab11931b6b84567ce16 sh:resultSeverity sh:Info .
+_:d23dae919e6e848355940c3d30effef sh:resultSeverity sh:Info .
+_:d57ddc269243aab11931b6b84567ce16 a oa:Annotation ;
 	oa:hasBody fhirr4:absentReasonNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "never-said" .
+_:d23dae919e6e848355940c3d30effef a oa:Annotation ;
+	oa:hasBody fhirr4:absentReasonNotCarried ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "http://terminology.hl7.org/CodeSystem/data-absent-reason" .

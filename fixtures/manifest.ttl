@@ -1743,7 +1743,7 @@
 
 <#condition-code-only-in-an-undefined-absent-reason> a bridge:IsomorphicConversionTest ;
   mf:name "condition-code-only-in-an-undefined-absent-reason" ;
-  rdfs:comment "A Condition whose only coding is never-said in FHIR's data-absent-reason, which that CodeSystem does not define: no cascade:conditionCode and no #absent-conditionCode node, and the coding is a finding." ;
+  rdfs:comment "A Condition whose only coding is never-said in FHIR's data-absent-reason, which that CodeSystem does not define: no cascade:conditionCode and no #absent-conditionCode node, and the coding's system and code are findings." ;
   mf:action [
     bridge:input <in/condition-code-only-in-an-undefined-absent-reason.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -1899,7 +1899,7 @@
 
 <#condition-codings-not-carried> a bridge:IsomorphicConversionTest ;
   mf:name "condition-codings-not-carried" ;
-  rdfs:comment "A Condition whose codings carry no code: one with no system, one whose system is no absolute URI and one with no code; each is a fhirr4:codingNotCarried finding." ;
+  rdfs:comment "A Condition whose codings carry no code: one with no system, one whose system is no absolute URI and one with no code; each is a fhirr4:codingNotCarried finding, the code beside a system no row reads included." ;
   mf:action [
     bridge:input <in/condition-codings-not-carried.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
