@@ -108,6 +108,7 @@
     <#bundle-medication-repeated-id>
     <#medication-request-reported-and-proposal>
     <#medication-request-intent-not-a-code>
+    <#medication-request-reported-intent-outside-the-eight>
     <#bundle-pull-collection-versions>
     <#bundle-pull-searchset-outcome>
     <#bundle-pull-organization>
@@ -1394,7 +1395,7 @@
 
 <#medication-request-reported-and-proposal> a bridge:IsomorphicConversionTest ;
   mf:name "medication-request-reported-and-proposal" ;
-  rdfs:comment "A Bundle of three MedicationRequests: one with reportedBoolean true and intent plan, one with a reportedReference and intent order, each reported use stating no intent; and one with reportedBoolean false and intent proposal, prescribed, stating its intent." ;
+  rdfs:comment "A Bundle of three MedicationRequests: one with reportedBoolean true and intent plan, one with a reportedReference and intent order, each reported use stating its intent; and one with reportedBoolean false and intent proposal, prescribed, stating its intent." ;
   mf:action [
     bridge:input <in/medication-request-reported-and-proposal.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -1416,6 +1417,19 @@
   mf:result [
     bridge:expectedGraph <expected/medication-request-intent-not-a-code.ttl> ;
     bridge:expectedFindings <findings/medication-request-intent-not-a-code.ttl>
+  ] .
+
+<#medication-request-reported-intent-outside-the-eight> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-reported-intent-outside-the-eight" ;
+  rdfs:comment "A reported MedicationRequest, reportedBoolean true, whose intent is directive, none of the eight codes of FHIR's medicationrequest-intent: as for a prescribed one, the version states no intent and the value is a finding of fhirr4:medicationRequestIntentNotMapped." ;
+  mf:action [
+    bridge:input <in/medication-request-reported-intent-outside-the-eight.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-reported-intent-outside-the-eight.ttl> ;
+    bridge:expectedFindings <findings/medication-request-reported-intent-outside-the-eight.ttl>
   ] .
 
 <#medication-request-ndc-forms> a bridge:IsomorphicConversionTest ;
