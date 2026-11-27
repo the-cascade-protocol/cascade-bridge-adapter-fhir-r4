@@ -2,1717 +2,1777 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:f9efdd01a09aec50fceb87b1c2ec14fe a oa:FragmentSelector ;
+_:a1d1e314f91fa4db859557b8fbd9d49c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:ae402c37e97921c187fa536e0c61d02 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f9efdd01a09aec50fceb87b1c2ec14fe oa:refinedBy _:a05c17c04e16e2bb131602e7712ae8f .
-_:a05c17c04e16e2bb131602e7712ae8f a oa:FragmentSelector ;
+_:c0cca30b10ac09e3dcdc3a3058193e90 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a1d1e314f91fa4db859557b8fbd9d49c oa:refinedBy _:b0a51f9b2cc9e4faf486a0231334ed8d .
+_:b0a51f9b2cc9e4faf486a0231334ed8d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:ae402c37e97921c187fa536e0c61d02 oa:hasSelector _:f9efdd01a09aec50fceb87b1c2ec14fe .
-_:ad2c82f4e472eedfaf3df68ebc428c31 oa:hasTarget _:ae402c37e97921c187fa536e0c61d02 ;
+_:c0cca30b10ac09e3dcdc3a3058193e90 oa:hasSelector _:a1d1e314f91fa4db859557b8fbd9d49c .
+_:c29238cce761dd823bb77a9bb917cc37 oa:hasTarget _:c0cca30b10ac09e3dcdc3a3058193e90 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:e1cffdd00d26e1ce2a4e28200ff2a15e a oa:FragmentSelector ;
+_:abed3f96d0edd132070d8a816abe0ded a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
-_:a37ae4cb3ee154625b385542cf90a129 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e1cffdd00d26e1ce2a4e28200ff2a15e oa:refinedBy _:f12cf39a1f191f954a7e1ea5557e8d75 .
-_:f12cf39a1f191f954a7e1ea5557e8d75 a oa:FragmentSelector ;
+_:f5ecc38133bc96edd76e3c03f4090972 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:abed3f96d0edd132070d8a816abe0ded oa:refinedBy _:fdd6d17ca4ea695cc830726f233a40b2 .
+_:fdd6d17ca4ea695cc830726f233a40b2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:a37ae4cb3ee154625b385542cf90a129 oa:hasSelector _:e1cffdd00d26e1ce2a4e28200ff2a15e .
-_:e16aefac687723690b43f3100d1208a2 oa:hasTarget _:a37ae4cb3ee154625b385542cf90a129 ;
+_:f5ecc38133bc96edd76e3c03f4090972 oa:hasSelector _:abed3f96d0edd132070d8a816abe0ded .
+_:aa0bb77b246a97c67d76e186b62ab744 oa:hasTarget _:f5ecc38133bc96edd76e3c03f4090972 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:ce080b7f7162d40539a58bbf89fc66f0 a oa:FragmentSelector ;
+_:f4e31632eecbece4e693fcc2ac3a160d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/2" .
-_:ac2676d585a667a78e30e6fe050bf067 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ce080b7f7162d40539a58bbf89fc66f0 oa:refinedBy _:c65db3488ce86dd2d932bd41c72eaf32 .
-_:c65db3488ce86dd2d932bd41c72eaf32 a oa:FragmentSelector ;
+_:e95a2f1db55134e818a4188a9d57b072 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f4e31632eecbece4e693fcc2ac3a160d oa:refinedBy _:ad883aabd0565808fe1b3b99ddf1201 .
+_:ad883aabd0565808fe1b3b99ddf1201 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:ac2676d585a667a78e30e6fe050bf067 oa:hasSelector _:ce080b7f7162d40539a58bbf89fc66f0 .
-_:c28170a5d79eb472c13357216dfffec7 oa:hasTarget _:ac2676d585a667a78e30e6fe050bf067 ;
+_:e95a2f1db55134e818a4188a9d57b072 oa:hasSelector _:f4e31632eecbece4e693fcc2ac3a160d .
+_:a458d03381142e72dd5d55b7f3778471 oa:hasTarget _:e95a2f1db55134e818a4188a9d57b072 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:ad2fbc333c16d645b7339d63bb040140 a oa:FragmentSelector ;
+_:c0910b33afc7d7ff248b28e8f330b512 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/2" .
-_:d827250e12e6595f7b612946a2506478 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ad2fbc333c16d645b7339d63bb040140 oa:refinedBy _:a37395f6d63fd1edfff74613b2f1fd76 .
-_:a37395f6d63fd1edfff74613b2f1fd76 a oa:FragmentSelector ;
+_:cf045f996fdb9617fed2037c49d7d135 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c0910b33afc7d7ff248b28e8f330b512 oa:refinedBy _:af4036731c6b0f783811f5a926454c4 .
+_:af4036731c6b0f783811f5a926454c4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource" .
-_:d827250e12e6595f7b612946a2506478 oa:hasSelector _:ad2fbc333c16d645b7339d63bb040140 .
-_:f2464a2fcdf7a7bd325c05443850f70c oa:hasTarget _:d827250e12e6595f7b612946a2506478 ;
+_:cf045f996fdb9617fed2037c49d7d135 oa:hasSelector _:c0910b33afc7d7ff248b28e8f330b512 .
+_:f693ccbf3af461460d5d3a56ac574d82 oa:hasTarget _:cf045f996fdb9617fed2037c49d7d135 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Specimen" .
-_:e241ad20880a2ea4d2b95bf0620af6b0 a oa:FragmentSelector ;
+_:ad35c3273ceaa07917e7596e890eed15 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/3" .
-_:db612a772de20135bca512b99f697eec oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e241ad20880a2ea4d2b95bf0620af6b0 oa:refinedBy _:ca222e3ffb06cf6646babd04168f4dea .
-_:ca222e3ffb06cf6646babd04168f4dea a oa:FragmentSelector ;
+_:f10ac548d1d1ccfc457662f36d372a45 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ad35c3273ceaa07917e7596e890eed15 oa:refinedBy _:fc58568e7d8e52d14b2e95dc1c441f9c .
+_:fc58568e7d8e52d14b2e95dc1c441f9c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:db612a772de20135bca512b99f697eec oa:hasSelector _:e241ad20880a2ea4d2b95bf0620af6b0 .
-_:ce5d8dc375ff97de227dceb7e93c913b oa:hasTarget _:db612a772de20135bca512b99f697eec ;
+_:f10ac548d1d1ccfc457662f36d372a45 oa:hasSelector _:ad35c3273ceaa07917e7596e890eed15 .
+_:c8e1f3bf9df4e35d591a6c78291b820f oa:hasTarget _:f10ac548d1d1ccfc457662f36d372a45 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:fc6d95823c4fc784654e7125b67ba830 a oa:FragmentSelector ;
+_:a8846f47d34ebdb465bdb3b2d2179bb1 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/4" .
-_:be1ad487aec9b0d0e1f1d56e433c1e00 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:fc6d95823c4fc784654e7125b67ba830 oa:refinedBy _:d36efa335a90bc70915ebe09cd02d454 .
-_:d36efa335a90bc70915ebe09cd02d454 a oa:FragmentSelector ;
+_:ccb31062449451bce7de62ea9bf38c64 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a8846f47d34ebdb465bdb3b2d2179bb1 oa:refinedBy _:c39b39d4b4a4557afc04762e3dfc2cfa .
+_:c39b39d4b4a4557afc04762e3dfc2cfa a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:be1ad487aec9b0d0e1f1d56e433c1e00 oa:hasSelector _:fc6d95823c4fc784654e7125b67ba830 .
-_:a6cafe8b5eec50887ec07b2e1eaf7ed3 oa:hasTarget _:be1ad487aec9b0d0e1f1d56e433c1e00 ;
+_:ccb31062449451bce7de62ea9bf38c64 oa:hasSelector _:a8846f47d34ebdb465bdb3b2d2179bb1 .
+_:c145390939e371792ea9bf913ddb7872 oa:hasTarget _:ccb31062449451bce7de62ea9bf38c64 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:d90cc93e5e31eef28c7f27bc14c68475 a oa:FragmentSelector ;
+_:b46cd6252cf4269bcaadf309ff233a0b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/4" .
-_:c993679967522782d70fc022dc02d048 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d90cc93e5e31eef28c7f27bc14c68475 oa:refinedBy _:cbdf514593c647f2c641f14219ece706 .
-_:cbdf514593c647f2c641f14219ece706 a oa:FragmentSelector ;
+_:d04b3942a93d9ebc7a38a90a9a511d84 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b46cd6252cf4269bcaadf309ff233a0b oa:refinedBy _:fe668a5c5494bbe7e7a8d35ac8084543 .
+_:fe668a5c5494bbe7e7a8d35ac8084543 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource" .
-_:c993679967522782d70fc022dc02d048 oa:hasSelector _:d90cc93e5e31eef28c7f27bc14c68475 .
-_:c831664c15854709a1fd028add872538 oa:hasTarget _:c993679967522782d70fc022dc02d048 ;
+_:d04b3942a93d9ebc7a38a90a9a511d84 oa:hasSelector _:b46cd6252cf4269bcaadf309ff233a0b .
+_:cdeb9d8d6fa43834f12e2f3443740d84 oa:hasTarget _:d04b3942a93d9ebc7a38a90a9a511d84 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "ServiceRequest" .
-_:e35cbf605162a19101ef47aedd2a48a2 a oa:FragmentSelector ;
+_:c9fee088f0f4a1dac5a776bd94ea9b00 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:b8bc4c231ab7b71ec4f5cc5dea79894f a oa:FragmentSelector ;
+_:ea30553fa8220de24fee8b73ec295fb4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/5/valueCodeableConcept/coding/0/version" .
-_:e35cbf605162a19101ef47aedd2a48a2 oa:refinedBy _:b8bc4c231ab7b71ec4f5cc5dea79894f .
-_:db43172f25a7fa99fc3021dc30d0078b a oa:Annotation ;
-	oa:hasTarget _:d17ebf815d7723b32f1740312c4f9530 .
-_:d17ebf815d7723b32f1740312c4f9530 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:e35cbf605162a19101ef47aedd2a48a2 .
-_:db43172f25a7fa99fc3021dc30d0078b oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:c9fee088f0f4a1dac5a776bd94ea9b00 oa:refinedBy _:ea30553fa8220de24fee8b73ec295fb4 .
+_:cd32ffa80a9515132b3b0466d98142df a oa:Annotation ;
+	oa:hasTarget _:ff0e3eaaff40f8cd948106fc7f839bdd .
+_:ff0e3eaaff40f8cd948106fc7f839bdd oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:c9fee088f0f4a1dac5a776bd94ea9b00 .
+_:cd32ffa80a9515132b3b0466d98142df oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueCodeableConcept/coding/version" ;
 	sh:resultSeverity sh:Info .
-_:ddc4ff0339022c8858407a82e44609a9 a oa:FragmentSelector ;
+_:bfaa88c90960a026ed169d4493b9e6ab a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:a9d2d3d382cbb13979910679c769e89c a oa:FragmentSelector ;
+_:b133e90fe88ee0edc61965eaf78fd943 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/9/valueString" .
-_:ddc4ff0339022c8858407a82e44609a9 oa:refinedBy _:a9d2d3d382cbb13979910679c769e89c .
-_:e6964163f8ae0944d3814102211db26d a oa:Annotation ;
-	oa:hasTarget _:ebe99df276d17676c924328e5b7dc248 .
-_:ebe99df276d17676c924328e5b7dc248 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:ddc4ff0339022c8858407a82e44609a9 .
-_:e6964163f8ae0944d3814102211db26d oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:bfaa88c90960a026ed169d4493b9e6ab oa:refinedBy _:b133e90fe88ee0edc61965eaf78fd943 .
+_:b5b305685da74a079842b7899d7d42f8 a oa:Annotation ;
+	oa:hasTarget _:ec9240d2a27d0816e6c69208910ba05 .
+_:ec9240d2a27d0816e6c69208910ba05 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:bfaa88c90960a026ed169d4493b9e6ab .
+_:b5b305685da74a079842b7899d7d42f8 oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueString" ;
 	<https://ns.cascadeprotocol.org/cascade#occurrenceCount> 2 ;
 	sh:resultSeverity sh:Info .
-_:b533f98d45ce945ba95ce7eb39ac2d91 a oa:FragmentSelector ;
+_:c8d98b3938b9fc70a8005315ba94e32c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:b5bb62fb0292667ff6b8cb6f4b77ae00 a oa:FragmentSelector ;
+_:b2f1b340535e09271c040974463d0648 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/10/valueRange/low/value" .
-_:b533f98d45ce945ba95ce7eb39ac2d91 oa:refinedBy _:b5bb62fb0292667ff6b8cb6f4b77ae00 .
-_:c3aa1ad906d8a98eab62b54efc0ffe43 a oa:Annotation ;
-	oa:hasTarget _:b11766f1d98ba6b2ada65009e625ad4 .
-_:b11766f1d98ba6b2ada65009e625ad4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:b533f98d45ce945ba95ce7eb39ac2d91 .
-_:c3aa1ad906d8a98eab62b54efc0ffe43 oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:c8d98b3938b9fc70a8005315ba94e32c oa:refinedBy _:b2f1b340535e09271c040974463d0648 .
+_:bcc0b4cd43728c5c6ee49a16026f73d1 a oa:Annotation ;
+	oa:hasTarget _:c5a1aeffe2b8405abf734776e5df8aa7 .
+_:c5a1aeffe2b8405abf734776e5df8aa7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:c8d98b3938b9fc70a8005315ba94e32c .
+_:bcc0b4cd43728c5c6ee49a16026f73d1 oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueRange/low/value" ;
 	<https://ns.cascadeprotocol.org/cascade#occurrenceCount> 3 ;
 	sh:resultSeverity sh:Info .
-_:f5891888daf5cae2338cd9257b89a29f a oa:FragmentSelector ;
+_:f24ced890a7d63ae4bcc92ba69bacb77 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:b5dd78f8f34f00972e15fb0cf2235886 a oa:FragmentSelector ;
+_:f2dae96fdb22675e78f54a4e96d95784 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/10/valueRange/high/value" .
-_:f5891888daf5cae2338cd9257b89a29f oa:refinedBy _:b5dd78f8f34f00972e15fb0cf2235886 .
-_:cacdfdf8f9f2a39f1be44d1ebed23b6d a oa:Annotation ;
-	oa:hasTarget _:cb5b025cd3d399eb75ef5a4042d9db36 .
-_:cb5b025cd3d399eb75ef5a4042d9db36 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:f5891888daf5cae2338cd9257b89a29f .
-_:cacdfdf8f9f2a39f1be44d1ebed23b6d oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:f24ced890a7d63ae4bcc92ba69bacb77 oa:refinedBy _:f2dae96fdb22675e78f54a4e96d95784 .
+_:d2b922ba41540b0f02a1bd4f68d988b5 a oa:Annotation ;
+	oa:hasTarget _:fc5a2679743e1ff7301e89e6414d978e .
+_:fc5a2679743e1ff7301e89e6414d978e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:f24ced890a7d63ae4bcc92ba69bacb77 .
+_:d2b922ba41540b0f02a1bd4f68d988b5 oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueRange/high/value" ;
 	<https://ns.cascadeprotocol.org/cascade#occurrenceCount> 3 ;
 	sh:resultSeverity sh:Info .
-_:b42f1382274b8e83fb73161ae5f8eb13 a oa:FragmentSelector ;
+_:fb91dddb546c6b26cb4bc8a92082714f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:f08592d1311621bf563179b33a83225a a oa:FragmentSelector ;
+_:ad067b534735f091f5a2838bfb36e53c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/15/valueQuantity/value" .
-_:b42f1382274b8e83fb73161ae5f8eb13 oa:refinedBy _:f08592d1311621bf563179b33a83225a .
-_:c88bd14cd78294844c66af70f55c15f4 a oa:Annotation ;
-	oa:hasTarget _:e8dd3c039ae120643948f257e790c97a .
-_:e8dd3c039ae120643948f257e790c97a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:b42f1382274b8e83fb73161ae5f8eb13 .
-_:c88bd14cd78294844c66af70f55c15f4 oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:fb91dddb546c6b26cb4bc8a92082714f oa:refinedBy _:ad067b534735f091f5a2838bfb36e53c .
+_:fe80e48a4ef6e0546327f10c2a53e592 a oa:Annotation ;
+	oa:hasTarget _:ea9d8fbab92c7727cc8e9a822a0f473d .
+_:ea9d8fbab92c7727cc8e9a822a0f473d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:fb91dddb546c6b26cb4bc8a92082714f .
+_:fe80e48a4ef6e0546327f10c2a53e592 oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueQuantity/value" ;
 	<https://ns.cascadeprotocol.org/cascade#occurrenceCount> 5 ;
 	sh:resultSeverity sh:Info .
-_:c38569c0a81498049881bde8d22e1847 a oa:FragmentSelector ;
+_:b601d61dcc17c6f0ee637fcd07727fd9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:e6433f9ec5b61c6697bfc4c6c03da3a a oa:FragmentSelector ;
+_:da775f60bff23e78288ce023bf1bec68 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/15/valueQuantity/system" .
-_:c38569c0a81498049881bde8d22e1847 oa:refinedBy _:e6433f9ec5b61c6697bfc4c6c03da3a .
-_:d4bdb0089ab05c782ef594262514729 a oa:Annotation ;
-	oa:hasTarget _:f17cc60d16a1fec60fce280a409d5e3e .
-_:f17cc60d16a1fec60fce280a409d5e3e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:c38569c0a81498049881bde8d22e1847 .
-_:d4bdb0089ab05c782ef594262514729 oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:b601d61dcc17c6f0ee637fcd07727fd9 oa:refinedBy _:da775f60bff23e78288ce023bf1bec68 .
+_:cd95fda86b3215f94f298cb691ea9f9 a oa:Annotation ;
+	oa:hasTarget _:c1d4469d5b1dec1e64bbacd3f6305b26 .
+_:c1d4469d5b1dec1e64bbacd3f6305b26 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:b601d61dcc17c6f0ee637fcd07727fd9 .
+_:cd95fda86b3215f94f298cb691ea9f9 oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueQuantity/system" ;
 	<https://ns.cascadeprotocol.org/cascade#occurrenceCount> 4 ;
 	sh:resultSeverity sh:Info .
-_:abef5f064ea45891cda13937d429074d a oa:FragmentSelector ;
+_:fc1dd53b78c6d71519797a0f33f618d6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:c7f0f317415547c498913961d59ca42b a oa:FragmentSelector ;
+_:efaa4a6ac90651eddd62f7d09c9424dc a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/15/valueQuantity/code" .
-_:abef5f064ea45891cda13937d429074d oa:refinedBy _:c7f0f317415547c498913961d59ca42b .
-_:de5b12198c926089118fde1bfb5b5d4e a oa:Annotation ;
-	oa:hasTarget _:b4755dc6348f401c15acaa7971329a3 .
-_:b4755dc6348f401c15acaa7971329a3 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:abef5f064ea45891cda13937d429074d .
-_:de5b12198c926089118fde1bfb5b5d4e oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:fc1dd53b78c6d71519797a0f33f618d6 oa:refinedBy _:efaa4a6ac90651eddd62f7d09c9424dc .
+_:ffe7b2474be43658d9b967cd3fd54837 a oa:Annotation ;
+	oa:hasTarget _:b673d18823c32d9aad0dae13456a050b .
+_:b673d18823c32d9aad0dae13456a050b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:fc1dd53b78c6d71519797a0f33f618d6 .
+_:ffe7b2474be43658d9b967cd3fd54837 oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueQuantity/code" ;
 	<https://ns.cascadeprotocol.org/cascade#occurrenceCount> 4 ;
 	sh:resultSeverity sh:Info .
-_:da24f4853576eb6509c98381df02ad7d a oa:FragmentSelector ;
+_:d06d0b186f76ce7bfce09e4f32b05d4a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:e7be8b26e5bb6b7775b5c4e9368106a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:da24f4853576eb6509c98381df02ad7d oa:refinedBy _:ff9ca3c1336d3e1d5375c6b75819314d .
-_:ff9ca3c1336d3e1d5375c6b75819314d a oa:FragmentSelector ;
+_:f18df0bd991fcc54825c13c4abff2a9c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d06d0b186f76ce7bfce09e4f32b05d4a oa:refinedBy _:cdbab6010c611c6ad44ef5b231edf04c .
+_:cdbab6010c611c6ad44ef5b231edf04c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/effectiveDateTime" .
-_:e7be8b26e5bb6b7775b5c4e9368106a oa:hasSelector _:da24f4853576eb6509c98381df02ad7d .
-_:a62a1c89d4ee8861ff821231dd95696 oa:hasTarget _:e7be8b26e5bb6b7775b5c4e9368106a .
-_:c94c68362aad97f08fbb9523003a47a4 a oa:FragmentSelector ;
+_:f18df0bd991fcc54825c13c4abff2a9c oa:hasSelector _:d06d0b186f76ce7bfce09e4f32b05d4a .
+_:e83f6aa0fef60284ef9e4a81cfb77561 oa:hasTarget _:f18df0bd991fcc54825c13c4abff2a9c .
+_:d6b963e796a2e6e00d0155a1e27e14d6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:b20e485e138305ad0176b2af689a3a9a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c94c68362aad97f08fbb9523003a47a4 oa:refinedBy _:a933461254662451449442ae43b4605a .
-_:a933461254662451449442ae43b4605a a oa:FragmentSelector ;
+_:fafabf8111ab715525e477d3106089ce oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d6b963e796a2e6e00d0155a1e27e14d6 oa:refinedBy _:aafec9ffaa655d29d5ef9d12d4e0da96 .
+_:aafec9ffaa655d29d5ef9d12d4e0da96 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:b20e485e138305ad0176b2af689a3a9a oa:hasSelector _:c94c68362aad97f08fbb9523003a47a4 .
-_:b5dd698ecff81c05bd8c3289e380af4a oa:hasTarget _:b20e485e138305ad0176b2af689a3a9a .
-_:a62a1c89d4ee8861ff821231dd95696 sh:resultSeverity sh:Info .
-_:b5dd698ecff81c05bd8c3289e380af4a sh:resultSeverity sh:Info .
-_:a62a1c89d4ee8861ff821231dd95696 a oa:Annotation ;
+_:fafabf8111ab715525e477d3106089ce oa:hasSelector _:d6b963e796a2e6e00d0155a1e27e14d6 .
+_:fb53252baf73fff841fd59fbf891b847 oa:hasTarget _:fafabf8111ab715525e477d3106089ce .
+_:e83f6aa0fef60284ef9e4a81cfb77561 sh:resultSeverity sh:Info .
+_:fb53252baf73fff841fd59fbf891b847 sh:resultSeverity sh:Info .
+_:e83f6aa0fef60284ef9e4a81cfb77561 a oa:Annotation ;
 	oa:hasBody fhirr4:variantTimeNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016" .
-_:b5dd698ecff81c05bd8c3289e380af4a a oa:Annotation ;
+_:fb53252baf73fff841fd59fbf891b847 a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:a59a04142c5db9760ebfeab93bc563a a oa:FragmentSelector ;
+_:d858bd6ae5a66444b594b3ac91caeb3e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:dde81ce133d407f2016b380b7c63a213 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:a59a04142c5db9760ebfeab93bc563a oa:refinedBy _:ecc8100e6f0c328c5e418c51da77b48e .
-_:ecc8100e6f0c328c5e418c51da77b48e a oa:FragmentSelector ;
+_:edb29e31ddbf24589bcd1468f4269b9b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d858bd6ae5a66444b594b3ac91caeb3e oa:refinedBy _:d533fd9b521f5a75e611f7ea647e42d7 .
+_:d533fd9b521f5a75e611f7ea647e42d7 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:dde81ce133d407f2016b380b7c63a213 oa:hasSelector _:a59a04142c5db9760ebfeab93bc563a .
-_:e36d81ec26c1140b7bf611c48e8506bc oa:hasTarget _:dde81ce133d407f2016b380b7c63a213 ;
+_:edb29e31ddbf24589bcd1468f4269b9b oa:hasSelector _:d858bd6ae5a66444b594b3ac91caeb3e .
+_:f7192e084a93a5f08be60f43ce93d6fc oa:hasTarget _:edb29e31ddbf24589bcd1468f4269b9b ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:b2a77886e9763313477dbc77d7a72ae7 a oa:FragmentSelector ;
+_:ace59f6ba2ab6b75bf23374a7e4caa91 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:a3f18397d49b8683312edd6ebd7fd3da oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b2a77886e9763313477dbc77d7a72ae7 oa:refinedBy _:e2f23758375b238380dbf5b15c51c975 .
-_:e2f23758375b238380dbf5b15c51c975 a oa:FragmentSelector ;
+_:aba4f5440739eb7bd04bc83e58972574 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ace59f6ba2ab6b75bf23374a7e4caa91 oa:refinedBy _:ccdc676cf5789ec175838c1796bb43c4 .
+_:ccdc676cf5789ec175838c1796bb43c4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/21/code/coding/0/code" .
-_:a3f18397d49b8683312edd6ebd7fd3da oa:hasSelector _:b2a77886e9763313477dbc77d7a72ae7 .
-_:abc5cf07e13531b8a08bac032731937d oa:hasTarget _:a3f18397d49b8683312edd6ebd7fd3da .
-_:e4881ae418ffd00de48b584737dc734c a oa:FragmentSelector ;
+_:aba4f5440739eb7bd04bc83e58972574 oa:hasSelector _:ace59f6ba2ab6b75bf23374a7e4caa91 .
+_:a0662d48b6462e4cbe02b04451c9ae69 oa:hasTarget _:aba4f5440739eb7bd04bc83e58972574 .
+_:dd0779443b6a03e12064d07c6ed8f75c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:bce408b4150da9dc82d4a53028c89766 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e4881ae418ffd00de48b584737dc734c oa:refinedBy _:b74a8ab3ec0cd20b6135b66e63af37e0 .
-_:b74a8ab3ec0cd20b6135b66e63af37e0 a oa:FragmentSelector ;
+_:cb00e69e8f82712cf6b54c9b0901ab9c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:dd0779443b6a03e12064d07c6ed8f75c oa:refinedBy _:c61c6323cf56c5f52a81c1eb8bfa23f9 .
+_:c61c6323cf56c5f52a81c1eb8bfa23f9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/20/code/coding/0/code" .
-_:bce408b4150da9dc82d4a53028c89766 oa:hasSelector _:e4881ae418ffd00de48b584737dc734c .
-_:c0335c28417620917957c63dd1db30a1 oa:hasTarget _:bce408b4150da9dc82d4a53028c89766 .
-_:d79d801359514e7cdba85bdc42ffdfc6 a oa:FragmentSelector ;
+_:cb00e69e8f82712cf6b54c9b0901ab9c oa:hasSelector _:dd0779443b6a03e12064d07c6ed8f75c .
+_:b63f6e83ea027fab0bb8e215fe620a2f oa:hasTarget _:cb00e69e8f82712cf6b54c9b0901ab9c .
+_:cdea15925caff4dea710eb2269f847e9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:ea91cd91ce2b199fb783c42c68da0a4a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d79d801359514e7cdba85bdc42ffdfc6 oa:refinedBy _:f5a901e7c549b4c32cef49808578d292 .
-_:f5a901e7c549b4c32cef49808578d292 a oa:FragmentSelector ;
+_:d51495a9d3883c5e3a45251869adf651 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:cdea15925caff4dea710eb2269f847e9 oa:refinedBy _:facdfcabca8cef252b9857046d2cc0d8 .
+_:facdfcabca8cef252b9857046d2cc0d8 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/19/code/coding/0/code" .
-_:ea91cd91ce2b199fb783c42c68da0a4a oa:hasSelector _:d79d801359514e7cdba85bdc42ffdfc6 .
-_:a9020731cef06f0d84b5965f35b723b0 oa:hasTarget _:ea91cd91ce2b199fb783c42c68da0a4a .
-_:f68c221f9e2c9aa5f877a5739c63bde7 a oa:FragmentSelector ;
+_:d51495a9d3883c5e3a45251869adf651 oa:hasSelector _:cdea15925caff4dea710eb2269f847e9 .
+_:da4c97ee72e57c547e2837e0b55d22bc oa:hasTarget _:d51495a9d3883c5e3a45251869adf651 .
+_:d67bd22616c531b97162a4b0f7bc3448 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:aafc9fc6ef6fb5703fc6f26479f403e7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f68c221f9e2c9aa5f877a5739c63bde7 oa:refinedBy _:fcf22f4a77b87b9cc10e04e74c326907 .
-_:fcf22f4a77b87b9cc10e04e74c326907 a oa:FragmentSelector ;
+_:d207a4a7d3c4659484869e56e6ca2603 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d67bd22616c531b97162a4b0f7bc3448 oa:refinedBy _:aa25adae6ff9e5cf5d6365f02fa9d24f .
+_:aa25adae6ff9e5cf5d6365f02fa9d24f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/18/code/coding/0/code" .
-_:aafc9fc6ef6fb5703fc6f26479f403e7 oa:hasSelector _:f68c221f9e2c9aa5f877a5739c63bde7 .
-_:be259e1c37bff553f02063846695b327 oa:hasTarget _:aafc9fc6ef6fb5703fc6f26479f403e7 .
-_:def19aeecccafb630dce2ef2767a7cef a oa:FragmentSelector ;
+_:d207a4a7d3c4659484869e56e6ca2603 oa:hasSelector _:d67bd22616c531b97162a4b0f7bc3448 .
+_:b758e0c87fe219e47fe61f90e5bee6 oa:hasTarget _:d207a4a7d3c4659484869e56e6ca2603 .
+_:c784aec0b325c3bb4426280be6961386 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:a086483c4b499f9da7a298e0fa58dfff oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:def19aeecccafb630dce2ef2767a7cef oa:refinedBy _:cb5ded2389533f884b64a26dc0f840d0 .
-_:cb5ded2389533f884b64a26dc0f840d0 a oa:FragmentSelector ;
+_:b8d9f6bbb8fca017a6f07cf3c6cb814 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c784aec0b325c3bb4426280be6961386 oa:refinedBy _:db87dfb8d65264608ae46ccd980ae2bd .
+_:db87dfb8d65264608ae46ccd980ae2bd a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/17/code/coding/0/code" .
-_:a086483c4b499f9da7a298e0fa58dfff oa:hasSelector _:def19aeecccafb630dce2ef2767a7cef .
-_:facaaca556d72879a8adecfaa22b06e5 oa:hasTarget _:a086483c4b499f9da7a298e0fa58dfff .
-_:d68a8faf2fa9ecf9a956e5d9ddf36d7a a oa:FragmentSelector ;
+_:b8d9f6bbb8fca017a6f07cf3c6cb814 oa:hasSelector _:c784aec0b325c3bb4426280be6961386 .
+_:cdc808719a81fec71187286c503040bd oa:hasTarget _:b8d9f6bbb8fca017a6f07cf3c6cb814 .
+_:e4c8ce1e1ef739edfdbb0c9fbe304e2f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:e9a85a25ff7b0dc0315273bc4a795cd4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d68a8faf2fa9ecf9a956e5d9ddf36d7a oa:refinedBy _:dfa870c823779cdd1731f6441b497f8d .
-_:dfa870c823779cdd1731f6441b497f8d a oa:FragmentSelector ;
+_:a939fef17c9b8c4660f11a7f9a204b72 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e4c8ce1e1ef739edfdbb0c9fbe304e2f oa:refinedBy _:d49fd51a8e9ee2cf42dfebb296a62048 .
+_:d49fd51a8e9ee2cf42dfebb296a62048 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/16/code/coding/0/code" .
-_:e9a85a25ff7b0dc0315273bc4a795cd4 oa:hasSelector _:d68a8faf2fa9ecf9a956e5d9ddf36d7a .
-_:d2f4dcc48b4f35063cd3e2a29c6bb323 oa:hasTarget _:e9a85a25ff7b0dc0315273bc4a795cd4 .
-_:dafe6be2dd55771553aca382fc6a7bdc a oa:FragmentSelector ;
+_:a939fef17c9b8c4660f11a7f9a204b72 oa:hasSelector _:e4c8ce1e1ef739edfdbb0c9fbe304e2f .
+_:db9dc635aaf5bd742c5776a2cc0d110d oa:hasTarget _:a939fef17c9b8c4660f11a7f9a204b72 .
+_:cc7e876faa479132801341533bf1c4d8 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:a0115772f420b2a2995171158e388f26 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:dafe6be2dd55771553aca382fc6a7bdc oa:refinedBy _:b8ba54921741d3851746b493d011ccdb .
-_:b8ba54921741d3851746b493d011ccdb a oa:FragmentSelector ;
+_:a8d4195eea04dd1f2f5f1eb48070e42e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:cc7e876faa479132801341533bf1c4d8 oa:refinedBy _:f369a74fdbcb5b96ac8ddcb2e9bf3100 .
+_:f369a74fdbcb5b96ac8ddcb2e9bf3100 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/15/code/coding/0/code" .
-_:a0115772f420b2a2995171158e388f26 oa:hasSelector _:dafe6be2dd55771553aca382fc6a7bdc .
-_:ed993c4d9fe9c577ed3a1c980ba3711b oa:hasTarget _:a0115772f420b2a2995171158e388f26 .
-_:ca0170cdeb08a255c8dd78ef5dde932b a oa:FragmentSelector ;
+_:a8d4195eea04dd1f2f5f1eb48070e42e oa:hasSelector _:cc7e876faa479132801341533bf1c4d8 .
+_:d471754110ad878501d5ef6a6372ae2c oa:hasTarget _:a8d4195eea04dd1f2f5f1eb48070e42e .
+_:fa6301b1c46eeca498c469db9068c2e5 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:cfa3186a94625ae0fc0d754a8ea49cf9 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ca0170cdeb08a255c8dd78ef5dde932b oa:refinedBy _:d1cd9f30245fb16ee47e88dca1b1d942 .
-_:d1cd9f30245fb16ee47e88dca1b1d942 a oa:FragmentSelector ;
+_:c1d0b258265c8db4ed32de0b05958fb0 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fa6301b1c46eeca498c469db9068c2e5 oa:refinedBy _:b51628d3f334d8ef3ccd4773f16a4883 .
+_:b51628d3f334d8ef3ccd4773f16a4883 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/14/code/coding/0/code" .
-_:cfa3186a94625ae0fc0d754a8ea49cf9 oa:hasSelector _:ca0170cdeb08a255c8dd78ef5dde932b .
-_:eae076c739693b9d1186ca48df1d6768 oa:hasTarget _:cfa3186a94625ae0fc0d754a8ea49cf9 .
-_:cd69aec78d32d9ece21e4f9b550c1ed4 a oa:FragmentSelector ;
+_:c1d0b258265c8db4ed32de0b05958fb0 oa:hasSelector _:fa6301b1c46eeca498c469db9068c2e5 .
+_:b20c7d665b3f490c8f9fb06decdd857a oa:hasTarget _:c1d0b258265c8db4ed32de0b05958fb0 .
+_:b8ce53e1b0507f309f6417fbd1cad32b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:ef993836d5b9a7372b3c6e5071c7d60c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:cd69aec78d32d9ece21e4f9b550c1ed4 oa:refinedBy _:aa67e8551754544a6f6b876bec59c279 .
-_:aa67e8551754544a6f6b876bec59c279 a oa:FragmentSelector ;
+_:da75cb0378efc3cbbd0c9c37cb019f3 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b8ce53e1b0507f309f6417fbd1cad32b oa:refinedBy _:be10f775e8359d82e89e19e2bf882acd .
+_:be10f775e8359d82e89e19e2bf882acd a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/14/valueCodeableConcept/coding/0/code" .
-_:ef993836d5b9a7372b3c6e5071c7d60c oa:hasSelector _:cd69aec78d32d9ece21e4f9b550c1ed4 .
-_:beebbb53bf24cd5e9ebbc0a1b88b8030 oa:hasTarget _:ef993836d5b9a7372b3c6e5071c7d60c .
-_:e8344478d6205690e8ffcf2c0ea53f3f a oa:FragmentSelector ;
+_:da75cb0378efc3cbbd0c9c37cb019f3 oa:hasSelector _:b8ce53e1b0507f309f6417fbd1cad32b .
+_:ce976a5153874b4e5bf7dbf37ae0207e oa:hasTarget _:da75cb0378efc3cbbd0c9c37cb019f3 .
+_:a718291957629c40e9921a5a19c64595 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:bcd0e94a1d745726094fab4440d7ae28 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e8344478d6205690e8ffcf2c0ea53f3f oa:refinedBy _:db4b736134d8ae82e402d51f8d29717e .
-_:db4b736134d8ae82e402d51f8d29717e a oa:FragmentSelector ;
+_:fbb0cfc40c50806c1728ade02c9152ee oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a718291957629c40e9921a5a19c64595 oa:refinedBy _:f5efcacb5080437e3ad84a8ded92bd08 .
+_:f5efcacb5080437e3ad84a8ded92bd08 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/14/valueCodeableConcept/coding/0/display" .
-_:bcd0e94a1d745726094fab4440d7ae28 oa:hasSelector _:e8344478d6205690e8ffcf2c0ea53f3f .
-_:b6a4e475914169f2391ee8276a91b38f oa:hasTarget _:bcd0e94a1d745726094fab4440d7ae28 .
-_:d0713ddfd63f6e0ba5a881ed2d8f790c a oa:FragmentSelector ;
+_:fbb0cfc40c50806c1728ade02c9152ee oa:hasSelector _:a718291957629c40e9921a5a19c64595 .
+_:beafb8bdd695751c5a9f0830c9bcbb82 oa:hasTarget _:fbb0cfc40c50806c1728ade02c9152ee .
+_:b6242fa536b97579d8807912a69f1334 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:c4af3f42cc0f8c4bc3c1962539633f5c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d0713ddfd63f6e0ba5a881ed2d8f790c oa:refinedBy _:f027178d0b7a3e08c8b79f5f40a27ee8 .
-_:f027178d0b7a3e08c8b79f5f40a27ee8 a oa:FragmentSelector ;
+_:d28b4b9e38dc22d638ded37b1bf99b55 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b6242fa536b97579d8807912a69f1334 oa:refinedBy _:f2f08b585fadeabeda8a1db583a1228e .
+_:f2f08b585fadeabeda8a1db583a1228e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/13/code/coding/0/code" .
-_:c4af3f42cc0f8c4bc3c1962539633f5c oa:hasSelector _:d0713ddfd63f6e0ba5a881ed2d8f790c .
-_:f527287e3d4940f52c2a800248cd2fd0 oa:hasTarget _:c4af3f42cc0f8c4bc3c1962539633f5c .
-_:d07f3e075025de993e2ba4edceda14da a oa:FragmentSelector ;
+_:d28b4b9e38dc22d638ded37b1bf99b55 oa:hasSelector _:b6242fa536b97579d8807912a69f1334 .
+_:debf70210495c64215587e26ab95bda2 oa:hasTarget _:d28b4b9e38dc22d638ded37b1bf99b55 .
+_:ff98bb8a5d3414daa0a713e3afb4bd8e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:b006fc60faa9c38867328b45baa5265d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d07f3e075025de993e2ba4edceda14da oa:refinedBy _:a07e40376f81213b20f9ade580198c68 .
-_:a07e40376f81213b20f9ade580198c68 a oa:FragmentSelector ;
+_:d3f31ce61d8822d43a6098bda225081d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ff98bb8a5d3414daa0a713e3afb4bd8e oa:refinedBy _:cae717bf6e8444dd0653bd26620b50b3 .
+_:cae717bf6e8444dd0653bd26620b50b3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/13/valueCodeableConcept/coding/0/code" .
-_:b006fc60faa9c38867328b45baa5265d oa:hasSelector _:d07f3e075025de993e2ba4edceda14da .
-_:a32210206e07bca59227078321448096 oa:hasTarget _:b006fc60faa9c38867328b45baa5265d .
-_:a7ff1be36c687d8e8c56add963b0ec1 a oa:FragmentSelector ;
+_:d3f31ce61d8822d43a6098bda225081d oa:hasSelector _:ff98bb8a5d3414daa0a713e3afb4bd8e .
+_:d59fc378e015595facca5e9a57d550c2 oa:hasTarget _:d3f31ce61d8822d43a6098bda225081d .
+_:a348f0d9723c17730db72fdcee5fc6fe a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:f68409ba169a9e74da26cccb39f3522 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:a7ff1be36c687d8e8c56add963b0ec1 oa:refinedBy _:a8f209b7dbcbc7457545e8344f6134cc .
-_:a8f209b7dbcbc7457545e8344f6134cc a oa:FragmentSelector ;
+_:a2b908ad9f6758ffda3dd1e2ac2a33bb oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a348f0d9723c17730db72fdcee5fc6fe oa:refinedBy _:ea930cd632f34b2cc312ff0803084e4 .
+_:ea930cd632f34b2cc312ff0803084e4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/13/valueCodeableConcept/coding/0/display" .
-_:f68409ba169a9e74da26cccb39f3522 oa:hasSelector _:a7ff1be36c687d8e8c56add963b0ec1 .
-_:e7917c799f5db8f41f025cec6b04ecec oa:hasTarget _:f68409ba169a9e74da26cccb39f3522 .
-_:d6af4ad57ac1e9ca5ad9631a376e5ee4 a oa:FragmentSelector ;
+_:a2b908ad9f6758ffda3dd1e2ac2a33bb oa:hasSelector _:a348f0d9723c17730db72fdcee5fc6fe .
+_:ee08655af0d31bf61fc84889faaa9987 oa:hasTarget _:a2b908ad9f6758ffda3dd1e2ac2a33bb .
+_:e83c9b7a815cf65975541227f16bc0ba a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:e8f2a5da076b22b425b6a25225cb7ab6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d6af4ad57ac1e9ca5ad9631a376e5ee4 oa:refinedBy _:ed1e222c0707db2108ac769ec125fb39 .
-_:ed1e222c0707db2108ac769ec125fb39 a oa:FragmentSelector ;
+_:fda25387e9505fe885ff677d569b4d36 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e83c9b7a815cf65975541227f16bc0ba oa:refinedBy _:c77e4b900e451f18242ab88ee965ef67 .
+_:c77e4b900e451f18242ab88ee965ef67 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/12/valueCodeableConcept/text" .
-_:e8f2a5da076b22b425b6a25225cb7ab6 oa:hasSelector _:d6af4ad57ac1e9ca5ad9631a376e5ee4 .
-_:f7898f1b3931d6a1fc742642d80f7874 oa:hasTarget _:e8f2a5da076b22b425b6a25225cb7ab6 .
-_:ef17b8d1c3d4e7b892b8123398d20eac a oa:FragmentSelector ;
+_:fda25387e9505fe885ff677d569b4d36 oa:hasSelector _:e83c9b7a815cf65975541227f16bc0ba .
+_:ae74d4d514185dec50258fab86738a4b oa:hasTarget _:fda25387e9505fe885ff677d569b4d36 .
+_:deda2eb9a2a0bf91b4ed9a471a0511f8 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:fa4ca1f83646f7cdf029deaafdedb17f oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ef17b8d1c3d4e7b892b8123398d20eac oa:refinedBy _:e2e67cb6233e4bb32fec6be6aea409ea .
-_:e2e67cb6233e4bb32fec6be6aea409ea a oa:FragmentSelector ;
+_:b344808b33a50039bb940fe48af38d8b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:deda2eb9a2a0bf91b4ed9a471a0511f8 oa:refinedBy _:e32dceb5c09779a0ef3bd66e645b83ea .
+_:e32dceb5c09779a0ef3bd66e645b83ea a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/12/code/coding/0/code" .
-_:fa4ca1f83646f7cdf029deaafdedb17f oa:hasSelector _:ef17b8d1c3d4e7b892b8123398d20eac .
-_:fc94991ba71ee3d430605bba0358ef3 oa:hasTarget _:fa4ca1f83646f7cdf029deaafdedb17f .
-_:abe3202ef5cf625427d1f9e4bcbecbc8 a oa:FragmentSelector ;
+_:b344808b33a50039bb940fe48af38d8b oa:hasSelector _:deda2eb9a2a0bf91b4ed9a471a0511f8 .
+_:c11784054aa7b8889f18a92e124f39a0 oa:hasTarget _:b344808b33a50039bb940fe48af38d8b .
+_:ce071f5938f7b78b39abe6ca55e5c3d2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:e9691bcc0ebeeb4f0cfc4835bca42d73 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:abe3202ef5cf625427d1f9e4bcbecbc8 oa:refinedBy _:c89b82f307dd60309e57836e808d7566 .
-_:c89b82f307dd60309e57836e808d7566 a oa:FragmentSelector ;
+_:cddc071d149467d2bcf4fd9e1033447c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ce071f5938f7b78b39abe6ca55e5c3d2 oa:refinedBy _:f01079b44b6f0c138deee3461b131bee .
+_:f01079b44b6f0c138deee3461b131bee a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/11/code/coding/0/code" .
-_:e9691bcc0ebeeb4f0cfc4835bca42d73 oa:hasSelector _:abe3202ef5cf625427d1f9e4bcbecbc8 .
-_:fd74cfd4ea87b1418cdc794967b7b731 oa:hasTarget _:e9691bcc0ebeeb4f0cfc4835bca42d73 .
-_:dbe7d0ed37692685bbf735025b27844 a oa:FragmentSelector ;
+_:cddc071d149467d2bcf4fd9e1033447c oa:hasSelector _:ce071f5938f7b78b39abe6ca55e5c3d2 .
+_:b3e7fc715fae3891c0eff51e1fbf7183 oa:hasTarget _:cddc071d149467d2bcf4fd9e1033447c .
+_:cffda989c9d4c315dd6b889c3e1e0f67 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:a43b476f702a26cf5edae289a04ecb0a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:dbe7d0ed37692685bbf735025b27844 oa:refinedBy _:f8668317d89a04eebed1d4a9ec4f0dc8 .
-_:f8668317d89a04eebed1d4a9ec4f0dc8 a oa:FragmentSelector ;
+_:f268f86af897337d53d73b9251d0563f oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:cffda989c9d4c315dd6b889c3e1e0f67 oa:refinedBy _:cea285d7c78d14705a63c6249d33a96c .
+_:cea285d7c78d14705a63c6249d33a96c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/10/code/coding/0/code" .
-_:a43b476f702a26cf5edae289a04ecb0a oa:hasSelector _:dbe7d0ed37692685bbf735025b27844 .
-_:fafd9b13dd1cc5953b3e9b437c8d271d oa:hasTarget _:a43b476f702a26cf5edae289a04ecb0a .
-_:da2bfa1fd1b4e83d3c3a596c53c41788 a oa:FragmentSelector ;
+_:f268f86af897337d53d73b9251d0563f oa:hasSelector _:cffda989c9d4c315dd6b889c3e1e0f67 .
+_:e8a98933c4f03f54f58dd4e1a2f86c97 oa:hasTarget _:f268f86af897337d53d73b9251d0563f .
+_:a1e5bf6d35f3898374b1b8497fd700f4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:a4f5e3a248d4ff03476fa988613e9aa2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:da2bfa1fd1b4e83d3c3a596c53c41788 oa:refinedBy _:d8e0ab353f9d3382844811b71ae00c36 .
-_:d8e0ab353f9d3382844811b71ae00c36 a oa:FragmentSelector ;
+_:f71321b0866c46a1c9289659a23405cf oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a1e5bf6d35f3898374b1b8497fd700f4 oa:refinedBy _:fadc3c779dff7175c26255d2cbefc3fa .
+_:fadc3c779dff7175c26255d2cbefc3fa a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/9/code/coding/0/code" .
-_:a4f5e3a248d4ff03476fa988613e9aa2 oa:hasSelector _:da2bfa1fd1b4e83d3c3a596c53c41788 .
-_:db2fc435ce7338862c2512faa67885b9 oa:hasTarget _:a4f5e3a248d4ff03476fa988613e9aa2 .
-_:daa50aa9cc12c841529bb1f4869ced09 a oa:FragmentSelector ;
+_:f71321b0866c46a1c9289659a23405cf oa:hasSelector _:a1e5bf6d35f3898374b1b8497fd700f4 .
+_:a4ea07d3f14f0d523b5327adbe6f9821 oa:hasTarget _:f71321b0866c46a1c9289659a23405cf .
+_:fcb5133edd4c6fb1430430a39f746592 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:ab9912a6bd5fcdd9f1775abbca3f29c7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:daa50aa9cc12c841529bb1f4869ced09 oa:refinedBy _:f8ff17e959909458cc4eb35d3dd97ec8 .
-_:f8ff17e959909458cc4eb35d3dd97ec8 a oa:FragmentSelector ;
+_:c91beb9d222110f6f5827dfd7c8ce38 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fcb5133edd4c6fb1430430a39f746592 oa:refinedBy _:fa290cb640ebd608719e42a576d0a3f3 .
+_:fa290cb640ebd608719e42a576d0a3f3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/8/code/coding/0/code" .
-_:ab9912a6bd5fcdd9f1775abbca3f29c7 oa:hasSelector _:daa50aa9cc12c841529bb1f4869ced09 .
-_:afc7aa67fd60b54d20210ad30cc083d6 oa:hasTarget _:ab9912a6bd5fcdd9f1775abbca3f29c7 .
-_:d052ddca7a39bbd299e2587e68c525e a oa:FragmentSelector ;
+_:c91beb9d222110f6f5827dfd7c8ce38 oa:hasSelector _:fcb5133edd4c6fb1430430a39f746592 .
+_:ac468a0e76e95c4904401da181e24396 oa:hasTarget _:c91beb9d222110f6f5827dfd7c8ce38 .
+_:a096c97b59da84e66fd068d873388928 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:c0026da82f113afe579b46d53b1bfbf4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d052ddca7a39bbd299e2587e68c525e oa:refinedBy _:aaa4a1abcb70200ceae8720a4d24f042 .
-_:aaa4a1abcb70200ceae8720a4d24f042 a oa:FragmentSelector ;
+_:f468cb82c79827a56af41e6c1d3223a9 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a096c97b59da84e66fd068d873388928 oa:refinedBy _:a7d150d24eb6838d8d66c25aba933626 .
+_:a7d150d24eb6838d8d66c25aba933626 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/8/valueCodeableConcept/coding/0/code" .
-_:c0026da82f113afe579b46d53b1bfbf4 oa:hasSelector _:d052ddca7a39bbd299e2587e68c525e .
-_:d03f4b2e37abac5290d269ce5ed4f71f oa:hasTarget _:c0026da82f113afe579b46d53b1bfbf4 .
-_:cd87eb55d0ade29d4f0f96c71e2fd9b a oa:FragmentSelector ;
+_:f468cb82c79827a56af41e6c1d3223a9 oa:hasSelector _:a096c97b59da84e66fd068d873388928 .
+_:fdd9f9120027172f444ba576a9141887 oa:hasTarget _:f468cb82c79827a56af41e6c1d3223a9 .
+_:c8ba8eecb126d0b032775780c05733e4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:ab68f8f11f5f3e82bd553ed25f584e1d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:cd87eb55d0ade29d4f0f96c71e2fd9b oa:refinedBy _:eea886d474edf4332b7068fe9d041638 .
-_:eea886d474edf4332b7068fe9d041638 a oa:FragmentSelector ;
+_:d3bafd65e9a28a04cfc879457e11c8e3 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c8ba8eecb126d0b032775780c05733e4 oa:refinedBy _:fd8a445d5b59ec4d0d652ee40b3a9b3 .
+_:fd8a445d5b59ec4d0d652ee40b3a9b3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/8/valueCodeableConcept/coding/0/display" .
-_:ab68f8f11f5f3e82bd553ed25f584e1d oa:hasSelector _:cd87eb55d0ade29d4f0f96c71e2fd9b .
-_:fbf0bee89315a060e8a66e3d7154aa24 oa:hasTarget _:ab68f8f11f5f3e82bd553ed25f584e1d .
-_:ae3d7bccea0351c512e6e3b3062f121f a oa:FragmentSelector ;
+_:d3bafd65e9a28a04cfc879457e11c8e3 oa:hasSelector _:c8ba8eecb126d0b032775780c05733e4 .
+_:c2115dabba9c7b638d1d2b66075023dc oa:hasTarget _:d3bafd65e9a28a04cfc879457e11c8e3 .
+_:b5e26eb134121b80da94442aa032a187 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:c49dd623bae734cd6dd57f1ec8d2b788 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ae3d7bccea0351c512e6e3b3062f121f oa:refinedBy _:e047bd529378cb11b59ff948fa905aa7 .
-_:e047bd529378cb11b59ff948fa905aa7 a oa:FragmentSelector ;
+_:ed44d6d709bbd5db8fe6c6c9622728e7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b5e26eb134121b80da94442aa032a187 oa:refinedBy _:feb639d88db79481d9b7c8a95e42a899 .
+_:feb639d88db79481d9b7c8a95e42a899 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/7/code/coding/0/code" .
-_:c49dd623bae734cd6dd57f1ec8d2b788 oa:hasSelector _:ae3d7bccea0351c512e6e3b3062f121f .
-_:bd9a4b8871cee6695f728e1adba8ed1d oa:hasTarget _:c49dd623bae734cd6dd57f1ec8d2b788 .
-_:b86b7d52cbe5ee523ad9d853f0709fe9 a oa:FragmentSelector ;
+_:ed44d6d709bbd5db8fe6c6c9622728e7 oa:hasSelector _:b5e26eb134121b80da94442aa032a187 .
+_:f63418603152df796ac963a530bd6dff oa:hasTarget _:ed44d6d709bbd5db8fe6c6c9622728e7 .
+_:df0c55f5f56759dd5716d323156d2ab2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:dd028b98a4bcd8ad62a44508eaae6593 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b86b7d52cbe5ee523ad9d853f0709fe9 oa:refinedBy _:dd81adf53046122634ef8d393c801aa6 .
-_:dd81adf53046122634ef8d393c801aa6 a oa:FragmentSelector ;
+_:d7875cb062ae3f6a417b619e0ace9838 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:df0c55f5f56759dd5716d323156d2ab2 oa:refinedBy _:e1764f74b592cfee0ea9d108f6b415b2 .
+_:e1764f74b592cfee0ea9d108f6b415b2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/7/valueCodeableConcept/coding/0/code" .
-_:dd028b98a4bcd8ad62a44508eaae6593 oa:hasSelector _:b86b7d52cbe5ee523ad9d853f0709fe9 .
-_:f03efe3b6e44aea33c88acffa14c4f85 oa:hasTarget _:dd028b98a4bcd8ad62a44508eaae6593 .
-_:d5b13ca36a31c4a9cc8ddc013888a02d a oa:FragmentSelector ;
+_:d7875cb062ae3f6a417b619e0ace9838 oa:hasSelector _:df0c55f5f56759dd5716d323156d2ab2 .
+_:ea8afb662dbdfa48247c9ad498ead320 oa:hasTarget _:d7875cb062ae3f6a417b619e0ace9838 .
+_:cfc618056ad04a5e6195a2f8043e9bae a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:d3936d2d21b3155b9606546aa097b20b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d5b13ca36a31c4a9cc8ddc013888a02d oa:refinedBy _:be5ff970153d22e66928e3925bc680de .
-_:be5ff970153d22e66928e3925bc680de a oa:FragmentSelector ;
+_:d6e6b0ef530fe526d3d0fedcc94ede20 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:cfc618056ad04a5e6195a2f8043e9bae oa:refinedBy _:a72c93a09167fc1081c5ac20c80dc5e8 .
+_:a72c93a09167fc1081c5ac20c80dc5e8 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/4/code/coding/0/code" .
-_:d3936d2d21b3155b9606546aa097b20b oa:hasSelector _:d5b13ca36a31c4a9cc8ddc013888a02d .
-_:ad4287b4d5007dd0bbc0017db45b65fd oa:hasTarget _:d3936d2d21b3155b9606546aa097b20b .
-_:bf33169c443312d44e82520c9fd19585 a oa:FragmentSelector ;
+_:d6e6b0ef530fe526d3d0fedcc94ede20 oa:hasSelector _:cfc618056ad04a5e6195a2f8043e9bae .
+_:d03eb8df2a6a18292ed670428d92be4d oa:hasTarget _:d6e6b0ef530fe526d3d0fedcc94ede20 .
+_:f2ca88956cf50a0a9e7110a007709e8f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:bd90b27feba77263886401f72392ba6b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bf33169c443312d44e82520c9fd19585 oa:refinedBy _:a333d5857fead9f7ae8613388e8a44f1 .
-_:a333d5857fead9f7ae8613388e8a44f1 a oa:FragmentSelector ;
+_:f03d3ba12eed8a3bd54ced5a7a615a29 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f2ca88956cf50a0a9e7110a007709e8f oa:refinedBy _:f5905e85ceb72a2188029335013cc92e .
+_:f5905e85ceb72a2188029335013cc92e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/4/valueCodeableConcept/coding/0/code" .
-_:bd90b27feba77263886401f72392ba6b oa:hasSelector _:bf33169c443312d44e82520c9fd19585 .
-_:ff939953d4f379856a6802c52404bf25 oa:hasTarget _:bd90b27feba77263886401f72392ba6b .
-_:e55487fffbd7bfe1b0b89ce83d5bd9fe a oa:FragmentSelector ;
+_:f03d3ba12eed8a3bd54ced5a7a615a29 oa:hasSelector _:f2ca88956cf50a0a9e7110a007709e8f .
+_:da583efe71f105e41cf7b183d21b5087 oa:hasTarget _:f03d3ba12eed8a3bd54ced5a7a615a29 .
+_:f944b982e847d05914168d3afcd8448d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:b2ce390b923867e05e4415a2e838385d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e55487fffbd7bfe1b0b89ce83d5bd9fe oa:refinedBy _:faba25d801bb0749f67f87cdf7fd49fa .
-_:faba25d801bb0749f67f87cdf7fd49fa a oa:FragmentSelector ;
+_:f5c94600b29856f3d3a26635ce496df oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f944b982e847d05914168d3afcd8448d oa:refinedBy _:b955aa7532e39f9fe8f51076c8d6e425 .
+_:b955aa7532e39f9fe8f51076c8d6e425 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/3/code/coding/0/code" .
-_:b2ce390b923867e05e4415a2e838385d oa:hasSelector _:e55487fffbd7bfe1b0b89ce83d5bd9fe .
-_:fb2c8ca993b12ad60bdc4024062a3d2b oa:hasTarget _:b2ce390b923867e05e4415a2e838385d .
-_:f37bd3d9931dac6881b71ae9e45b574f a oa:FragmentSelector ;
+_:f5c94600b29856f3d3a26635ce496df oa:hasSelector _:f944b982e847d05914168d3afcd8448d .
+_:c87b2ab109c39c313d474d45afdec36b oa:hasTarget _:f5c94600b29856f3d3a26635ce496df .
+_:df8787070295c06c99b43382facbcd46 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:eb2360731a852717f36b5d6f7007a803 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f37bd3d9931dac6881b71ae9e45b574f oa:refinedBy _:e54e8708b059078589063aa89bbfc940 .
-_:e54e8708b059078589063aa89bbfc940 a oa:FragmentSelector ;
+_:e7ff2bd5685c2c91ead276060e11844a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:df8787070295c06c99b43382facbcd46 oa:refinedBy _:ad9298a5856e6728c4951bebe32342a4 .
+_:ad9298a5856e6728c4951bebe32342a4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/3/valueCodeableConcept/coding/0/code" .
-_:eb2360731a852717f36b5d6f7007a803 oa:hasSelector _:f37bd3d9931dac6881b71ae9e45b574f .
-_:fa2583ab2f82f2b62fc4c8fdd716058e oa:hasTarget _:eb2360731a852717f36b5d6f7007a803 .
-_:d87d41b841e18989087023e1df1f4d92 a oa:FragmentSelector ;
+_:e7ff2bd5685c2c91ead276060e11844a oa:hasSelector _:df8787070295c06c99b43382facbcd46 .
+_:cb6257a0fed6917b0a9a3188f99cc4ec oa:hasTarget _:e7ff2bd5685c2c91ead276060e11844a .
+_:a2ab7c3d6dbf62fda66450b2fdd539d6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:d448512e8f420e4ba97d9f467768f45 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d87d41b841e18989087023e1df1f4d92 oa:refinedBy _:bd5443b63e6c3bd478861fa41261b7b9 .
-_:bd5443b63e6c3bd478861fa41261b7b9 a oa:FragmentSelector ;
+_:f8e474bee68d8493ec445ddb51d290d6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a2ab7c3d6dbf62fda66450b2fdd539d6 oa:refinedBy _:af8e852eef3625c15b25940cfc13dc0c .
+_:af8e852eef3625c15b25940cfc13dc0c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/2/code/coding/0/code" .
-_:d448512e8f420e4ba97d9f467768f45 oa:hasSelector _:d87d41b841e18989087023e1df1f4d92 .
-_:ef381615152f96806ece852bc1435484 oa:hasTarget _:d448512e8f420e4ba97d9f467768f45 .
-_:b63906428e4d5a948866ee26148e7807 a oa:FragmentSelector ;
+_:f8e474bee68d8493ec445ddb51d290d6 oa:hasSelector _:a2ab7c3d6dbf62fda66450b2fdd539d6 .
+_:aa74cc9ced6b3e9f8a02b389025af2dc oa:hasTarget _:f8e474bee68d8493ec445ddb51d290d6 .
+_:aa7c7bc556af8c5767d1344ef980404f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:cf3c349cd9d137b1e9541b88721ff06f oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b63906428e4d5a948866ee26148e7807 oa:refinedBy _:da1317e7baf943dca55d80d70f57ab99 .
-_:da1317e7baf943dca55d80d70f57ab99 a oa:FragmentSelector ;
+_:e8306310881475f12275f9c36a435303 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:aa7c7bc556af8c5767d1344ef980404f oa:refinedBy _:a931f7985ea992647fc51a1aa98ea36f .
+_:a931f7985ea992647fc51a1aa98ea36f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/2/valueCodeableConcept/coding/0/code" .
-_:cf3c349cd9d137b1e9541b88721ff06f oa:hasSelector _:b63906428e4d5a948866ee26148e7807 .
-_:ccc9825f469b7c007229703b7eab3009 oa:hasTarget _:cf3c349cd9d137b1e9541b88721ff06f .
-_:ff2e5d99dbc177c1434c5b6f4ed2c2a7 a oa:FragmentSelector ;
+_:e8306310881475f12275f9c36a435303 oa:hasSelector _:aa7c7bc556af8c5767d1344ef980404f .
+_:f362c4a7a7fe7fc7e1d5e2b9aa1af36c oa:hasTarget _:e8306310881475f12275f9c36a435303 .
+_:a3ffbd372c9a7b0bfdc64291d7bf4f30 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:ce3cdfec9f3d80b66da289014c93f8e2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ff2e5d99dbc177c1434c5b6f4ed2c2a7 oa:refinedBy _:a72f0fcc8e5b955d9ae92ccbc05310ec .
-_:a72f0fcc8e5b955d9ae92ccbc05310ec a oa:FragmentSelector ;
+_:cb73ff3e9041e2ea58a1d71f12162712 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a3ffbd372c9a7b0bfdc64291d7bf4f30 oa:refinedBy _:f238fd71c1cb0bdf2bde5313ea72236a .
+_:f238fd71c1cb0bdf2bde5313ea72236a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:ce3cdfec9f3d80b66da289014c93f8e2 oa:hasSelector _:ff2e5d99dbc177c1434c5b6f4ed2c2a7 .
-_:eea4a3c47aab8cf2a13d6edc61b83396 oa:hasTarget _:ce3cdfec9f3d80b66da289014c93f8e2 .
-_:abc5cf07e13531b8a08bac032731937d sh:resultSeverity sh:Info .
-_:c0335c28417620917957c63dd1db30a1 sh:resultSeverity sh:Info .
-_:a9020731cef06f0d84b5965f35b723b0 sh:resultSeverity sh:Info .
-_:be259e1c37bff553f02063846695b327 sh:resultSeverity sh:Info .
-_:facaaca556d72879a8adecfaa22b06e5 sh:resultSeverity sh:Info .
-_:d2f4dcc48b4f35063cd3e2a29c6bb323 sh:resultSeverity sh:Info .
-_:ed993c4d9fe9c577ed3a1c980ba3711b sh:resultSeverity sh:Info .
-_:eae076c739693b9d1186ca48df1d6768 sh:resultSeverity sh:Info .
-_:beebbb53bf24cd5e9ebbc0a1b88b8030 sh:resultSeverity sh:Info .
-_:b6a4e475914169f2391ee8276a91b38f sh:resultSeverity sh:Info .
-_:f527287e3d4940f52c2a800248cd2fd0 sh:resultSeverity sh:Info .
-_:a32210206e07bca59227078321448096 sh:resultSeverity sh:Info .
-_:e7917c799f5db8f41f025cec6b04ecec sh:resultSeverity sh:Info .
-_:f7898f1b3931d6a1fc742642d80f7874 sh:resultSeverity sh:Info .
-_:fc94991ba71ee3d430605bba0358ef3 sh:resultSeverity sh:Info .
-_:fd74cfd4ea87b1418cdc794967b7b731 sh:resultSeverity sh:Info .
-_:fafd9b13dd1cc5953b3e9b437c8d271d sh:resultSeverity sh:Info .
-_:db2fc435ce7338862c2512faa67885b9 sh:resultSeverity sh:Info .
-_:afc7aa67fd60b54d20210ad30cc083d6 sh:resultSeverity sh:Info .
-_:d03f4b2e37abac5290d269ce5ed4f71f sh:resultSeverity sh:Info .
-_:fbf0bee89315a060e8a66e3d7154aa24 sh:resultSeverity sh:Info .
-_:bd9a4b8871cee6695f728e1adba8ed1d sh:resultSeverity sh:Info .
-_:f03efe3b6e44aea33c88acffa14c4f85 sh:resultSeverity sh:Info .
-_:ad4287b4d5007dd0bbc0017db45b65fd sh:resultSeverity sh:Info .
-_:ff939953d4f379856a6802c52404bf25 sh:resultSeverity sh:Info .
-_:fb2c8ca993b12ad60bdc4024062a3d2b sh:resultSeverity sh:Info .
-_:fa2583ab2f82f2b62fc4c8fdd716058e sh:resultSeverity sh:Info .
-_:ef381615152f96806ece852bc1435484 sh:resultSeverity sh:Info .
-_:ccc9825f469b7c007229703b7eab3009 sh:resultSeverity sh:Info .
-_:eea4a3c47aab8cf2a13d6edc61b83396 sh:resultSeverity sh:Info .
-_:abc5cf07e13531b8a08bac032731937d a oa:Annotation ;
+_:cb73ff3e9041e2ea58a1d71f12162712 oa:hasSelector _:a3ffbd372c9a7b0bfdc64291d7bf4f30 .
+_:a10411576e64bb8b72fc777ef6a6104c oa:hasTarget _:cb73ff3e9041e2ea58a1d71f12162712 .
+_:a0662d48b6462e4cbe02b04451c9ae69 sh:resultSeverity sh:Info .
+_:b63f6e83ea027fab0bb8e215fe620a2f sh:resultSeverity sh:Info .
+_:da4c97ee72e57c547e2837e0b55d22bc sh:resultSeverity sh:Info .
+_:b758e0c87fe219e47fe61f90e5bee6 sh:resultSeverity sh:Info .
+_:cdc808719a81fec71187286c503040bd sh:resultSeverity sh:Info .
+_:db9dc635aaf5bd742c5776a2cc0d110d sh:resultSeverity sh:Info .
+_:d471754110ad878501d5ef6a6372ae2c sh:resultSeverity sh:Info .
+_:b20c7d665b3f490c8f9fb06decdd857a sh:resultSeverity sh:Info .
+_:ce976a5153874b4e5bf7dbf37ae0207e sh:resultSeverity sh:Info .
+_:beafb8bdd695751c5a9f0830c9bcbb82 sh:resultSeverity sh:Info .
+_:debf70210495c64215587e26ab95bda2 sh:resultSeverity sh:Info .
+_:d59fc378e015595facca5e9a57d550c2 sh:resultSeverity sh:Info .
+_:ee08655af0d31bf61fc84889faaa9987 sh:resultSeverity sh:Info .
+_:ae74d4d514185dec50258fab86738a4b sh:resultSeverity sh:Info .
+_:c11784054aa7b8889f18a92e124f39a0 sh:resultSeverity sh:Info .
+_:b3e7fc715fae3891c0eff51e1fbf7183 sh:resultSeverity sh:Info .
+_:e8a98933c4f03f54f58dd4e1a2f86c97 sh:resultSeverity sh:Info .
+_:a4ea07d3f14f0d523b5327adbe6f9821 sh:resultSeverity sh:Info .
+_:ac468a0e76e95c4904401da181e24396 sh:resultSeverity sh:Info .
+_:fdd9f9120027172f444ba576a9141887 sh:resultSeverity sh:Info .
+_:c2115dabba9c7b638d1d2b66075023dc sh:resultSeverity sh:Info .
+_:f63418603152df796ac963a530bd6dff sh:resultSeverity sh:Info .
+_:ea8afb662dbdfa48247c9ad498ead320 sh:resultSeverity sh:Info .
+_:d03eb8df2a6a18292ed670428d92be4d sh:resultSeverity sh:Info .
+_:da583efe71f105e41cf7b183d21b5087 sh:resultSeverity sh:Info .
+_:c87b2ab109c39c313d474d45afdec36b sh:resultSeverity sh:Info .
+_:cb6257a0fed6917b0a9a3188f99cc4ec sh:resultSeverity sh:Info .
+_:aa74cc9ced6b3e9f8a02b389025af2dc sh:resultSeverity sh:Info .
+_:f362c4a7a7fe7fc7e1d5e2b9aa1af36c sh:resultSeverity sh:Info .
+_:a10411576e64bb8b72fc777ef6a6104c sh:resultSeverity sh:Info .
+_:a0662d48b6462e4cbe02b04451c9ae69 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81302-2" .
-_:c0335c28417620917957c63dd1db30a1 a oa:Annotation ;
+_:b63f6e83ea027fab0bb8e215fe620a2f a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81301-4" .
-_:a9020731cef06f0d84b5965f35b723b0 a oa:Annotation ;
+_:da4c97ee72e57c547e2837e0b55d22bc a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81300-6" .
-_:be259e1c37bff553f02063846695b327 a oa:Annotation ;
+_:b758e0c87fe219e47fe61f90e5bee6 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81299-0" .
-_:facaaca556d72879a8adecfaa22b06e5 a oa:Annotation ;
+_:cdc808719a81fec71187286c503040bd a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "82155-3" .
-_:d2f4dcc48b4f35063cd3e2a29c6bb323 a oa:Annotation ;
+_:db9dc635aaf5bd742c5776a2cc0d110d a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "82121-5" .
-_:ed993c4d9fe9c577ed3a1c980ba3711b a oa:Annotation ;
+_:d471754110ad878501d5ef6a6372ae2c a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81258-6" .
-_:eae076c739693b9d1186ca48df1d6768 a oa:Annotation ;
+_:b20c7d665b3f490c8f9fb06decdd857a a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "53034-5" .
-_:beebbb53bf24cd5e9ebbc0a1b88b8030 a oa:Annotation ;
+_:ce976a5153874b4e5bf7dbf37ae0207e a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA6706-1" .
-_:b6a4e475914169f2391ee8276a91b38f a oa:Annotation ;
+_:beafb8bdd695751c5a9f0830c9bcbb82 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Heterozygous" .
-_:f527287e3d4940f52c2a800248cd2fd0 a oa:Annotation ;
+_:debf70210495c64215587e26ab95bda2 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48002-0" .
-_:a32210206e07bca59227078321448096 a oa:Annotation ;
+_:d59fc378e015595facca5e9a57d550c2 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA6683-2" .
-_:e7917c799f5db8f41f025cec6b04ecec a oa:Annotation ;
+_:ee08655af0d31bf61fc84889faaa9987 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Germline" .
-_:f7898f1b3931d6a1fc742642d80f7874 a oa:Annotation ;
+_:ae74d4d514185dec50258fab86738a4b a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "3q21" .
-_:fc94991ba71ee3d430605bba0358ef3 a oa:Annotation ;
+_:c11784054aa7b8889f18a92e124f39a0 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48001-2" .
-_:fd74cfd4ea87b1418cdc794967b7b731 a oa:Annotation ;
+_:b3e7fc715fae3891c0eff51e1fbf7183 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "69551-0" .
-_:fafd9b13dd1cc5953b3e9b437c8d271d a oa:Annotation ;
+_:e8a98933c4f03f54f58dd4e1a2f86c97 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81254-5" .
-_:db2fc435ce7338862c2512faa67885b9 a oa:Annotation ;
+_:a4ea07d3f14f0d523b5327adbe6f9821 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "69547-8" .
-_:afc7aa67fd60b54d20210ad30cc083d6 a oa:Annotation ;
+_:ac468a0e76e95c4904401da181e24396 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48019-4" .
-_:d03f4b2e37abac5290d269ce5ed4f71f a oa:Annotation ;
+_:fdd9f9120027172f444ba576a9141887 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA6690-7" .
-_:fbf0bee89315a060e8a66e3d7154aa24 a oa:Annotation ;
+_:c2115dabba9c7b638d1d2b66075023dc a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Substitution" .
-_:bd9a4b8871cee6695f728e1adba8ed1d a oa:Annotation ;
+_:f63418603152df796ac963a530bd6dff a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48005-3" .
-_:f03efe3b6e44aea33c88acffa14c4f85 a oa:Annotation ;
+_:ea8afb662dbdfa48247c9ad498ead320 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NP_054768.2:p.Arg417Cys" .
-_:ad4287b4d5007dd0bbc0017db45b65fd a oa:Annotation ;
+_:d03eb8df2a6a18292ed670428d92be4d a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81290-9" .
-_:ff939953d4f379856a6802c52404bf25 a oa:Annotation ;
+_:da583efe71f105e41cf7b183d21b5087 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NC_000003.11:g.128625063C>T" .
-_:fb2c8ca993b12ad60bdc4024062a3d2b a oa:Annotation ;
+_:c87b2ab109c39c313d474d45afdec36b a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48013-7" .
-_:fa2583ab2f82f2b62fc4c8fdd716058e a oa:Annotation ;
+_:cb6257a0fed6917b0a9a3188f99cc4ec a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NG_017064.1" .
-_:ef381615152f96806ece852bc1435484 a oa:Annotation ;
+_:aa74cc9ced6b3e9f8a02b389025af2dc a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "51958-7" .
-_:ccc9825f469b7c007229703b7eab3009 a oa:Annotation ;
+_:f362c4a7a7fe7fc7e1d5e2b9aa1af36c a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NM_014049.4" .
-_:eea4a3c47aab8cf2a13d6edc61b83396 a oa:Annotation ;
+_:a10411576e64bb8b72fc777ef6a6104c a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "HGNC:21497" .
-_:b76e69a5604205e09509a158a7e6e2d5 a oa:FragmentSelector ;
+_:c4fc12a415d9fb03836c5eb4c48dd6d6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:adb332cc8554d59c4318b6bb7befa9a6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b76e69a5604205e09509a158a7e6e2d5 oa:refinedBy _:e8937fb0a81e5c0d371860f56542c30d .
-_:e8937fb0a81e5c0d371860f56542c30d a oa:FragmentSelector ;
+_:dd99e8b24529d96b7cd0a6328aeac89 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c4fc12a415d9fb03836c5eb4c48dd6d6 oa:refinedBy _:c39b01caef8de1dcf3614af06446e65c .
+_:c39b01caef8de1dcf3614af06446e65c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/5/valueCodeableConcept/coding/0/code" .
-_:adb332cc8554d59c4318b6bb7befa9a6 oa:hasSelector _:b76e69a5604205e09509a158a7e6e2d5 .
-_:ee2d5784de60cf6e80a252ed8a44a4d3 oa:hasTarget _:adb332cc8554d59c4318b6bb7befa9a6 ;
-	sh:resultSeverity sh:Info ;
-	a oa:Annotation ;
+_:dd99e8b24529d96b7cd0a6328aeac89 oa:hasSelector _:c4fc12a415d9fb03836c5eb4c48dd6d6 .
+_:f858f84197e6a0e03e243c4ddc15b61f oa:hasTarget _:dd99e8b24529d96b7cd0a6328aeac89 .
+_:ce147db619326b9a20aa9bcd4ba527d2 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/5" .
+_:ceecb8269321556a929478e777cf0baa oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ce147db619326b9a20aa9bcd4ba527d2 oa:refinedBy _:e0eba113823d698e4552b394b0d94e80 .
+_:e0eba113823d698e4552b394b0d94e80 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/resource/performer/0" .
+_:ceecb8269321556a929478e777cf0baa oa:hasSelector _:ce147db619326b9a20aa9bcd4ba527d2 .
+_:c05c4cc537d79e37b63feaca9d96e8cb oa:hasTarget _:ceecb8269321556a929478e777cf0baa .
+_:f858f84197e6a0e03e243c4ddc15b61f sh:resultSeverity sh:Info .
+_:c05c4cc537d79e37b63feaca9d96e8cb sh:resultSeverity sh:Warning .
+_:f858f84197e6a0e03e243c4ddc15b61f a oa:Annotation ;
 	oa:hasBody fhirr4:variantDiscreteVariantCode ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "rs368949613" .
-_:deccc2449a1deaba9584334d7d9490fd a oa:FragmentSelector ;
+_:c05c4cc537d79e37b63feaca9d96e8cb a oa:Annotation ;
+	oa:hasBody fhirr4:performerCarriedOnlyAsOneOrganizationRecord ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "Organization/ExampleLab" .
+_:ac4900d5015481531c2ae9bbc1db150c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/6" .
-_:e78302308fac17dd1573b910c1ab1752 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:deccc2449a1deaba9584334d7d9490fd oa:refinedBy _:eb1ebd92ea3bb57d1a8abcbabd9c2e30 .
-_:eb1ebd92ea3bb57d1a8abcbabd9c2e30 a oa:FragmentSelector ;
+_:c476da84338da1794f231488a871b2e0 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ac4900d5015481531c2ae9bbc1db150c oa:refinedBy _:a3956c2d863c222dcdb81b01cfc3182d .
+_:a3956c2d863c222dcdb81b01cfc3182d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:e78302308fac17dd1573b910c1ab1752 oa:hasSelector _:deccc2449a1deaba9584334d7d9490fd .
-_:b33703a224384177dd559dfb8ad4c5e1 oa:hasTarget _:e78302308fac17dd1573b910c1ab1752 ;
+_:c476da84338da1794f231488a871b2e0 oa:hasSelector _:ac4900d5015481531c2ae9bbc1db150c .
+_:cb0c9871d15e72197423583d523a06c7 oa:hasTarget _:c476da84338da1794f231488a871b2e0 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:a9bbaabb77b5764fd8c01a4a2fe203ca a oa:FragmentSelector ;
+_:ba5aab4571ffeae90ce8fc41c4a0e24f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/6" .
-_:da7b4f27a78ea7e237f3a4c154e7b650 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:a9bbaabb77b5764fd8c01a4a2fe203ca oa:refinedBy _:eb8c0dbb196f2a288a6916eca7230b3e .
-_:eb8c0dbb196f2a288a6916eca7230b3e a oa:FragmentSelector ;
+_:ab6173a4a54496aef45649d3da086813 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ba5aab4571ffeae90ce8fc41c4a0e24f oa:refinedBy _:e3ba4444dfa4357ab85cbe9ab7bbac84 .
+_:e3ba4444dfa4357ab85cbe9ab7bbac84 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:da7b4f27a78ea7e237f3a4c154e7b650 oa:hasSelector _:a9bbaabb77b5764fd8c01a4a2fe203ca .
-_:a4ffc0fa6c59621fc48d32ce4f7032ad oa:hasTarget _:da7b4f27a78ea7e237f3a4c154e7b650 .
-_:d6c85e491668b9537d5102f9ca900df7 a oa:FragmentSelector ;
+_:ab6173a4a54496aef45649d3da086813 oa:hasSelector _:ba5aab4571ffeae90ce8fc41c4a0e24f .
+_:bf6b3467192c0012662c5da864d2c944 oa:hasTarget _:ab6173a4a54496aef45649d3da086813 .
+_:fe992154d5eaef04b8f5a491c1fefbf9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/6" .
-_:b40a2ea863c56f714a1c79bd18ad826d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d6c85e491668b9537d5102f9ca900df7 oa:refinedBy _:d5e5c09d1286a1024704e4e81fa40e86 .
-_:d5e5c09d1286a1024704e4e81fa40e86 a oa:FragmentSelector ;
+_:ff3054ee5055b2aef26edd357dccd946 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fe992154d5eaef04b8f5a491c1fefbf9 oa:refinedBy _:cf647c6345265301ca13543cbe493fb .
+_:cf647c6345265301ca13543cbe493fb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:b40a2ea863c56f714a1c79bd18ad826d oa:hasSelector _:d6c85e491668b9537d5102f9ca900df7 .
-_:f673f99a01477c14453cd817c2c04a7a oa:hasTarget _:b40a2ea863c56f714a1c79bd18ad826d .
-_:bb290f0c6885830b141b18ef2e472620 a oa:FragmentSelector ;
+_:ff3054ee5055b2aef26edd357dccd946 oa:hasSelector _:fe992154d5eaef04b8f5a491c1fefbf9 .
+_:b4c5116411e61edd3d14b4ffd72e9fb6 oa:hasTarget _:ff3054ee5055b2aef26edd357dccd946 .
+_:b140d7d527ff8e6cdab1985969ff208d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/6" .
-_:a60dbe9c8fe63c9a1aab7d793658f62b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bb290f0c6885830b141b18ef2e472620 oa:refinedBy _:d87ad87ca56ed55ac01e85607e2ad063 .
-_:d87ad87ca56ed55ac01e85607e2ad063 a oa:FragmentSelector ;
+_:dca0d96f229bcf75b2733e539134ed2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b140d7d527ff8e6cdab1985969ff208d oa:refinedBy _:af39676c41f4f0c2af77e794ae7c52b1 .
+_:af39676c41f4f0c2af77e794ae7c52b1 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/display" .
-_:a60dbe9c8fe63c9a1aab7d793658f62b oa:hasSelector _:bb290f0c6885830b141b18ef2e472620 .
-_:d5e29aa7366404f45cd392479623fc0e oa:hasTarget _:a60dbe9c8fe63c9a1aab7d793658f62b .
-_:a4ffc0fa6c59621fc48d32ce4f7032ad sh:resultSeverity sh:Info .
-_:f673f99a01477c14453cd817c2c04a7a sh:resultSeverity sh:Info .
-_:d5e29aa7366404f45cd392479623fc0e sh:resultSeverity sh:Info .
-_:a4ffc0fa6c59621fc48d32ce4f7032ad a oa:Annotation ;
+_:dca0d96f229bcf75b2733e539134ed2 oa:hasSelector _:b140d7d527ff8e6cdab1985969ff208d .
+_:ca0fcf2991e5e58d41b5571957b2c42 oa:hasTarget _:dca0d96f229bcf75b2733e539134ed2 .
+_:bf6b3467192c0012662c5da864d2c944 sh:resultSeverity sh:Info .
+_:b4c5116411e61edd3d14b4ffd72e9fb6 sh:resultSeverity sh:Info .
+_:ca0fcf2991e5e58d41b5571957b2c42 sh:resultSeverity sh:Info .
+_:bf6b3467192c0012662c5da864d2c944 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81259-4" .
-_:f673f99a01477c14453cd817c2c04a7a a oa:Annotation ;
+_:b4c5116411e61edd3d14b4ffd72e9fb6 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "MONDO:0012624" .
-_:d5e29aa7366404f45cd392479623fc0e a oa:Annotation ;
+_:ca0fcf2991e5e58d41b5571957b2c42 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "acyl-CoA dehydrogenase 9 deficiency" .
-_:bcd150cfba4f71c74ac744ea3ece446b a oa:FragmentSelector ;
+_:afd47048f7b62a6c8dc9a2be21bafd58 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/7" .
-_:b0d9807e3ac731b6c4ba9a38d2748d3b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bcd150cfba4f71c74ac744ea3ece446b oa:refinedBy _:bda16e43f2ac09b55b4f55f3f24d6de0 .
-_:bda16e43f2ac09b55b4f55f3f24d6de0 a oa:FragmentSelector ;
+_:eeeed9f174b38f0d86456624dadd29d1 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:afd47048f7b62a6c8dc9a2be21bafd58 oa:refinedBy _:aed3bbe18a2b0faee34ef59b32ad8485 .
+_:aed3bbe18a2b0faee34ef59b32ad8485 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/effectiveDateTime" .
-_:b0d9807e3ac731b6c4ba9a38d2748d3b oa:hasSelector _:bcd150cfba4f71c74ac744ea3ece446b .
-_:ace3076cf642554fecd8f9017ba9c2f3 oa:hasTarget _:b0d9807e3ac731b6c4ba9a38d2748d3b .
-_:bbd8032851f7d21772b47f1b632c3209 a oa:FragmentSelector ;
+_:eeeed9f174b38f0d86456624dadd29d1 oa:hasSelector _:afd47048f7b62a6c8dc9a2be21bafd58 .
+_:b4dfb003b9a8929258a9f6708c1ce445 oa:hasTarget _:eeeed9f174b38f0d86456624dadd29d1 .
+_:efd1bd9c076aa86bec767ce1eb0b2028 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/7" .
-_:db58799da9435559097fa2a02724ce43 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bbd8032851f7d21772b47f1b632c3209 oa:refinedBy _:d468bd3e8f35625a4933ef90816f0ad9 .
-_:d468bd3e8f35625a4933ef90816f0ad9 a oa:FragmentSelector ;
+_:c0abd04fb2ce1ce6cb05669a3a6ff738 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:efd1bd9c076aa86bec767ce1eb0b2028 oa:refinedBy _:dc0b64b900cbb442bdf438f606667b55 .
+_:dc0b64b900cbb442bdf438f606667b55 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:db58799da9435559097fa2a02724ce43 oa:hasSelector _:bbd8032851f7d21772b47f1b632c3209 .
-_:f2ca06c02a385c5e367aff916dd31d29 oa:hasTarget _:db58799da9435559097fa2a02724ce43 .
-_:ace3076cf642554fecd8f9017ba9c2f3 sh:resultSeverity sh:Info .
-_:f2ca06c02a385c5e367aff916dd31d29 sh:resultSeverity sh:Info .
-_:ace3076cf642554fecd8f9017ba9c2f3 a oa:Annotation ;
+_:c0abd04fb2ce1ce6cb05669a3a6ff738 oa:hasSelector _:efd1bd9c076aa86bec767ce1eb0b2028 .
+_:bc7ff311abb6cced9f9a7ea57b809353 oa:hasTarget _:c0abd04fb2ce1ce6cb05669a3a6ff738 .
+_:b4dfb003b9a8929258a9f6708c1ce445 sh:resultSeverity sh:Info .
+_:bc7ff311abb6cced9f9a7ea57b809353 sh:resultSeverity sh:Info .
+_:b4dfb003b9a8929258a9f6708c1ce445 a oa:Annotation ;
 	oa:hasBody fhirr4:variantTimeNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016" .
-_:f2ca06c02a385c5e367aff916dd31d29 a oa:Annotation ;
+_:bc7ff311abb6cced9f9a7ea57b809353 a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:f4d9e629d976f8d5a8666db15a8ad831 a oa:FragmentSelector ;
+_:d737bb9a01d8e91b5c657d00e2c3ea90 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/7" .
-_:d8bf1709258eaf985d582d55822107c8 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f4d9e629d976f8d5a8666db15a8ad831 oa:refinedBy _:dd0a182ac1f70ae62b4252c5c3d4998a .
-_:dd0a182ac1f70ae62b4252c5c3d4998a a oa:FragmentSelector ;
+_:e342cd37b4be4893f5f695ab1975a425 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d737bb9a01d8e91b5c657d00e2c3ea90 oa:refinedBy _:ef533330b3b4baafeaa856986ed2353c .
+_:ef533330b3b4baafeaa856986ed2353c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:d8bf1709258eaf985d582d55822107c8 oa:hasSelector _:f4d9e629d976f8d5a8666db15a8ad831 .
-_:d64d1095f5b7dcf1341875355037e0cb oa:hasTarget _:d8bf1709258eaf985d582d55822107c8 ;
+_:e342cd37b4be4893f5f695ab1975a425 oa:hasSelector _:d737bb9a01d8e91b5c657d00e2c3ea90 .
+_:e1abbe18889c7b3c9c2ced4df5b48df5 oa:hasTarget _:e342cd37b4be4893f5f695ab1975a425 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:bab701324a57d8253447af1d665af8c a oa:FragmentSelector ;
+_:bb2d9c68043476183587e74af3040cd9 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/7" .
+_:f7101770eede51cfcb69825fc07e64a9 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:bb2d9c68043476183587e74af3040cd9 oa:refinedBy _:a5f25b0dc2689e961f1d28ad5291f2ff .
+_:a5f25b0dc2689e961f1d28ad5291f2ff a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/resource/performer/0" .
+_:f7101770eede51cfcb69825fc07e64a9 oa:hasSelector _:bb2d9c68043476183587e74af3040cd9 .
+_:f06c71e41815cde9dee1c56e361bfb40 oa:hasTarget _:f7101770eede51cfcb69825fc07e64a9 ;
+	sh:resultSeverity sh:Warning ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:performerCarriedOnlyAsOneOrganizationRecord ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "Organization/ExampleLab" .
+_:f0be67cdb1288c5d2b78b5c2a72b3f0d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/8" .
-_:af1a7385c93a5f7d415bb0d3b08d6e57 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bab701324a57d8253447af1d665af8c oa:refinedBy _:f48c2d9e65735da94498efa20b4ccdc8 .
-_:f48c2d9e65735da94498efa20b4ccdc8 a oa:FragmentSelector ;
+_:a315b6d026361771d543c1b27067378a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f0be67cdb1288c5d2b78b5c2a72b3f0d oa:refinedBy _:cf4f8233275a7f356c32184ddb4df09c .
+_:cf4f8233275a7f356c32184ddb4df09c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:af1a7385c93a5f7d415bb0d3b08d6e57 oa:hasSelector _:bab701324a57d8253447af1d665af8c .
-_:ab6f5c5ecb34be8b2eb3889ffa25ad61 oa:hasTarget _:af1a7385c93a5f7d415bb0d3b08d6e57 ;
+_:a315b6d026361771d543c1b27067378a oa:hasSelector _:f0be67cdb1288c5d2b78b5c2a72b3f0d .
+_:ae3102ed88be7bca0653fff04788175b oa:hasTarget _:a315b6d026361771d543c1b27067378a ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:f9d7d845ea1973468071db5ddaeff3d a oa:FragmentSelector ;
+_:e5fa63f66e607c3d83f5da34bfaae9ad a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/8" .
-_:bb87fce3b4708c418e14e1a54cea4545 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f9d7d845ea1973468071db5ddaeff3d oa:refinedBy _:c88ed902c651b2dfecf736372f29ae03 .
-_:c88ed902c651b2dfecf736372f29ae03 a oa:FragmentSelector ;
+_:fc5399bb33972bcc6d8340bf7812916e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e5fa63f66e607c3d83f5da34bfaae9ad oa:refinedBy _:e7828c719a6bc2c3b5fcd670d3f3bf05 .
+_:e7828c719a6bc2c3b5fcd670d3f3bf05 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:bb87fce3b4708c418e14e1a54cea4545 oa:hasSelector _:f9d7d845ea1973468071db5ddaeff3d .
-_:da6280d0732248ac5b4a156738b129cb oa:hasTarget _:bb87fce3b4708c418e14e1a54cea4545 .
-_:be5ef4956cef0157eb8c7e080a25011b a oa:FragmentSelector ;
+_:fc5399bb33972bcc6d8340bf7812916e oa:hasSelector _:e5fa63f66e607c3d83f5da34bfaae9ad .
+_:adcf6adfaac12f10651c43f38b00775 oa:hasTarget _:fc5399bb33972bcc6d8340bf7812916e .
+_:a8257d736c2bf7763a8d253c1bb82ede a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/8" .
-_:e4944247dc59e270198858698cd7b74f oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:be5ef4956cef0157eb8c7e080a25011b oa:refinedBy _:e21e729ef50af9da3b7170ff7275a258 .
-_:e21e729ef50af9da3b7170ff7275a258 a oa:FragmentSelector ;
+_:cac7601d39440efc2b53c1dceab97d2e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a8257d736c2bf7763a8d253c1bb82ede oa:refinedBy _:c36cbd463dba7d90ecd528487731444a .
+_:c36cbd463dba7d90ecd528487731444a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:e4944247dc59e270198858698cd7b74f oa:hasSelector _:be5ef4956cef0157eb8c7e080a25011b .
-_:f2a75ec5c43c147a0e1b187ad3237d3b oa:hasTarget _:e4944247dc59e270198858698cd7b74f .
-_:e4862d367b0bc2e9e771be7ae785dcda a oa:FragmentSelector ;
+_:cac7601d39440efc2b53c1dceab97d2e oa:hasSelector _:a8257d736c2bf7763a8d253c1bb82ede .
+_:f557be23146a50654e6a77cbc57f42d7 oa:hasTarget _:cac7601d39440efc2b53c1dceab97d2e .
+_:ce7fa0cba132c2a74e8086a57b89755d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/8" .
-_:fbaac13b3addca969484886f9bf9084 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e4862d367b0bc2e9e771be7ae785dcda oa:refinedBy _:c3af1b8a83507ee0dae68bf3bc75d0e1 .
-_:c3af1b8a83507ee0dae68bf3bc75d0e1 a oa:FragmentSelector ;
+_:eecd702d9865f57747cba3a1a4187184 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ce7fa0cba132c2a74e8086a57b89755d oa:refinedBy _:da28c342ab51a346e9098fc6d8175e89 .
+_:da28c342ab51a346e9098fc6d8175e89 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/display" .
-_:fbaac13b3addca969484886f9bf9084 oa:hasSelector _:e4862d367b0bc2e9e771be7ae785dcda .
-_:b30600c28e1ef16f7c09bc6773f7b10d oa:hasTarget _:fbaac13b3addca969484886f9bf9084 .
-_:da6280d0732248ac5b4a156738b129cb sh:resultSeverity sh:Info .
-_:f2a75ec5c43c147a0e1b187ad3237d3b sh:resultSeverity sh:Info .
-_:b30600c28e1ef16f7c09bc6773f7b10d sh:resultSeverity sh:Info .
-_:da6280d0732248ac5b4a156738b129cb a oa:Annotation ;
+_:eecd702d9865f57747cba3a1a4187184 oa:hasSelector _:ce7fa0cba132c2a74e8086a57b89755d .
+_:effdaad8f7610b52288a455a0676b7d6 oa:hasTarget _:eecd702d9865f57747cba3a1a4187184 .
+_:adcf6adfaac12f10651c43f38b00775 sh:resultSeverity sh:Info .
+_:f557be23146a50654e6a77cbc57f42d7 sh:resultSeverity sh:Info .
+_:effdaad8f7610b52288a455a0676b7d6 sh:resultSeverity sh:Info .
+_:adcf6adfaac12f10651c43f38b00775 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "81259-4" .
-_:f2a75ec5c43c147a0e1b187ad3237d3b a oa:Annotation ;
+_:f557be23146a50654e6a77cbc57f42d7 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "293498008" .
-_:b30600c28e1ef16f7c09bc6773f7b10d a oa:Annotation ;
+_:effdaad8f7610b52288a455a0676b7d6 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Debrisoquine adverse reaction (disorder)" .
-_:d5493fc87a6a8a71ea0368558aa35c7b a oa:FragmentSelector ;
+_:c5541f6fd67b192afe49f75814571280 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:d90990e60e3c7373b0394b10e0c8c220 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d5493fc87a6a8a71ea0368558aa35c7b oa:refinedBy _:d6b648be981923ccff3fb722a5c899a .
-_:d6b648be981923ccff3fb722a5c899a a oa:FragmentSelector ;
+_:d6661a73948944f617a380ccceef904c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c5541f6fd67b192afe49f75814571280 oa:refinedBy _:e441b468e5a756b9816fad2ec196c451 .
+_:e441b468e5a756b9816fad2ec196c451 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/effectiveDateTime" .
-_:d90990e60e3c7373b0394b10e0c8c220 oa:hasSelector _:d5493fc87a6a8a71ea0368558aa35c7b .
-_:f011113aeb6b6715005c340537f1530d oa:hasTarget _:d90990e60e3c7373b0394b10e0c8c220 .
-_:c3ea6ce4a60b90f7ac16fadfbc4a9aca a oa:FragmentSelector ;
+_:d6661a73948944f617a380ccceef904c oa:hasSelector _:c5541f6fd67b192afe49f75814571280 .
+_:d3809a98a767412fec6256509ad55a04 oa:hasTarget _:d6661a73948944f617a380ccceef904c .
+_:e6e73c17a60535e4d67368f67357dd6a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:f4af50b28bfc056d02eb679d7c426b41 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c3ea6ce4a60b90f7ac16fadfbc4a9aca oa:refinedBy _:ed503c2af8990d096b59a0e7ff2f86fe .
-_:ed503c2af8990d096b59a0e7ff2f86fe a oa:FragmentSelector ;
+_:b07926ee362d5e20ca7be4596f1d8520 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e6e73c17a60535e4d67368f67357dd6a oa:refinedBy _:f0b38da29b52bd8f320eaefead510620 .
+_:f0b38da29b52bd8f320eaefead510620 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:f4af50b28bfc056d02eb679d7c426b41 oa:hasSelector _:c3ea6ce4a60b90f7ac16fadfbc4a9aca .
-_:cf12764a97554903638dde4a9c988a50 oa:hasTarget _:f4af50b28bfc056d02eb679d7c426b41 .
-_:f011113aeb6b6715005c340537f1530d sh:resultSeverity sh:Info .
-_:cf12764a97554903638dde4a9c988a50 sh:resultSeverity sh:Info .
-_:f011113aeb6b6715005c340537f1530d a oa:Annotation ;
+_:b07926ee362d5e20ca7be4596f1d8520 oa:hasSelector _:e6e73c17a60535e4d67368f67357dd6a .
+_:dd16c3bcafc4cb8d07da968fddfd5b19 oa:hasTarget _:b07926ee362d5e20ca7be4596f1d8520 .
+_:d3809a98a767412fec6256509ad55a04 sh:resultSeverity sh:Info .
+_:dd16c3bcafc4cb8d07da968fddfd5b19 sh:resultSeverity sh:Info .
+_:d3809a98a767412fec6256509ad55a04 a oa:Annotation ;
 	oa:hasBody fhirr4:variantTimeNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016" .
-_:cf12764a97554903638dde4a9c988a50 a oa:Annotation ;
+_:dd16c3bcafc4cb8d07da968fddfd5b19 a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:e87d63c00729d787eb320d9c98d86ac9 a oa:FragmentSelector ;
+_:b954a0444476f9dc1f9a4b5aaed2936 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:dcc110857c4ab89a9114ec6375a12b75 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e87d63c00729d787eb320d9c98d86ac9 oa:refinedBy _:c228fd3cc01c8b204b42534a93c9e7e2 .
-_:c228fd3cc01c8b204b42534a93c9e7e2 a oa:FragmentSelector ;
+_:a3d98ead38e119b7bf0148099d5ed2bd oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b954a0444476f9dc1f9a4b5aaed2936 oa:refinedBy _:cdda6e4a22d9e555c8d8f2614fdd9938 .
+_:cdda6e4a22d9e555c8d8f2614fdd9938 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:dcc110857c4ab89a9114ec6375a12b75 oa:hasSelector _:e87d63c00729d787eb320d9c98d86ac9 .
-_:cc97664357d3093afa1d4dc477a9e1cb oa:hasTarget _:dcc110857c4ab89a9114ec6375a12b75 ;
+_:a3d98ead38e119b7bf0148099d5ed2bd oa:hasSelector _:b954a0444476f9dc1f9a4b5aaed2936 .
+_:e406622e17887d06dd42947df1765044 oa:hasTarget _:a3d98ead38e119b7bf0148099d5ed2bd ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:c2e71ef8607caa3e446a0527e28285ae a oa:FragmentSelector ;
+_:a5453ec85954c80636449ce541c3bedb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:b47a6515507d5060d2342f6e367b3cba oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c2e71ef8607caa3e446a0527e28285ae oa:refinedBy _:e6536f2c09d656a1a60f7ea67ac9a7f3 .
-_:e6536f2c09d656a1a60f7ea67ac9a7f3 a oa:FragmentSelector ;
+_:cc356bf237a533d187f0abfc016799df oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a5453ec85954c80636449ce541c3bedb oa:refinedBy _:afa5e880186a89b13ac260fffabc73f .
+_:afa5e880186a89b13ac260fffabc73f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/4/code/coding/0/code" .
-_:b47a6515507d5060d2342f6e367b3cba oa:hasSelector _:c2e71ef8607caa3e446a0527e28285ae .
-_:eb467688ea306bcc2be0002aba2e3f02 oa:hasTarget _:b47a6515507d5060d2342f6e367b3cba .
-_:f17ac3f3a676d8a750939f0ff0f3da9d a oa:FragmentSelector ;
+_:cc356bf237a533d187f0abfc016799df oa:hasSelector _:a5453ec85954c80636449ce541c3bedb .
+_:e7123ea877281ea2550c37f07328869c oa:hasTarget _:cc356bf237a533d187f0abfc016799df .
+_:e1f066cd13fec5f5847afd8e31e5d2d6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:c1ba940bb78ea51908158f464ce51da8 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f17ac3f3a676d8a750939f0ff0f3da9d oa:refinedBy _:ed20c5cbee109382af0e01553fb0e32f .
-_:ed20c5cbee109382af0e01553fb0e32f a oa:FragmentSelector ;
+_:b7723a700faa3c64e03fab96cf10648a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e1f066cd13fec5f5847afd8e31e5d2d6 oa:refinedBy _:d043b6097a952c0dbc5a1725ee31a697 .
+_:d043b6097a952c0dbc5a1725ee31a697 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/4/valueCodeableConcept/coding/0/code" .
-_:c1ba940bb78ea51908158f464ce51da8 oa:hasSelector _:f17ac3f3a676d8a750939f0ff0f3da9d .
-_:d99814f6a62c2e0b627c418be4e8eb6c oa:hasTarget _:c1ba940bb78ea51908158f464ce51da8 .
-_:aef2abba65127f873b6f02d2a6f8a5f1 a oa:FragmentSelector ;
+_:b7723a700faa3c64e03fab96cf10648a oa:hasSelector _:e1f066cd13fec5f5847afd8e31e5d2d6 .
+_:e2bf7ff954bca0b8fe2c1b2c4308491e oa:hasTarget _:b7723a700faa3c64e03fab96cf10648a .
+_:e1d850da75f901c9c9de561dbd3dd58c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:ec7517085640aacd8aa75fd8d56d2a36 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:aef2abba65127f873b6f02d2a6f8a5f1 oa:refinedBy _:c8302273a39c5d3e628280fcda390f08 .
-_:c8302273a39c5d3e628280fcda390f08 a oa:FragmentSelector ;
+_:fd9d3c59adaff3e4b0bfb98ccc1f7818 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e1d850da75f901c9c9de561dbd3dd58c oa:refinedBy _:bb683bdb5ffe8d485a1ed823321172bb .
+_:bb683bdb5ffe8d485a1ed823321172bb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/4/valueCodeableConcept/coding/0/display" .
-_:ec7517085640aacd8aa75fd8d56d2a36 oa:hasSelector _:aef2abba65127f873b6f02d2a6f8a5f1 .
-_:ba7f8ac3892cc127180eca8ea9111085 oa:hasTarget _:ec7517085640aacd8aa75fd8d56d2a36 .
-_:eaee4749bf67b0ca3c7a9dd523f346a6 a oa:FragmentSelector ;
+_:fd9d3c59adaff3e4b0bfb98ccc1f7818 oa:hasSelector _:e1d850da75f901c9c9de561dbd3dd58c .
+_:c4dc95b18d1209a89f0d50fb8776477d oa:hasTarget _:fd9d3c59adaff3e4b0bfb98ccc1f7818 .
+_:a5d26783ac9850f7700e034538b041ab a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:ec1126b6dda4bf503412c0fe8b274aca oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:eaee4749bf67b0ca3c7a9dd523f346a6 oa:refinedBy _:c00a0f9b83a9f0d80209682f98d284b1 .
-_:c00a0f9b83a9f0d80209682f98d284b1 a oa:FragmentSelector ;
+_:e1e12c614f1663a16a2b70324fc97af2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a5d26783ac9850f7700e034538b041ab oa:refinedBy _:a876595ff474aaead2dbf34d4ed658b9 .
+_:a876595ff474aaead2dbf34d4ed658b9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/3/code/coding/0/code" .
-_:ec1126b6dda4bf503412c0fe8b274aca oa:hasSelector _:eaee4749bf67b0ca3c7a9dd523f346a6 .
-_:b28b39c2cd517796ea23f3fa882cc006 oa:hasTarget _:ec1126b6dda4bf503412c0fe8b274aca .
-_:c9fdbe5a6f189cc1b8e7d2980a9d395 a oa:FragmentSelector ;
+_:e1e12c614f1663a16a2b70324fc97af2 oa:hasSelector _:a5d26783ac9850f7700e034538b041ab .
+_:e65b74edb531c469f5050508b3cb838d oa:hasTarget _:e1e12c614f1663a16a2b70324fc97af2 .
+_:d22538e45293a3267eef7708593e51e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:b5e8de1d1a1532e63f36765686ddabb2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c9fdbe5a6f189cc1b8e7d2980a9d395 oa:refinedBy _:dec1638309f97d028ab236202820e6a5 .
-_:dec1638309f97d028ab236202820e6a5 a oa:FragmentSelector ;
+_:cb182b75085aa98957c6fab33887fb44 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d22538e45293a3267eef7708593e51e oa:refinedBy _:b0928f28e1809a269c857af067bd14cf .
+_:b0928f28e1809a269c857af067bd14cf a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/3/valueCodeableConcept/coding/0/code" .
-_:b5e8de1d1a1532e63f36765686ddabb2 oa:hasSelector _:c9fdbe5a6f189cc1b8e7d2980a9d395 .
-_:fa53ef473d0f345c98d9ca7983b2a99 oa:hasTarget _:b5e8de1d1a1532e63f36765686ddabb2 .
-_:cc1480f316ff3327c7e3aab3d7557823 a oa:FragmentSelector ;
+_:cb182b75085aa98957c6fab33887fb44 oa:hasSelector _:d22538e45293a3267eef7708593e51e .
+_:fd05d92c44f5feacc21ca67ce09ef715 oa:hasTarget _:cb182b75085aa98957c6fab33887fb44 .
+_:de4b9bead224ec5b6599b6718f0ed406 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:ba8de934593ba9a116808856671800ce oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:cc1480f316ff3327c7e3aab3d7557823 oa:refinedBy _:ef260ae0ff72076da64499b14abcc4ab .
-_:ef260ae0ff72076da64499b14abcc4ab a oa:FragmentSelector ;
+_:d18404f2e41fb6f12dea00285adcd027 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:de4b9bead224ec5b6599b6718f0ed406 oa:refinedBy _:d2f891d8d123de5030afd9461d4d03c .
+_:d2f891d8d123de5030afd9461d4d03c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:ba8de934593ba9a116808856671800ce oa:hasSelector _:cc1480f316ff3327c7e3aab3d7557823 .
-_:cc57d6afaec147049e7e349ed9589a59 oa:hasTarget _:ba8de934593ba9a116808856671800ce .
-_:bf32694a9b57419fcf4428807480517f a oa:FragmentSelector ;
+_:d18404f2e41fb6f12dea00285adcd027 oa:hasSelector _:de4b9bead224ec5b6599b6718f0ed406 .
+_:b2960f44144d11d20a417cad2f79589b oa:hasTarget _:d18404f2e41fb6f12dea00285adcd027 .
+_:d78cb2eeb385942398e00abbc9faa335 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
-_:df1a1df70b221076836165b4d92d0e91 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bf32694a9b57419fcf4428807480517f oa:refinedBy _:f5ea84793eca023cad687d55255cfaf .
-_:f5ea84793eca023cad687d55255cfaf a oa:FragmentSelector ;
+_:f7621d9d25af45d83017ac20fb4a3bbb oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d78cb2eeb385942398e00abbc9faa335 oa:refinedBy _:b3f9127f6cdde153b982ff48c18587ef .
+_:b3f9127f6cdde153b982ff48c18587ef a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:df1a1df70b221076836165b4d92d0e91 oa:hasSelector _:bf32694a9b57419fcf4428807480517f .
-_:ef3df6151a0b9336ffe5ba434b3da8eb oa:hasTarget _:df1a1df70b221076836165b4d92d0e91 .
-_:eb467688ea306bcc2be0002aba2e3f02 sh:resultSeverity sh:Info .
-_:d99814f6a62c2e0b627c418be4e8eb6c sh:resultSeverity sh:Info .
-_:ba7f8ac3892cc127180eca8ea9111085 sh:resultSeverity sh:Info .
-_:b28b39c2cd517796ea23f3fa882cc006 sh:resultSeverity sh:Info .
-_:fa53ef473d0f345c98d9ca7983b2a99 sh:resultSeverity sh:Info .
-_:cc57d6afaec147049e7e349ed9589a59 sh:resultSeverity sh:Info .
-_:ef3df6151a0b9336ffe5ba434b3da8eb sh:resultSeverity sh:Info .
-_:eb467688ea306bcc2be0002aba2e3f02 a oa:Annotation ;
+_:f7621d9d25af45d83017ac20fb4a3bbb oa:hasSelector _:d78cb2eeb385942398e00abbc9faa335 .
+_:defae6e688acc1fb5860d47d40dcce80 oa:hasTarget _:f7621d9d25af45d83017ac20fb4a3bbb .
+_:e7123ea877281ea2550c37f07328869c sh:resultSeverity sh:Info .
+_:e2bf7ff954bca0b8fe2c1b2c4308491e sh:resultSeverity sh:Info .
+_:c4dc95b18d1209a89f0d50fb8776477d sh:resultSeverity sh:Info .
+_:e65b74edb531c469f5050508b3cb838d sh:resultSeverity sh:Info .
+_:fd05d92c44f5feacc21ca67ce09ef715 sh:resultSeverity sh:Info .
+_:b2960f44144d11d20a417cad2f79589b sh:resultSeverity sh:Info .
+_:defae6e688acc1fb5860d47d40dcce80 sh:resultSeverity sh:Info .
+_:e7123ea877281ea2550c37f07328869c a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48019-4" .
-_:d99814f6a62c2e0b627c418be4e8eb6c a oa:Annotation ;
+_:e2bf7ff954bca0b8fe2c1b2c4308491e a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA6690-7" .
-_:ba7f8ac3892cc127180eca8ea9111085 a oa:Annotation ;
+_:c4dc95b18d1209a89f0d50fb8776477d a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Substitution" .
-_:b28b39c2cd517796ea23f3fa882cc006 a oa:Annotation ;
+_:e65b74edb531c469f5050508b3cb838d a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48005-3" .
-_:fa53ef473d0f345c98d9ca7983b2a99 a oa:Annotation ;
+_:fd05d92c44f5feacc21ca67ce09ef715 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NP_000097.3:p.Arg296Cys" .
-_:cc57d6afaec147049e7e349ed9589a59 a oa:Annotation ;
+_:b2960f44144d11d20a417cad2f79589b a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "51958-7" .
-_:ef3df6151a0b9336ffe5ba434b3da8eb a oa:Annotation ;
+_:defae6e688acc1fb5860d47d40dcce80 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NM_000106.5" .
-_:bee29063db7b953cb18014f9f3ff468d a oa:FragmentSelector ;
+_:b3184b099e408fb0457eb4053fa4cea5 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/9" .
+_:ade1b2948e784dcb6b99144e049048c5 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b3184b099e408fb0457eb4053fa4cea5 oa:refinedBy _:f7a332a51816e05aca5ebf32253d2161 .
+_:f7a332a51816e05aca5ebf32253d2161 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/resource/performer/0" .
+_:ade1b2948e784dcb6b99144e049048c5 oa:hasSelector _:b3184b099e408fb0457eb4053fa4cea5 .
+_:f7bcba1ed84c434b98ff0e5622b9a9cb oa:hasTarget _:ade1b2948e784dcb6b99144e049048c5 ;
+	sh:resultSeverity sh:Warning ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:performerCarriedOnlyAsOneOrganizationRecord ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "Organization/ExampleLab" .
+_:ff69586f0edc8928c73e1710bed14006 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/10" .
-_:bda0e5535a10629e87a20559708685cb a oa:FragmentSelector ;
+_:f5584a0a23ee859690585512b3a44d0a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/version" .
-_:bee29063db7b953cb18014f9f3ff468d oa:refinedBy _:bda0e5535a10629e87a20559708685cb .
-_:b9f96928f653007a7b1727788d415913 a oa:Annotation ;
-	oa:hasTarget _:ce81c469b820209c57ef8ac3ab2bd8d0 .
-_:ce81c469b820209c57ef8ac3ab2bd8d0 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:bee29063db7b953cb18014f9f3ff468d .
-_:b9f96928f653007a7b1727788d415913 oa:hasBody fhirr4:observationComponentDataNotCarried ;
+_:ff69586f0edc8928c73e1710bed14006 oa:refinedBy _:f5584a0a23ee859690585512b3a44d0a .
+_:e9b0b17657be39284c268f82d011cbd a oa:Annotation ;
+	oa:hasTarget _:c0454eeff93890a1cb9b6b927b11fe23 .
+_:c0454eeff93890a1cb9b6b927b11fe23 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:ff69586f0edc8928c73e1710bed14006 .
+_:e9b0b17657be39284c268f82d011cbd oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/component/valueCodeableConcept/coding/version" ;
 	sh:resultSeverity sh:Info .
-_:ed8f99be69883ed138bea5722ed33c17 a oa:FragmentSelector ;
+_:f2c20c9607e2838b39ed81b6e01eb0fb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/10" .
-_:d2b678cb9056dfb0373600f469e05b47 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ed8f99be69883ed138bea5722ed33c17 oa:refinedBy _:bd9fa95204aaaf5d74193e0a08a29aea .
-_:bd9fa95204aaaf5d74193e0a08a29aea a oa:FragmentSelector ;
+_:cb2c01745f5b988c6c21183d85a6c046 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f2c20c9607e2838b39ed81b6e01eb0fb oa:refinedBy _:e94a66be642b0f5bfe3d16d9261281ff .
+_:e94a66be642b0f5bfe3d16d9261281ff a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/effectiveDateTime" .
-_:d2b678cb9056dfb0373600f469e05b47 oa:hasSelector _:ed8f99be69883ed138bea5722ed33c17 .
-_:d85ec44a6618ca31e8e3e33603bd7572 oa:hasTarget _:d2b678cb9056dfb0373600f469e05b47 .
-_:ee7a2d74536e26e45f75f7f4463c48c a oa:FragmentSelector ;
+_:cb2c01745f5b988c6c21183d85a6c046 oa:hasSelector _:f2c20c9607e2838b39ed81b6e01eb0fb .
+_:d19976d96f119d4a526d7a21eada1fd3 oa:hasTarget _:cb2c01745f5b988c6c21183d85a6c046 .
+_:d2a591250bead6bfcf14484d91b7d4b6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/10" .
-_:ff2e4a98781dd8434f3c08d6de28052d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ee7a2d74536e26e45f75f7f4463c48c oa:refinedBy _:dd5678ad40ad7c82216baad7eec7b4d8 .
-_:dd5678ad40ad7c82216baad7eec7b4d8 a oa:FragmentSelector ;
+_:e8126923fe5c1297f56cf762c0e446f3 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d2a591250bead6bfcf14484d91b7d4b6 oa:refinedBy _:a92d7e7cbcfa55e633f0e8f52646eb11 .
+_:a92d7e7cbcfa55e633f0e8f52646eb11 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:ff2e4a98781dd8434f3c08d6de28052d oa:hasSelector _:ee7a2d74536e26e45f75f7f4463c48c .
-_:fd0cda23a41497f6fac6f1691a33e4fb oa:hasTarget _:ff2e4a98781dd8434f3c08d6de28052d .
-_:d85ec44a6618ca31e8e3e33603bd7572 sh:resultSeverity sh:Info .
-_:fd0cda23a41497f6fac6f1691a33e4fb sh:resultSeverity sh:Info .
-_:d85ec44a6618ca31e8e3e33603bd7572 a oa:Annotation ;
+_:e8126923fe5c1297f56cf762c0e446f3 oa:hasSelector _:d2a591250bead6bfcf14484d91b7d4b6 .
+_:dbdcd91fb0e0715c7f0a2c850662ffad oa:hasTarget _:e8126923fe5c1297f56cf762c0e446f3 .
+_:d19976d96f119d4a526d7a21eada1fd3 sh:resultSeverity sh:Info .
+_:dbdcd91fb0e0715c7f0a2c850662ffad sh:resultSeverity sh:Info .
+_:d19976d96f119d4a526d7a21eada1fd3 a oa:Annotation ;
 	oa:hasBody fhirr4:variantTimeNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016" .
-_:fd0cda23a41497f6fac6f1691a33e4fb a oa:Annotation ;
+_:dbdcd91fb0e0715c7f0a2c850662ffad a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:f3c62a028e3f28f272e2cfc9b6128df5 a oa:FragmentSelector ;
+_:e74564534421f5f8e3746a237b403fcf a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/10" .
-_:d6e6a65f3b32fe23826c771b9cc5c92d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f3c62a028e3f28f272e2cfc9b6128df5 oa:refinedBy _:ff9dfd5803be3862be7378d0c95e90a .
-_:ff9dfd5803be3862be7378d0c95e90a a oa:FragmentSelector ;
+_:a4f0b19b52b89f7208d695cc8c1ed290 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e74564534421f5f8e3746a237b403fcf oa:refinedBy _:b2a0064c97120b4022ffd97a8a522fbe .
+_:b2a0064c97120b4022ffd97a8a522fbe a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:d6e6a65f3b32fe23826c771b9cc5c92d oa:hasSelector _:f3c62a028e3f28f272e2cfc9b6128df5 .
-_:ba4e596982d7fd24918c6942ad842fd9 oa:hasTarget _:d6e6a65f3b32fe23826c771b9cc5c92d ;
+_:a4f0b19b52b89f7208d695cc8c1ed290 oa:hasSelector _:e74564534421f5f8e3746a237b403fcf .
+_:d36555d72762ccb0f056e00ca2c96db3 oa:hasTarget _:a4f0b19b52b89f7208d695cc8c1ed290 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:f5d19ecbeb95baa73f4bc6cc460e2116 a oa:FragmentSelector ;
+_:fa517f8360cd8d9bc9ab58753fa9ce0 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/10" .
-_:fb5f1224dc2e7fe17beba84173d4f4dc oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f5d19ecbeb95baa73f4bc6cc460e2116 oa:refinedBy _:a9db876018d0d941e10368b3424ece67 .
-_:a9db876018d0d941e10368b3424ece67 a oa:FragmentSelector ;
+_:c41204e8d7ac01e6cb7f6eb21d480c7b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fa517f8360cd8d9bc9ab58753fa9ce0 oa:refinedBy _:e7064f8e8d3eb34ccf200c89539ce8a1 .
+_:e7064f8e8d3eb34ccf200c89539ce8a1 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:fb5f1224dc2e7fe17beba84173d4f4dc oa:hasSelector _:f5d19ecbeb95baa73f4bc6cc460e2116 .
-_:cedafc7bc197d78cfae4bcb04d291e60 oa:hasTarget _:fb5f1224dc2e7fe17beba84173d4f4dc .
-_:c1fa33988d96ee8234f1851d5ad322aa a oa:FragmentSelector ;
+_:c41204e8d7ac01e6cb7f6eb21d480c7b oa:hasSelector _:fa517f8360cd8d9bc9ab58753fa9ce0 .
+_:c4901a1bcfd0f2717ef762c651a0ed16 oa:hasTarget _:c41204e8d7ac01e6cb7f6eb21d480c7b .
+_:f9cf3b2d4e3edb16ee741ef9f820b87c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/10" .
-_:a48f1fad1ef68a9f41d0bd1a3ef672e1 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c1fa33988d96ee8234f1851d5ad322aa oa:refinedBy _:c9db5f73bb14c6dbbcf08d23e7397251 .
-_:c9db5f73bb14c6dbbcf08d23e7397251 a oa:FragmentSelector ;
+_:cebfba73f3239309b3f93e186b2df1e6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f9cf3b2d4e3edb16ee741ef9f820b87c oa:refinedBy _:e6093b93d0c0fc8e75770c3e39e6f278 .
+_:e6093b93d0c0fc8e75770c3e39e6f278 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:a48f1fad1ef68a9f41d0bd1a3ef672e1 oa:hasSelector _:c1fa33988d96ee8234f1851d5ad322aa .
-_:c3d52d9a673bb98a8d065a6f74670dfe oa:hasTarget _:a48f1fad1ef68a9f41d0bd1a3ef672e1 .
-_:cedafc7bc197d78cfae4bcb04d291e60 sh:resultSeverity sh:Info .
-_:c3d52d9a673bb98a8d065a6f74670dfe sh:resultSeverity sh:Info .
-_:cedafc7bc197d78cfae4bcb04d291e60 a oa:Annotation ;
+_:cebfba73f3239309b3f93e186b2df1e6 oa:hasSelector _:f9cf3b2d4e3edb16ee741ef9f820b87c .
+_:bdfa59e41a324e9a5bb7573a2a5f4189 oa:hasTarget _:cebfba73f3239309b3f93e186b2df1e6 .
+_:c4901a1bcfd0f2717ef762c651a0ed16 sh:resultSeverity sh:Info .
+_:bdfa59e41a324e9a5bb7573a2a5f4189 sh:resultSeverity sh:Info .
+_:c4901a1bcfd0f2717ef762c651a0ed16 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "51958-7" .
-_:c3d52d9a673bb98a8d065a6f74670dfe a oa:Annotation ;
+_:bdfa59e41a324e9a5bb7573a2a5f4189 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "NM_000106.5" .
-_:c236a5cda58ee3f57e82fad9559f6783 a oa:FragmentSelector ;
+_:c58f22ca2a57e81197eef012f1911503 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/10" .
+_:a73743bdf5ebdaa3246dd2d86c83c058 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c58f22ca2a57e81197eef012f1911503 oa:refinedBy _:d8ac230debdb76b5828dc85336ebb630 .
+_:d8ac230debdb76b5828dc85336ebb630 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/resource/performer/0" .
+_:a73743bdf5ebdaa3246dd2d86c83c058 oa:hasSelector _:c58f22ca2a57e81197eef012f1911503 .
+_:c9fa0999c1e89f8fc43775ad07fc67cd oa:hasTarget _:a73743bdf5ebdaa3246dd2d86c83c058 ;
+	sh:resultSeverity sh:Warning ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:performerCarriedOnlyAsOneOrganizationRecord ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "Organization/ExampleLab" .
+_:fc0b2378e1daf91381cf1a64339eb220 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/11" .
-_:cf91e16f0f73d8d69c6ff9872e3d44a0 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c236a5cda58ee3f57e82fad9559f6783 oa:refinedBy _:fe6d2709521527d549a7eb6cc1f219ee .
-_:fe6d2709521527d549a7eb6cc1f219ee a oa:FragmentSelector ;
+_:a633173bb9e4d7de309e7b62ecd4a12b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fc0b2378e1daf91381cf1a64339eb220 oa:refinedBy _:d7e8518d5a1a02f07071f57549dce9a4 .
+_:d7e8518d5a1a02f07071f57549dce9a4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:cf91e16f0f73d8d69c6ff9872e3d44a0 oa:hasSelector _:c236a5cda58ee3f57e82fad9559f6783 .
-_:f29af427110b48af4bd05341f61e6ca5 oa:hasTarget _:cf91e16f0f73d8d69c6ff9872e3d44a0 ;
+_:a633173bb9e4d7de309e7b62ecd4a12b oa:hasSelector _:fc0b2378e1daf91381cf1a64339eb220 .
+_:e67b12a9f1a4ba27144d8a9bae4f1112 oa:hasTarget _:a633173bb9e4d7de309e7b62ecd4a12b ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:ced652956d65958cd2d9965f740f0a14 a oa:FragmentSelector ;
+_:e7dda8b45a6f80823645155e5b4ca39e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/11" .
-_:f8f066288a0d98eb83668e2f5765122d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ced652956d65958cd2d9965f740f0a14 oa:refinedBy _:f7977a7b202411e88694a87b38033fdc .
-_:f7977a7b202411e88694a87b38033fdc a oa:FragmentSelector ;
+_:bb1d4813419ea66fc91412fd2b7a3144 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e7dda8b45a6f80823645155e5b4ca39e oa:refinedBy _:e8db228346d8faf30dc8fb386537af63 .
+_:e8db228346d8faf30dc8fb386537af63 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/valueCodeableConcept/coding/0/code" .
-_:f8f066288a0d98eb83668e2f5765122d oa:hasSelector _:ced652956d65958cd2d9965f740f0a14 .
-_:e041afcdcf226bce838c2314aca0a246 oa:hasTarget _:f8f066288a0d98eb83668e2f5765122d ;
+_:bb1d4813419ea66fc91412fd2b7a3144 oa:hasSelector _:e7dda8b45a6f80823645155e5b4ca39e .
+_:d609dc63d2a52d4e23ccdf5000e3ef9b oa:hasTarget _:bb1d4813419ea66fc91412fd2b7a3144 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:labResultValueCode ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "*2" .
-_:fc57773604adcc177069aca5f6282eaf a oa:FragmentSelector ;
+_:bf926266eb62b82cc82e70343b9b9c3b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/11" .
-_:f8283f61fcc12f5670d859fa826ebf9 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:fc57773604adcc177069aca5f6282eaf oa:refinedBy _:ee859f558c063dd4965c74322a767761 .
-_:ee859f558c063dd4965c74322a767761 a oa:FragmentSelector ;
+_:c07920c5733a6899b73c238319da8071 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:bf926266eb62b82cc82e70343b9b9c3b oa:refinedBy _:d2d0764519f88b67a7794dc9fe823e6e .
+_:d2d0764519f88b67a7794dc9fe823e6e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:f8283f61fcc12f5670d859fa826ebf9 oa:hasSelector _:fc57773604adcc177069aca5f6282eaf .
-_:e6142a1a66d3b4d189d1b7a9760509e3 oa:hasTarget _:f8283f61fcc12f5670d859fa826ebf9 ;
+_:c07920c5733a6899b73c238319da8071 oa:hasSelector _:bf926266eb62b82cc82e70343b9b9c3b .
+_:ea2427525d632b9890fc7f5974717574 oa:hasTarget _:c07920c5733a6899b73c238319da8071 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:e9e4cfd7221e82cf02ad6e90ee9948fe a oa:FragmentSelector ;
+_:f245283c7c85a1d0f0cf9f37cd5a53b4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:ab27d9bc7c0375930f8738eeb86db2e2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e9e4cfd7221e82cf02ad6e90ee9948fe oa:refinedBy _:faae1c2a922969abf80da0055e48bed5 .
-_:faae1c2a922969abf80da0055e48bed5 a oa:FragmentSelector ;
+_:dafbf4ca25d26966952300fc77216798 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f245283c7c85a1d0f0cf9f37cd5a53b4 oa:refinedBy _:e98d8e7635fde687a6c8c6a3441ef9d9 .
+_:e98d8e7635fde687a6c8c6a3441ef9d9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:ab27d9bc7c0375930f8738eeb86db2e2 oa:hasSelector _:e9e4cfd7221e82cf02ad6e90ee9948fe .
-_:ab302d2d37bc81d093148d2797c60df2 oa:hasTarget _:ab27d9bc7c0375930f8738eeb86db2e2 ;
+_:dafbf4ca25d26966952300fc77216798 oa:hasSelector _:f245283c7c85a1d0f0cf9f37cd5a53b4 .
+_:da0b7da7a6c5813df326b635ed884915 oa:hasTarget _:dafbf4ca25d26966952300fc77216798 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:d87706d3cc526c9d8cbab9a65196a142 a oa:FragmentSelector ;
+_:fd2b1c44b12d0d7ea17e2bdab61bc08 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:f8491bf04e7c7f839d96b3b54ca93e56 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d87706d3cc526c9d8cbab9a65196a142 oa:refinedBy _:c1b1f2632cb98e7d61eb1c92b3e6346b .
-_:c1b1f2632cb98e7d61eb1c92b3e6346b a oa:FragmentSelector ;
+_:a904b18d166822626bdddb275ab7c889 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fd2b1c44b12d0d7ea17e2bdab61bc08 oa:refinedBy _:ecfa3f96a88f9c293fa176ed7f256b6e .
+_:ecfa3f96a88f9c293fa176ed7f256b6e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/valueCodeableConcept/coding/0/code" .
-_:f8491bf04e7c7f839d96b3b54ca93e56 oa:hasSelector _:d87706d3cc526c9d8cbab9a65196a142 .
-_:c080437d71bb4496c9e558984f828af0 oa:hasTarget _:f8491bf04e7c7f839d96b3b54ca93e56 ;
+_:a904b18d166822626bdddb275ab7c889 oa:hasSelector _:fd2b1c44b12d0d7ea17e2bdab61bc08 .
+_:af42632b6db7631e084c3d0bafd3aabf oa:hasTarget _:a904b18d166822626bdddb275ab7c889 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:labResultValueCode ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "CYP2C9 *2/*5" .
-_:c980f21b1bed08e81dec764287b79f76 a oa:FragmentSelector ;
+_:c334d272a63afee7b011bff23a91b62e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:e46d4735943a4bb806bfa6f6ade25b40 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c980f21b1bed08e81dec764287b79f76 oa:refinedBy _:d4591c48881c7f5bbc0972491bc64c29 .
-_:d4591c48881c7f5bbc0972491bc64c29 a oa:FragmentSelector ;
+_:c346d697a3a7ef9f8714bbc034f54a34 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c334d272a63afee7b011bff23a91b62e oa:refinedBy _:a739ac85fbba4a609a964650084189de .
+_:a739ac85fbba4a609a964650084189de a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:e46d4735943a4bb806bfa6f6ade25b40 oa:hasSelector _:c980f21b1bed08e81dec764287b79f76 .
-_:f9a80c1cdf52a4e2268ee11ce0a72cf9 oa:hasTarget _:e46d4735943a4bb806bfa6f6ade25b40 ;
+_:c346d697a3a7ef9f8714bbc034f54a34 oa:hasSelector _:c334d272a63afee7b011bff23a91b62e .
+_:b16bfd3f5cedb5ac3ebcc5f1222eba28 oa:hasTarget _:c346d697a3a7ef9f8714bbc034f54a34 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:e1b95109284b454f37c7dcc7b8f2b23d a oa:FragmentSelector ;
+_:e6a5e84a5667f2411ad99bf834ec81fc a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:bc1ce077a187056979337e07a605ce95 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e1b95109284b454f37c7dcc7b8f2b23d oa:refinedBy _:cb57d54866611977c42e01cdaecbc778 .
-_:cb57d54866611977c42e01cdaecbc778 a oa:FragmentSelector ;
+_:f74b76bd2a6d699a3538caffc16b2fae oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e6a5e84a5667f2411ad99bf834ec81fc oa:refinedBy _:e6e88ced6e9a913ae885586df0b04c7 .
+_:e6e88ced6e9a913ae885586df0b04c7 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:bc1ce077a187056979337e07a605ce95 oa:hasSelector _:e1b95109284b454f37c7dcc7b8f2b23d .
-_:ddf35b67a23ee24667588c793d0f45b9 oa:hasTarget _:bc1ce077a187056979337e07a605ce95 .
-_:f79d6a4c1994905e2ff1c6c772f7b2b5 a oa:FragmentSelector ;
+_:f74b76bd2a6d699a3538caffc16b2fae oa:hasSelector _:e6a5e84a5667f2411ad99bf834ec81fc .
+_:a6c627f5c3f2c1cfac023fba0030107a oa:hasTarget _:f74b76bd2a6d699a3538caffc16b2fae .
+_:b306492e6342cd4abd509cac7d54ba83 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:a574347e84bd3416ffed886a042262c4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f79d6a4c1994905e2ff1c6c772f7b2b5 oa:refinedBy _:e35d1d6cccfbbf403089a74cb79f1b05 .
-_:e35d1d6cccfbbf403089a74cb79f1b05 a oa:FragmentSelector ;
+_:b0cd7af53ed564908d86ecf9d5b3484a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b306492e6342cd4abd509cac7d54ba83 oa:refinedBy _:cd622142cbc44575dca920a635a21478 .
+_:cd622142cbc44575dca920a635a21478 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:a574347e84bd3416ffed886a042262c4 oa:hasSelector _:f79d6a4c1994905e2ff1c6c772f7b2b5 .
-_:dbdedbe90ae28da6dcf88403e9025e92 oa:hasTarget _:a574347e84bd3416ffed886a042262c4 .
-_:c6533623aecdc78fcd609df3617d32a4 a oa:FragmentSelector ;
+_:b0cd7af53ed564908d86ecf9d5b3484a oa:hasSelector _:b306492e6342cd4abd509cac7d54ba83 .
+_:aaca5da9849809018836590a182a0dc7 oa:hasTarget _:b0cd7af53ed564908d86ecf9d5b3484a .
+_:cefc2046be7aaf96996046e1b09a07de a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:c271eff687237a5cf31573d21aaff9ed oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c6533623aecdc78fcd609df3617d32a4 oa:refinedBy _:c07dc955487269858e0c44bafff7d285 .
-_:c07dc955487269858e0c44bafff7d285 a oa:FragmentSelector ;
+_:f8869ffb9a2b821c0fcc8c358b02c279 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:cefc2046be7aaf96996046e1b09a07de oa:refinedBy _:b15d6578f0811c9a521f32081ce4348c .
+_:b15d6578f0811c9a521f32081ce4348c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/display" .
-_:c271eff687237a5cf31573d21aaff9ed oa:hasSelector _:c6533623aecdc78fcd609df3617d32a4 .
-_:c0ecb469971ee57e35e9924e1f600a96 oa:hasTarget _:c271eff687237a5cf31573d21aaff9ed .
-_:eafef0d7ecdbef53d7071dda63febf71 a oa:FragmentSelector ;
+_:f8869ffb9a2b821c0fcc8c358b02c279 oa:hasSelector _:cefc2046be7aaf96996046e1b09a07de .
+_:dda8f6b70e27004eaa0428ac0bc76404 oa:hasTarget _:f8869ffb9a2b821c0fcc8c358b02c279 .
+_:fa37b734ee65476b97ae77244c26e026 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:a3112a8c4f64698b69c86e9cf5fccd47 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:eafef0d7ecdbef53d7071dda63febf71 oa:refinedBy _:c2e766b4ee50370c890f544fccfb701e .
-_:c2e766b4ee50370c890f544fccfb701e a oa:FragmentSelector ;
+_:aba9300d3e71c8bfce1e8d6259733660 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:fa37b734ee65476b97ae77244c26e026 oa:refinedBy _:cb2989d1b73109a59316a2b4113cf3b7 .
+_:cb2989d1b73109a59316a2b4113cf3b7 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/code/coding/0/code" .
-_:a3112a8c4f64698b69c86e9cf5fccd47 oa:hasSelector _:eafef0d7ecdbef53d7071dda63febf71 .
-_:f8cb2fa6c242ef67bb2c9f03f8f89e1f oa:hasTarget _:a3112a8c4f64698b69c86e9cf5fccd47 .
-_:b718369f33c4ab6248c218235223d779 a oa:FragmentSelector ;
+_:aba9300d3e71c8bfce1e8d6259733660 oa:hasSelector _:fa37b734ee65476b97ae77244c26e026 .
+_:a1363e51d957e9618e05d7598d7631ee oa:hasTarget _:aba9300d3e71c8bfce1e8d6259733660 .
+_:df3c9e973ba3c4b82339d8a2556bfa48 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:b862866c012f8399a492a8a3ca43aaef oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b718369f33c4ab6248c218235223d779 oa:refinedBy _:e8d679511ad71ff057f46bc6b76f135 .
-_:e8d679511ad71ff057f46bc6b76f135 a oa:FragmentSelector ;
+_:d6e807d7b466e9f60a23ea90c3fca745 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:df3c9e973ba3c4b82339d8a2556bfa48 oa:refinedBy _:e4d34da3bc12a11045cbfd8393b2b4b9 .
+_:e4d34da3bc12a11045cbfd8393b2b4b9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/code" .
-_:b862866c012f8399a492a8a3ca43aaef oa:hasSelector _:b718369f33c4ab6248c218235223d779 .
-_:da987c657247a42aaf2e5b4733ec41cf oa:hasTarget _:b862866c012f8399a492a8a3ca43aaef .
-_:ec3450c0cb790017e3533a2e7855ce24 a oa:FragmentSelector ;
+_:d6e807d7b466e9f60a23ea90c3fca745 oa:hasSelector _:df3c9e973ba3c4b82339d8a2556bfa48 .
+_:b3a134f2e5f61f8e54d8ebce967b9756 oa:hasTarget _:d6e807d7b466e9f60a23ea90c3fca745 .
+_:a33b5152b94bd3f4730b1ed5e14dbc4c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/12" .
-_:ab0fe63f0597ffb934ea6d5f207fec4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ec3450c0cb790017e3533a2e7855ce24 oa:refinedBy _:e4af8345d8090ee8f8b59b2ead5d8c81 .
-_:e4af8345d8090ee8f8b59b2ead5d8c81 a oa:FragmentSelector ;
+_:dc14e241d6ef4230dfaa8c08fb6d03b6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a33b5152b94bd3f4730b1ed5e14dbc4c oa:refinedBy _:e8da326f48a17c9c43b35a2c972e4598 .
+_:e8da326f48a17c9c43b35a2c972e4598 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/display" .
-_:ab0fe63f0597ffb934ea6d5f207fec4 oa:hasSelector _:ec3450c0cb790017e3533a2e7855ce24 .
-_:f9974525b6799948367e79584f823e0e oa:hasTarget _:ab0fe63f0597ffb934ea6d5f207fec4 .
-_:ddf35b67a23ee24667588c793d0f45b9 sh:resultSeverity sh:Info .
-_:dbdedbe90ae28da6dcf88403e9025e92 sh:resultSeverity sh:Info .
-_:c0ecb469971ee57e35e9924e1f600a96 sh:resultSeverity sh:Info .
-_:f8cb2fa6c242ef67bb2c9f03f8f89e1f sh:resultSeverity sh:Info .
-_:da987c657247a42aaf2e5b4733ec41cf sh:resultSeverity sh:Info .
-_:f9974525b6799948367e79584f823e0e sh:resultSeverity sh:Info .
-_:ddf35b67a23ee24667588c793d0f45b9 a oa:Annotation ;
+_:dc14e241d6ef4230dfaa8c08fb6d03b6 oa:hasSelector _:a33b5152b94bd3f4730b1ed5e14dbc4c .
+_:ad7f628c59bed53a18224e087ec0c471 oa:hasTarget _:dc14e241d6ef4230dfaa8c08fb6d03b6 .
+_:a6c627f5c3f2c1cfac023fba0030107a sh:resultSeverity sh:Info .
+_:aaca5da9849809018836590a182a0dc7 sh:resultSeverity sh:Info .
+_:dda8f6b70e27004eaa0428ac0bc76404 sh:resultSeverity sh:Info .
+_:a1363e51d957e9618e05d7598d7631ee sh:resultSeverity sh:Info .
+_:b3a134f2e5f61f8e54d8ebce967b9756 sh:resultSeverity sh:Info .
+_:ad7f628c59bed53a18224e087ec0c471 sh:resultSeverity sh:Info .
+_:a6c627f5c3f2c1cfac023fba0030107a a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48018-6" .
-_:dbdedbe90ae28da6dcf88403e9025e92 a oa:Annotation ;
+_:aaca5da9849809018836590a182a0dc7 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "HGNC:23663" .
-_:c0ecb469971ee57e35e9924e1f600a96 a oa:Annotation ;
+_:dda8f6b70e27004eaa0428ac0bc76404 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "VKORC1" .
-_:f8cb2fa6c242ef67bb2c9f03f8f89e1f a oa:Annotation ;
+_:a1363e51d957e9618e05d7598d7631ee a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "48018-6" .
-_:da987c657247a42aaf2e5b4733ec41cf a oa:Annotation ;
+_:b3a134f2e5f61f8e54d8ebce967b9756 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "HGNC:2623" .
-_:f9974525b6799948367e79584f823e0e a oa:Annotation ;
+_:ad7f628c59bed53a18224e087ec0c471 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "CYP2C9" .
-_:ffc6f57f98c2b65337810dd4b23a352d a oa:FragmentSelector ;
+_:b9ccab181dd601aa72a26596f592394a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:eb8a882ee889227fff62d31e6b7971ce oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:ffc6f57f98c2b65337810dd4b23a352d oa:refinedBy _:d55525dcafa6b396ad815f91f432b5f2 .
-_:d55525dcafa6b396ad815f91f432b5f2 a oa:FragmentSelector ;
+_:e0356b24774ab930c429980134b29e99 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b9ccab181dd601aa72a26596f592394a oa:refinedBy _:dc9ec76d2f7bbd51a43815cf65da76bd .
+_:dc9ec76d2f7bbd51a43815cf65da76bd a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:eb8a882ee889227fff62d31e6b7971ce oa:hasSelector _:ffc6f57f98c2b65337810dd4b23a352d .
-_:da7165cfe12d00a8a9a771ff995bf3ce oa:hasTarget _:eb8a882ee889227fff62d31e6b7971ce ;
+_:e0356b24774ab930c429980134b29e99 oa:hasSelector _:b9ccab181dd601aa72a26596f592394a .
+_:dde27c031a8cb498d49075c439046fbb oa:hasTarget _:e0356b24774ab930c429980134b29e99 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:dc62ddec4e751bba8dd5168f71fb1c44 a oa:FragmentSelector ;
+_:becab19e4385fa9909714c703944381c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:c85357d09bcfe1c7b163dbfbcff8c207 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:dc62ddec4e751bba8dd5168f71fb1c44 oa:refinedBy _:c20c88562ce446551be89c4a5302644c .
-_:c20c88562ce446551be89c4a5302644c a oa:FragmentSelector ;
+_:c945cff4a2f527b78d941e15c507817e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:becab19e4385fa9909714c703944381c oa:refinedBy _:fb017f08d31efe8da8b3ac706ac025e1 .
+_:fb017f08d31efe8da8b3ac706ac025e1 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:c85357d09bcfe1c7b163dbfbcff8c207 oa:hasSelector _:dc62ddec4e751bba8dd5168f71fb1c44 .
-_:e2bca4bcf2bf2451704fb1bb87827454 oa:hasTarget _:c85357d09bcfe1c7b163dbfbcff8c207 ;
+_:c945cff4a2f527b78d941e15c507817e oa:hasSelector _:becab19e4385fa9909714c703944381c .
+_:dd422e3c9fa352c4b5d543661200998a oa:hasTarget _:c945cff4a2f527b78d941e15c507817e ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:cdbd8b4e092727f1052786b8c5a49675 a oa:FragmentSelector ;
+_:e55db5f09d3c13a7711758002a879a8b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:fcdacf69b79ea967b10243261719d46c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:cdbd8b4e092727f1052786b8c5a49675 oa:refinedBy _:f488acc7f26773588303a67199a0e431 .
-_:f488acc7f26773588303a67199a0e431 a oa:FragmentSelector ;
+_:d4b06891e9b4e82278637b98f0e650c2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e55db5f09d3c13a7711758002a879a8b oa:refinedBy _:ec5775edc418af30ce84f626879118b1 .
+_:ec5775edc418af30ce84f626879118b1 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:fcdacf69b79ea967b10243261719d46c oa:hasSelector _:cdbd8b4e092727f1052786b8c5a49675 .
-_:d20afab6bb0e0752c442aea5fca7552e oa:hasTarget _:fcdacf69b79ea967b10243261719d46c .
-_:c2e2e7aa24043e5f08ede330f513c5f a oa:FragmentSelector ;
+_:d4b06891e9b4e82278637b98f0e650c2 oa:hasSelector _:e55db5f09d3c13a7711758002a879a8b .
+_:be9125c4262c864520d4b49503dd5ae7 oa:hasTarget _:d4b06891e9b4e82278637b98f0e650c2 .
+_:ae157e9b3acb2591ac831b9c2b536f2a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:d9aa1ad46cf3d6678267116b4606d72e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c2e2e7aa24043e5f08ede330f513c5f oa:refinedBy _:fd4c052fc8df65a7d7062e56041f674 .
-_:fd4c052fc8df65a7d7062e56041f674 a oa:FragmentSelector ;
+_:ef6c0b36a575e121234cc8eb0b0998b1 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ae157e9b3acb2591ac831b9c2b536f2a oa:refinedBy _:bd609d8b1014dff1f958edbdfaf790cc .
+_:bd609d8b1014dff1f958edbdfaf790cc a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:d9aa1ad46cf3d6678267116b4606d72e oa:hasSelector _:c2e2e7aa24043e5f08ede330f513c5f .
-_:b398fd5a036cf60954039f9c2b42f3bb oa:hasTarget _:d9aa1ad46cf3d6678267116b4606d72e .
-_:acab531194787a900314ac33567ecbaa a oa:FragmentSelector ;
+_:ef6c0b36a575e121234cc8eb0b0998b1 oa:hasSelector _:ae157e9b3acb2591ac831b9c2b536f2a .
+_:faf3c004b884200db21cedd5d38b02d4 oa:hasTarget _:ef6c0b36a575e121234cc8eb0b0998b1 .
+_:bfd1c7c5cdc44914fba055c1eba2f322 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:ee62dcb71d0751deb85336659780912 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:acab531194787a900314ac33567ecbaa oa:refinedBy _:b75ae8fcda029b9e46b896439a40e0de .
-_:b75ae8fcda029b9e46b896439a40e0de a oa:FragmentSelector ;
+_:ad6648dc36b7a9d77703ec69a87fbd89 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:bfd1c7c5cdc44914fba055c1eba2f322 oa:refinedBy _:d310e928f5845aa8b131dd7ddeab23e5 .
+_:d310e928f5845aa8b131dd7ddeab23e5 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/display" .
-_:ee62dcb71d0751deb85336659780912 oa:hasSelector _:acab531194787a900314ac33567ecbaa .
-_:bd32edc4e2820292a8a1f1a99526082 oa:hasTarget _:ee62dcb71d0751deb85336659780912 .
-_:c5dc466b20be83dec4e06a58c1b17ccd a oa:FragmentSelector ;
+_:ad6648dc36b7a9d77703ec69a87fbd89 oa:hasSelector _:bfd1c7c5cdc44914fba055c1eba2f322 .
+_:b6cc701ec9ce4e6bf7b32e8f694f81b3 oa:hasTarget _:ad6648dc36b7a9d77703ec69a87fbd89 .
+_:a9e941879372b5e8c04403a006e0aec5 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:d8584c60a0f26614f3f7925a79556e4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c5dc466b20be83dec4e06a58c1b17ccd oa:refinedBy _:fdc199ddd1cd98d5e8a82f3532854dc3 .
-_:fdc199ddd1cd98d5e8a82f3532854dc3 a oa:FragmentSelector ;
+_:e3871f5eb826d0625c300f0b7320ac7a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a9e941879372b5e8c04403a006e0aec5 oa:refinedBy _:bc0295d454adaa37a666c75c7e744b80 .
+_:bc0295d454adaa37a666c75c7e744b80 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/code/coding/0/code" .
-_:d8584c60a0f26614f3f7925a79556e4 oa:hasSelector _:c5dc466b20be83dec4e06a58c1b17ccd .
-_:b6ae178be293a185427e99494496b38f oa:hasTarget _:d8584c60a0f26614f3f7925a79556e4 .
-_:f84357a05faa5f9d33be1642200a937c a oa:FragmentSelector ;
+_:e3871f5eb826d0625c300f0b7320ac7a oa:hasSelector _:a9e941879372b5e8c04403a006e0aec5 .
+_:c24a8011d16066677bca27775f5568a7 oa:hasTarget _:e3871f5eb826d0625c300f0b7320ac7a .
+_:c149954c9866fcc24923ed30602ee43e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:ba6e36350d8072f72c6423ebf94a591 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:f84357a05faa5f9d33be1642200a937c oa:refinedBy _:f4b0f113e27820fa915a49a0ce22a131 .
-_:f4b0f113e27820fa915a49a0ce22a131 a oa:FragmentSelector ;
+_:a7e0aa15f780e886c9d6a3717809ce13 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c149954c9866fcc24923ed30602ee43e oa:refinedBy _:a2dceb3255dea226b06455be63647d2f .
+_:a2dceb3255dea226b06455be63647d2f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/code" .
-_:ba6e36350d8072f72c6423ebf94a591 oa:hasSelector _:f84357a05faa5f9d33be1642200a937c .
-_:e0a0be6c6a0a2b990f8727c742406e7f oa:hasTarget _:ba6e36350d8072f72c6423ebf94a591 .
-_:dbf46addcf647b1d1dca2e2fb94c7b22 a oa:FragmentSelector ;
+_:a7e0aa15f780e886c9d6a3717809ce13 oa:hasSelector _:c149954c9866fcc24923ed30602ee43e .
+_:c083f9bcb4bf7063533ea79fb790e507 oa:hasTarget _:a7e0aa15f780e886c9d6a3717809ce13 .
+_:b7a6ff4646c212b7124ce04bf078356f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/13" .
-_:d6f5c755ec98e2850abf6a69a0e74be2 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:dbf46addcf647b1d1dca2e2fb94c7b22 oa:refinedBy _:f01092076ac10cd65864ea45dfaf5558 .
-_:f01092076ac10cd65864ea45dfaf5558 a oa:FragmentSelector ;
+_:e85639d5648ad420d1dcf0e6a4810d0c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b7a6ff4646c212b7124ce04bf078356f oa:refinedBy _:f8017739d6192c1a0e1b52bf16f98148 .
+_:f8017739d6192c1a0e1b52bf16f98148 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/display" .
-_:d6f5c755ec98e2850abf6a69a0e74be2 oa:hasSelector _:dbf46addcf647b1d1dca2e2fb94c7b22 .
-_:ee7d2fce866f5fe8529bd3a784dc86b7 oa:hasTarget _:d6f5c755ec98e2850abf6a69a0e74be2 .
-_:d20afab6bb0e0752c442aea5fca7552e sh:resultSeverity sh:Info .
-_:b398fd5a036cf60954039f9c2b42f3bb sh:resultSeverity sh:Info .
-_:bd32edc4e2820292a8a1f1a99526082 sh:resultSeverity sh:Info .
-_:b6ae178be293a185427e99494496b38f sh:resultSeverity sh:Info .
-_:e0a0be6c6a0a2b990f8727c742406e7f sh:resultSeverity sh:Info .
-_:ee7d2fce866f5fe8529bd3a784dc86b7 sh:resultSeverity sh:Info .
-_:d20afab6bb0e0752c442aea5fca7552e a oa:Annotation ;
+_:e85639d5648ad420d1dcf0e6a4810d0c oa:hasSelector _:b7a6ff4646c212b7124ce04bf078356f .
+_:f933e0d29c4cb5bd6692dab781a97c62 oa:hasTarget _:e85639d5648ad420d1dcf0e6a4810d0c .
+_:be9125c4262c864520d4b49503dd5ae7 sh:resultSeverity sh:Info .
+_:faf3c004b884200db21cedd5d38b02d4 sh:resultSeverity sh:Info .
+_:b6cc701ec9ce4e6bf7b32e8f694f81b3 sh:resultSeverity sh:Info .
+_:c24a8011d16066677bca27775f5568a7 sh:resultSeverity sh:Info .
+_:c083f9bcb4bf7063533ea79fb790e507 sh:resultSeverity sh:Info .
+_:f933e0d29c4cb5bd6692dab781a97c62 sh:resultSeverity sh:Info .
+_:be9125c4262c864520d4b49503dd5ae7 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "therapeutic-implication" .
-_:b398fd5a036cf60954039f9c2b42f3bb a oa:Annotation ;
+_:faf3c004b884200db21cedd5d38b02d4 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA25390-8" .
-_:bd32edc4e2820292a8a1f1a99526082 a oa:Annotation ;
+_:b6cc701ec9ce4e6bf7b32e8f694f81b3 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Rapid metabolizer" .
-_:b6ae178be293a185427e99494496b38f a oa:Annotation ;
+_:c24a8011d16066677bca27775f5568a7 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "51963-7" .
-_:e0a0be6c6a0a2b990f8727c742406e7f a oa:Annotation ;
+_:c083f9bcb4bf7063533ea79fb790e507 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "11289" .
-_:ee7d2fce866f5fe8529bd3a784dc86b7 a oa:Annotation ;
+_:f933e0d29c4cb5bd6692dab781a97c62 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Warfarin" .
-_:d6245838c645551c7f397fba5c699cb9 a oa:FragmentSelector ;
+_:d8eb0999983e94604dcd489ad1ac202c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:ae3e8a37bb6eae4bfcd8ac80d428a7e7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d6245838c645551c7f397fba5c699cb9 oa:refinedBy _:d043f281756fcd30e7f558f2f33c29b6 .
-_:d043f281756fcd30e7f558f2f33c29b6 a oa:FragmentSelector ;
+_:f25ad0a4aa684a5176fc6db30e712408 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d8eb0999983e94604dcd489ad1ac202c oa:refinedBy _:e0c27012e17c6b06cf5fbe09c939ceda .
+_:e0c27012e17c6b06cf5fbe09c939ceda a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:ae3e8a37bb6eae4bfcd8ac80d428a7e7 oa:hasSelector _:d6245838c645551c7f397fba5c699cb9 .
-_:caf9cb82c65cabe27703ee6ceeb69fd oa:hasTarget _:ae3e8a37bb6eae4bfcd8ac80d428a7e7 ;
+_:f25ad0a4aa684a5176fc6db30e712408 oa:hasSelector _:d8eb0999983e94604dcd489ad1ac202c .
+_:fbec3655562198b7325a573697ad0ecb oa:hasTarget _:f25ad0a4aa684a5176fc6db30e712408 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:e57f929bacaa002f5f6c5b3f9331001e a oa:FragmentSelector ;
+_:e488cab112b63e3f30a6c09e39d99f93 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:b3fbd53949e1d6d680b7edfd3704bcfc oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e57f929bacaa002f5f6c5b3f9331001e oa:refinedBy _:b9d5e1585950daabd727caed9c420016 .
-_:b9d5e1585950daabd727caed9c420016 a oa:FragmentSelector ;
+_:ae863f1a0964ca5073a5d810d2063ae6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e488cab112b63e3f30a6c09e39d99f93 oa:refinedBy _:d9bad70b83d8487c1a80392b5d7ff3f8 .
+_:d9bad70b83d8487c1a80392b5d7ff3f8 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:b3fbd53949e1d6d680b7edfd3704bcfc oa:hasSelector _:e57f929bacaa002f5f6c5b3f9331001e .
-_:b400cf80b6120ba3a6732e821acf0385 oa:hasTarget _:b3fbd53949e1d6d680b7edfd3704bcfc ;
+_:ae863f1a0964ca5073a5d810d2063ae6 oa:hasSelector _:e488cab112b63e3f30a6c09e39d99f93 .
+_:d1541aa7a8a00847b7805b17ec34f617 oa:hasTarget _:ae863f1a0964ca5073a5d810d2063ae6 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:e8e298736f9499085578ff72c50e5e05 a oa:FragmentSelector ;
+_:b3135eddb45d4274728325f85626ca12 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:ed54417addc63ef90f6111f3953c8929 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e8e298736f9499085578ff72c50e5e05 oa:refinedBy _:f0586da24e77364ee3b90589f238ccde .
-_:f0586da24e77364ee3b90589f238ccde a oa:FragmentSelector ;
+_:cf3df5598bfa051a21e1595a69a8ab97 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b3135eddb45d4274728325f85626ca12 oa:refinedBy _:c5420369a56851cb3cbcdb68f94c40ff .
+_:c5420369a56851cb3cbcdb68f94c40ff a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:ed54417addc63ef90f6111f3953c8929 oa:hasSelector _:e8e298736f9499085578ff72c50e5e05 .
-_:a407552fe60ce2abe4774f2c6ae18475 oa:hasTarget _:ed54417addc63ef90f6111f3953c8929 .
-_:dcdb45b39588b19d031aa0e7b694c993 a oa:FragmentSelector ;
+_:cf3df5598bfa051a21e1595a69a8ab97 oa:hasSelector _:b3135eddb45d4274728325f85626ca12 .
+_:c95665327e9f90479b7f572c76778861 oa:hasTarget _:cf3df5598bfa051a21e1595a69a8ab97 .
+_:d8f86c1950e4853977be70808017758e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:d0114e60093c4e45b3d526c528eee340 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:dcdb45b39588b19d031aa0e7b694c993 oa:refinedBy _:a0f9e0a3a9e2cab7dd9e73ea7619983 .
-_:a0f9e0a3a9e2cab7dd9e73ea7619983 a oa:FragmentSelector ;
+_:f7718e57ad9df23d2a0b70935a9d158a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d8f86c1950e4853977be70808017758e oa:refinedBy _:db5083b2633d260710b79e799b03b358 .
+_:db5083b2633d260710b79e799b03b358 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:d0114e60093c4e45b3d526c528eee340 oa:hasSelector _:dcdb45b39588b19d031aa0e7b694c993 .
-_:c796225d9ec7c0a2eb3e3f175ab9c4ec oa:hasTarget _:d0114e60093c4e45b3d526c528eee340 .
-_:d12b7084423cc87308e5aeaa3b584df7 a oa:FragmentSelector ;
+_:f7718e57ad9df23d2a0b70935a9d158a oa:hasSelector _:d8f86c1950e4853977be70808017758e .
+_:a395d011f227999652fbcaafeeac2b5f oa:hasTarget _:f7718e57ad9df23d2a0b70935a9d158a .
+_:ec94055f1d8b32857afbe53a3c77f003 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:a6abaee56b3f4f8c4159149581a972e3 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:d12b7084423cc87308e5aeaa3b584df7 oa:refinedBy _:c9f01f5f9efb76dc9b3c4ec4d79425d6 .
-_:c9f01f5f9efb76dc9b3c4ec4d79425d6 a oa:FragmentSelector ;
+_:c589221469c1e75ad8c76571bedac47b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ec94055f1d8b32857afbe53a3c77f003 oa:refinedBy _:c49509382c92fa24c0fe5da666419a5 .
+_:c49509382c92fa24c0fe5da666419a5 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/display" .
-_:a6abaee56b3f4f8c4159149581a972e3 oa:hasSelector _:d12b7084423cc87308e5aeaa3b584df7 .
-_:aad174fffce202a194f9dc74cc2f6c08 oa:hasTarget _:a6abaee56b3f4f8c4159149581a972e3 .
-_:aa8688c15b23821cc9b7d9b40df507b1 a oa:FragmentSelector ;
+_:c589221469c1e75ad8c76571bedac47b oa:hasSelector _:ec94055f1d8b32857afbe53a3c77f003 .
+_:d545de7aacc958508256fa6750a8e1a oa:hasTarget _:c589221469c1e75ad8c76571bedac47b .
+_:f6d39b5a1c6f0d10733ed027e52f682b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:cd6365412f895218658f95c3d306ee71 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:aa8688c15b23821cc9b7d9b40df507b1 oa:refinedBy _:b7b82f7c0814df4294af292bc6bf46d .
-_:b7b82f7c0814df4294af292bc6bf46d a oa:FragmentSelector ;
+_:a36284054b21e5d6395c8d4eeada249 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f6d39b5a1c6f0d10733ed027e52f682b oa:refinedBy _:b7f3b71e6a3c0eb6024110ba43f50e1f .
+_:b7f3b71e6a3c0eb6024110ba43f50e1f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/code/coding/0/code" .
-_:cd6365412f895218658f95c3d306ee71 oa:hasSelector _:aa8688c15b23821cc9b7d9b40df507b1 .
-_:f0e99ceb2d374febc8c08b68b62aa6d5 oa:hasTarget _:cd6365412f895218658f95c3d306ee71 .
-_:b286a6de463f0cdc9c9c94af52263b2a a oa:FragmentSelector ;
+_:a36284054b21e5d6395c8d4eeada249 oa:hasSelector _:f6d39b5a1c6f0d10733ed027e52f682b .
+_:d018fe4ab67e78f79bf15bcef32219e7 oa:hasTarget _:a36284054b21e5d6395c8d4eeada249 .
+_:c9fadcbabddf3fd2bf6f76c1a1991535 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:e01ada3143ad78fb51774d8a0ce5d9ef oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b286a6de463f0cdc9c9c94af52263b2a oa:refinedBy _:a5f4b5c7b0f1d2c653adb5f7689f143b .
-_:a5f4b5c7b0f1d2c653adb5f7689f143b a oa:FragmentSelector ;
+_:b6a5dbc64e3b7d56686d3f9d0fde33a7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:c9fadcbabddf3fd2bf6f76c1a1991535 oa:refinedBy _:f9e9d9d6bfad1d84109572750f1bd8b6 .
+_:f9e9d9d6bfad1d84109572750f1bd8b6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/code" .
-_:e01ada3143ad78fb51774d8a0ce5d9ef oa:hasSelector _:b286a6de463f0cdc9c9c94af52263b2a .
-_:e24d15cef59db319d415b28f823f754b oa:hasTarget _:e01ada3143ad78fb51774d8a0ce5d9ef .
-_:b26869e50ded29737abe4b440ba9aa6a a oa:FragmentSelector ;
+_:b6a5dbc64e3b7d56686d3f9d0fde33a7 oa:hasSelector _:c9fadcbabddf3fd2bf6f76c1a1991535 .
+_:f1b023f09353abc2cc7333c54eac8d oa:hasTarget _:b6a5dbc64e3b7d56686d3f9d0fde33a7 .
+_:d93be9e208dbd8826c78234fd7043b67 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/14" .
-_:b8ceef1f22515d33c35dad5a56cda895 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b26869e50ded29737abe4b440ba9aa6a oa:refinedBy _:bc8d9e071eb89407d8189c99cbd8d92d .
-_:bc8d9e071eb89407d8189c99cbd8d92d a oa:FragmentSelector ;
+_:f888c521905adf5012ef68687c40393a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:d93be9e208dbd8826c78234fd7043b67 oa:refinedBy _:d973b62404ab9321ebe3f8e8de6b47a .
+_:d973b62404ab9321ebe3f8e8de6b47a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/display" .
-_:b8ceef1f22515d33c35dad5a56cda895 oa:hasSelector _:b26869e50ded29737abe4b440ba9aa6a .
-_:cdd04ac9a7a8c799c6f3153cabd52847 oa:hasTarget _:b8ceef1f22515d33c35dad5a56cda895 .
-_:a407552fe60ce2abe4774f2c6ae18475 sh:resultSeverity sh:Info .
-_:c796225d9ec7c0a2eb3e3f175ab9c4ec sh:resultSeverity sh:Info .
-_:aad174fffce202a194f9dc74cc2f6c08 sh:resultSeverity sh:Info .
-_:f0e99ceb2d374febc8c08b68b62aa6d5 sh:resultSeverity sh:Info .
-_:e24d15cef59db319d415b28f823f754b sh:resultSeverity sh:Info .
-_:cdd04ac9a7a8c799c6f3153cabd52847 sh:resultSeverity sh:Info .
-_:a407552fe60ce2abe4774f2c6ae18475 a oa:Annotation ;
+_:f888c521905adf5012ef68687c40393a oa:hasSelector _:d93be9e208dbd8826c78234fd7043b67 .
+_:b692510892d08aff461f7391ceb5a303 oa:hasTarget _:f888c521905adf5012ef68687c40393a .
+_:c95665327e9f90479b7f572c76778861 sh:resultSeverity sh:Info .
+_:a395d011f227999652fbcaafeeac2b5f sh:resultSeverity sh:Info .
+_:d545de7aacc958508256fa6750a8e1a sh:resultSeverity sh:Info .
+_:d018fe4ab67e78f79bf15bcef32219e7 sh:resultSeverity sh:Info .
+_:f1b023f09353abc2cc7333c54eac8d sh:resultSeverity sh:Info .
+_:b692510892d08aff461f7391ceb5a303 sh:resultSeverity sh:Info .
+_:c95665327e9f90479b7f572c76778861 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "51963-7" .
-_:c796225d9ec7c0a2eb3e3f175ab9c4ec a oa:Annotation ;
+_:a395d011f227999652fbcaafeeac2b5f a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "11289" .
-_:aad174fffce202a194f9dc74cc2f6c08 a oa:Annotation ;
+_:d545de7aacc958508256fa6750a8e1a a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Warfarin" .
-_:f0e99ceb2d374febc8c08b68b62aa6d5 a oa:Annotation ;
+_:d018fe4ab67e78f79bf15bcef32219e7 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "therapeutic-implication" .
-_:e24d15cef59db319d415b28f823f754b a oa:Annotation ;
+_:f1b023f09353abc2cc7333c54eac8d a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA6676-6" .
-_:cdd04ac9a7a8c799c6f3153cabd52847 a oa:Annotation ;
+_:b692510892d08aff461f7391ceb5a303 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Resistant" .
-_:dc8a50f4bc75ec948f4589dfc91f27d a oa:FragmentSelector ;
+_:a7a723fce685675bf769cd7abcc3a2fc a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:deefd0ba785247cc6fea865b15282393 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:dc8a50f4bc75ec948f4589dfc91f27d oa:refinedBy _:e5bd8290f01a6ce5733369325363c183 .
-_:e5bd8290f01a6ce5733369325363c183 a oa:FragmentSelector ;
+_:b2557e49c396cd3b1c7ac69a84cbf5d4 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a7a723fce685675bf769cd7abcc3a2fc oa:refinedBy _:ed22e9f0525ca983f7aae83858328d84 .
+_:ed22e9f0525ca983f7aae83858328d84 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/issued" .
-_:deefd0ba785247cc6fea865b15282393 oa:hasSelector _:dc8a50f4bc75ec948f4589dfc91f27d .
-_:b6b744e2f086155c1d3b298c48dab176 oa:hasTarget _:deefd0ba785247cc6fea865b15282393 ;
+_:b2557e49c396cd3b1c7ac69a84cbf5d4 oa:hasSelector _:a7a723fce685675bf769cd7abcc3a2fc .
+_:cb29503e032cd7a5d88a56008ea6792b oa:hasTarget _:b2557e49c396cd3b1c7ac69a84cbf5d4 ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:issuedNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2016-09-06T00:00:00-05:00" .
-_:eebf2a5e62bcbe694f671c5560dcf5c7 a oa:FragmentSelector ;
+_:ad41b1fe7c7987d7316b6be312f036c6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:e95294a8fad4a572b5228d6a87abe98e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:eebf2a5e62bcbe694f671c5560dcf5c7 oa:refinedBy _:eb2a046248c2da5f79cbc967ec388689 .
-_:eb2a046248c2da5f79cbc967ec388689 a oa:FragmentSelector ;
+_:f99773faaa4405152be2a7435d455a6a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ad41b1fe7c7987d7316b6be312f036c6 oa:refinedBy _:ef0921e976ac8405ab55b3cf27cee385 .
+_:ef0921e976ac8405ab55b3cf27cee385 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:e95294a8fad4a572b5228d6a87abe98e oa:hasSelector _:eebf2a5e62bcbe694f671c5560dcf5c7 .
-_:b9c25cfde633a8cbbb18f1bcc4f11a21 oa:hasTarget _:e95294a8fad4a572b5228d6a87abe98e ;
+_:f99773faaa4405152be2a7435d455a6a oa:hasSelector _:ad41b1fe7c7987d7316b6be312f036c6 .
+_:e8255214c6b7ea71d05d94c89c48ae12 oa:hasTarget _:f99773faaa4405152be2a7435d455a6a ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:af19f3cd22a4e89f08f5e6a63d833f4b a oa:FragmentSelector ;
+_:e05fb9528fa2c8a936da340a434c9d9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:b8e171fa177b61164b869cb8f341ea6a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:af19f3cd22a4e89f08f5e6a63d833f4b oa:refinedBy _:cfbd3b19ad16e5b825526f101ee5bbee .
-_:cfbd3b19ad16e5b825526f101ee5bbee a oa:FragmentSelector ;
+_:cc484e4cdb4b346d50437af1dc07406 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e05fb9528fa2c8a936da340a434c9d9 oa:refinedBy _:a48d6bca9c5adb57d3817f9d370c6fc4 .
+_:a48d6bca9c5adb57d3817f9d370c6fc4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/code/coding/0/code" .
-_:b8e171fa177b61164b869cb8f341ea6a oa:hasSelector _:af19f3cd22a4e89f08f5e6a63d833f4b .
-_:fa7832585cf49fff8693aeebfb207afb oa:hasTarget _:b8e171fa177b61164b869cb8f341ea6a .
-_:b2276877764f741a18f22555cf52588a a oa:FragmentSelector ;
+_:cc484e4cdb4b346d50437af1dc07406 oa:hasSelector _:e05fb9528fa2c8a936da340a434c9d9 .
+_:f7359d61de683e2efdd9dd4df9aea7b oa:hasTarget _:cc484e4cdb4b346d50437af1dc07406 .
+_:edd57e57bb10f07ec723fb82277ca789 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:bba017426b0a855a6a51ddf73352702 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:b2276877764f741a18f22555cf52588a oa:refinedBy _:cdf8ff351682b498ff8bb9436a2ad8f .
-_:cdf8ff351682b498ff8bb9436a2ad8f a oa:FragmentSelector ;
+_:ff89a73c60fa3f0ca06e779655ad5ac oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:edd57e57bb10f07ec723fb82277ca789 oa:refinedBy _:ea4b4fee95865aee3ed0c997d40a96fb .
+_:ea4b4fee95865aee3ed0c997d40a96fb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/code" .
-_:bba017426b0a855a6a51ddf73352702 oa:hasSelector _:b2276877764f741a18f22555cf52588a .
-_:f68a0377fd05e2106cf5a073d62391c3 oa:hasTarget _:bba017426b0a855a6a51ddf73352702 .
-_:e6861bf2cac5ed1c30183ea10f38280e a oa:FragmentSelector ;
+_:ff89a73c60fa3f0ca06e779655ad5ac oa:hasSelector _:edd57e57bb10f07ec723fb82277ca789 .
+_:d3aced6a6541f7918292155214042b5f oa:hasTarget _:ff89a73c60fa3f0ca06e779655ad5ac .
+_:dea5d2e0f2719a377410916ee72ae140 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:c1a1aff5d5adabed81510560dabc8f4d oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e6861bf2cac5ed1c30183ea10f38280e oa:refinedBy _:c43b4f48efe3f1d516f82700f7076c86 .
-_:c43b4f48efe3f1d516f82700f7076c86 a oa:FragmentSelector ;
+_:b3d0089d719a36054bbbf4a8f7b9a82c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:dea5d2e0f2719a377410916ee72ae140 oa:refinedBy _:cdede7ba032643b91492a3336eed8ab5 .
+_:cdede7ba032643b91492a3336eed8ab5 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/1/valueCodeableConcept/coding/0/display" .
-_:c1a1aff5d5adabed81510560dabc8f4d oa:hasSelector _:e6861bf2cac5ed1c30183ea10f38280e .
-_:e0a684d88f9bf443854061ad9868eeb7 oa:hasTarget _:c1a1aff5d5adabed81510560dabc8f4d .
-_:be798b394cf131553ce7b36d4312b6ec a oa:FragmentSelector ;
+_:b3d0089d719a36054bbbf4a8f7b9a82c oa:hasSelector _:dea5d2e0f2719a377410916ee72ae140 .
+_:c762c6e983530c6090ede259616da6e9 oa:hasTarget _:b3d0089d719a36054bbbf4a8f7b9a82c .
+_:b2e002cddb96eeb2c79496dd6da1833a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:dc035a2f8e51ccb70e3e59b6d73d515a oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:be798b394cf131553ce7b36d4312b6ec oa:refinedBy _:ba4f2706bfef9d8d92acc843da264d64 .
-_:ba4f2706bfef9d8d92acc843da264d64 a oa:FragmentSelector ;
+_:f899e97662739905fde5f45bd76f9b17 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:b2e002cddb96eeb2c79496dd6da1833a oa:refinedBy _:d9c39e0b05748bea4af106ea83fabbd2 .
+_:d9c39e0b05748bea4af106ea83fabbd2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/code/coding/0/code" .
-_:dc035a2f8e51ccb70e3e59b6d73d515a oa:hasSelector _:be798b394cf131553ce7b36d4312b6ec .
-_:c3cc6a43802cef680398053255d27264 oa:hasTarget _:dc035a2f8e51ccb70e3e59b6d73d515a .
-_:e2b765db4ab96ccc7a395caaf48d2a13 a oa:FragmentSelector ;
+_:f899e97662739905fde5f45bd76f9b17 oa:hasSelector _:b2e002cddb96eeb2c79496dd6da1833a .
+_:dfaa357071ffe6298dacb1d4301a8f64 oa:hasTarget _:f899e97662739905fde5f45bd76f9b17 .
+_:ae9169462da059c2f1f097e2e3559210 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:b2a656d87e37034a421caef9d764772e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:e2b765db4ab96ccc7a395caaf48d2a13 oa:refinedBy _:e1a606ce45a646ce53bee129d258d468 .
-_:e1a606ce45a646ce53bee129d258d468 a oa:FragmentSelector ;
+_:e4c02e41d7ec78e158a558682d8e081c oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:ae9169462da059c2f1f097e2e3559210 oa:refinedBy _:d1905a131fe629ad17a7e02b61cf97cb .
+_:d1905a131fe629ad17a7e02b61cf97cb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/code" .
-_:b2a656d87e37034a421caef9d764772e oa:hasSelector _:e2b765db4ab96ccc7a395caaf48d2a13 .
-_:ffad06691f690c60cf5bbd60f36fed3b oa:hasTarget _:b2a656d87e37034a421caef9d764772e .
-_:c796c5b2c87be911a8fa32fbf21fa820 a oa:FragmentSelector ;
+_:e4c02e41d7ec78e158a558682d8e081c oa:hasSelector _:ae9169462da059c2f1f097e2e3559210 .
+_:e0c40659f3c30b5c5a7a13e3b4b91e5 oa:hasTarget _:e4c02e41d7ec78e158a558682d8e081c .
+_:f3de9ea6e409e7949cf7c2aba462671e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/15" .
-_:c020e1c2fd6700e8b7f85673432006c7 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:c796c5b2c87be911a8fa32fbf21fa820 oa:refinedBy _:dd03640ae4dcb034415464e7b9f995ca .
-_:dd03640ae4dcb034415464e7b9f995ca a oa:FragmentSelector ;
+_:bb34219aef7115a5fec4d64bfcafd898 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:f3de9ea6e409e7949cf7c2aba462671e oa:refinedBy _:fd4b85b2d1933073ba8dc4df25a243b6 .
+_:fd4b85b2d1933073ba8dc4df25a243b6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/component/0/valueCodeableConcept/coding/0/display" .
-_:c020e1c2fd6700e8b7f85673432006c7 oa:hasSelector _:c796c5b2c87be911a8fa32fbf21fa820 .
-_:eadd5cbaf01eb35a567ea80726a2745b oa:hasTarget _:c020e1c2fd6700e8b7f85673432006c7 .
-_:fa7832585cf49fff8693aeebfb207afb sh:resultSeverity sh:Info .
-_:f68a0377fd05e2106cf5a073d62391c3 sh:resultSeverity sh:Info .
-_:e0a684d88f9bf443854061ad9868eeb7 sh:resultSeverity sh:Info .
-_:c3cc6a43802cef680398053255d27264 sh:resultSeverity sh:Info .
-_:ffad06691f690c60cf5bbd60f36fed3b sh:resultSeverity sh:Info .
-_:eadd5cbaf01eb35a567ea80726a2745b sh:resultSeverity sh:Info .
-_:fa7832585cf49fff8693aeebfb207afb a oa:Annotation ;
+_:bb34219aef7115a5fec4d64bfcafd898 oa:hasSelector _:f3de9ea6e409e7949cf7c2aba462671e .
+_:ca068bea33302e6f10d5e4a9663ff088 oa:hasTarget _:bb34219aef7115a5fec4d64bfcafd898 .
+_:f7359d61de683e2efdd9dd4df9aea7b sh:resultSeverity sh:Info .
+_:d3aced6a6541f7918292155214042b5f sh:resultSeverity sh:Info .
+_:c762c6e983530c6090ede259616da6e9 sh:resultSeverity sh:Info .
+_:dfaa357071ffe6298dacb1d4301a8f64 sh:resultSeverity sh:Info .
+_:e0c40659f3c30b5c5a7a13e3b4b91e5 sh:resultSeverity sh:Info .
+_:ca068bea33302e6f10d5e4a9663ff088 sh:resultSeverity sh:Info .
+_:f7359d61de683e2efdd9dd4df9aea7b a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "51963-7" .
-_:f68a0377fd05e2106cf5a073d62391c3 a oa:Annotation ;
+_:d3aced6a6541f7918292155214042b5f a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "11289" .
-_:e0a684d88f9bf443854061ad9868eeb7 a oa:Annotation ;
+_:c762c6e983530c6090ede259616da6e9 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Warfarin" .
-_:c3cc6a43802cef680398053255d27264 a oa:Annotation ;
+_:dfaa357071ffe6298dacb1d4301a8f64 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "therapeutic-implication" .
-_:ffad06691f690c60cf5bbd60f36fed3b a oa:Annotation ;
+_:e0c40659f3c30b5c5a7a13e3b4b91e5 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "LA19542-2" .
-_:eadd5cbaf01eb35a567ea80726a2745b a oa:Annotation ;
+_:ca068bea33302e6f10d5e4a9663ff088 a oa:Annotation ;
 	oa:hasBody fhirr4:observationComponentDataNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Low risk" .
-_:cafda64d774f2a7e8342f78cb3cb559c a oa:FragmentSelector ;
+_:e0167b22426162aa62a9708e4876a2e6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/16" .
-_:e20a18089d54681b51957d64c1f537ac a oa:FragmentSelector ;
+_:a0d83dd283b9d6924f3b0a291629754a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/reasonReference/reference" .
-_:cafda64d774f2a7e8342f78cb3cb559c oa:refinedBy _:e20a18089d54681b51957d64c1f537ac .
-_:a1dfdca433d82784111157698f179f80 a oa:Annotation ;
-	oa:hasTarget _:e5a1fb9041484d60e8a05390515f1d1e .
-_:e5a1fb9041484d60e8a05390515f1d1e oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
-	oa:hasSelector _:cafda64d774f2a7e8342f78cb3cb559c .
-_:a1dfdca433d82784111157698f179f80 oa:hasBody fhirr4:procedureReason ;
+_:e0167b22426162aa62a9708e4876a2e6 oa:refinedBy _:a0d83dd283b9d6924f3b0a291629754a .
+_:cd5777c5e1b0e27093cd48d5b4c85cf4 a oa:Annotation ;
+	oa:hasTarget _:f31ba827e66ad004da6fecf4ac631fa6 .
+_:f31ba827e66ad004da6fecf4ac631fa6 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> ;
+	oa:hasSelector _:e0167b22426162aa62a9708e4876a2e6 .
+_:cd5777c5e1b0e27093cd48d5b4c85cf4 oa:hasBody fhirr4:procedureReason ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/reasonReference/reference" ;
 	sh:resultSeverity sh:Info .
-_:bfef16e96b28ff5569e62e772be57cc4 a oa:FragmentSelector ;
+_:e0ded2bb2d35dedd86a6207e158e2c7c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/16" .
-_:c2568c423fcc2ebe08f22399af8c5a46 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bfef16e96b28ff5569e62e772be57cc4 oa:refinedBy _:dba91343a3cc1212a1adfe30a5c46cbf .
-_:dba91343a3cc1212a1adfe30a5c46cbf a oa:FragmentSelector ;
+_:cd1c5fa1d492f0b6135cf7b3f850815f oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:e0ded2bb2d35dedd86a6207e158e2c7c oa:refinedBy _:cbd907b46a4c7bd3ae765d06dc086b0d .
+_:cbd907b46a4c7bd3ae765d06dc086b0d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/text/div" .
-_:c2568c423fcc2ebe08f22399af8c5a46 oa:hasSelector _:bfef16e96b28ff5569e62e772be57cc4 .
-_:cee4652a1350c00b7d2e42b4fce526bd oa:hasTarget _:c2568c423fcc2ebe08f22399af8c5a46 ;
+_:cd1c5fa1d492f0b6135cf7b3f850815f oa:hasSelector _:e0ded2bb2d35dedd86a6207e158e2c7c .
+_:c6d78bc2d6bbdb93adc82e4e97341551 oa:hasTarget _:cd1c5fa1d492f0b6135cf7b3f850815f ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:narrative ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/text/div" .
-_:bae9c9ccfa8f211d4ee6b5b44417d78f a oa:FragmentSelector ;
+_:a0992b61c5bfa440dd04eab776737110 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/16" .
-_:a98e5c7a14f576bc8dbca14e0a55875b oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
-_:bae9c9ccfa8f211d4ee6b5b44417d78f oa:refinedBy _:a787bdd94ebb0153ef2bd67fd7c3e8f7 .
-_:a787bdd94ebb0153ef2bd67fd7c3e8f7 a oa:FragmentSelector ;
+_:bbc9bc525a2b10bfc08233c4ce9a41f1 oa:hasSource <../in/Bundle-bundle-cgexample.input.json> .
+_:a0992b61c5bfa440dd04eab776737110 oa:refinedBy _:e5f4df227e301e55a5c957f186d1463d .
+_:e5f4df227e301e55a5c957f186d1463d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource" .
-_:a98e5c7a14f576bc8dbca14e0a55875b oa:hasSelector _:bae9c9ccfa8f211d4ee6b5b44417d78f .
-_:c5cf5efe8b98d6ed5435ac2eecf792a5 oa:hasTarget _:a98e5c7a14f576bc8dbca14e0a55875b ;
+_:bbc9bc525a2b10bfc08233c4ce9a41f1 oa:hasSelector _:a0992b61c5bfa440dd04eab776737110 .
+_:cc43aaaa8d5866b656861527f26a664c oa:hasTarget _:bbc9bc525a2b10bfc08233c4ce9a41f1 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;

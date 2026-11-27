@@ -147,6 +147,11 @@
     <#variant-effective-instant-not-carried>
     <#variant-effective-period-start-not-carried>
     <#variant-effective-period-end-not-carried>
+    <#variant-performer-not-carried>
+    <#variant-interpretation-flag-not-carried>
+    <#variant-data-absent-reason-not-carried>
+    <#variant-effective-time-absent-for-reason>
+    <#variant-derived-from-not-carried>
     <#diagnostic-report-effective-period-end-not-carried>
     <#medication-dispense-days-supply-system-only>
     <#medication-dispense-quantity-system-only>
@@ -1989,6 +1994,71 @@
   mf:result [
     bridge:expectedGraph <expected/variant-effective-period-end-not-carried.ttl> ;
     bridge:expectedFindings <findings/variant-effective-period-end-not-carried.ttl>
+  ] .
+
+<#variant-performer-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-performer-not-carried" ;
+  rdfs:comment "A genetic variant Observation with a performer: no Cascade term carries a variant's performer, so it is a fhirr4:performerCarriedOnlyAsOneOrganizationRecord finding at the performer, holding its reference." ;
+  mf:action [
+    bridge:input <in/variant-performer-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-performer-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-performer-not-carried.ttl>
+  ] .
+
+<#variant-interpretation-flag-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-interpretation-flag-not-carried" ;
+  rdfs:comment "A genetic variant Observation with an interpretation flag: no Cascade term carries a variant's flag, so it is a fhirr4:labResultInterpretationNotCarried finding at the interpretation, holding its code." ;
+  mf:action [
+    bridge:input <in/variant-interpretation-flag-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-interpretation-flag-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-interpretation-flag-not-carried.ttl>
+  ] .
+
+<#variant-data-absent-reason-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-data-absent-reason-not-carried" ;
+  rdfs:comment "A genetic variant Observation with a data absent reason: no Cascade term carries a variant's, so it is a fhirr4:absentReasonNotCarried finding at the data absent reason, holding its code." ;
+  mf:action [
+    bridge:input <in/variant-data-absent-reason-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-data-absent-reason-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-data-absent-reason-not-carried.ttl>
+  ] .
+
+<#variant-effective-time-absent-for-reason> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-effective-time-absent-for-reason" ;
+  rdfs:comment "A genetic variant Observation whose effective time is absent for a reason: the time is not carried for a variant, so it is a fhirr4:variantTimeNotCarried finding at the time's extension element." ;
+  mf:action [
+    bridge:input <in/variant-effective-time-absent-for-reason.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-effective-time-absent-for-reason.ttl> ;
+    bridge:expectedFindings <findings/variant-effective-time-absent-for-reason.ttl>
+  ] .
+
+<#variant-derived-from-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-derived-from-not-carried" ;
+  rdfs:comment "A genetic variant Observation derived from another Observation: no Cascade term carries a variant's derivedFrom, so it is a fhirr4:variantDerivedFromNotCarried finding at the reference, holding it." ;
+  mf:action [
+    bridge:input <in/variant-derived-from-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-derived-from-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-derived-from-not-carried.ttl>
   ] .
 
 <#diagnostic-report-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;

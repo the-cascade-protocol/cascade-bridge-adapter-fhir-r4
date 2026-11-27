@@ -923,6 +923,21 @@
           "@id": "fixtures/in/variant-effective-period-end-not-carried.json"
         },
         {
+          "@id": "fixtures/in/variant-performer-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-interpretation-flag-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-data-absent-reason-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/variant-effective-time-absent-for-reason.json"
+        },
+        {
+          "@id": "fixtures/in/variant-derived-from-not-carried.json"
+        },
+        {
           "@id": "fixtures/in/diagnostic-report-effective-period-end-not-carried.json"
         },
         {
@@ -1916,6 +1931,21 @@
           "@id": "fixtures/expected/variant-effective-period-end-not-carried.ttl"
         },
         {
+          "@id": "fixtures/expected/variant-performer-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-interpretation-flag-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-data-absent-reason-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-effective-time-absent-for-reason.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-derived-from-not-carried.ttl"
+        },
+        {
           "@id": "fixtures/expected/diagnostic-report-effective-period-end-not-carried.ttl"
         },
         {
@@ -2088,6 +2118,21 @@
         },
         {
           "@id": "fixtures/findings/variant-effective-period-end-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-performer-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-interpretation-flag-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-data-absent-reason-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-effective-time-absent-for-reason.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-derived-from-not-carried.ttl"
         },
         {
           "@id": "fixtures/findings/diagnostic-report-effective-period-end-not-carried.ttl"
@@ -5234,6 +5279,61 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A collection Bundle of one genetic variant Observation whose effectivePeriod holds only an end. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a period's end, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/variant-performer-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant Observation with a performer",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one genetic variant Observation with a performer that is a Practitioner. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's performer, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/variant-interpretation-flag-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant Observation with an interpretation flag",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one genetic variant Observation whose interpretation is the v3 code A. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's interpretation, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/variant-data-absent-reason-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant Observation with a data absent reason",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one genetic variant Observation with a dataAbsentReason. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's data absent reason, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/variant-effective-time-absent-for-reason.json",
+      "@type": "File",
+      "name": "A genetic variant Observation whose effective time is absent for a reason",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one genetic variant Observation whose _effectiveDateTime holds a data-absent-reason extension. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's time stated absent, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/variant-derived-from-not-carried.json",
+      "@type": "File",
+      "name": "A genetic variant Observation derived from another Observation",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one genetic variant Observation with a derivedFrom reference. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a variant's derivedFrom, which was dropped with no finding."
     },
     {
       "@id": "fixtures/in/diagnostic-report-effective-period-end-not-carried.json",
@@ -9124,6 +9224,76 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/variant-performer-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-performer-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-performer-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-interpretation-flag-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-interpretation-flag-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-interpretation-flag-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-data-absent-reason-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-data-absent-reason-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-data-absent-reason-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-effective-time-absent-for-reason.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-effective-time-absent-for-reason",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-time-absent-for-reason.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-derived-from-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-derived-from-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-derived-from-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/diagnostic-report-effective-period-end-not-carried.ttl",
       "@type": "File",
       "name": "Expected graph for diagnostic-report-effective-period-end-not-carried",
@@ -9816,6 +9986,76 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/variant-effective-period-end-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-performer-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-performer-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-performer-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-interpretation-flag-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-interpretation-flag-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-interpretation-flag-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-data-absent-reason-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-data-absent-reason-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-data-absent-reason-not-carried.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-effective-time-absent-for-reason.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-effective-time-absent-for-reason",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-effective-time-absent-for-reason.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-derived-from-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-derived-from-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-derived-from-not-carried.json"
       },
       "dateCreated": "2026-11-26",
       "license": {
