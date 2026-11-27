@@ -25,7 +25,9 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # report.rq carries only with its seconds: a day or a time to the minute is
 # reported here as no value, as a date is. A lab result's and a variant's issued is
 # carried by no mapping, and is reported as fhirr4:issuedNotCarried, and a
-# variant's effective time, readable or not, as fhirr4:variantTimeNotCarried.
+# variant's effective time, readable or not, as fhirr4:variantTimeNotCarried. The end of
+# a diagnostic report's or a variant's effective period is carried by no mapping, and is
+# reported as fhirr4:diagnosticReportPeriodEnd or fhirr4:variantTimeNotCarried, readable or not.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -121,6 +123,15 @@ WHERE {
     ?resource xyz:effectivePeriod ?period . ?period xyz:start ?value .
     BIND ("/effectivePeriod/start" AS ?step)
     BIND (fhirr4:variantTimeNotCarried AS ?fixedGap)
+  }
+  UNION
+  {
+    VALUES (?type ?scope ?fixedGap) {
+      ("DiagnosticReport" "" fhirr4:diagnosticReportPeriodEnd)
+      ("Observation" "variant" fhirr4:variantTimeNotCarried)
+    }
+    ?resource xyz:effectivePeriod ?period . ?period xyz:end ?value .
+    BIND ("/effectivePeriod/end" AS ?step)
   }
   UNION
   {
