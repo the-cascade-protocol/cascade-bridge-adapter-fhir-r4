@@ -11,7 +11,7 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 
 # What medication.rq and medication-supply-and-dosages.rq leave behind at a
 # path the source accounting carries for another kind, or carries where it
-# holds one value: a prescribed request's intent outside the eight codes of
+# holds one value: a request's intent outside the eight codes of
 # FHIR's medicationrequest-intent, a reference that resolves to no one
 # Medication, a note, every coding with no system, a system
 # coding-system-table.rq gives no row, or no code, and every NDC that
@@ -80,9 +80,7 @@ WHERE {
     ?resource xyz:resourceType "MedicationRequest" ;
       xyz:intent ?value .
     FILTER (!(?value IN ("proposal", "plan", "order", "original-order", "reflex-order",
-                           "filler-order", "instance-order", "option"))
-      && NOT EXISTS { ?resource xyz:reportedReference ?reportedReference }
-      && NOT EXISTS { ?resource xyz:reportedBoolean "true" })
+                           "filler-order", "instance-order", "option")))
     BIND ("/intent" AS ?step)
     BIND (fhirr4:medicationRequestIntentNotMapped AS ?gap)
   }

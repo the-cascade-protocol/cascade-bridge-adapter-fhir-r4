@@ -256,7 +256,7 @@ fhirr4:addressCarriedForOrganizationsOnly a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:medicationRequestIntentNotMapped a skos:Concept ;
-  skos:prefLabel "A prescribed request's intent is not one of the eight codes of FHIR's medicationrequest-intent, which its binding requires, so no intent is carried."@en ;
+  skos:prefLabel "A request's intent, prescribed or reported, is not one of the eight codes of FHIR's medicationrequest-intent, which its binding requires, so no intent is carried."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:valueNotMapped ;
   sh:resultSeverity sh:Warning .

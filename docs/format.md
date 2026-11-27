@@ -167,9 +167,10 @@ start of use, which only `effective[x]` gives. A `MedicationStatement` is
 reported use. A `MedicationRequest` is too where its `reported[x]` says the
 source reported it rather than ordered it (`reportedBoolean` true, or a
 `reportedReference`, whose reference to who reported it is not carried), and is
-otherwise prescribed. Only a prescribed request carries its `intent`
+otherwise prescribed. Every request, reported or prescribed, carries its `intent`
 ([medicationrequest-intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html),
-read on 2026-10-29), because a reported request's intent is not read. An intent
+read on 2026-10-29): FHIR requires one on each, and `cascade:prescribedOrReported`
+tells a reader which kind the version is. An intent
 outside R4's eight codes is not carried and is a finding,
 `fhirr4:medicationRequestIntentNotMapped`.
 
