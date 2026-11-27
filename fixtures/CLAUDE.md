@@ -10,14 +10,14 @@ An input is one of two kinds, and the crate says which:
 
 - **Copied**: from `../../conformance`, `fixtures/clinical-fhir/` or
   `fixtures/genomics/fhir-genomics-ig/` at the commit the crate's `isBasedOn`
-  names, under the same file name, byte for byte, with a `sameAs` to its blob
-  and its digest, so a copy that drifted from its source is caught. Never edited.
+  names, byte for byte under the same file name, with a `sameAs` to its blob
+  and its digest. Never edited.
 - **Authored here**: written for a case the conformance corpus does not hold,
-  with the date it was written, and no digest: git holds its bytes. Edited only
-  by replacing it, as a new file under a new name.
+  with its date and no digest, because git holds its bytes. Replaced under a
+  new name, never edited.
 
-The two kinds share `in/`, so `.gitattributes` and `.editorconfig` keep every
-file under `in/`, `facts/`, `expected/` and `findings/` from being normalised.
+Both kinds share `in/`, so `.gitattributes` and `.editorconfig` leave every
+file under `in/`, `facts/`, `expected/` and `findings/` unnormalised.
 
 An input is committed once. A case that needs the same bytes twice names one
 file in both of its entries.
