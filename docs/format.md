@@ -191,8 +191,8 @@ number or lies beyond twenty digits of the point are
 not carried at all, and each is a finding at the duration
 (`fhirr4:expectedSupplyDurationNotCarried`), holding the value that stopped it, so that
 it speaks for the duration's number, unit and code. Where the stopper is the unit,
-the value is its code, else its unit text; where the code is a unit of time and its
-system is not UCUM's it is that system, and where no unit is stated it is empty. A course of therapy in another system,
+the value is its code, else its unit text, else its system; where the code is a unit of time and its
+system is not UCUM's it is that system, and where no unit is stated the finding holds no value. A course of therapy in another system,
 after its first coding or of text alone, and `dispenseRequest.quantity`, which no
 term holds, are findings, as are the initial fill, the dispense interval and the
 performer. Any other number that is no number, a repeat frequency of 0 and a

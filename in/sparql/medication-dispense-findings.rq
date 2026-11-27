@@ -149,9 +149,9 @@ WHERE {
     OPTIONAL { ?quantity xyz:unit ?daysUnit }
     OPTIONAL { ?quantity xyz:value ?daysValue }
     OPTIONAL { ?quantity xyz:system ?daysSystem }
-    FILTER (BOUND(?daysCode) || BOUND(?daysUnit) || BOUND(?daysValue))
-    BIND (IF(BOUND(?daysCode) && ?daysCode IN ("s", "min", "h", "d", "wk", "mo", "a"), COALESCE(?daysSystem, ""),
-             COALESCE(?daysCode, ?daysUnit, "")) AS ?value)
+    FILTER (BOUND(?daysCode) || BOUND(?daysUnit) || BOUND(?daysValue) || BOUND(?daysSystem))
+    BIND (IF(BOUND(?daysCode) && ?daysCode IN ("s", "min", "h", "d", "wk", "mo", "a"), ?daysSystem,
+             COALESCE(?daysCode, ?daysUnit, ?daysSystem)) AS ?value)
     BIND (?quantityStep AS ?step)
     BIND (fhirr4:dispenseDaysSupplyNotCarried AS ?gap)
   }

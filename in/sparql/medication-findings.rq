@@ -246,9 +246,9 @@ WHERE {
     OPTIONAL { ?duration xyz:unit ?durationUnit }
     OPTIONAL { ?duration xyz:value ?durationValue }
     OPTIONAL { ?duration xyz:system ?durationSystem }
-    FILTER (BOUND(?durationCode) || BOUND(?durationUnit) || BOUND(?durationValue))
-    BIND (IF(BOUND(?durationCode) && ?durationCode IN ("s", "min", "h", "d", "wk", "mo", "a"), COALESCE(?durationSystem, ""),
-             COALESCE(?durationCode, ?durationUnit, "")) AS ?value)
+    FILTER (BOUND(?durationCode) || BOUND(?durationUnit) || BOUND(?durationValue) || BOUND(?durationSystem))
+    BIND (IF(BOUND(?durationCode) && ?durationCode IN ("s", "min", "h", "d", "wk", "mo", "a"), ?durationSystem,
+             COALESCE(?durationCode, ?durationUnit, ?durationSystem)) AS ?value)
     BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
     BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
   }
