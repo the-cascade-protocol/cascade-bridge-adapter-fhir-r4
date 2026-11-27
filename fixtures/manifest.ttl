@@ -146,6 +146,8 @@
     <#variant-effective-date-time-not-carried>
     <#variant-effective-instant-not-carried>
     <#variant-effective-period-start-not-carried>
+    <#medication-dispense-days-supply-system-only>
+    <#medication-request-supply-duration-system-only>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
     <#Bundle-bundle-compound-heterozygote>
@@ -1970,6 +1972,32 @@
   mf:result [
     bridge:expectedGraph <expected/variant-effective-period-start-not-carried.ttl> ;
     bridge:expectedFindings <findings/variant-effective-period-start-not-carried.ttl>
+  ] .
+
+<#medication-dispense-days-supply-system-only> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-days-supply-system-only" ;
+  rdfs:comment "A MedicationDispense whose days' supply states only a system: it is dropped whole, with one finding at the days' supply holding its system." ;
+  mf:action [
+    bridge:input <in/medication-dispense-days-supply-system-only.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-days-supply-system-only.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-days-supply-system-only.ttl>
+  ] .
+
+<#medication-request-supply-duration-system-only> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-supply-duration-system-only" ;
+  rdfs:comment "A MedicationRequest whose expected supply duration states only a system: it is dropped whole, with one finding at the duration holding its system." ;
+  mf:action [
+    bridge:input <in/medication-request-supply-duration-system-only.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-supply-duration-system-only.ttl> ;
+    bridge:expectedFindings <findings/medication-request-supply-duration-system-only.ttl>
   ] .
 
 <#lab-performer-differs-names-one-record> a bridge:IdentityRelationTest ;
