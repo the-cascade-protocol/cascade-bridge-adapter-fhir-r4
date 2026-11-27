@@ -1,0 +1,30 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertension"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat-1"
+        },
+        "id": "condition-identifier",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.3.4",
+            "value": "ID-77"
+          }
+        ]
+      }
+    }
+  ]
+}

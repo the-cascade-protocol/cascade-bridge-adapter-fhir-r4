@@ -9,7 +9,7 @@ fhirr4:gaps a skos:ConceptScheme ;
 fhirr4:documentNotR4 a skos:Concept ;
   skos:prefLabel "A document states a FHIR version other than R4, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:administrativeGenderNotMapped a skos:Concept ;
@@ -31,7 +31,7 @@ fhirr4:referenceDisplay a skos:Concept ;
 fhirr4:resourceTypeNotMapped a skos:Concept ;
   skos:prefLabel "A resource is of a type this release of the adapter does not map, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:resourceIdRepeated a skos:Concept ;
@@ -78,10 +78,16 @@ fhirr4:referenceRelativeUndefined a skos:Concept ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
 
+fhirr4:referenceNotToAPatient a skos:Concept ;
+  skos:prefLabel "A resource references its patient as something that is no Patient resource: a reference to another type, as Group/<id>, a reference that is none, as a contained one, or a urn:uuid that no Patient entry of its document has as its fullUrl, or more than one has, so the reference names no record and nothing carries it."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss ;
+  sh:resultSeverity sh:Warning .
+
 fhirr4:observationNotLabResult a skos:Concept ;
   skos:prefLabel "An Observation is not a laboratory result, by its category or, where it has none, by its code, or it is a panel of other results, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:medicationReferenceUnresolved a skos:Concept ;
@@ -108,6 +114,27 @@ fhirr4:medicationDosageRepeated a skos:Concept ;
 
 fhirr4:labResultPeriodEnd a skos:Concept ;
   skos:prefLabel "A lab result carries the end of the period it was performed over, and no Cascade predicate carries it."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
+fhirr4:diagnosticReportPeriodEnd a skos:Concept ;
+  skos:prefLabel "A diagnostic report carries the end of the period its results are about, and no Cascade predicate carries it."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
+fhirr4:variantDerivedFromNotCarried a skos:Concept ;
+  skos:prefLabel "A variant references the resources it is derived from, and no Cascade predicate carries the link; a diagnostic implication's link to a variant is carried."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
+fhirr4:patientNameRepeated a skos:Concept ;
+  skos:prefLabel "A patient states more than one name, or a name more than one given name, and a patient has one family name, one given name and one name: only the first name's family name and text, and its first given name that is not blank, are carried."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss ;
+  sh:resultSeverity sh:Warning .
+
+fhirr4:patientTelecomNotCarried a skos:Concept ;
+  skos:prefLabel "A patient states a contact point, a phone number or an email address, and no Cascade predicate carries it."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 
@@ -215,15 +242,10 @@ fhirr4:interpretationVariantLink a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:performerCarriedOnlyAsOneOrganizationRecord a skos:Concept ;
-  skos:prefLabel "A performer or an author is carried only as the one organization record it names: a diagnostic implication's, an Organization of its document, and a lab result's or a report's performer and a note's author from a server, an Organization of that server by type and id; one whose performers or authors name no organization record, or more than one, is attributed to none, and any other is not carried."@en ;
+  skos:prefLabel "A performer or an author is carried only as the one organization record it names: a diagnostic implication's, an Organization of its document, and a lab result's or a report's performer and a note's author from a server, an Organization of that server by type and id; one whose performers or authors name no organization record, or more than one, is attributed to none, and any other, a variant's among them, is not carried."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
-
-fhirr4:variantComponentNotCarried a skos:Concept ;
-  skos:prefLabel "A variant or a diagnostic implication carries components no Cascade term carries, as the genomic and protein HGVS, the allelic state, the predicted phenotype and the level of evidence."@en ;
-  skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:carriedWithLoss .
 
 fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly a skos:Concept ;
   skos:prefLabel "A resource's business identifiers are carried for a lab result, which the matcher compares within one organization, and for an Organization a document names, which is named by one, or one from a server, whose version states them; any other record's are not, since nothing reads them. An identifier's assigner (Identifier.assigner) is not read: the organization a lab result's identifier belongs to is the one its document names as custodian or author."@en ;
@@ -231,7 +253,7 @@ fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:issuedNotCarried a skos:Concept ;
-  skos:prefLabel "A result carries the time it was issued, which is not when it was performed, and only a diagnostic implication's is carried, as its date, and a report's, as its issued time."@en ;
+  skos:prefLabel "A lab result or a variant carries the time it was issued, which is not when it was performed, and no Cascade term carries it; only a diagnostic implication's is carried, as its date, and a report's, as its issued time."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss .
 
@@ -241,7 +263,7 @@ fhirr4:variantTimeNotCarried a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:absentReasonNotCarried a skos:Concept ;
-  skos:prefLabel "A value FHIR says is absent gives a reason in a code system other than FHIR's data absent reasons and v3 NullFlavor, or a code its system does not define, and that reason is not carried; the absence is, where another reason is given."@en ;
+  skos:prefLabel "A value FHIR says is absent gives a reason in a code system other than FHIR's data absent reasons and v3 NullFlavor, or a code its system does not define, and that reason is not carried; the absence is, where another reason is given. A variant's data absent reason is not carried at all, a variant stating a value and no absence."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss .
 
@@ -272,7 +294,7 @@ fhirr4:codingNotCarried a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:labResultInterpretationNotCarried a skos:Concept ;
-  skos:prefLabel "A lab result's interpretation is a coding in a system other than HL7's v3 ObservationInterpretation, v2's table 0078 among them, or a coding with no system or no code, and it is not carried."@en ;
+  skos:prefLabel "A lab result's interpretation is a coding in a system other than HL7's v3 ObservationInterpretation, v2's table 0078 among them, or a coding with no system or no code, and it is not carried; nor is a variant's interpretation, whatever it holds, since a variant has no interpretation flag."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss .
 
@@ -322,7 +344,7 @@ fhirr4:medicationNumberNotCarried a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:dateNotCarried a skos:Concept ;
-  skos:prefLabel "A date or time a mapping reads is one FHIR does not allow, such as a day the calendar lacks, month 00 or 13, year 0000, hour 24 or a time with no zone, or one FHIR allows that no xsd:date or xsd:dateTime carries, a leap second, so it is not carried."@en ;
+  skos:prefLabel "A date or time a mapping reads is one FHIR does not allow, such as a day the calendar lacks, month 00 or 13, year 0000, hour 24, a time with no zone, or a report's issued, an instant, written as a day or to the minute, or one FHIR allows that no xsd:date or xsd:dateTime carries, a leap second, so it is not carried."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
@@ -364,7 +386,7 @@ fhirr4:authorizingPrescriptionNotNamed a skos:Concept ;
 fhirr4:documentReferenceToCcdaDocument a skos:Concept ;
   skos:prefLabel "A DocumentReference's content is a C-CDA document, a source of its own for a C-CDA adapter to import, so it makes no note or document record and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:attachmentDataNotRead a skos:Concept ;
@@ -388,6 +410,11 @@ fhirr4:procedurePeriodEnd a skos:Concept ;
   skos:prefLabel "A procedure carries the end of the period it was performed over, and no Cascade predicate carries it."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
+
+fhirr4:performedPeriodStartBesideDate a skos:Concept ;
+  skos:prefLabel "A procedure states a period's start beside a performed date, which FHIR allows only one of: the performed date is the procedure's date, the start is not carried, and no Cascade term carries it, whether or not it is a date FHIR allows."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss .
 
 fhirr4:encounterNotCarried a skos:Concept ;
   skos:prefLabel "A resource references the encounter it was recorded at, and no Cascade predicate carries the link."@en ;

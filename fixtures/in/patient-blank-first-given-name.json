@@ -1,0 +1,15 @@
+{
+  "resourceType": "Patient",
+  "id": "pat-blank-given",
+  "name": [
+    {
+      "family": "Okonkwo",
+      "given": [
+        "",
+        "Marie"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-03-14"
+}

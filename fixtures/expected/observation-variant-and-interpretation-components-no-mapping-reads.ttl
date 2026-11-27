@@ -8,17 +8,19 @@
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix pav: <http://purl.org/pav/> .
 <urn:uuid:cddbdb11-44e2-813c-9337-f98e252944e9> a cascade:GeneticVariantFinding ;
-	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/Observation/obs-variant-unread-1> .
+	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/Observation/obs-variant-unread-1> ;
+	cascade:sourceRecordId "obs-variant-unread-1" .
 <ni:///sha-256;t9bBsLAyc6GKt8WIR8m5PEXpTtRYJhA-JagEp7leEeo> prov:specializationOf <urn:uuid:cddbdb11-44e2-813c-9337-f98e252944e9> ;
 	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
 _:a28db1bb9622968f1276ef28c735f2cf bridge:arrivedAs <ni:///sha-256;t9bBsLAyc6GKt8WIR8m5PEXpTtRYJhA-JagEp7leEeo> .
 <urn:uuid:32cdd889-af84-818f-a2dd-ea14676d6c58> a cascade:VariantInterpretation ;
-	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/Observation/obs-variant-unread-1#interpretation-unread-1> .
+	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/Observation/obs-variant-unread-1#interpretation-unread-1> ;
+	cascade:sourceRecordId "interpretation-unread-1" .
 <ni:///sha-256;XIEu4JHv5908cpmkyTp4_0jzHaLomn7BsSJlBaXfcVY> prov:specializationOf <urn:uuid:32cdd889-af84-818f-a2dd-ea14676d6c58> ;
 	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
 _:c1fe3a5fa57bea40121c0d1acac698ca bridge:arrivedAs <ni:///sha-256;XIEu4JHv5908cpmkyTp4_0jzHaLomn7BsSJlBaXfcVY> ;
-	oa:hasSelector _:a81165612d166cd13b0887f0116fb211 .
-_:a81165612d166cd13b0887f0116fb211 a oa:FragmentSelector ;
+	oa:hasSelector _:a5831a4f066601042bedebc3fae713ee .
+_:a5831a4f066601042bedebc3fae713ee a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/contained/0" .
 <ni:///sha-256;XIEu4JHv5908cpmkyTp4_0jzHaLomn7BsSJlBaXfcVY> cascade:acmgClassification cascade:Pathogenic ;

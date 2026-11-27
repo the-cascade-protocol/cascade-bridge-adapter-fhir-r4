@@ -1,0 +1,23 @@
+{
+  "resourceType": "Patient",
+  "id": "pat-second-name",
+  "name": [
+    {
+      "use": "official",
+      "family": "Okonkwo",
+      "given": [
+        "Odette"
+      ]
+    },
+    {
+      "use": "maiden",
+      "family": "Adeyemi",
+      "given": [
+        "Odette"
+      ],
+      "text": "Odette Adeyemi"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-03-14"
+}

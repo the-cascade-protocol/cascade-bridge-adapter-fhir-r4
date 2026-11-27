@@ -17,9 +17,11 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # system other than HL7's v3 ObservationInterpretation or with no code, a
 # number's unit code in a system other than UCUM, a comparator on a bound, a number
 # lab-result-quantities.rq refuses for its form, its size or its comparator,
-# a coded value's code in a system other than SNOMED CT or LOINC, and, from a
-# server, each performer's reference where performers name more than one
-# Organization, as lab-result-performer.rq reads them.
+# a coded value's code in a system other than SNOMED CT or LOINC, and each
+# performer's reference from which lab-result-performer.rq attributes the result
+# to no organization, for any reason: no server known, another type, a reference
+# from or to an entry under a urn:uuid, an id two entries hold, or performers
+# naming more than one Organization.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -207,24 +209,44 @@ WHERE {
   }
   UNION
   {
-    {
-      SELECT ?resource (COUNT(DISTINCT ?performerId) AS ?organizations) WHERE {
-        bridge:thisDocument cascade:serverBaseUrl ?performerServer .
-        ?resource xyz:resourceType "Observation" ;
-          xyz:performer ?countedPerformers .
-        ?countedPerformers ?countedSlot ?countedPerformer .
-        ?countedPerformer xyz:reference ?written .
-        BIND (REPLACE(?written, "/_history/[A-Za-z0-9.-]{1,64}$", "") AS ?unversioned)
-        BIND (IF(STRSTARTS(?unversioned, CONCAT(?performerServer, "/")), STRAFTER(?unversioned, CONCAT(?performerServer, "/")),
-                 ?unversioned) AS ?relative)
-        FILTER (REGEX(?relative, "^Organization/[A-Za-z0-9.-]{1,64}$"))
-        BIND (STRAFTER(?relative, "Organization/") AS ?performerId)
-      } GROUP BY ?resource
-    }
-    FILTER (?organizations > 1)
+    ?root a fx:root .
     ?resource xyz:performer ?performers .
     ?performers ?performerSlot ?performer .
     ?performer xyz:reference ?value .
+    OPTIONAL { bridge:thisDocument cascade:serverBaseUrl ?server }
+    BIND (REPLACE(?value, "/_history/[A-Za-z0-9.-]{1,64}$", "") AS ?unversioned)
+    BIND (IF(BOUND(?server) && STRSTARTS(?unversioned, CONCAT(?server, "/")), STRAFTER(?unversioned, CONCAT(?server, "/")),
+             ?unversioned) AS ?relative)
+    BIND (IF(BOUND(?server) && REGEX(?relative, "^Organization/[A-Za-z0-9.-]{1,64}$"), STRAFTER(?relative, "Organization/"), 1/0)
+          AS ?performerId)
+    FILTER (!BOUND(?performerId) || NOT EXISTS {
+      FILTER NOT EXISTS { ?root xyz:fullUrl ?urnFullUrl . FILTER (STRSTARTS(?urnFullUrl, "urn:uuid:")) }
+      FILTER NOT EXISTS {
+        ?resource xyz:performer ?otherPerformers .
+        ?otherPerformers ?otherSlot ?otherPerformer .
+        ?otherPerformer xyz:reference ?otherWritten .
+        BIND (REPLACE(?otherWritten, "/_history/[A-Za-z0-9.-]{1,64}$", "") AS ?otherUnversioned)
+        BIND (IF(STRSTARTS(?otherUnversioned, CONCAT(?server, "/")), STRAFTER(?otherUnversioned, CONCAT(?server, "/")),
+                 ?otherUnversioned) AS ?otherRelative)
+        FILTER (REGEX(?otherRelative, "^Organization/[A-Za-z0-9.-]{1,64}$")
+                && STRAFTER(?otherRelative, "Organization/") != ?performerId)
+      }
+      FILTER NOT EXISTS {
+        ?urnOrganization fhirr4:resourceType "Organization" ;
+          fhirr4:resourceId ?performerId ;
+          fhirr4:fullUrl ?urnOrganizationUrl .
+        FILTER (STRSTARTS(?urnOrganizationUrl, "urn:uuid:"))
+      }
+      FILTER NOT EXISTS {
+        ?heldOnce fhirr4:resourceType "Organization" ;
+          fhirr4:resourceId ?performerId ;
+          fhirr4:heldAt ?onceAt .
+        ?heldTwice fhirr4:resourceType "Organization" ;
+          fhirr4:resourceId ?performerId ;
+          fhirr4:heldAt ?twiceAt .
+        FILTER (?onceAt != ?twiceAt)
+      }
+    })
     BIND (CONCAT("/performer/", STR(xsd:integer(STRAFTER(STR(?performerSlot), "#_")) - 1), "/reference") AS ?step)
     BIND (fhirr4:performerCarriedOnlyAsOneOrganizationRecord AS ?gap)
   }

@@ -1,0 +1,54 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs",
+              "code": "diagnostic-implication",
+              "display": "Diagnostic Implication"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat-1"
+        },
+        "effectiveDateTime": "2024-01-01",
+        "issued": "2024-03-21T23:30:00-07:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "53037-8"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "LA6668-3",
+                  "display": "Pathogenic"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "variant-interpretation-identifier",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.3.4",
+            "value": "ID-77"
+          }
+        ]
+      }
+    }
+  ]
+}

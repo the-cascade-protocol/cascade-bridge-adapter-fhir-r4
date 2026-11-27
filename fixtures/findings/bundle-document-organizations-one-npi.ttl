@@ -2,46 +2,46 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:d40cadeb211bbdd302183f49992f82e2 a oa:FragmentSelector ;
+_:f57433ccf21dd8fa7b6de2877b183253 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:c69c93810500f48b3dda08fbb4a50c9d oa:hasSource <../in/bundle-document-organizations-one-npi.json> .
-_:d40cadeb211bbdd302183f49992f82e2 oa:refinedBy _:f5825992fd3ea69fa9f065dc649fd295 .
-_:f5825992fd3ea69fa9f065dc649fd295 a oa:FragmentSelector ;
+_:a3f9d2820ea450487a11e9f98eb111cf oa:hasSource <../in/bundle-document-organizations-one-npi.json> .
+_:f57433ccf21dd8fa7b6de2877b183253 oa:refinedBy _:d1d47b8419ab02854c0cf5366496a4f6 .
+_:d1d47b8419ab02854c0cf5366496a4f6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:c69c93810500f48b3dda08fbb4a50c9d oa:hasSelector _:d40cadeb211bbdd302183f49992f82e2 .
-_:db7cdde524bdb178b8ade44eca6bf4ae oa:hasTarget _:c69c93810500f48b3dda08fbb4a50c9d ;
+	rdf:value "/resource" .
+_:a3f9d2820ea450487a11e9f98eb111cf oa:hasSelector _:f57433ccf21dd8fa7b6de2877b183253 .
+_:a129ef84d518d8865df63a633daba622 oa:hasTarget _:a3f9d2820ea450487a11e9f98eb111cf ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Composition" .
-_:bc812b587a167351d87d4d24563cf1ff a oa:FragmentSelector ;
+_:e8d1e71f60c1ed7624b2d99506491e0d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/3" .
-_:c0f5922f187f52aea4e7395f3b28a073 oa:hasSource <../in/bundle-document-organizations-one-npi.json> .
-_:bc812b587a167351d87d4d24563cf1ff oa:refinedBy _:b4c47d2067b5c15c6a3ce8c209623649 .
-_:b4c47d2067b5c15c6a3ce8c209623649 a oa:FragmentSelector ;
+_:ad6d654bd047ca5626b327a54aeaffaf oa:hasSource <../in/bundle-document-organizations-one-npi.json> .
+_:e8d1e71f60c1ed7624b2d99506491e0d oa:refinedBy _:a699f6c49d8de1e3eb1b3134c0972175 .
+_:a699f6c49d8de1e3eb1b3134c0972175 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource" .
-_:c0f5922f187f52aea4e7395f3b28a073 oa:hasSelector _:bc812b587a167351d87d4d24563cf1ff .
-_:da9a9453ada966fcc50d60e013c8091 oa:hasTarget _:c0f5922f187f52aea4e7395f3b28a073 ;
+_:ad6d654bd047ca5626b327a54aeaffaf oa:hasSelector _:e8d1e71f60c1ed7624b2d99506491e0d .
+_:bb76618f42fa173882e2164ed237223e oa:hasTarget _:ad6d654bd047ca5626b327a54aeaffaf ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:duplicateOrganizationNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "1234567893"^^<http://hl7.org/fhir/sid/us-npi> .
-_:ce9e81ee64f40dc7c87e6a8d5f36347d a oa:FragmentSelector ;
+_:b54b59d3f93b31a55a8f312686ca83ad a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/4" .
-_:f3f1cc8d182ad78d5d2cae67794a308d oa:hasSource <../in/bundle-document-organizations-one-npi.json> .
-_:ce9e81ee64f40dc7c87e6a8d5f36347d oa:refinedBy _:bbac01fe475c2796b63b9ac68c86edf7 .
-_:bbac01fe475c2796b63b9ac68c86edf7 a oa:FragmentSelector ;
+_:e4b69dee3cd60e3e795dd3b8ac31f09a oa:hasSource <../in/bundle-document-organizations-one-npi.json> .
+_:b54b59d3f93b31a55a8f312686ca83ad oa:refinedBy _:d98e3a4ddb121a8129b80d28d44531a2 .
+_:d98e3a4ddb121a8129b80d28d44531a2 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource" .
-_:f3f1cc8d182ad78d5d2cae67794a308d oa:hasSelector _:ce9e81ee64f40dc7c87e6a8d5f36347d .
-_:b3354d7d8f90a8e30d941b3325c25c24 oa:hasTarget _:f3f1cc8d182ad78d5d2cae67794a308d ;
+_:e4b69dee3cd60e3e795dd3b8ac31f09a oa:hasSelector _:b54b59d3f93b31a55a8f312686ca83ad .
+_:f64bf16de8b9db6e9bd2ac0a3750885a oa:hasTarget _:e4b69dee3cd60e3e795dd3b8ac31f09a ;
 	sh:resultSeverity sh:Info ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:duplicateOrganizationNotCarried ;

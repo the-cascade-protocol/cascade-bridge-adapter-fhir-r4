@@ -145,7 +145,8 @@ _:243fa62384ffc5603e97fc084579c6f8 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/7" .
 <urn:uuid:0495eef3-36f2-81b7-9658-00f91ad95773> a cascade:GeneticVariantFinding ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/v1> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/v1> ;
+	cascade:sourceRecordId "v1" .
 <ni:///sha-256;EIpqM5mRMRh1-bQH8kJkLyzRp9zbbsQeqtJxfkkNEKA> prov:specializationOf <urn:uuid:0495eef3-36f2-81b7-9658-00f91ad95773> .
 _:193ee6c634d29ad6bbdc865ac81d1c4e bridge:arrivedAs <ni:///sha-256;EIpqM5mRMRh1-bQH8kJkLyzRp9zbbsQeqtJxfkkNEKA> .
 <ni:///sha-256;EIpqM5mRMRh1-bQH8kJkLyzRp9zbbsQeqtJxfkkNEKA> cascade:hgvsCodingDnaExpression "NM_000249.4:c.2042C>T" ;
@@ -158,7 +159,8 @@ _:b17edf3cbd271092ac6e698a6506fb5b a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/8" .
 <urn:uuid:5c3f1c7d-d21e-80ea-a6cf-b7c9ebf860be> a cascade:VariantInterpretation ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/i1> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/i1> ;
+	cascade:sourceRecordId "i1" .
 <ni:///sha-256;AwWRT_Zhpoc3XZwpfq4Y29j37M6LS1ekKBvhVqdwId4> prov:specializationOf <urn:uuid:5c3f1c7d-d21e-80ea-a6cf-b7c9ebf860be> .
 _:6ab603eb03d27f23b3869c68810c407c bridge:arrivedAs <ni:///sha-256;AwWRT_Zhpoc3XZwpfq4Y29j37M6LS1ekKBvhVqdwId4> .
 <ni:///sha-256;AwWRT_Zhpoc3XZwpfq4Y29j37M6LS1ekKBvhVqdwId4> cascade:acmgClassification cascade:Pathogenic ;

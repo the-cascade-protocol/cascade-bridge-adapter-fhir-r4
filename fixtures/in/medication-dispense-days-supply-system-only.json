@@ -1,0 +1,14 @@
+{
+  "resourceType": "MedicationDispense",
+  "id": "meddisp-days-supply-system-only-1",
+  "status": "completed",
+  "medicationCodeableConcept": {
+    "text": "Metformin 500 mg tablet"
+  },
+  "subject": {
+    "reference": "Patient/pat-conformance-1"
+  },
+  "daysSupply": {
+    "system": "http://unitsofmeasure.org"
+  }
+}

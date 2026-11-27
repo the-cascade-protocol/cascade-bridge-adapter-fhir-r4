@@ -433,7 +433,7 @@
   bridge:sourcePath "/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -443,9 +443,12 @@
   bridge:sourcePath "/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] .
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:acmgClassification ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/component/valueCodeableConcept/coding/system" ;
@@ -660,8 +663,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -1110,7 +1114,7 @@
   bridge:sourcePath "/contained/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -1120,9 +1124,12 @@
   bridge:sourcePath "/contained/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] .
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:acmgClassification ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/component/valueCodeableConcept/coding/system" ;
@@ -3740,9 +3747,9 @@
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
-    [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
-    [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
@@ -4023,19 +4030,22 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -4124,8 +4134,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -4806,27 +4817,27 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/rank" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/system" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/use" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/value" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/text" ;
@@ -7601,7 +7612,9 @@
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
@@ -7885,22 +7898,25 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -8784,7 +8800,7 @@
   bridge:sourcePath "/resource/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -8794,9 +8810,12 @@
   bridge:sourcePath "/resource/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] .
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:acmgClassification ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/component/valueCodeableConcept/coding/system" ;
@@ -9011,8 +9030,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -9438,7 +9458,7 @@
   bridge:sourcePath "/resource/contained/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -9448,9 +9468,12 @@
   bridge:sourcePath "/resource/contained/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] .
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:acmgClassification ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/component/valueCodeableConcept/coding/system" ;
@@ -12068,13 +12091,21 @@
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
-    [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
-    [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/identifier" ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly ;
+  bridge:carriedAs
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:LaboratoryTestResult ; bridge:asProperty dct:identifier ] ,
+    [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty org:identifier ] .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/resource/contained/identifier/system" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:namesGap fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly ;
   bridge:carriedAs
@@ -12351,19 +12382,22 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -12452,8 +12486,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -13134,27 +13169,27 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/rank" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/system" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/use" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/value" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/text" ;
@@ -15925,7 +15960,9 @@
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
@@ -16209,22 +16246,25 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -16953,31 +16993,31 @@
   bridge:sourcePath "/resource/telecom" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/rank" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/use" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/value" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/text" ;
@@ -17614,31 +17654,31 @@
   bridge:sourcePath "/telecom" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/rank" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/use" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/value" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/text" ;

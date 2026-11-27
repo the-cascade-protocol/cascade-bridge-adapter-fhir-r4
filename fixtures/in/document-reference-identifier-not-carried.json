@@ -1,0 +1,40 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/pat-1"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U2VlbiBmb3IgZm9sbG93LXVwLg=="
+            }
+          }
+        ],
+        "date": "2026-08-20T14:05:00Z",
+        "id": "document-reference-identifier",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.3.4",
+            "value": "ID-77"
+          }
+        ]
+      }
+    }
+  ]
+}

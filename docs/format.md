@@ -67,9 +67,10 @@ attributed to the one `Organization` its `performer`s name, by
 not the document holds it, so a pull fetching it later joins it by name. A
 reference made from an entry whose `fullUrl` is a `urn:uuid:`, or to an
 `Organization` held under one, or to an `id` two entries hold an
-`Organization` under, names none; performers naming two
-`Organization`s name none, and each performer is a finding; a performer of
-another type is not read. The performing organization is on the version, so a
+`Organization` under, names none, as does one in a document from no known server;
+performers naming two `Organization`s name none. A performer's reference
+that does not give the attribution is a finding, for any of those reasons and
+for a performer of another type, which is not read. The performing organization is on the version, so a
 pull naming another leaves the record's name as it was.
 
 An `Observation`'s `category` says what kind it is, from
@@ -106,9 +107,9 @@ lab result's. Each `result` is the IRI of the record it names, under RO's
 `fullUrl` of the report's entry to resolve it and is named from a `urn:uuid:` entry as from any other, or `#` and the id of an `Observation` the report contains, as a
 contained record is named. It names a record only where the `Observation` is
 one, never a panel; one on another server, or one that resolves to no one
-entry, is `fhirr4:reportResultNotNamed`. Performers naming two
-`Organization`s name none, and each is a finding, as a lab result's are; so
-are a note's authors.
+entry, is `fhirr4:reportResultNotNamed`. A performer whose reference gives
+the attribution to no organization, for any reason, is a finding, as a lab result's
+is; so is a note's author.
 
 A `DocumentReference` is a note or document record unless its content is a
 structured C-CDA document: a `content.format` coded
@@ -190,8 +191,8 @@ number or lies beyond twenty digits of the point are
 not carried at all, and each is a finding at the duration
 (`fhirr4:expectedSupplyDurationNotCarried`), holding the value that stopped it, so that
 it speaks for the duration's number, unit and code. Where the stopper is the unit,
-the value is its code, else its unit text; where the code is a unit of time and its
-system is not UCUM's it is that system, and where no unit is stated it is empty. A course of therapy in another system,
+the value is its code, else its unit text, else its system; where the code is a unit of time and its
+system is not UCUM's it is that system, and where no unit is stated the finding holds no value. A course of therapy in another system,
 after its first coding or of text alone, and `dispenseRequest.quantity`, which no
 term holds, are findings, as are the initial fill, the dispense interval and the
 performer. Any other number that is no number, a repeat frequency of 0 and a
@@ -395,6 +396,11 @@ its position: one name for both would fuse two resources the source gave one
 the document names both. A record named by the document carries no
 `cascade:sourceUrl`: its name is not its id's.
 
+**The `id` is the record's `cascade:sourceRecordId`**, however the record is named: of every kind,
+a variant and a diagnostic implication among them, and of a contained resource its local `id`. An
+`Organization` a document names carries none: it is named by an identifier, and an `id` the document
+gives it, a contained one most of all, is local to that document.
+
 **A contained resource** is named within its container, by the container's name
 and source version, so that a renumbered `contained` list does not make one
 resource a revision of another. With no `id` it has nothing to be named by but
@@ -439,10 +445,15 @@ As cascade-vocabulary says, read on 2026-10-24:
   `fhirr4:dateNotCarried`, reports each: on a patient's birth and death, an allergy's or a condition's onset or
   abatement, an immunization's occurrence, a procedure's performance, a document reference's date, a report's
   effective time and `issued`, a laboratory result's or an interpretation's time, a prescription's `authoredOn`, a
-  use's `effective[x]`, a dosage bound and a dispense's time. A birth date holds no time. A schema violation may
+  use's `effective[x]`, a dosage bound and a dispense's time. A procedure's `performedPeriod.start` is its date only
+  where it states no `performedDateTime`; beside one, readable or not, it is not carried and
+  `fhirr4:performedPeriodStartBesideDate` reports it. A birth date holds no time. A schema violation may
   report the same date as well. The test is looser than FHIR in two ways: a time to the minute is accepted, as above,
   though FHIR asks for seconds (it needs its zone), and a date alone is accepted where FHIR
-  types the field `instant` and asks for a time, such as `issued`.
+  types the field `instant` and asks for a time, such as a diagnostic implication's `issued`, which is carried as
+  its date. A report's `issued` is carried as an instant, only with its seconds: a day or a time to the minute is
+  `fhirr4:dateNotCarried` too. A lab result's and a variant's `issued` is carried by no mapping, and is
+  `fhirr4:issuedNotCarried`.
 - **A lab result's `dataAbsentReason`** stands for its value, which obs-6 says
   it has none of ([Observation](https://hl7.org/fhir/R4/observation-definitions.html)),
   and is a `cascade:ValueAbsentForReason` node of the version naming
@@ -461,7 +472,7 @@ As cascade-vocabulary says, read on 2026-10-24:
   the data-absent-reason extension, has no `cascade:conditionCode` or
   `cascade:procedureCode`: the reason is a `cascade:ValueAbsentForReason` node
   naming that property, one `cascade:absentReasonCode` for each such coding, a code the
-  CodeSystem does not define being a finding. Beside a coding in any other system those
+  CodeSystem does not define being a finding, at the coding's system and at its code. Beside a coding in any other system those
   codings are dropped, since a code of the condition is not a reason it has none. An
   absent-reason coding beside a real code is dropped with no finding, so only the real codes are written, and
   that coding is not carried by `/code/coding/code`.
@@ -486,7 +497,8 @@ lists as not preferred are read as the system's URI, the rows of
 [`vocab/fhir-code-systems.ttl`](../vocab/fhir-code-systems.ttl) the C-CDA
 adapter holds too, so one code from either adapter is one term; an OID no row
 holds is `urn:oid:` and the OID. A coding with no system, a system that is no
-absolute URI, or no code is a finding, `fhirr4:codingNotCarried`. A lab result's interpretation is carried as every coding in HL7's
+absolute URI, or no code is a finding, `fhirr4:codingNotCarried`, at the part that fails, and at a code that is
+dropped with a system no row reads. A lab result's interpretation is carried as every coding in HL7's
 [v3 ObservationInterpretation](https://terminology.hl7.org/CodeSystem-v3-ObservationInterpretation.html),
 the code kept as written
 ([cascade-vocabulary#298](https://github.com/the-cascade-protocol/cascade-vocabulary/issues/298));

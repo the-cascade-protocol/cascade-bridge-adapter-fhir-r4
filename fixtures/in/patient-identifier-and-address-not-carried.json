@@ -1,0 +1,38 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-identifier-and-address",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.3.4",
+            "value": "ID-77"
+          }
+        ],
+        "name": [
+          {
+            "family": "Okafor",
+            "given": [
+              "Martin"
+            ]
+          }
+        ],
+        "birthDate": "1979-02-08",
+        "address": [
+          {
+            "line": [
+              "1 Main Street"
+            ],
+            "city": "Springfield",
+            "state": "MA",
+            "postalCode": "01101",
+            "country": "US"
+          }
+        ]
+      }
+    }
+  ]
+}

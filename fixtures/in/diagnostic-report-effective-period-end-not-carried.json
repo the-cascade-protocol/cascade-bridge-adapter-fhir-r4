@@ -1,0 +1,21 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "dr-period-end",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2132-9",
+        "display": "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/pat-conformance-1"
+  },
+  "effectivePeriod": {
+    "start": "2026-01-02T08:00:00Z",
+    "end": "2026-01-03T08:00:00Z"
+  }
+}

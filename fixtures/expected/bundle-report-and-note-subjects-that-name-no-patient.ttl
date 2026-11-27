@@ -1,0 +1,74 @@
+@prefix bridge: <https://ns.cascadeprotocol.org/bridge/v1-draft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cascade: <https://ns.cascadeprotocol.org/cascade#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix pav: <http://purl.org/pav/> .
+<ni:///sha-256;iwZlV4lMt-xkjBESXGpEF6uPAvcDE_Kn1hCANrMPis0> cascade:attachment <ni:///sha-256;iwZlV4lMt-xkjBESXGpEF6uPAvcDE_Kn1hCANrMPis0#attachment-1> .
+<ni:///sha-256;iwZlV4lMt-xkjBESXGpEF6uPAvcDE_Kn1hCANrMPis0#attachment-1> cascade:attachmentContentType "application/pdf" ;
+	cascade:attachmentTitle "Vitamin B12 report" .
+<urn:uuid:5850dd3e-cab0-87f8-8d14-23ba09908b45> a cascade:DiagnosticReport ;
+	cascade:sourceRecordId "b12-report-3" .
+<ni:///sha-256;iwZlV4lMt-xkjBESXGpEF6uPAvcDE_Kn1hCANrMPis0> prov:specializationOf <urn:uuid:5850dd3e-cab0-87f8-8d14-23ba09908b45> .
+_:9ea2f6ef339dd812d18b86d9b755fa71 bridge:arrivedAs <ni:///sha-256;iwZlV4lMt-xkjBESXGpEF6uPAvcDE_Kn1hCANrMPis0> .
+<ni:///sha-256;iwZlV4lMt-xkjBESXGpEF6uPAvcDE_Kn1hCANrMPis0> cascade:reportName "Vitamin B12" ;
+	cascade:workflowStatus "final" ;
+	cascade:reportEffectiveTime "2026-08-14"^^xsd:date ;
+	cascade:reportCode <http://loinc.org/rdf/2132-9> .
+_:9ea2f6ef339dd812d18b86d9b755fa71 oa:hasSelector _:e957d2689f839ebb7e12fe4544f04958 ;
+	oa:hasSource <ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> ;
+	prov:wasDerivedFrom <ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> ;
+	prov:wasGeneratedBy _:d75cb63ad5f688c72622a7da9109fff6 .
+_:e957d2689f839ebb7e12fe4544f04958 a oa:FragmentSelector ;
+	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/0" .
+<ni:///sha-256;FOQrXz7btx4mh2takZc80VvxOt8YZj3HSDLmf5FQiII> cascade:attachment <ni:///sha-256;FOQrXz7btx4mh2takZc80VvxOt8YZj3HSDLmf5FQiII#attachment-1> .
+<ni:///sha-256;FOQrXz7btx4mh2takZc80VvxOt8YZj3HSDLmf5FQiII#attachment-1> cascade:attachmentContentType "text/plain" ;
+	cascade:attachmentTitle "Progress note" .
+<ni:///sha-256;FOQrXz7btx4mh2takZc80VvxOt8YZj3HSDLmf5FQiII> cascade:narrativeText "Seen for follow-up of a low vitamin B12." ;
+	cascade:noteOrDocumentTypeName "Progress note" ;
+	cascade:workflowStatus "current" ;
+	cascade:noteOrDocumentDate "2026-08-20T14:05:00Z"^^xsd:dateTime ;
+	cascade:noteOrDocumentTypeCode <http://loinc.org/rdf/11506-3> .
+<urn:uuid:a6dc7432-463c-8553-a39a-abf9ed40ede4> a cascade:ClinicalNoteOrDocument ;
+	cascade:sourceRecordId "progress-note-3" .
+<ni:///sha-256;FOQrXz7btx4mh2takZc80VvxOt8YZj3HSDLmf5FQiII> prov:specializationOf <urn:uuid:a6dc7432-463c-8553-a39a-abf9ed40ede4> .
+_:c145662c95502974dc53d732cf56ac05 bridge:arrivedAs <ni:///sha-256;FOQrXz7btx4mh2takZc80VvxOt8YZj3HSDLmf5FQiII> ;
+	oa:hasSelector _:fe2d261c42e7c6c35dc0136486c2e097 ;
+	oa:hasSource <ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> ;
+	prov:wasDerivedFrom <ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> ;
+	prov:wasGeneratedBy _:d75cb63ad5f688c72622a7da9109fff6 .
+_:fe2d261c42e7c6c35dc0136486c2e097 a oa:FragmentSelector ;
+	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/1" .
+<ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+	prov:wasGeneratedBy _:fdc313379912fbb53ff041b6923e925f ;
+	prov:wasAttributedTo _:503086b63241e2397de1e634ed95402f ;
+	cascade:authenticatedPatient "Patient/eM5vN8qTz2Hc4Rk7Jw0Pb3" ;
+	cascade:authenticatedAsProxy false ;
+	cascade:sourceFormatVersion "4.0.1" .
+_:e2238ea6d39f800751d7861f639c28fb prov:agent _:503086b63241e2397de1e634ed95402f ;
+	prov:hadRole cascade:AuthorRole .
+_:fdc313379912fbb53ff041b6923e925f prov:qualifiedAssociation _:e2238ea6d39f800751d7861f639c28fb .
+_:27dbc81b5eb2e18d4e6da0762afafaca prov:agent _:b35e1cb35eba1bace64762247dc83a7c ;
+	prov:hadRole cascade:TransmitterRole .
+_:fdc313379912fbb53ff041b6923e925f prov:qualifiedAssociation _:27dbc81b5eb2e18d4e6da0762afafaca .
+_:503086b63241e2397de1e634ed95402f <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
+_:b35e1cb35eba1bace64762247dc83a7c <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
+_:d75cb63ad5f688c72622a7da9109fff6 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
+	prov:startedAtTime "2026-09-01T10:00:04Z"^^xsd:dateTime .
+<ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> a prov:Entity .
+_:d75cb63ad5f688c72622a7da9109fff6 a prov:Activity ;
+	prov:used <ni:///sha-256;MHl8YtvJTzfguY-pCjGfzbtKW6tUm-xI7e4hppvkHKc> ;
+	prov:qualifiedAssociation _:4c86e1cf2964a38f57e34bcc61b752b6 .
+_:4c86e1cf2964a38f57e34bcc61b752b6 prov:hadPlan _:80341aa254cf678efe73ee311c7bbb77 .
+_:80341aa254cf678efe73ee311c7bbb77 a prov:Plan ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "fhir-r4" ;
+	pav:version "0.1.0" .
+_:4c86e1cf2964a38f57e34bcc61b752b6 prov:agent _:75ce3124d9825f89f7a6ee5bc758c929 .
+_:75ce3124d9825f89f7a6ee5bc758c929 a prov:SoftwareAgent ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Cascade Bridge for Rust" ;
+	pav:version "0.1.0" .

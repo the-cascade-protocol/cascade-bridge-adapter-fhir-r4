@@ -13,7 +13,8 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # note-or-document.rq of a note's type: a coding with no
 # system, a system coding-system-table.rq gives no row, or no code or a code of
 # blanks, reported at its code where the code is the part that fails or the
-# system names nothing, else at its system.
+# system names nothing, else at its system, and, where that is a system no row
+# reads beside a code that is not blank, at that code too, which is dropped with it.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -67,7 +68,10 @@ WHERE {
     BIND (EXISTS { ?coding xyz:system ?readSystem . ?readRow fhirr4:systemWritten ?readSystem } AS ?systemRead)
     BIND (COALESCE(REPLACE(STR(?codeWritten), "^\\s+|\\s+$", "") != "", false) AS ?codeRead)
     FILTER (!?systemRead || !?codeRead)
-    BIND (IF(!BOUND(?systemWritten) || (?systemRead && BOUND(?codeWritten)), "/code", "/system") AS ?part)
+    BIND (IF(!BOUND(?systemWritten) || (?systemRead && BOUND(?codeWritten)), "/code", "/system") AS ?failing)
+    VALUES ?reported { "failing" "dropped" }
+    FILTER (?reported = "failing" || (?failing = "/system" && ?codeRead))
+    BIND (IF(?reported = "failing", ?failing, "/code") AS ?part)
     BIND (IF(?part = "/code", ?codeWritten, ?systemWritten) AS ?value)
     BIND (fhirr4:codingNotCarried AS ?gap)
   }

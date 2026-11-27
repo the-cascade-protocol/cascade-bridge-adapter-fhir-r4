@@ -2,18 +2,33 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:e5fa44d38c0d69c7c4627c67b8ad427f a oa:FragmentSelector ;
+_:b0f752f35bc37efcd8a9441663c2b5ee a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:c82f569b4c9a401963a737e72610ff42 a oa:FragmentSelector ;
+_:b737bc27486a865b7746d8bf15215690 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/performedPeriod/end" .
-_:e5fa44d38c0d69c7c4627c67b8ad427f oa:refinedBy _:c82f569b4c9a401963a737e72610ff42 .
-_:da018ce604f185896fee33547d5cd28a a oa:Annotation ;
-	oa:hasTarget _:a0dd91c0fd5c50c757145916139a5bed .
-_:a0dd91c0fd5c50c757145916139a5bed oa:hasSource <../in/procedure-performed-date-beside-an-unreadable-period-start.json> ;
-	oa:hasSelector _:e5fa44d38c0d69c7c4627c67b8ad427f .
-_:da018ce604f185896fee33547d5cd28a oa:hasBody fhirr4:procedurePeriodEnd ;
+_:b0f752f35bc37efcd8a9441663c2b5ee oa:refinedBy _:b737bc27486a865b7746d8bf15215690 .
+_:a16583b50247b19a53b4885af767f4ea a oa:Annotation ;
+	oa:hasTarget _:cbb7ae129769333ed3d6a0edf7fb8dbf .
+_:cbb7ae129769333ed3d6a0edf7fb8dbf oa:hasSource <../in/procedure-performed-date-beside-an-unreadable-period-start.json> ;
+	oa:hasSelector _:b0f752f35bc37efcd8a9441663c2b5ee .
+_:a16583b50247b19a53b4885af767f4ea oa:hasBody fhirr4:procedurePeriodEnd ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/performedPeriod/end" ;
 	sh:resultSeverity sh:Info .
+_:e05da793cee4a32b09f398a753e5d4f9 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+_:da32ffe53fb17f54c553706b11c1f122 oa:hasSource <../in/procedure-performed-date-beside-an-unreadable-period-start.json> .
+_:e05da793cee4a32b09f398a753e5d4f9 oa:refinedBy _:a439ca3bcf6c524b9695855ffd23380b .
+_:a439ca3bcf6c524b9695855ffd23380b a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/performedPeriod/start" .
+_:da32ffe53fb17f54c553706b11c1f122 oa:hasSelector _:e05da793cee4a32b09f398a753e5d4f9 .
+_:c5e62217dff56286513e0411886571a0 oa:hasTarget _:da32ffe53fb17f54c553706b11c1f122 ;
+	sh:resultSeverity sh:Info ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:performedPeriodStartBesideDate ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "2026-02-30T08:00:00-05:00" .

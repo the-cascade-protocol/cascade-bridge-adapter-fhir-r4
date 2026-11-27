@@ -15,7 +15,9 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # version, is not a coding expression, or is one of several different
 # expressions; a ClinVar code that is no variation's ID, one of several
 # different IDs, and a code of another system beside it; a gene coding with no
-# display, and one of several different gene symbols.
+# display, and one of several different gene symbols. A variant carries none of
+# its performer, interpretation, data absent reason, derivedFrom or the data
+# absent reason of its effective time: each is reported where it stands.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -181,6 +183,49 @@ WHERE {
     BIND (CONCAT("/component/", STR(xsd:integer(STRAFTER(STR(?geneComponentSlot), "#_")) - 1),
                  "/valueCodeableConcept/coding/", STR(xsd:integer(STRAFTER(STR(?geneValueSlot), "#_")) - 1),
                  IF(?geneKind = "unnamed", "", "/display")) AS ?step)
+  }
+  UNION
+  {
+    ?variant fhirr4:variantAt ?resourcePointer .
+    {
+      ?resource xyz:performer ?items . ?items ?slot ?item .
+      OPTIONAL { ?item xyz:reference ?value }
+      BIND ("/performer/" AS ?list)
+      BIND (fhirr4:performerCarriedOnlyAsOneOrganizationRecord AS ?gap)
+    }
+    UNION
+    {
+      ?resource xyz:derivedFrom ?items . ?items ?slot ?item .
+      OPTIONAL { ?item xyz:reference ?value }
+      BIND ("/derivedFrom/" AS ?list)
+      BIND (fhirr4:variantDerivedFromNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?resource xyz:interpretation ?items . ?items ?slot ?item .
+      OPTIONAL { ?item xyz:coding ?codings . ?codings rdf:_1 ?coding . ?coding xyz:code ?value }
+      BIND ("/interpretation/" AS ?list)
+      BIND (fhirr4:labResultInterpretationNotCarried AS ?gap)
+    }
+    FILTER (STRSTARTS(STR(?slot), STR(rdf:_)))
+    BIND (CONCAT(?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1)) AS ?step)
+  }
+  UNION
+  {
+    ?variant fhirr4:variantAt ?resourcePointer .
+    {
+      ?resource xyz:dataAbsentReason ?reason .
+      OPTIONAL { ?reason xyz:coding ?reasonCodings . ?reasonCodings rdf:_1 ?reasonCoding . ?reasonCoding xyz:code ?value }
+      BIND ("/dataAbsentReason" AS ?step)
+      BIND (fhirr4:absentReasonNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?resource xyz:_effectiveDateTime ?timeExtended .
+      OPTIONAL { ?timeExtended xyz:extension ?timeExtensions . ?timeExtensions rdf:_1 ?timeExtension . ?timeExtension xyz:valueCode ?value }
+      BIND ("/_effectiveDateTime" AS ?step)
+      BIND (fhirr4:variantTimeNotCarried AS ?gap)
+    }
   }
   FILTER (BOUND(?gap))
   BIND (CONCAT(?topStep, ?containedStep, ?step) AS ?pointer)

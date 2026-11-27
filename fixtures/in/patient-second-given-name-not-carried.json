@@ -1,0 +1,15 @@
+{
+  "resourceType": "Patient",
+  "id": "pat-second-given",
+  "name": [
+    {
+      "family": "Okonkwo",
+      "given": [
+        "Odette",
+        "Marie"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-03-14"
+}

@@ -16,7 +16,9 @@ PREFIX void:    <http://rdfs.org/ns/void#>
 # reasons and v3 NullFlavor, or with a code its system does not define, and a
 # data-absent-reason extension's code the CodeSystem does not define; and the
 # same of a condition's or a procedure's code, in a coding of FHIR's data absent
-# reasons or v3 NullFlavor or in the extension, where it has no other coding.
+# reasons or v3 NullFlavor or in the extension, where it has no other coding; a
+# coding of a condition's or a procedure's code is reported at its system and at
+# its code, which are not carried.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -30,7 +32,7 @@ CONSTRUCT {
     ] ;
     oa:hasBody fhirr4:absentReasonNotCarried ;
     oa:motivatedBy oa:classifying ;
-    sh:value ?value .
+    sh:value ?reported .
 }
 WHERE {
   FILTER NOT EXISTS {
@@ -98,6 +100,8 @@ WHERE {
       BIND (REPLACE(STR(?codeWritten), "^\\s+|\\s+$", "") AS ?value)
       FILTER (?value != "")
       BIND (CONCAT("/code/coding/", STR(xsd:integer(STRAFTER(STR(?codingSlot), "#_")) - 1)) AS ?tail)
+      VALUES ?part { "/code" "/system" }
+      BIND (IF(?part = "/system", STR(?systemWritten), 1/0) AS ?shown)
     }
     UNION
     {
@@ -116,7 +120,8 @@ WHERE {
   }
   FILTER (?type != "Observation" || EXISTS { ?lab fhirr4:labResultAt ?labPointer })
   FILTER (?type != "DocumentReference" || EXISTS { ?note fhirr4:noteOrDocumentAt ?labPointer })
-  BIND (CONCAT(?resourcePointer, ?tail) AS ?pointer)
+  BIND (CONCAT(?resourcePointer, ?tail, COALESCE(?part, "")) AS ?pointer)
+  BIND (COALESCE(?shown, ?value) AS ?reported)
   BIND (STRDT(COALESCE(?system, ""), xsd:anyURI) AS ?systemUri)
   OPTIONAL { ?codeSystem skos:inScheme fhirr4:codeSystems ; cascade:codingSystemUri ?systemUri ; void:uriSpace ?stem }
   BIND (IRI(CONCAT(?stem, ENCODE_FOR_URI(?value))) AS ?reason)

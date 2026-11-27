@@ -9,6 +9,11 @@ PREFIX bridge:  <https://ns.cascadeprotocol.org/bridge/v1-draft#>
 PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 
+# What patient.rq leaves behind: a gender that is no code of FHIR's administrative
+# gender; each name after the first, at the name; each given name of the first name
+# that is not blank and is not the one carried, at the given name; and each contact
+# point, at the contact point.
+
 CONSTRUCT {
   [] a oa:Annotation ;
     oa:hasTarget [
@@ -19,7 +24,7 @@ CONSTRUCT {
         rdf:value ?pointer
       ]
     ] ;
-    oa:hasBody fhirr4:administrativeGenderNotMapped ;
+    oa:hasBody ?gap ;
     oa:motivatedBy oa:classifying ;
     sh:value ?value .
 }
@@ -41,8 +46,43 @@ WHERE {
     BIND (CONCAT("/contained/", STR(xsd:integer(STRAFTER(STR(?containedSlot), "#_")) - 1)) AS ?containedStep)
   }
   BIND (COALESCE(?contained, ?top) AS ?resource)
-  ?resource xyz:resourceType "Patient" ;
-    xyz:gender ?value .
-  FILTER (!(?value IN ("male", "female", "other", "unknown")))
-  BIND (CONCAT(?topStep, ?containedStep, "/gender") AS ?pointer)
+  ?resource xyz:resourceType "Patient" .
+  {
+    ?resource xyz:gender ?value .
+    FILTER (!(?value IN ("male", "female", "other", "unknown")))
+    BIND ("/gender" AS ?step)
+    BIND (fhirr4:administrativeGenderNotMapped AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:name ?names . ?names ?nameSlot ?name .
+    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)) && ?nameSlot != rdf:_1)
+    OPTIONAL { ?name xyz:text ?nameText }
+    OPTIONAL { ?name xyz:family ?nameFamily }
+    BIND (COALESCE(?nameText, ?nameFamily) AS ?value)
+    BIND (CONCAT("/name/", STR(xsd:integer(STRAFTER(STR(?nameSlot), "#_")) - 1)) AS ?step)
+    BIND (fhirr4:patientNameRepeated AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:given ?given . ?given ?givenSlot ?value .
+    FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_)) && REPLACE(STR(?value), "^\\s+|\\s+$", "") != "")
+    FILTER EXISTS {
+      ?given ?earlierSlot ?earlier .
+      FILTER (STRSTARTS(STR(?earlierSlot), STR(rdf:_))
+              && xsd:integer(STRAFTER(STR(?earlierSlot), "#_")) < xsd:integer(STRAFTER(STR(?givenSlot), "#_"))
+              && REPLACE(STR(?earlier), "^\\s+|\\s+$", "") != "")
+    }
+    BIND (CONCAT("/name/0/given/", STR(xsd:integer(STRAFTER(STR(?givenSlot), "#_")) - 1)) AS ?step)
+    BIND (fhirr4:patientNameRepeated AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:telecom ?contactPoints . ?contactPoints ?contactSlot ?contactPoint .
+    FILTER (STRSTARTS(STR(?contactSlot), STR(rdf:_)))
+    OPTIONAL { ?contactPoint xyz:value ?value }
+    BIND (CONCAT("/telecom/", STR(xsd:integer(STRAFTER(STR(?contactSlot), "#_")) - 1)) AS ?step)
+    BIND (fhirr4:patientTelecomNotCarried AS ?gap)
+  }
+  BIND (CONCAT(?topStep, ?containedStep, ?step) AS ?pointer)
 }

@@ -10,15 +10,14 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 
 # What note-or-document.rq and attachments.rq leave behind: a DocumentReference
-# whose content is a C-CDA document, at the format code
-# note-or-document-table.rq reads it by, the code as its value; and a report's
+# whose content is a C-CDA document, at the DocumentReference, since nothing in
+# it is carried, the format code note-or-document-table.rq reads it by as its value; and a report's
 # or a note's attachment whose content is not read, at its data or, given by
 # URL only, at its URL, its content type as its value: any but text/plain or
 # text/html data the Bridge decodes; a text attachment after the first
-# narrative-text.rq carries, at its data; and, of a report or a note from a
-# server, each performer's or author's reference where they name more than one
-# Organization, as report-and-note-performer.rq reads them and
-# lab-result-findings.rq reports a lab result's.
+# narrative-text.rq carries, at its data; and each performer's or author's
+# reference from which report-and-note-performer.rq attributes the version to
+# no organization, for any reason, as lab-result-findings.rq reports a lab result's.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -119,30 +118,52 @@ WHERE {
   }
   UNION
   {
-    {
-      SELECT ?resource (COUNT(DISTINCT ?performerId) AS ?organizations) WHERE {
-        bridge:thisDocument cascade:serverBaseUrl ?performerServer .
-        { ?resource xyz:resourceType "DiagnosticReport" ; xyz:performer ?countedPerformers }
-        UNION
-        { ?resource xyz:resourceType "DocumentReference" ; xyz:author ?countedPerformers }
-        ?countedPerformers ?countedSlot ?countedPerformer .
-        ?countedPerformer xyz:reference ?written .
-        BIND (REPLACE(?written, "/_history/[A-Za-z0-9.-]{1,64}$", "") AS ?unversioned)
-        BIND (IF(STRSTARTS(?unversioned, CONCAT(?performerServer, "/")), STRAFTER(?unversioned, CONCAT(?performerServer, "/")),
-                 ?unversioned) AS ?relative)
-        FILTER (REGEX(?relative, "^Organization/[A-Za-z0-9.-]{1,64}$"))
-        BIND (STRAFTER(?relative, "Organization/") AS ?performerId)
-      } GROUP BY ?resource
-    }
-    FILTER (?organizations > 1)
-    { ?resource xyz:performer ?performers . BIND ("/performer/" AS ?list) }
+    ?root a fx:root .
+    { ?resource xyz:resourceType "DiagnosticReport" ; xyz:performer ?performers . BIND ("/performer/" AS ?list) }
     UNION
-    { ?resource xyz:author ?performers . BIND ("/author/" AS ?list) }
+    { ?resource xyz:resourceType "DocumentReference" ; xyz:author ?performers . BIND ("/author/" AS ?list) }
     ?performers ?slot ?performer .
     ?performer xyz:reference ?value .
+    OPTIONAL { bridge:thisDocument cascade:serverBaseUrl ?server }
+    BIND (REPLACE(?value, "/_history/[A-Za-z0-9.-]{1,64}$", "") AS ?unversioned)
+    BIND (IF(BOUND(?server) && STRSTARTS(?unversioned, CONCAT(?server, "/")), STRAFTER(?unversioned, CONCAT(?server, "/")),
+             ?unversioned) AS ?relative)
+    BIND (IF(BOUND(?server) && REGEX(?relative, "^Organization/[A-Za-z0-9.-]{1,64}$"), STRAFTER(?relative, "Organization/"), 1/0)
+          AS ?performerId)
+    FILTER (!BOUND(?performerId) || NOT EXISTS {
+      FILTER NOT EXISTS { ?root xyz:fullUrl ?urnFullUrl . FILTER (STRSTARTS(?urnFullUrl, "urn:uuid:")) }
+      FILTER NOT EXISTS {
+        { ?resource xyz:resourceType "DiagnosticReport" ; xyz:performer ?otherPerformers }
+        UNION
+        { ?resource xyz:resourceType "DocumentReference" ; xyz:author ?otherPerformers }
+        ?otherPerformers ?otherSlot ?otherPerformer .
+        ?otherPerformer xyz:reference ?otherWritten .
+        BIND (REPLACE(?otherWritten, "/_history/[A-Za-z0-9.-]{1,64}$", "") AS ?otherUnversioned)
+        BIND (IF(STRSTARTS(?otherUnversioned, CONCAT(?server, "/")), STRAFTER(?otherUnversioned, CONCAT(?server, "/")),
+                 ?otherUnversioned) AS ?otherRelative)
+        FILTER (REGEX(?otherRelative, "^Organization/[A-Za-z0-9.-]{1,64}$")
+                && STRAFTER(?otherRelative, "Organization/") != ?performerId)
+      }
+      FILTER NOT EXISTS {
+        ?urnOrganization fhirr4:resourceType "Organization" ;
+          fhirr4:resourceId ?performerId ;
+          fhirr4:fullUrl ?urnOrganizationUrl .
+        FILTER (STRSTARTS(?urnOrganizationUrl, "urn:uuid:"))
+      }
+      FILTER NOT EXISTS {
+        ?heldOnce fhirr4:resourceType "Organization" ;
+          fhirr4:resourceId ?performerId ;
+          fhirr4:heldAt ?onceAt .
+        ?heldTwice fhirr4:resourceType "Organization" ;
+          fhirr4:resourceId ?performerId ;
+          fhirr4:heldAt ?twiceAt .
+        FILTER (?onceAt != ?twiceAt)
+      }
+    })
     BIND ("/reference" AS ?part)
     BIND (fhirr4:performerCarriedOnlyAsOneOrganizationRecord AS ?gap)
   }
   FILTER (?gap = fhirr4:documentReferenceToCcdaDocument || ?resourceType = "DiagnosticReport" || ?isNote)
-  BIND (CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1), ?part) AS ?pointer)
+  BIND (IF(?gap = fhirr4:documentReferenceToCcdaDocument, ?resourceStep,
+           CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1), ?part)) AS ?pointer)
 }

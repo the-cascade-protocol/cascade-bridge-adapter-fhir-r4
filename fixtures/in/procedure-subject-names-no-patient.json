@@ -1,0 +1,25 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "45378"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Group/g1"
+        },
+        "performedDateTime": "2024-03-12",
+        "id": "procedure-subject-group"
+      }
+    }
+  ]
+}

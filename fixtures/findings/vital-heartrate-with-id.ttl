@@ -2,16 +2,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:a6679dab22c4b427c8d6b1b715ab185c a oa:FragmentSelector ;
+_:c8a0b3e3bd3e14944650369de1fd8ff a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:d8039b7bfb52fcdad416aea0886588bb oa:hasSource <../in/vital-heartrate-with-id.json> .
-_:a6679dab22c4b427c8d6b1b715ab185c oa:refinedBy _:c90fc01af86dae3630254e742e8ef0e8 .
-_:c90fc01af86dae3630254e742e8ef0e8 a oa:FragmentSelector ;
+_:c05046248432d1f2f46973d53c99d51d oa:hasSource <../in/vital-heartrate-with-id.json> .
+_:c8a0b3e3bd3e14944650369de1fd8ff oa:refinedBy _:e360abd28db64bb02810eec48a2efcb6 .
+_:e360abd28db64bb02810eec48a2efcb6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/category/0/coding/0/code" .
-_:d8039b7bfb52fcdad416aea0886588bb oa:hasSelector _:a6679dab22c4b427c8d6b1b715ab185c .
-_:ae4470e86d2edf8368768295c4e15089 oa:hasTarget _:d8039b7bfb52fcdad416aea0886588bb ;
+	rdf:value "" .
+_:c05046248432d1f2f46973d53c99d51d oa:hasSelector _:c8a0b3e3bd3e14944650369de1fd8ff .
+_:d0d14228436dd63515e57348f800c41b oa:hasTarget _:c05046248432d1f2f46973d53c99d51d ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:observationNotLabResult ;
