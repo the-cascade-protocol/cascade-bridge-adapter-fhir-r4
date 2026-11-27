@@ -91,5 +91,5 @@ WHERE {
     ?namedOrganization fhirr4:organizationAt ?medicationPointer ;
       fhirr4:organizationIdentifierSystem ?organizationIdentifierSystem .
   }))
-  BIND (CONCAT(?resourcePointer, "/resourceType") AS ?pointer)
+  BIND (?resourcePointer AS ?pointer)
 }

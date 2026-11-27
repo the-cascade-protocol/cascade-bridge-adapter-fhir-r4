@@ -10,8 +10,8 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 
 # What note-or-document.rq and attachments.rq leave behind: a DocumentReference
-# whose content is a C-CDA document, at the format code
-# note-or-document-table.rq reads it by, the code as its value; and a report's
+# whose content is a C-CDA document, at the DocumentReference, since nothing in
+# it is carried, the format code note-or-document-table.rq reads it by as its value; and a report's
 # or a note's attachment whose content is not read, at its data or, given by
 # URL only, at its URL, its content type as its value: any but text/plain or
 # text/html data the Bridge decodes; a text attachment after the first
@@ -164,5 +164,6 @@ WHERE {
     BIND (fhirr4:performerCarriedOnlyAsOneOrganizationRecord AS ?gap)
   }
   FILTER (?gap = fhirr4:documentReferenceToCcdaDocument || ?resourceType = "DiagnosticReport" || ?isNote)
-  BIND (CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1), ?part) AS ?pointer)
+  BIND (IF(?gap = fhirr4:documentReferenceToCcdaDocument, ?resourceStep,
+           CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1), ?part)) AS ?pointer)
 }

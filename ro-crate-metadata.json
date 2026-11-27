@@ -3065,7 +3065,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "Reports fhirr4:observationNotLabResult for each Observation lab-result-table.rq does not call a lab result, and that is no variant and no diagnostic implication, at what decided it: a category, a vital sign's LOINC code, the type of one with neither category nor LOINC code, or a panel's members."
+      "description": "Reports fhirr4:observationNotLabResult for each Observation lab-result-table.rq does not call a lab result, and that is no variant and no diagnostic implication, at the Observation, with what decided it as the value: a category, a vital sign's LOINC code, the type of one with neither category nor LOINC code, or a panel's members."
     },
     {
       "@id": "in/sparql/medication-findings.rq",
@@ -3175,7 +3175,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "Reports fhirr4:documentReferenceToCcdaDocument at the format code of a DocumentReference whose content is a structured C-CDA document, fhirr4:attachmentDataNotRead at each report or note attachment whose content is not read (by URL only, or data that is no text/plain or text/html the Bridge decodes), fhirr4:textAttachmentNotCarried at each text attachment after the one carried, and fhirr4:performerCarriedOnlyAsOneOrganizationRecord at each performer or author reference of a report or note whose performers or authors name more than one Organization."
+      "description": "Reports fhirr4:documentReferenceToCcdaDocument at a DocumentReference whose content is a structured C-CDA document, with its format code as the value, fhirr4:attachmentDataNotRead at each report or note attachment whose content is not read (by URL only, or data that is no text/plain or text/html the Bridge decodes), fhirr4:textAttachmentNotCarried at each text attachment after the one carried, and fhirr4:performerCarriedOnlyAsOneOrganizationRecord at each performer or author reference of a report or note whose performers or authors name more than one Organization."
     },
     {
       "@id": "in/sparql/report-result-findings.rq",
