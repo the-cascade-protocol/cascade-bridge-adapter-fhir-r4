@@ -24,7 +24,8 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # fhirr4:performedPeriodStartBesideDate. A report's issued is an instant, which
 # report.rq carries only with its seconds: a day or a time to the minute is
 # reported here as no value, as a date is. A lab result's and a variant's issued is
-# carried by no mapping, and is reported as fhirr4:issuedNotCarried.
+# carried by no mapping, and is reported as fhirr4:issuedNotCarried, and a
+# variant's effective time, readable or not, as fhirr4:variantTimeNotCarried.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -104,6 +105,22 @@ WHERE {
     ?resource xyz:performedDateTime ?dateTime .
     BIND ("/performedPeriod/start" AS ?step)
     BIND (fhirr4:performedPeriodStartBesideDate AS ?fixedGap)
+  }
+  UNION
+  {
+    VALUES (?type ?scope ?member ?step) {
+      ("Observation" "variant" xyz:effectiveDateTime "/effectiveDateTime")
+      ("Observation" "variant" xyz:effectiveInstant  "/effectiveInstant")
+    }
+    ?resource ?member ?value .
+    BIND (fhirr4:variantTimeNotCarried AS ?fixedGap)
+  }
+  UNION
+  {
+    VALUES (?type ?scope) { ("Observation" "variant") }
+    ?resource xyz:effectivePeriod ?period . ?period xyz:start ?value .
+    BIND ("/effectivePeriod/start" AS ?step)
+    BIND (fhirr4:variantTimeNotCarried AS ?fixedGap)
   }
   UNION
   {

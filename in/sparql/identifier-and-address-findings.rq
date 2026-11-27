@@ -1,0 +1,97 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh:      <http://www.w3.org/ns/shacl#>
+PREFIX oa:      <http://www.w3.org/ns/oa#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fx:      <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
+PREFIX bridge:  <https://ns.cascadeprotocol.org/bridge/v1-draft#>
+PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
+PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
+
+# Each identifier and each address of a resource a mapping reads that no mapping
+# carries: an identifier is carried for a lab result, which lab-result-identifiers.rq
+# writes, and for an Organization, which organization.rq and
+# organization-from-server.rq write, and an address for an Organization alone. Every
+# other record's, a patient's address and any record's identifier among them, is
+# reported at the identifier or the address, above the parts its accounting
+# entries name the one gap for. An Organization no record is made of is reported
+# whole by resource-type-findings.rq, and one whose record another gives the
+# version of by organization-findings.rq.
+
+CONSTRUCT {
+  [] a oa:Annotation ;
+    oa:hasTarget [
+      oa:hasSource bridge:thisRecord ;
+      oa:hasSelector [
+        a oa:FragmentSelector ;
+        dcterms:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+        rdf:value ?pointer
+      ]
+    ] ;
+    oa:hasBody ?gap ;
+    oa:motivatedBy oa:classifying ;
+    sh:value ?value .
+}
+WHERE {
+  FILTER NOT EXISTS {
+    bridge:thisDocument cascade:sourceFormatVersion ?stated .
+    FILTER (!STRSTARTS(?stated, "4.0."))
+  }
+  bridge:thisRecord bridge:selector ?recordSelector .
+  ?root a fx:root .
+  { ?root xyz:resourceType ?topType . BIND (?root AS ?top) BIND ("" AS ?topStep) }
+  UNION
+  { ?root xyz:resource ?top . ?top xyz:resourceType ?topType . BIND ("/resource" AS ?topStep) }
+  { BIND ("" AS ?containedStep) }
+  UNION
+  {
+    ?top xyz:contained ?containedList .
+    ?containedList ?containedSlot ?contained .
+    ?contained xyz:resourceType ?containedType .
+    BIND (CONCAT("/contained/", STR(xsd:integer(STRAFTER(STR(?containedSlot), "#_")) - 1)) AS ?containedStep)
+  }
+  BIND (COALESCE(?contained, ?top) AS ?resource)
+  BIND (CONCAT(?topStep, ?containedStep) AS ?resourceStep)
+  BIND (CONCAT(?recordSelector, ?resourceStep) AS ?resourcePointer)
+  ?resource xyz:resourceType ?type .
+  FILTER (?type IN ("AllergyIntolerance", "Condition", "Immunization", "Procedure", "Patient",
+                    "MedicationRequest", "MedicationStatement", "MedicationDispense", "DiagnosticReport")
+          || (?type = "DocumentReference" && EXISTS { ?note fhirr4:noteOrDocumentAt ?resourcePointer })
+          || (?type = "Observation" && EXISTS {
+               { ?variantRow fhirr4:variantAt ?resourcePointer }
+               UNION { ?interpretationRow fhirr4:interpretationAt ?resourcePointer }
+             })
+          || (?type = "Medication" && EXISTS {
+               ?resolving fhirr4:medicationReferenceFrom ?from ;
+                 fhirr4:medicationReferenceTo ?key ;
+                 fhirr4:medicationScope ?scope .
+               ?held fhirr4:medicationAt ?resourcePointer ;
+                 fhirr4:medicationKey ?key ;
+                 fhirr4:medicationScope ?scope .
+               FILTER NOT EXISTS {
+                 ?rival fhirr4:medicationAt ?rivalPointer ;
+                   fhirr4:medicationKey ?key ;
+                   fhirr4:medicationScope ?scope .
+                 FILTER (?rivalPointer != ?resourcePointer)
+               }
+             }))
+  {
+    ?resource xyz:identifier ?items .
+    ?items ?slot ?item .
+    FILTER (STRSTARTS(STR(?slot), STR(rdf:_)))
+    OPTIONAL { ?item xyz:value ?value }
+    BIND ("/identifier/" AS ?list)
+    BIND (fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:address ?items .
+    ?items ?slot ?item .
+    FILTER (STRSTARTS(STR(?slot), STR(rdf:_)))
+    OPTIONAL { ?item xyz:text ?value }
+    BIND ("/address/" AS ?list)
+    BIND (fhirr4:addressCarriedForOrganizationsOnly AS ?gap)
+  }
+  BIND (CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1)) AS ?pointer)
+}

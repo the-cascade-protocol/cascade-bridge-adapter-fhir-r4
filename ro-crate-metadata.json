@@ -272,6 +272,9 @@
         },
         {
           "@id": "in/sparql/narrative-findings.rq"
+        },
+        {
+          "@id": "in/sparql/identifier-and-address-findings.rq"
         }
       ],
       "bridge:table": [
@@ -468,6 +471,9 @@
         },
         {
           "@id": "in/sparql/narrative-findings.rq"
+        },
+        {
+          "@id": "in/sparql/identifier-and-address-findings.rq"
         },
         {
           "@id": "vocab/fhir-accounting.ttl"
@@ -3172,6 +3178,16 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "Reports fhirr4:narrative at each text div narrative-text.rq does not carry: any resource's but a report's or a note's, and theirs where a text/plain or text/html attachment is carried instead."
+    },
+    {
+      "@id": "in/sparql/identifier-and-address-findings.rq",
+      "@type": "File",
+      "name": "Findings: an identifier or an address not carried",
+      "encodingFormat": "application/sparql-query",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "Reports fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly at each identifier, and fhirr4:addressCarriedForOrganizationsOnly at each address, of a resource a mapping reads that no mapping carries it for: any record's but a lab result's and an Organization's identifier, and any record's but an Organization's address."
     },
     {
       "@id": "in/sparql/reference-without-server-findings.rq",
