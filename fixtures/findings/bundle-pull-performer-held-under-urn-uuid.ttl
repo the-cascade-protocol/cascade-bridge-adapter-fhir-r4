@@ -2,18 +2,33 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:e8bb1eae875007a7265584fa4de25e44 a oa:FragmentSelector ;
+_:ecc80aff7fd7cd664e8bd487a5a76f8b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:a4bb213c9334083a14dd45b737ce7fe oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
-_:e8bb1eae875007a7265584fa4de25e44 oa:refinedBy _:c468b14f07281b698b65f3ac97889a96 .
-_:c468b14f07281b698b65f3ac97889a96 a oa:FragmentSelector ;
+_:bbcf852d7d357d88f300aa8043745283 oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
+_:ecc80aff7fd7cd664e8bd487a5a76f8b oa:refinedBy _:e4b65009092b0e27f28bf158aec3bf7a .
+_:e4b65009092b0e27f28bf158aec3bf7a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/resourceType" .
-_:a4bb213c9334083a14dd45b737ce7fe oa:hasSelector _:e8bb1eae875007a7265584fa4de25e44 .
-_:f60ad62f61c97c3f3ebe79839a607945 oa:hasTarget _:a4bb213c9334083a14dd45b737ce7fe ;
+_:bbcf852d7d357d88f300aa8043745283 oa:hasSelector _:ecc80aff7fd7cd664e8bd487a5a76f8b .
+_:beb72c332a7878a8c429e9899eaab5ad oa:hasTarget _:bbcf852d7d357d88f300aa8043745283 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Organization" .
+_:c9bd937651e68ce8e95ff20c8d0f7946 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/1" .
+_:a5c60605634e0ae3d521bcfac9216119 oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
+_:c9bd937651e68ce8e95ff20c8d0f7946 oa:refinedBy _:d0bd050e28e85a80fb6bb83b3ed6098b .
+_:d0bd050e28e85a80fb6bb83b3ed6098b a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/resource/performer/0/reference" .
+_:a5c60605634e0ae3d521bcfac9216119 oa:hasSelector _:c9bd937651e68ce8e95ff20c8d0f7946 .
+_:a30ae09a464abe19d194c5e73578df68 oa:hasTarget _:a5c60605634e0ae3d521bcfac9216119 ;
+	sh:resultSeverity sh:Warning ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:performerCarriedOnlyAsOneOrganizationRecord ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "Organization/org-lab-1" .

@@ -118,6 +118,7 @@
     <#bundle-pull-organization-id-repeated>
     <#bundle-pull-id-shared-across-types>
     <#bundle-pull-performer-held-under-urn-uuid>
+    <#bundle-performers-from-no-known-server>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
     <#Bundle-bundle-compound-heterozygote>
@@ -796,7 +797,7 @@
 
 <#Bundle-bundle-oncology-diagnostic> a bridge:IsomorphicConversionTest ;
   mf:name "Bundle-bundle-oncology-diagnostic" ;
-  rdfs:comment "A Variant with a ClinVar ID and a gene and only a genomic HGVS expression, and a Diagnostic Implication derived from it by a urn:uuid fullUrl, dated by its effective time alone; its performer is a Practitioner, so it is attributed to no lab and the reference is a finding." ;
+  rdfs:comment "A Variant with a ClinVar ID and a gene and only a genomic HGVS expression, and a Diagnostic Implication derived from it by a urn:uuid fullUrl, dated by its effective time alone; its performer is a Practitioner, so it is attributed to no lab and the reference is a finding, as it is of the lab result and the report that name the same Practitioner." ;
   mf:action [
     bridge:input <in/Bundle-bundle-oncology-diagnostic.input.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -1495,7 +1496,7 @@
 
 <#lab-performed-by-an-organization> a bridge:IsomorphicConversionTest ;
   mf:name "lab-performed-by-an-organization" ;
-  rdfs:comment "A lab result from a server whose performers are a Practitioner and Organization/org-lab-1 is attributed to that Organization's record on the server, which the document does not hold; the Practitioner is not read." ;
+  rdfs:comment "A lab result from a server whose performers are a Practitioner and Organization/org-lab-1 is attributed to that Organization's record on the server, which the document does not hold; the Practitioner is not carried, and its reference is a finding." ;
   mf:action [
     bridge:input <in/lab-performed-by-an-organization.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -1547,7 +1548,7 @@
 
 <#bundle-pull-organization-id-repeated> a bridge:IsomorphicConversionTest ;
   mf:name "bundle-pull-organization-id-repeated" ;
-  rdfs:comment "Two Organizations of a pull sharing one id are no record and a finding each, and a lab result whose performer names that id is attributed to none." ;
+  rdfs:comment "Two Organizations of a pull sharing one id are no record and a finding each, and a lab result whose performer names that id is attributed to none, and the performer's reference is a finding." ;
   mf:action [
     bridge:input <in/bundle-pull-organization-id-repeated.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -1560,7 +1561,7 @@
 
 <#bundle-pull-performer-held-under-urn-uuid> a bridge:IsomorphicConversionTest ;
   mf:name "bundle-pull-performer-held-under-urn-uuid" ;
-  rdfs:comment "A performer Organization/<id> naming an Organization the document holds under a urn:uuid fullUrl, which FHIR gives no meaning, names no record." ;
+  rdfs:comment "A performer Organization/<id> naming an Organization the document holds under a urn:uuid fullUrl, which FHIR gives no meaning, names no record, and the performer's reference is a finding." ;
   mf:action [
     bridge:input <in/bundle-pull-performer-held-under-urn-uuid.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -1569,6 +1570,19 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-pull-performer-held-under-urn-uuid.ttl> ;
     bridge:expectedFindings <findings/bundle-pull-performer-held-under-urn-uuid.ttl>
+  ] .
+
+<#bundle-performers-from-no-known-server> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-performers-from-no-known-server" ;
+  rdfs:comment "A lab result's and a report's performer and a note's author, each Organization/<id>, in a document from no known server: no organization record is named, so each is attributed to none and each reference is a finding." ;
+  mf:action [
+    bridge:input <in/bundle-performers-from-no-known-server.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/no-server.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-performers-from-no-known-server.ttl> ;
+    bridge:expectedFindings <findings/bundle-performers-from-no-known-server.ttl>
   ] .
 
 <#lab-performer-differs-names-one-record> a bridge:IdentityRelationTest ;
@@ -2079,7 +2093,7 @@
 
 <#bundle-reports-results-and-performers> a bridge:IsomorphicConversionTest ;
   mf:name "bundle-reports-results-and-performers" ;
-  rdfs:comment "Reports in a Bundle from a server: a result names a record by an absolute URL on the server with a version, or by a urn:uuid one entry holds, and names none when it is a panel, a vital sign, an Observation/<id> held under a urn:uuid or by two entries, or a urn:uuid two entries share, or a urn:uuid one entry holds of a vital sign; a report whose div holds only white space has no text; a performer names no organization when it is held by two entries or under a urn:uuid, or the report's own entry is held under a urn:uuid." ;
+  rdfs:comment "Reports in a Bundle from a server: a result names a record by an absolute URL on the server with a version, or by a urn:uuid one entry holds, and names none when it is a panel, a vital sign, an Observation/<id> held under a urn:uuid or by two entries, or a urn:uuid two entries share, or a urn:uuid one entry holds of a vital sign; a report whose div holds only white space has no text; a performer names no organization when it is held by two entries or under a urn:uuid, or the report's own entry is held under a urn:uuid, and each such performer's reference is a finding." ;
   mf:action [
     bridge:input <in/bundle-reports-results-and-performers.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
