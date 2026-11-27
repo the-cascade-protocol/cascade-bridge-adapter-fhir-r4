@@ -3749,7 +3749,9 @@
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
@@ -7609,7 +7611,9 @@
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
@@ -12085,7 +12089,9 @@
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;
@@ -15941,7 +15947,9 @@
     [ bridge:inSourceRecordType "DocumentReference" ; bridge:inRecordClass cascade:ClinicalNoteOrDocument ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
 
 [] a bridge:PathEntry ;

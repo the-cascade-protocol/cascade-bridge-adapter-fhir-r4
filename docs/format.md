@@ -375,6 +375,11 @@ its position: one name for both would fuse two resources the source gave one
 the document names both. A record named by the document carries no
 `cascade:sourceUrl`: its name is not its id's.
 
+**The `id` is the record's `cascade:sourceRecordId`**, however the record is named: of every kind,
+a variant and a diagnostic implication among them, and of a contained resource its local `id`. An
+`Organization` a document names carries none: it is named by an identifier, and an `id` the document
+gives it, a contained one most of all, is local to that document.
+
 **A contained resource** is named within its container, by the container's name
 and source version, so that a renumbered `contained` list does not make one
 resource a revision of another. With no `id` it has nothing to be named by but
