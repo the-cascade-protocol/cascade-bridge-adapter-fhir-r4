@@ -1394,10 +1394,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/daysSupply/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/daysSupply/unit" ;
@@ -1568,10 +1566,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dispenseRequest/expectedSupplyDuration/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dispenseRequest/expectedSupplyDuration/unit" ;
@@ -4260,10 +4256,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/quantity/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/quantity/unit" ;
@@ -5258,10 +5252,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/daysSupply/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/daysSupply/unit" ;
@@ -5428,10 +5420,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dispenseRequest/expectedSupplyDuration/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dispenseRequest/expectedSupplyDuration/unit" ;
@@ -8099,10 +8089,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/quantity/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/quantity/unit" ;
@@ -9722,10 +9710,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/daysSupply/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/daysSupply/unit" ;
@@ -9896,10 +9882,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dispenseRequest/expectedSupplyDuration/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dispenseRequest/expectedSupplyDuration/unit" ;
@@ -12588,10 +12572,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/quantity/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/quantity/unit" ;
@@ -13586,10 +13568,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/daysSupply/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/daysSupply/unit" ;
@@ -13762,10 +13742,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dispenseRequest/expectedSupplyDuration/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dispenseRequest/expectedSupplyDuration/unit" ;
@@ -16423,10 +16401,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/quantity/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernCodes .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/quantity/unit" ;
