@@ -1,0 +1,21 @@
+{
+  "resourceType": "Patient",
+  "id": "pat-official-name-blank",
+  "name": [
+    {
+      "use": "usual",
+      "family": "Usable",
+      "given": [
+        "U"
+      ]
+    },
+    {
+      "use": "official",
+      "given": [
+        "  "
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-03-14"
+}

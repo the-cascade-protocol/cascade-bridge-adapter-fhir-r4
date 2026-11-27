@@ -10,9 +10,10 @@ PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 
 # What patient.rq leaves behind: a gender that is no code of FHIR's administrative
-# gender; each name after the first, at the name; each given name of the first name
-# that is not blank and is not the one carried, at the given name; and each contact
-# point, at the contact point.
+# gender; each name with something in it (a family, a text or a given name that is not
+# blank) but the one carried, the first with something in it whose use is official, else
+# the first with something in it, at the name; each given name of that name that is not blank and is not the one
+# carried, at the given name; and each contact point, at the contact point.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -56,7 +57,23 @@ WHERE {
   UNION
   {
     ?resource xyz:name ?names . ?names ?nameSlot ?name .
-    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)) && ?nameSlot != rdf:_1)
+    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)))
+    FILTER EXISTS {
+      { ?name xyz:family ?held } UNION { ?name xyz:text ?held } UNION { ?name xyz:given ?heldGiven . ?heldGiven ?heldSlot ?held . FILTER (STRSTARTS(STR(?heldSlot), STR(rdf:_))) }
+      FILTER (REPLACE(STR(?held), "^\\s+|\\s+$", "") != "")
+    }
+    BIND (IF(EXISTS { ?name xyz:use "official" }, 0, 1000000) + xsd:integer(STRAFTER(STR(?nameSlot), "#_")) AS ?nameRank)
+    {
+      SELECT ?names (MIN(?rank) AS ?carriedNameRank) {
+        ?named xyz:resourceType "Patient" ; xyz:name ?names . ?names ?slot ?held .
+        FILTER (STRSTARTS(STR(?slot), STR(rdf:_)))
+        { ?held xyz:family ?o } UNION { ?held xyz:text ?o } UNION { ?held xyz:given ?given . ?given ?givenSlot ?o . FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_))) }
+        FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+        BIND (IF(EXISTS { ?held xyz:use "official" }, 0, 1000000) + xsd:integer(STRAFTER(STR(?slot), "#_")) AS ?rank)
+      }
+      GROUP BY ?names
+    }
+    FILTER (?nameRank != ?carriedNameRank)
     OPTIONAL { ?name xyz:text ?nameText }
     OPTIONAL { ?name xyz:family ?nameFamily }
     BIND (COALESCE(?nameText, ?nameFamily) AS ?value)
@@ -65,7 +82,20 @@ WHERE {
   }
   UNION
   {
-    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:given ?given . ?given ?givenSlot ?value .
+    ?resource xyz:name ?names . ?names ?nameSlot ?name .
+    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)))
+    BIND (IF(EXISTS { ?name xyz:use "official" }, 0, 1000000) + xsd:integer(STRAFTER(STR(?nameSlot), "#_")) AS ?nameRank)
+    {
+      SELECT ?names (MIN(?rank) AS ?nameRank) {
+        ?named xyz:resourceType "Patient" ; xyz:name ?names . ?names ?slot ?held .
+        FILTER (STRSTARTS(STR(?slot), STR(rdf:_)))
+        { ?held xyz:family ?o } UNION { ?held xyz:text ?o } UNION { ?held xyz:given ?given . ?given ?givenSlot ?o . FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_))) }
+        FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+        BIND (IF(EXISTS { ?held xyz:use "official" }, 0, 1000000) + xsd:integer(STRAFTER(STR(?slot), "#_")) AS ?rank)
+      }
+      GROUP BY ?names
+    }
+    ?name xyz:given ?given . ?given ?givenSlot ?value .
     FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_)) && REPLACE(STR(?value), "^\\s+|\\s+$", "") != "")
     FILTER EXISTS {
       ?given ?earlierSlot ?earlier .
@@ -73,7 +103,7 @@ WHERE {
               && xsd:integer(STRAFTER(STR(?earlierSlot), "#_")) < xsd:integer(STRAFTER(STR(?givenSlot), "#_"))
               && REPLACE(STR(?earlier), "^\\s+|\\s+$", "") != "")
     }
-    BIND (CONCAT("/name/0/given/", STR(xsd:integer(STRAFTER(STR(?givenSlot), "#_")) - 1)) AS ?step)
+    BIND (CONCAT("/name/", STR(xsd:integer(STRAFTER(STR(?nameSlot), "#_")) - 1), "/given/", STR(xsd:integer(STRAFTER(STR(?givenSlot), "#_")) - 1)) AS ?step)
     BIND (fhirr4:patientNameRepeated AS ?gap)
   }
   UNION

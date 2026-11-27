@@ -112,15 +112,10 @@ fhirr4:medicationDosageRepeated a skos:Concept ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
 
-fhirr4:labResultPeriodEnd a skos:Concept ;
-  skos:prefLabel "A lab result carries the end of the period it was performed over, and no Cascade predicate carries it."@en ;
+fhirr4:effectivePeriodEndNotCarried a skos:Concept ;
+  skos:prefLabel "A lab result, a diagnostic report or a variant carries the end of the period it was performed over or its results are about, and no Cascade predicate carries it; a medication statement's is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:noPredicate .
-
-fhirr4:diagnosticReportPeriodEnd a skos:Concept ;
-  skos:prefLabel "A diagnostic report carries the end of the period its results are about, and no Cascade predicate carries it."@en ;
-  skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:noPredicate .
+  skos:broader bridge:carriedWithLoss .
 
 fhirr4:variantDerivedFromNotCarried a skos:Concept ;
   skos:prefLabel "A variant references the resources it is derived from, and no Cascade predicate carries the link; a diagnostic implication's link to a variant is carried."@en ;
@@ -128,7 +123,19 @@ fhirr4:variantDerivedFromNotCarried a skos:Concept ;
   skos:broader bridge:noPredicate .
 
 fhirr4:patientNameRepeated a skos:Concept ;
-  skos:prefLabel "A patient states more than one name, or a name more than one given name, and a patient has one family name, one given name and one name: only the first name's family name and text, and its first given name that is not blank, are carried."@en ;
+  skos:prefLabel "A patient states more than one name, or a name more than one given name, and a patient has one family name, one given name and one name: only the family name and text of the first name with something in it whose use is official, else of the first name with something in it, and its first given name that is not blank, are carried."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss ;
+  sh:resultSeverity sh:Warning .
+
+fhirr4:conditionOrAllergyCategoryRepeated a skos:Concept ;
+  skos:prefLabel "A condition or an allergy states more than one category, and a condition or an allergy has one category: only the first an allergy states, and the first a condition states with a coding of FHIR's condition-category system, is carried."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss ;
+  sh:resultSeverity sh:Warning .
+
+fhirr4:allergyReactionSeverityRepeated a skos:Concept ;
+  skos:prefLabel "An allergy states a severity for more than one reaction, and an allergy has one severity: only the first severity its reactions state is carried."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .

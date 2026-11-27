@@ -1,0 +1,104 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh:      <http://www.w3.org/ns/shacl#>
+PREFIX oa:      <http://www.w3.org/ns/oa#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fx:      <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
+PREFIX bridge:  <https://ns.cascadeprotocol.org/bridge/v1-draft#>
+PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
+PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
+
+# What allergy-intolerance.rq and condition.rq leave behind, for the vocabulary holds one
+# category of an allergy or a condition, and one severity of an allergy: the first category
+# an allergy states, the first a condition states with a coding of FHIR's condition-category
+# system, and the first severity of its reactions. Each other category an allergy states or
+# a condition states with a coding, at the category, and each other reaction's severity, at
+# the severity. A category a condition gives as text alone is reported by
+# category-text-findings.rq.
+
+CONSTRUCT {
+  [] a oa:Annotation ;
+    oa:hasTarget [
+      oa:hasSource bridge:thisRecord ;
+      oa:hasSelector [
+        a oa:FragmentSelector ;
+        dcterms:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+        rdf:value ?pointer
+      ]
+    ] ;
+    oa:hasBody ?gap ;
+    oa:motivatedBy oa:classifying ;
+    sh:value ?value .
+}
+WHERE {
+  FILTER NOT EXISTS {
+    bridge:thisDocument cascade:sourceFormatVersion ?stated .
+    FILTER (!STRSTARTS(?stated, "4.0."))
+  }
+  ?root a fx:root .
+  { ?root xyz:resourceType ?topType . BIND (?root AS ?top) BIND ("" AS ?topStep) }
+  UNION
+  { ?root xyz:resource ?top . ?top xyz:resourceType ?topType . BIND ("/resource" AS ?topStep) }
+  { BIND ("" AS ?containedStep) }
+  UNION
+  {
+    ?top xyz:contained ?containedList .
+    ?containedList ?containedSlot ?contained .
+    ?contained xyz:resourceType ?containedType .
+    BIND (CONCAT("/contained/", STR(xsd:integer(STRAFTER(STR(?containedSlot), "#_")) - 1)) AS ?containedStep)
+  }
+  BIND (COALESCE(?contained, ?top) AS ?resource)
+  {
+    ?resource xyz:resourceType "AllergyIntolerance" .
+    ?resource xyz:category ?categories . ?categories ?categorySlot ?value .
+    FILTER (STRSTARTS(STR(?categorySlot), STR(rdf:_)) && ?categorySlot != rdf:_1)
+    BIND (CONCAT("/category/", STR(xsd:integer(STRAFTER(STR(?categorySlot), "#_")) - 1)) AS ?step)
+    BIND (fhirr4:conditionOrAllergyCategoryRepeated AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:resourceType "Condition" .
+    ?resource xyz:category ?categories . ?categories ?categorySlot ?category .
+    FILTER (STRSTARTS(STR(?categorySlot), STR(rdf:_)))
+    ?category xyz:coding ?codings .
+    FILTER (!EXISTS {
+              ?codings ?ownCodingSlot ?ownCoding .
+              ?ownCoding xyz:system "http://terminology.hl7.org/CodeSystem/condition-category" ;
+                xyz:code ?ownCode .
+            }
+            || EXISTS {
+              ?categories ?earlierCategorySlot ?earlierCategory .
+              ?earlierCategory xyz:coding ?earlierCodings . ?earlierCodings ?earlierCodingSlot ?earlierCoding .
+              ?earlierCoding xyz:system "http://terminology.hl7.org/CodeSystem/condition-category" ;
+                xyz:code ?earlierCode .
+              FILTER (STRSTARTS(STR(?earlierCategorySlot), STR(rdf:_))
+                      && xsd:integer(STRAFTER(STR(?earlierCategorySlot), "#_")) < xsd:integer(STRAFTER(STR(?categorySlot), "#_")))
+            })
+    FILTER (?categorySlot != rdf:_1 || EXISTS {
+              ?categories ?otherCategorySlot ?otherCategory .
+              ?otherCategory xyz:coding ?otherCodings . ?otherCodings ?otherCodingSlot ?otherCoding .
+              ?otherCoding xyz:system "http://terminology.hl7.org/CodeSystem/condition-category" ;
+                xyz:code ?otherCode .
+              FILTER (STRSTARTS(STR(?otherCategorySlot), STR(rdf:_)))
+            })
+    OPTIONAL { ?codings rdf:_1 ?coding . ?coding xyz:code ?value }
+    BIND (CONCAT("/category/", STR(xsd:integer(STRAFTER(STR(?categorySlot), "#_")) - 1)) AS ?step)
+    BIND (fhirr4:conditionOrAllergyCategoryRepeated AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:resourceType "AllergyIntolerance" .
+    ?resource xyz:reaction ?reactions . ?reactions ?reactionSlot ?reaction .
+    FILTER (STRSTARTS(STR(?reactionSlot), STR(rdf:_)))
+    ?reaction xyz:severity ?value .
+    FILTER EXISTS {
+      ?reactions ?earlierReactionSlot ?earlierReaction . ?earlierReaction xyz:severity ?earlierSeverity .
+      FILTER (STRSTARTS(STR(?earlierReactionSlot), STR(rdf:_))
+              && xsd:integer(STRAFTER(STR(?earlierReactionSlot), "#_")) < xsd:integer(STRAFTER(STR(?reactionSlot), "#_")))
+    }
+    BIND (CONCAT("/reaction/", STR(xsd:integer(STRAFTER(STR(?reactionSlot), "#_")) - 1), "/severity") AS ?step)
+    BIND (fhirr4:allergyReactionSeverityRepeated AS ?gap)
+  }
+  BIND (CONCAT(?topStep, ?containedStep, ?step) AS ?pointer)
+}

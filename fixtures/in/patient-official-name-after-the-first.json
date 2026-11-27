@@ -1,0 +1,31 @@
+{
+  "resourceType": "Patient",
+  "id": "pat-official-name",
+  "name": [
+    {
+      "use": "nickname",
+      "family": "Nick",
+      "given": [
+        "Nicky"
+      ]
+    },
+    {
+      "use": "official",
+      "family": "Okonkwo",
+      "given": [
+        "Odette",
+        "Marie"
+      ]
+    },
+    {
+      "use": "official",
+      "family": "Adeyemi",
+      "given": [
+        "Odette"
+      ],
+      "text": "Odette Adeyemi"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-03-14"
+}

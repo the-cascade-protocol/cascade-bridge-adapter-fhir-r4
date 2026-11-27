@@ -11,6 +11,9 @@
     <#allergy-no-id-penicillin>
     <#allergy-no-id-penicillin-compact>
     <#allergy-no-id-sulfa>
+    <#allergy-categories-after-the-first-not-carried>
+    <#allergy-reactions-after-the-first-not-carried>
+    <#allergy-reaction-severity-after-a-reaction-without-one>
     <#condition-with-id>
     <#condition-every-mapped-element>
     <#condition-with-id-meta-fetch-a>
@@ -21,6 +24,8 @@
     <#condition-no-id-structured-diabetes>
     <#condition-no-id-narrative-diabetes>
     <#condition-no-id-narrative-breast-cancer>
+    <#condition-categories-after-the-first-not-carried>
+    <#condition-category-first-without-a-carried-coding>
     <#immunization-with-id>
     <#immunization-every-mapped-element>
     <#immunization-no-id-2024>
@@ -34,6 +39,8 @@
     <#patient-no-id>
     <#patient-second-given-name-not-carried>
     <#patient-second-name-not-carried>
+    <#patient-official-name-after-the-first>
+    <#patient-official-name-without-content>
     <#patient-telecom-not-carried>
     <#patient-blank-first-given-name>
     <#patient-deceased-date>
@@ -311,6 +318,45 @@
     bridge:expectedFindings <findings/allergy-no-id-sulfa.ttl>
   ] .
 
+<#allergy-categories-after-the-first-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-categories-after-the-first-not-carried" ;
+  rdfs:comment "An AllergyIntolerance that states three categories: the first is carried, as the vocabulary holds one, and each later one is a fhirr4:conditionOrAllergyCategoryRepeated finding at it." ;
+  mf:action [
+    bridge:input <in/allergy-categories-after-the-first-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-categories-after-the-first-not-carried.ttl> ;
+    bridge:expectedFindings <findings/allergy-categories-after-the-first-not-carried.ttl>
+  ] .
+
+<#allergy-reactions-after-the-first-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-reactions-after-the-first-not-carried" ;
+  rdfs:comment "An AllergyIntolerance with four reactions: every reaction's manifestations are carried, the first reaction's severity is carried, as the vocabulary holds one, and the severity of each later reaction is a fhirr4:allergyReactionSeverityRepeated finding at it." ;
+  mf:action [
+    bridge:input <in/allergy-reactions-after-the-first-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-reactions-after-the-first-not-carried.ttl> ;
+    bridge:expectedFindings <findings/allergy-reactions-after-the-first-not-carried.ttl>
+  ] .
+
+<#allergy-reaction-severity-after-a-reaction-without-one> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-reaction-severity-after-a-reaction-without-one" ;
+  rdfs:comment "An AllergyIntolerance whose first reaction states no severity, and whose second and third reactions state one: the second reaction's severity is carried, as the first severity there is, and the third reaction's is a fhirr4:allergyReactionSeverityRepeated finding at it." ;
+  mf:action [
+    bridge:input <in/allergy-reaction-severity-after-a-reaction-without-one.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-reaction-severity-after-a-reaction-without-one.ttl> ;
+    bridge:expectedFindings <findings/allergy-reaction-severity-after-a-reaction-without-one.ttl>
+  ] .
+
 <#condition-with-id> a bridge:IsomorphicConversionTest ;
   mf:name "condition-with-id" ;
   mf:action [
@@ -431,6 +477,32 @@
   mf:result [
     bridge:expectedGraph <expected/condition-no-id-narrative-breast-cancer.ttl> ;
     bridge:expectedFindings <findings/condition-no-id-narrative-breast-cancer.ttl>
+  ] .
+
+<#condition-categories-after-the-first-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "condition-categories-after-the-first-not-carried" ;
+  rdfs:comment "A Condition that states four categories: the first is carried, as the vocabulary holds one, each later one with a coding is a fhirr4:conditionOrAllergyCategoryRepeated finding at it, and the later one that is text alone is a fhirr4:categoryTextNotCarried finding." ;
+  mf:action [
+    bridge:input <in/condition-categories-after-the-first-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/condition-categories-after-the-first-not-carried.ttl> ;
+    bridge:expectedFindings <findings/condition-categories-after-the-first-not-carried.ttl>
+  ] .
+
+<#condition-category-first-without-a-carried-coding> a bridge:IsomorphicConversionTest ;
+  mf:name "condition-category-first-without-a-carried-coding" ;
+  rdfs:comment "A Condition whose first category has only a SNOMED coding and whose second and third have a condition-category coding: the second category is carried, as the first that has a coding the mapping carries, and the first and third categories, which the mapping does not carry, are fhirr4:conditionOrAllergyCategoryRepeated findings at them." ;
+  mf:action [
+    bridge:input <in/condition-category-first-without-a-carried-coding.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/condition-category-first-without-a-carried-coding.ttl> ;
+    bridge:expectedFindings <findings/condition-category-first-without-a-carried-coding.ttl>
   ] .
 
 <#immunization-with-id> a bridge:IsomorphicConversionTest ;
@@ -590,6 +662,32 @@
   mf:result [
     bridge:expectedGraph <expected/patient-second-name-not-carried.ttl> ;
     bridge:expectedFindings <findings/patient-second-name-not-carried.ttl>
+  ] .
+
+<#patient-official-name-after-the-first> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-official-name-after-the-first" ;
+  rdfs:comment "A Patient who states a nickname and then two official names: the first official name is carried, with its first given name, and the nickname, the second official name and the first official name's second given name are fhirr4:patientNameRepeated findings at them." ;
+  mf:action [
+    bridge:input <in/patient-official-name-after-the-first.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-official-name-after-the-first.ttl> ;
+    bridge:expectedFindings <findings/patient-official-name-after-the-first.ttl>
+  ] .
+
+<#patient-official-name-without-content> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-official-name-without-content" ;
+  rdfs:comment "A Patient who states a usual name and then an official name that holds nothing, its only given name blank: the usual name is carried, as the name with something in it, and the official name with nothing in it is not carried and is not reported." ;
+  mf:action [
+    bridge:input <in/patient-official-name-without-content.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-official-name-without-content.ttl> ;
+    bridge:expectedFindings <findings/patient-official-name-without-content.ttl>
   ] .
 
 <#patient-telecom-not-carried> a bridge:IsomorphicConversionTest ;
@@ -2041,7 +2139,7 @@
 
 <#variant-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;
   mf:name "variant-effective-period-end-not-carried" ;
-  rdfs:comment "A genetic variant Observation whose effective period states only an end: the end is the time it was collected or resulted, which no Cascade term carries, so it is a fhirr4:variantTimeNotCarried finding at the end." ;
+  rdfs:comment "A genetic variant Observation whose effective period states only an end: the end is the time it was collected or resulted, which no Cascade term carries, so it is a fhirr4:effectivePeriodEndNotCarried finding at the end." ;
   mf:action [
     bridge:input <in/variant-effective-period-end-not-carried.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -2119,7 +2217,7 @@
 
 <#diagnostic-report-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;
   mf:name "diagnostic-report-effective-period-end-not-carried" ;
-  rdfs:comment "A DiagnosticReport whose effective period states a start and an end: the start is the report's effective time, and the end is carried by no Cascade term, so it is a fhirr4:diagnosticReportPeriodEnd finding at the end." ;
+  rdfs:comment "A DiagnosticReport whose effective period states a start and an end: the start is the report's effective time, and the end is carried by no Cascade term, so it is a fhirr4:effectivePeriodEndNotCarried finding at the end." ;
   mf:action [
     bridge:input <in/diagnostic-report-effective-period-end-not-carried.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;

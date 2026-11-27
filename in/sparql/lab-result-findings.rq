@@ -63,7 +63,7 @@ WHERE {
   {
     ?resource xyz:effectivePeriod ?period . ?period xyz:end ?value .
     BIND ("/effectivePeriod/end" AS ?step)
-    BIND (fhirr4:labResultPeriodEnd AS ?gap)
+    BIND (fhirr4:effectivePeriodEndNotCarried AS ?gap)
   }
   UNION
   {

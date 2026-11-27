@@ -188,8 +188,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/category" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] ,
@@ -202,8 +203,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/category/coding/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] .
@@ -869,8 +871,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/category" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] ,
@@ -883,8 +886,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/category/coding/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] .
@@ -3591,8 +3595,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/effectivePeriod/end" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:effectivePeriodEndNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:medicationUseEndDate ] .
 
@@ -4331,7 +4336,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/severity" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:allergyReactionSeverityRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:allergySeverity ] .
 
@@ -7461,8 +7467,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/effectivePeriod/end" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:effectivePeriodEndNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:medicationUseEndDate ] .
 
@@ -8175,7 +8182,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/severity" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:allergyReactionSeverityRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:allergySeverity ] .
 
@@ -8555,8 +8563,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/category" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] ,
@@ -8569,8 +8578,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/category/coding/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] .
@@ -9236,8 +9246,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/category" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] ,
@@ -9250,8 +9261,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/category/coding/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:conditionOrAllergyCategoryRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCategory ] ,
     [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCategory ] .
@@ -11935,8 +11947,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/effectivePeriod/end" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:effectivePeriodEndNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:medicationUseEndDate ] .
 
@@ -12683,7 +12696,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/severity" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:allergyReactionSeverityRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:allergySeverity ] .
 
@@ -15813,8 +15827,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/effectivePeriod/end" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:effectivePeriodEndNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:medicationUseEndDate ] .
 
@@ -16523,7 +16538,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/severity" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:allergyReactionSeverityRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:allergySeverity ] .
 
