@@ -133,6 +133,8 @@
     <#variant-interpretation-subject-names-no-patient>
     <#diagnostic-report-subject-names-no-patient>
     <#document-reference-subject-names-no-patient>
+    <#lab-result-contained-organization-with-identifier>
+    <#document-reference-author-names-no-organization>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
     <#Bundle-bundle-compound-heterozygote>
@@ -1788,6 +1790,32 @@
   mf:result [
     bridge:expectedGraph <expected/document-reference-subject-names-no-patient.ttl> ;
     bridge:expectedFindings <findings/document-reference-subject-names-no-patient.ttl>
+  ] .
+
+<#lab-result-contained-organization-with-identifier> a bridge:IsomorphicConversionTest ;
+  mf:name "lab-result-contained-organization-with-identifier" ;
+  rdfs:comment "A lab result with a contained Organization, its performer, that has an identifier with a system and a value." ;
+  mf:action [
+    bridge:input <in/lab-result-contained-organization-with-identifier.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/lab-result-contained-organization-with-identifier.ttl> ;
+    bridge:expectedFindings <findings/lab-result-contained-organization-with-identifier.ttl>
+  ] .
+
+<#document-reference-author-names-no-organization> a bridge:IsomorphicConversionTest ;
+  mf:name "document-reference-author-names-no-organization" ;
+  rdfs:comment "A DocumentReference note whose only author is a Practitioner given as a search reference, which names no organization: the version is attributed to none and the author's reference is a finding." ;
+  mf:action [
+    bridge:input <in/document-reference-author-names-no-organization.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/document-reference-author-names-no-organization.ttl> ;
+    bridge:expectedFindings <findings/document-reference-author-names-no-organization.ttl>
   ] .
 
 <#lab-performer-differs-names-one-record> a bridge:IdentityRelationTest ;
