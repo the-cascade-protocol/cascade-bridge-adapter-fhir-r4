@@ -20,8 +20,9 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # dosage text but the first, every dose
 # quantity of a dosage after its first, a course of therapy's coding outside
 # FHIR's three codes or after the first of them, an expected supply duration in
-# no unit of time or whose number is in no decimal form, and its comparator, a
-# bound the exposure derivation reads no end from, a prescription's, a use's or
+# no unit of time, whose number is in no decimal form or whose comparator is none
+# of R4's four, and its comparator, a bound the exposure derivation reads no end
+# from, a prescription's, a use's or
 # a bound's date that matches no form of FHIR's date and dateTime, a dose
 # quantity's unit code outside UCUM, and a number or a period unit the
 # structure of a dosage or the supply states in a form no predicate takes. A
@@ -220,16 +221,24 @@ WHERE {
     BIND (COALESCE(?durationCode, ?durationUnit, ?durationValue) AS ?value)
     FILTER (BOUND(?value))
     BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
-    BIND (fhirr4:expectedSupplyDurationNotInUnitOfTime AS ?gap)
+    BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
   }
   UNION
   {
     ?resource xyz:dispenseRequest ?boundRequest .
     ?boundRequest xyz:expectedSupplyDuration ?boundDuration .
     ?boundDuration xyz:comparator ?value .
-    BIND (IF(?value IN ("<", "<=", ">=", ">"), "/dispenseRequest/expectedSupplyDuration/comparator",
-             "/dispenseRequest/expectedSupplyDuration") AS ?step)
+    BIND ("/dispenseRequest/expectedSupplyDuration/comparator" AS ?step)
     BIND (fhirr4:expectedSupplyDurationBound AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:dispenseRequest ?outsideRequest .
+    ?outsideRequest xyz:expectedSupplyDuration ?outsideDuration .
+    ?outsideDuration xyz:comparator ?value .
+    FILTER (!(?value IN ("<", "<=", ">=", ">")))
+    BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+    BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
   }
   UNION
   {
@@ -301,6 +310,7 @@ WHERE {
       ?supplyRequest xyz:numberOfRepeatsAllowed ?value .
       FILTER (!REGEX(STR(?value), "^[0-9]+$"))
       BIND ("/dispenseRequest/numberOfRepeatsAllowed" AS ?step)
+      BIND (fhirr4:medicationNumberNotCarried AS ?gap)
     }
     UNION
     {
@@ -311,8 +321,8 @@ WHERE {
       FILTER (?supplyUnit IN ("s", "min", "h", "d", "wk", "mo", "a")
         && !REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
       BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+      BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
     }
-    BIND (fhirr4:medicationNumberNotCarried AS ?gap)
   }
   UNION
   {

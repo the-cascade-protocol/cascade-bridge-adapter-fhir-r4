@@ -14,8 +14,8 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # and not at what it holds, such as its type, category, performers, location,
 # context, destination, receivers, substitution or dosage instructions, whose
 # paths other kinds of resource carry; a quantity or a days' supply that
-# states a comparator, which FHIR's SimpleQuantity forbids, and so is none; a
-# number in no decimal form; a days' supply in no UCUM unit of time, and so
+# states a comparator, which FHIR's SimpleQuantity forbids, or whose number is
+# in no decimal form, and a days' supply in no UCUM unit of time, and so are
 # none; a dispensed quantity whose unit code is not UCUM's; and a time prepared
 # or handed over that matches no form of FHIR's date and dateTime. A quantity
 # that is none is reported at the quantity, holding the value that stopped it,
@@ -81,20 +81,19 @@ WHERE {
   }
   UNION
   {
-    VALUES (?quantityMember ?quantityStep) {
-      (xyz:quantity "/quantity")
-      (xyz:daysSupply "/daysSupply")
+    VALUES (?quantityMember ?quantityStep ?gap) {
+      (xyz:quantity "/quantity" fhirr4:medicationDispenseQuantityNotCarried)
+      (xyz:daysSupply "/daysSupply" fhirr4:dispenseDaysSupplyNotCarried)
     }
     ?resource ?quantityMember ?quantity .
     ?quantity xyz:comparator ?value .
     BIND (?quantityStep AS ?step)
-    BIND (fhirr4:medicationDispenseElementNotCarried AS ?gap)
   }
   UNION
   {
-    VALUES (?quantityMember ?quantityStep) {
-      (xyz:quantity "/quantity")
-      (xyz:daysSupply "/daysSupply")
+    VALUES (?quantityMember ?quantityStep ?gap) {
+      (xyz:quantity "/quantity" fhirr4:medicationDispenseQuantityNotCarried)
+      (xyz:daysSupply "/daysSupply" fhirr4:dispenseDaysSupplyNotCarried)
     }
     ?resource ?quantityMember ?quantity .
     ?quantity xyz:value ?value .
@@ -105,7 +104,6 @@ WHERE {
         FILTER (?timeUnit IN ("s", "min", "h", "d", "wk", "mo", "a"))
       }))
     BIND (?quantityStep AS ?step)
-    BIND (fhirr4:medicationNumberNotCarried AS ?gap)
   }
   UNION
   {
@@ -127,7 +125,7 @@ WHERE {
     BIND (COALESCE(?daysCode, ?daysUnit, ?daysValue) AS ?value)
     FILTER (BOUND(?value))
     BIND (?quantityStep AS ?step)
-    BIND (fhirr4:dispenseDaysSupplyNotInUnitOfTime AS ?gap)
+    BIND (fhirr4:dispenseDaysSupplyNotCarried AS ?gap)
   }
   UNION
   {
