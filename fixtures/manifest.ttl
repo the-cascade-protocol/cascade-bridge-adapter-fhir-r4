@@ -13,6 +13,8 @@
     <#allergy-no-id-sulfa>
     <#allergy-categories-after-the-first-not-carried>
     <#allergy-reactions-after-the-first-not-carried>
+    <#allergy-reaction-members-not-carried>
+    <#allergy-reaction-members-with-nothing-in-them>
     <#allergy-reaction-severity-after-a-reaction-without-one>
     <#condition-with-id>
     <#condition-every-mapped-element>
@@ -123,6 +125,8 @@
     <#bundle-pull-collection-versions>
     <#bundle-pull-searchset-outcome>
     <#bundle-pull-organization>
+    <#organization-telecom-not-carried>
+    <#document-organizations-telecom-not-carried>
     <#lab-performed-by-an-organization>
     <#lab-performed-by-two-organizations>
     <#lab-performer-absolute-url>
@@ -342,6 +346,32 @@
   mf:result [
     bridge:expectedGraph <expected/allergy-reactions-after-the-first-not-carried.ttl> ;
     bridge:expectedFindings <findings/allergy-reactions-after-the-first-not-carried.ttl>
+  ] .
+
+<#allergy-reaction-members-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-reaction-members-not-carried" ;
+  rdfs:comment "An AllergyIntolerance whose first reaction states a substance, an onset, a description, an exposure route and two notes, and whose second states a description: the vocabulary has no term for any of them, so each is a fhirr4:allergyReactionMemberNotCarried finding at the member, at the note for a note, and the manifestations and the first severity are carried." ;
+  mf:action [
+    bridge:input <in/allergy-reaction-members-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-reaction-members-not-carried.ttl> ;
+    bridge:expectedFindings <findings/allergy-reaction-members-not-carried.ttl>
+  ] .
+
+<#allergy-reaction-members-with-nothing-in-them> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-reaction-members-with-nothing-in-them" ;
+  rdfs:comment "An AllergyIntolerance whose first reaction states members with nothing in them, a substance holding a coding with a system alone, a blank description, an exposure route holding a blank text and a coding with a system and a blank display, and a note with a blank text and one with an author alone: none is reported, and none keeps what the second reaction states from being reported, a substance whose text and first coding are blank and whose second coding has a display, a description, and a note after a blank one." ;
+  mf:action [
+    bridge:input <in/allergy-reaction-members-with-nothing-in-them.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-reaction-members-with-nothing-in-them.ttl> ;
+    bridge:expectedFindings <findings/allergy-reaction-members-with-nothing-in-them.ttl>
   ] .
 
 <#allergy-reaction-severity-after-a-reaction-without-one> a bridge:IsomorphicConversionTest ;
@@ -1706,6 +1736,32 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-pull-organization.ttl> ;
     bridge:expectedFindings <findings/bundle-pull-organization.ttl>
+  ] .
+
+<#organization-telecom-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "organization-telecom-not-carried" ;
+  rdfs:comment "An Organization of a server with four contact points, two with a value, one with a system alone and one with a blank value: no Cascade predicate carries a contact point, so each with a value is a fhirr4:organizationTelecomNotCarried finding at it." ;
+  mf:action [
+    bridge:input <in/organization-telecom-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/example-pull.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/organization-telecom-not-carried.ttl> ;
+    bridge:expectedFindings <findings/organization-telecom-not-carried.ttl>
+  ] .
+
+<#document-organizations-telecom-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "document-organizations-telecom-not-carried" ;
+  rdfs:comment "A document whose custodian and an author are two Organizations with one NPI and one contact point each, and a third Organization no reference names, with one: the custodian's and the author's contact points are each a fhirr4:organizationTelecomNotCarried finding, the third Organization is reported whole as a resource of a type not mapped and its contact point is not reported apart." ;
+  mf:action [
+    bridge:input <in/document-organizations-telecom-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/no-server.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/document-organizations-telecom-not-carried.ttl> ;
+    bridge:expectedFindings <findings/document-organizations-telecom-not-carried.ttl>
   ] .
 
 <#lab-performed-by-an-organization> a bridge:IsomorphicConversionTest ;
