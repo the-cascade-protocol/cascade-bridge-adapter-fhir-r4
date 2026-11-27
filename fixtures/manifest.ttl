@@ -32,6 +32,10 @@
     <#procedure-contained-empty-version-id>
     <#patient-with-id>
     <#patient-no-id>
+    <#patient-second-given-name-not-carried>
+    <#patient-second-name-not-carried>
+    <#patient-telecom-not-carried>
+    <#patient-blank-first-given-name>
     <#patient-deceased-date>
     <#patient-deceased-boolean>
     <#patient-gender-absent-for-reason>
@@ -560,6 +564,58 @@
   mf:result [
     bridge:expectedGraph <expected/patient-no-id.ttl> ;
     bridge:expectedFindings <findings/patient-no-id.ttl>
+  ] .
+
+<#patient-second-given-name-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-second-given-name-not-carried" ;
+  rdfs:comment "A Patient whose name states two given names: the first is carried, as the vocabulary holds one, and the second is a fhirr4:patientNameRepeated finding at it." ;
+  mf:action [
+    bridge:input <in/patient-second-given-name-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-second-given-name-not-carried.ttl> ;
+    bridge:expectedFindings <findings/patient-second-given-name-not-carried.ttl>
+  ] .
+
+<#patient-second-name-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-second-name-not-carried" ;
+  rdfs:comment "A Patient who states two names: the first is carried, as the vocabulary holds one, and the second is a fhirr4:patientNameRepeated finding at it." ;
+  mf:action [
+    bridge:input <in/patient-second-name-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-second-name-not-carried.ttl> ;
+    bridge:expectedFindings <findings/patient-second-name-not-carried.ttl>
+  ] .
+
+<#patient-telecom-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-telecom-not-carried" ;
+  rdfs:comment "A Patient with a phone number and an email address: no Cascade predicate carries a contact point, so each is a fhirr4:patientTelecomNotCarried finding at it." ;
+  mf:action [
+    bridge:input <in/patient-telecom-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-telecom-not-carried.ttl> ;
+    bridge:expectedFindings <findings/patient-telecom-not-carried.ttl>
+  ] .
+
+<#patient-blank-first-given-name> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-blank-first-given-name" ;
+  rdfs:comment "A Patient whose first given name is empty: no empty name is written, the first given name that is not blank is carried, and the mapping makes no finding of the empty one; the one finding is the Bridge's, that FHIR's schema allows no empty string." ;
+  mf:action [
+    bridge:input <in/patient-blank-first-given-name.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-blank-first-given-name.ttl> ;
+    bridge:expectedFindings <findings/patient-blank-first-given-name.ttl>
   ] .
 
 <#patient-deceased-date> a bridge:IsomorphicConversionTest ;

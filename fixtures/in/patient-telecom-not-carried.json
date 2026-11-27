@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "pat-telecom",
+  "name": [
+    {
+      "family": "Okonkwo",
+      "given": [
+        "Odette"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-0100",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "odette@example.org"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-03-14"
+}
