@@ -78,6 +78,12 @@ fhirr4:referenceRelativeUndefined a skos:Concept ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
 
+fhirr4:referenceNotToAPatient a skos:Concept ;
+  skos:prefLabel "A resource references its patient as something that is no Patient resource: a reference to another type, as Group/<id>, a reference that is none, as a contained one, or a urn:uuid that no Patient entry of its document has as its fullUrl, or more than one has, so the reference names no record and nothing carries it."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss ;
+  sh:resultSeverity sh:Warning .
+
 fhirr4:observationNotLabResult a skos:Concept ;
   skos:prefLabel "An Observation is not a laboratory result, by its category or, where it has none, by its code, or it is a panel of other results, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;

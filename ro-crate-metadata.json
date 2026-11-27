@@ -3074,7 +3074,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A finding for each patient or subject reference of a mapped resource that record.rq names no record from: a urn:uuid no entry of the document has as its fullUrl (fhirr4:referenceNotHeld), an absolute URL whose server base is not a plain scheme, host, port and path (fhirr4:referenceBaseRefused), and a Patient/<id> made from an entry whose fullUrl is a urn:uuid or to an entry held under one (fhirr4:referenceRelativeUndefined)."
+      "description": "A finding for each patient or subject reference of a mapped resource that record.rq names no record from: a urn:uuid no entry of the document has as its fullUrl (fhirr4:referenceNotHeld), an absolute URL whose server base is not a plain scheme, host, port and path (fhirr4:referenceBaseRefused), and a Patient/<id> made from an entry whose fullUrl is a urn:uuid or to an entry held under one (fhirr4:referenceRelativeUndefined), and a reference that names no Patient, as Group/<id>, or a urn:uuid no one Patient entry has as its fullUrl (fhirr4:referenceNotToAPatient)."
     },
     {
       "@id": "vocab/fhir-gaps.ttl",

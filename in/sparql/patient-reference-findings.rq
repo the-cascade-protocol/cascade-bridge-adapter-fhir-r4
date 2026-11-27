@@ -12,7 +12,10 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # The patient references record.rq names no record from: a urn:uuid no entry of
 # the document has as its fullUrl, an absolute URL whose base it refuses, and a
 # reference of the form Patient/<id> made from an entry whose fullUrl is a
-# urn:uuid or to an entry held under one, which FHIR gives no meaning.
+# urn:uuid or to an entry held under one, which FHIR gives no meaning; and a
+# reference that names no Patient at all: another type, as Group/<id>, a
+# reference that is none, as a contained one, or a urn:uuid that no Patient
+# entry, or more than one, has as its fullUrl.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -86,9 +89,22 @@ WHERE {
           FILTER (STRSTARTS(?urnPatientUrl, "urn:uuid:") && ?urnPatientId = STRAFTER(?bare, "Patient/"))
         }) AS ?relativeUndefined)
   BIND (IF(STRSTARTS(?value, "urn:uuid:"),
-           IF(EXISTS { ?held fhirr4:fullUrl ?value }, 1/0, fhirr4:referenceNotHeld),
+           IF(EXISTS { ?held fhirr4:fullUrl ?value },
+              IF(EXISTS {
+                   ?one fhirr4:resourceType "Patient" ;
+                     fhirr4:fullUrl ?value ;
+                     fhirr4:heldAt ?oneAt .
+                   FILTER NOT EXISTS {
+                     ?two fhirr4:resourceType "Patient" ;
+                       fhirr4:fullUrl ?value ;
+                       fhirr4:heldAt ?twoAt .
+                     FILTER (?twoAt != ?oneAt)
+                   }
+                 }, 1/0, fhirr4:referenceNotToAPatient),
+              fhirr4:referenceNotHeld),
            IF(?relativeUndefined, fhirr4:referenceRelativeUndefined,
-              IF(BOUND(?base) && !COALESCE(?baseAccepted, false), fhirr4:referenceBaseRefused, 1/0))) AS ?gap)
+              IF(BOUND(?base), IF(COALESCE(?baseAccepted, false), 1/0, fhirr4:referenceBaseRefused),
+                 IF(?relative, 1/0, fhirr4:referenceNotToAPatient)))) AS ?gap)
   FILTER (BOUND(?gap))
   BIND (CONCAT(?resourcePointer, "/", STRAFTER(STR(?member), "http://sparql.xyz/facade-x/data/"), "/reference") AS ?pointer)
 }
