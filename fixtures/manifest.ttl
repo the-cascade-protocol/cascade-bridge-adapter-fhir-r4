@@ -174,6 +174,7 @@
     <#bundle-variant-and-interpretation-components-no-mapping-reads>
     <#bundle-variant-components-with-unread-codings>
     <#medication-request-formulary-code>
+    <#bundle-medication-request-user-selected-marks-no-code>
     <#medication-request-us-core-supply-only>
     <#medication-request-supply-and-dosages>
     <#bundle-medication-supply-not-carried>
@@ -1912,7 +1913,7 @@
 
 <#medication-request-formulary-code> a bridge:IsomorphicConversionTest ;
   mf:name "medication-request-formulary-code" ;
-  rdfs:comment "A MedicationRequest coded by its formulary and by RxNorm: the formulary code is a cascade:medicationCodeInOtherSystem literal, and its userSelected flag marks nothing, a selected code being an RxNorm or NDC IRI." ;
+  rdfs:comment "A MedicationRequest coded by its formulary and by RxNorm: the formulary code is a cascade:medicationCodeInOtherSystem literal, and its userSelected flag marks nothing, a selected code being an RxNorm or NDC IRI, so it is a finding." ;
   mf:action [
     bridge:input <in/medication-request-formulary-code.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -1921,6 +1922,19 @@
   mf:result [
     bridge:expectedGraph <expected/medication-request-formulary-code.ttl> ;
     bridge:expectedFindings <findings/medication-request-formulary-code.ttl>
+  ] .
+
+<#bundle-medication-request-user-selected-marks-no-code> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-request-user-selected-marks-no-code" ;
+  rdfs:comment "A Bundle of two MedicationRequests whose codings state userSelected: in the first, the first RxNorm coding marked true is the selected code, and a later RxNorm coding marked true, a formulary coding marked false and an RxNorm coding marked false each mark none, a finding apiece; in the second, an NDC coding marked true that is no 11-digit code marks none, a finding beside the NDC's own, and the RxNorm coding marked true after it is the selected code." ;
+  mf:action [
+    bridge:input <in/bundle-medication-request-user-selected-marks-no-code.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-request-user-selected-marks-no-code.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-request-user-selected-marks-no-code.ttl>
   ] .
 
 <#medication-request-us-core-supply-only> a bridge:IsomorphicConversionTest ;
