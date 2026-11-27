@@ -4,20 +4,20 @@ The cases a Bridge's harness runs, and the inputs and expected outputs they name
 Nothing here executes; `manifest.ttl` declares the cases and the rule each is
 judged by, and the crate records where every file came from.
 
-## Every byte is recorded, and inputs are never edited
-
-Every file under `in/`, `facts/`, `expected/` and `findings/` has its digest in the crate,
-and `.gitattributes` and `.editorconfig` protect them from normalisation. A
-change updates the crate's digest, size and description in the same commit.
+## A copied input carries its digest, and no input is edited
 
 An input is one of two kinds, and the crate says which:
 
 - **Copied**: from `../../conformance`, `fixtures/clinical-fhir/` or
   `fixtures/genomics/fhir-genomics-ig/` at the commit the crate's `isBasedOn`
-  names, under the same file name, byte for byte, with a `sameAs` to its blob.
+  names, under the same file name, byte for byte, with a `sameAs` to its blob
+  and its digest, so a copy that drifted from its source is caught. Never edited.
 - **Authored here**: written for a case the conformance corpus does not hold,
-  with the date it was written. An authored input is edited only by replacing
-  it, as a new file under a new name.
+  with the date it was written, and no digest: git holds its bytes. Edited only
+  by replacing it, as a new file under a new name.
+
+The two kinds share `in/`, so `.gitattributes` and `.editorconfig` keep every
+file under `in/`, `facts/`, `expected/` and `findings/` from being normalised.
 
 An input is committed once. A case that needs the same bytes twice names one
 file in both of its entries.
