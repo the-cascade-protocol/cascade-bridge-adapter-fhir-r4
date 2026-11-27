@@ -9,7 +9,7 @@ fhirr4:gaps a skos:ConceptScheme ;
 fhirr4:documentNotR4 a skos:Concept ;
   skos:prefLabel "A document states a FHIR version other than R4, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:administrativeGenderNotMapped a skos:Concept ;
@@ -31,7 +31,7 @@ fhirr4:referenceDisplay a skos:Concept ;
 fhirr4:resourceTypeNotMapped a skos:Concept ;
   skos:prefLabel "A resource is of a type this release of the adapter does not map, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:resourceIdRepeated a skos:Concept ;
@@ -87,7 +87,7 @@ fhirr4:referenceNotToAPatient a skos:Concept ;
 fhirr4:observationNotLabResult a skos:Concept ;
   skos:prefLabel "An Observation is not a laboratory result, by its category or, where it has none, by its code, or it is a panel of other results, and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:medicationReferenceUnresolved a skos:Concept ;
@@ -225,11 +225,6 @@ fhirr4:performerCarriedOnlyAsOneOrganizationRecord a skos:Concept ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
-
-fhirr4:variantComponentNotCarried a skos:Concept ;
-  skos:prefLabel "A variant or a diagnostic implication carries components no Cascade term carries, as the genomic and protein HGVS, the allelic state, the predicted phenotype and the level of evidence."@en ;
-  skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:carriedWithLoss .
 
 fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly a skos:Concept ;
   skos:prefLabel "A resource's business identifiers are carried for a lab result, which the matcher compares within one organization, and for an Organization a document names, which is named by one, or one from a server, whose version states them; any other record's are not, since nothing reads them. An identifier's assigner (Identifier.assigner) is not read: the organization a lab result's identifier belongs to is the one its document names as custodian or author."@en ;
@@ -370,7 +365,7 @@ fhirr4:authorizingPrescriptionNotNamed a skos:Concept ;
 fhirr4:documentReferenceToCcdaDocument a skos:Concept ;
   skos:prefLabel "A DocumentReference's content is a C-CDA document, a source of its own for a C-CDA adapter to import, so it makes no note or document record and nothing in it is carried."@en ;
   skos:inScheme fhirr4:gaps ;
-  skos:broader bridge:valueNotMapped ;
+  skos:broader bridge:elementNotCarried ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:attachmentDataNotRead a skos:Concept ;
