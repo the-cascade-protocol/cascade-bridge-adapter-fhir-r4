@@ -1,0 +1,76 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-selected-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medrx-selected-1",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "617312",
+              "display": "atorvastatin calcium 10 MG Oral Tablet",
+              "userSelected": true
+            },
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "617310",
+              "display": "atorvastatin calcium 80 MG Oral Tablet",
+              "userSelected": true
+            },
+            {
+              "system": "https://formulary.meridian.example/drugs",
+              "code": "F-ATOR-10",
+              "userSelected": false
+            },
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "259255",
+              "display": "atorvastatin 20 MG Oral Tablet",
+              "userSelected": false
+            }
+          ],
+          "text": "Atorvastatin 10 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/pat-conformance-1"
+        },
+        "authoredOn": "2026-03-02"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-selected-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medrx-selected-2",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/ndc",
+              "code": "12345",
+              "userSelected": true
+            },
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "617312",
+              "display": "atorvastatin calcium 10 MG Oral Tablet",
+              "userSelected": true
+            }
+          ],
+          "text": "Atorvastatin 10 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/pat-conformance-1"
+        },
+        "authoredOn": "2026-03-02"
+      }
+    }
+  ]
+}

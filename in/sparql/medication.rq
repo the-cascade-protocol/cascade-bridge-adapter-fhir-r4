@@ -12,8 +12,9 @@ PREFIX fhirr4:   <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 # told apart by cascade:prescribedOrReported. A MedicationStatement is reported
 # use, and so is a MedicationRequest whose reported[x] says it was reported
 # rather than ordered: reportedBoolean true, or any reportedReference. Any other
-# request is prescribed, and only a prescribed one states its intent, one of
-# R4's eight codes as FHIR writes it; a code outside them states none.
+# request is prescribed. Every request, reported or prescribed, states its
+# intent, one of R4's eight codes as FHIR writes it; a code outside them states
+# none.
 #
 # A drug named by reference is read from the Medication the reference resolves
 # to in the document, as medication-table.rq says. One that resolves to no one
@@ -30,7 +31,8 @@ PREFIX fhirr4:   <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 # the missing digit tells apart; ten digits with no hyphens, or any other
 # value, are no code, and medication-findings.rq reports them. The coding the
 # source marked userSelected is the selected code, the first such RxNorm or NDC
-# IRI: a code in another system marks nothing.
+# IRI: a code in another system marks nothing, and medication-findings.rq
+# reports each userSelected that marks none.
 # Every other value is single, so each is bound beside the others rather than
 # in a branch of its own, and a medication stating nothing still states whether
 # it was prescribed or reported. A MedicationDispense is a record of its own
@@ -94,8 +96,8 @@ WHERE {
            IF(?type = "MedicationRequest" && COALESCE(?reportedBoolean, "") != "true" && !BOUND(?reportedReference),
               "prescribed", "reportedUse")) AS ?prescribedOrReported)
   OPTIONAL { ?resource xyz:intent ?statedIntent }
-  BIND (IF(?prescribedOrReported = "prescribed" && ?statedIntent IN ("proposal", "plan", "order", "original-order", "reflex-order",
-                                                       "filler-order", "instance-order", "option"),
+  BIND (IF(?type = "MedicationRequest" && ?statedIntent IN ("proposal", "plan", "order", "original-order", "reflex-order",
+                                                              "filler-order", "instance-order", "option"),
            ?statedIntent, 1/0) AS ?requestIntent)
 
   OPTIONAL {

@@ -7,38 +7,40 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix pav: <http://purl.org/pav/> .
-<ni:///sha-256;BcUAeuyptGrDTn97nge1AA2BaIyndJWN5-HrW2FbqIU> cascade:prescribedOrReported "reportedUse" ;
+<ni:///sha-256;By_WkM_UaZHov2ND2tiOAU3pDcxed6lhDdXzhTvMlGI> cascade:prescribedOrReported "reportedUse" ;
 	cascade:drugName "Simvastatin 40 mg tablet" ;
 	cascade:workflowStatus "active" ;
+	cascade:medicationRequestIntent "plan" ;
 	cascade:prescriptionWrittenDate "2025-11-04"^^xsd:date .
 <urn:uuid:f5a7d0d7-197e-8873-9835-c93d081373c5> a cascade:PrescribedOrReportedMedication ;
 	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-reported-boolean-1> ;
 	cascade:sourceRecordId "medrx-reported-boolean-1" .
-<ni:///sha-256;BcUAeuyptGrDTn97nge1AA2BaIyndJWN5-HrW2FbqIU> prov:specializationOf <urn:uuid:f5a7d0d7-197e-8873-9835-c93d081373c5> ;
+<ni:///sha-256;By_WkM_UaZHov2ND2tiOAU3pDcxed6lhDdXzhTvMlGI> prov:specializationOf <urn:uuid:f5a7d0d7-197e-8873-9835-c93d081373c5> ;
 	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
-_:b20a19529191c963aa1723b7b05a5b29 bridge:arrivedAs <ni:///sha-256;BcUAeuyptGrDTn97nge1AA2BaIyndJWN5-HrW2FbqIU> ;
-	oa:hasSelector _:b3b04f3ddc6567ba540966b4c2e87a08 ;
+_:cdedf358709b1dea6188281f7eb5bd65 bridge:arrivedAs <ni:///sha-256;By_WkM_UaZHov2ND2tiOAU3pDcxed6lhDdXzhTvMlGI> ;
+	oa:hasSelector _:bc241fb09ccc4cd065b5889a97b61f07 ;
 	oa:hasSource <ni:///sha-256;BkY-dKuJQ1-f7XBiu7JmXMZhKcnax_lCX2hHYmejamQ> ;
 	prov:wasDerivedFrom <ni:///sha-256;BkY-dKuJQ1-f7XBiu7JmXMZhKcnax_lCX2hHYmejamQ> ;
 	prov:wasGeneratedBy _:264fd86a04883bbee726b4324f05680a .
-_:b3b04f3ddc6567ba540966b4c2e87a08 a oa:FragmentSelector ;
+_:bc241fb09ccc4cd065b5889a97b61f07 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-<ni:///sha-256;a79pGxl3GRL4c3w-fevcDjaf3LVo9MFvObFOziEsnlg> cascade:prescribedOrReported "reportedUse" ;
+<ni:///sha-256;05DEND_cIuOMmxEgqbjE8OXJRlvM0TFm7eSXy__MbYo> cascade:prescribedOrReported "reportedUse" ;
 	cascade:drugName "Vitamin D3 1000 unit capsule" ;
 	cascade:workflowStatus "active" ;
+	cascade:medicationRequestIntent "order" ;
 	cascade:prescriptionWrittenDate "2025-11-04"^^xsd:date .
 <urn:uuid:a2493aa8-9284-842b-91af-56ede7eaeacb> a cascade:PrescribedOrReportedMedication ;
 	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-reported-reference-1> ;
 	cascade:sourceRecordId "medrx-reported-reference-1" .
-<ni:///sha-256;a79pGxl3GRL4c3w-fevcDjaf3LVo9MFvObFOziEsnlg> prov:specializationOf <urn:uuid:a2493aa8-9284-842b-91af-56ede7eaeacb> ;
+<ni:///sha-256;05DEND_cIuOMmxEgqbjE8OXJRlvM0TFm7eSXy__MbYo> prov:specializationOf <urn:uuid:a2493aa8-9284-842b-91af-56ede7eaeacb> ;
 	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
-_:4310d99e8e5688bdd7c0bee40ae52cfa bridge:arrivedAs <ni:///sha-256;a79pGxl3GRL4c3w-fevcDjaf3LVo9MFvObFOziEsnlg> ;
-	oa:hasSelector _:35d60202c1fbf55a13b8eab6e792d348 ;
+_:2737345a709a324144005639aea8643 bridge:arrivedAs <ni:///sha-256;05DEND_cIuOMmxEgqbjE8OXJRlvM0TFm7eSXy__MbYo> ;
+	oa:hasSelector _:4594bb9bbacc41b8f39518e487ba31bc ;
 	oa:hasSource <ni:///sha-256;BkY-dKuJQ1-f7XBiu7JmXMZhKcnax_lCX2hHYmejamQ> ;
 	prov:wasDerivedFrom <ni:///sha-256;BkY-dKuJQ1-f7XBiu7JmXMZhKcnax_lCX2hHYmejamQ> ;
 	prov:wasGeneratedBy _:264fd86a04883bbee726b4324f05680a .
-_:35d60202c1fbf55a13b8eab6e792d348 a oa:FragmentSelector ;
+_:4594bb9bbacc41b8f39518e487ba31bc a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
 <ni:///sha-256;3i1rQxfPpTN4gPulsifAm_F1jwo60Oahuws7TcwWFk0> cascade:prescribedOrReported "prescribed" ;

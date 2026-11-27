@@ -108,6 +108,7 @@
     <#bundle-medication-repeated-id>
     <#medication-request-reported-and-proposal>
     <#medication-request-intent-not-a-code>
+    <#medication-request-reported-intent-outside-the-eight>
     <#bundle-pull-collection-versions>
     <#bundle-pull-searchset-outcome>
     <#bundle-pull-organization>
@@ -174,9 +175,11 @@
     <#bundle-variant-and-interpretation-components-no-mapping-reads>
     <#bundle-variant-components-with-unread-codings>
     <#medication-request-formulary-code>
+    <#bundle-medication-request-user-selected-marks-no-code>
     <#medication-request-us-core-supply-only>
     <#medication-request-supply-and-dosages>
     <#bundle-medication-supply-not-carried>
+    <#medication-request-supply-duration-comparator-outside-the-four>
     <#bundle-codings-without-system>
     <#medication-request-dose-quantity-not-carried>
     <#medication-request-supply-and-timing-values-not-carried>
@@ -185,6 +188,13 @@
     <#medication-dispense-partial-times>
     <#medication-dispense-times-absent-for-reason>
     <#bundle-medication-dispense-supply-not-carried>
+    <#bundle-medication-dispense-quantity-dropped-whole>
+    <#medication-dispense-quantity-without-a-value>
+    <#medication-dispense-days-supply-without-a-value>
+    <#medication-request-dose-quantity-without-a-value>
+    <#medication-request-supply-duration-without-a-value>
+    <#bundle-medication-supply-numbers-out-of-range>
+    <#bundle-medication-supply-reason-held-in-the-value>
     <#medication-dispense-prescription-without-server>
     <#bundle-medication-dispense-repeated-id-and-patient-not-held>
     <#medication-dispense-codings-not-carried>
@@ -1391,7 +1401,7 @@
 
 <#medication-request-reported-and-proposal> a bridge:IsomorphicConversionTest ;
   mf:name "medication-request-reported-and-proposal" ;
-  rdfs:comment "A Bundle of three MedicationRequests: one with reportedBoolean true and intent plan, one with a reportedReference and intent order, each reported use stating no intent; and one with reportedBoolean false and intent proposal, prescribed, stating its intent." ;
+  rdfs:comment "A Bundle of three MedicationRequests: one with reportedBoolean true and intent plan, one with a reportedReference and intent order, each reported use stating its intent; and one with reportedBoolean false and intent proposal, prescribed, stating its intent." ;
   mf:action [
     bridge:input <in/medication-request-reported-and-proposal.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -1413,6 +1423,19 @@
   mf:result [
     bridge:expectedGraph <expected/medication-request-intent-not-a-code.ttl> ;
     bridge:expectedFindings <findings/medication-request-intent-not-a-code.ttl>
+  ] .
+
+<#medication-request-reported-intent-outside-the-eight> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-reported-intent-outside-the-eight" ;
+  rdfs:comment "A reported MedicationRequest, reportedBoolean true, whose intent is directive, none of the eight codes of FHIR's medicationrequest-intent: as for a prescribed one, the version states no intent and the value is a finding of fhirr4:medicationRequestIntentNotMapped." ;
+  mf:action [
+    bridge:input <in/medication-request-reported-intent-outside-the-eight.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-reported-intent-outside-the-eight.ttl> ;
+    bridge:expectedFindings <findings/medication-request-reported-intent-outside-the-eight.ttl>
   ] .
 
 <#medication-request-ndc-forms> a bridge:IsomorphicConversionTest ;
@@ -1910,7 +1933,7 @@
 
 <#medication-request-formulary-code> a bridge:IsomorphicConversionTest ;
   mf:name "medication-request-formulary-code" ;
-  rdfs:comment "A MedicationRequest coded by its formulary and by RxNorm: the formulary code is a cascade:medicationCodeInOtherSystem literal, and its userSelected flag marks nothing, a selected code being an RxNorm or NDC IRI." ;
+  rdfs:comment "A MedicationRequest coded by its formulary and by RxNorm: the formulary code is a cascade:medicationCodeInOtherSystem literal, and its userSelected flag marks nothing, a selected code being an RxNorm or NDC IRI, so it is a finding." ;
   mf:action [
     bridge:input <in/medication-request-formulary-code.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -1919,6 +1942,19 @@
   mf:result [
     bridge:expectedGraph <expected/medication-request-formulary-code.ttl> ;
     bridge:expectedFindings <findings/medication-request-formulary-code.ttl>
+  ] .
+
+<#bundle-medication-request-user-selected-marks-no-code> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-request-user-selected-marks-no-code" ;
+  rdfs:comment "A Bundle of two MedicationRequests whose codings state userSelected: in the first, the first RxNorm coding marked true is the selected code, and a later RxNorm coding marked true, a formulary coding marked false and an RxNorm coding marked false each mark none, a finding apiece; in the second, an NDC coding marked true that is no 11-digit code marks none, a finding beside the NDC's own, and the RxNorm coding marked true after it is the selected code." ;
+  mf:action [
+    bridge:input <in/bundle-medication-request-user-selected-marks-no-code.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-request-user-selected-marks-no-code.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-request-user-selected-marks-no-code.ttl>
   ] .
 
 <#medication-request-us-core-supply-only> a bridge:IsomorphicConversionTest ;
@@ -1958,6 +1994,19 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-medication-supply-not-carried.ttl> ;
     bridge:expectedFindings <findings/bundle-medication-supply-not-carried.ttl>
+  ] .
+
+<#medication-request-supply-duration-comparator-outside-the-four> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-supply-duration-comparator-outside-the-four" ;
+  rdfs:comment "A MedicationRequest whose expected supply duration states the comparator ~, which is none of R4's four: the whole duration is not carried, number, unit and code with it, and it is a finding at the duration; its comparator is a second finding, at the comparator." ;
+  mf:action [
+    bridge:input <in/medication-request-supply-duration-comparator-outside-the-four.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-supply-duration-comparator-outside-the-four.ttl> ;
+    bridge:expectedFindings <findings/medication-request-supply-duration-comparator-outside-the-four.ttl>
   ] .
 
 <#bundle-codings-without-system> a bridge:IsomorphicConversionTest ;
@@ -2335,6 +2384,97 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-medication-dispense-supply-not-carried.ttl> ;
     bridge:expectedFindings <findings/bundle-medication-dispense-supply-not-carried.ttl>
+  ] .
+
+<#bundle-medication-dispense-quantity-dropped-whole> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-dispense-quantity-dropped-whole" ;
+  rdfs:comment "A Bundle of two MedicationDispenses whose quantities are dropped whole, each with one finding at the quantity holding the value that stopped it: a quantity with the comparator <= beside a days' supply in UCUM days whose number is no number, and a quantity that is no number in a system that is no UCUM, whose unit code is not a finding of its own." ;
+  mf:action [
+    bridge:input <in/bundle-medication-dispense-quantity-dropped-whole.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-dispense-quantity-dropped-whole.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-dispense-quantity-dropped-whole.ttl>
+  ] .
+
+<#medication-dispense-quantity-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-quantity-without-a-value" ;
+  rdfs:comment "A MedicationDispense whose quantity states a unit and a UCUM code and no number: it is dropped whole, with one finding at the quantity holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-dispense-quantity-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-quantity-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-quantity-without-a-value.ttl>
+  ] .
+
+<#medication-dispense-days-supply-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-days-supply-without-a-value" ;
+  rdfs:comment "A MedicationDispense whose days' supply states a unit and the UCUM code d and no number: it is dropped whole, with one finding at the days' supply holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-dispense-days-supply-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-days-supply-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-days-supply-without-a-value.ttl>
+  ] .
+
+<#medication-request-dose-quantity-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-dose-quantity-without-a-value" ;
+  rdfs:comment "A MedicationRequest whose dose quantity states a unit and a UCUM code and no number: it is dropped whole, with one finding at the dose quantity holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-request-dose-quantity-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-dose-quantity-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-request-dose-quantity-without-a-value.ttl>
+  ] .
+
+<#medication-request-supply-duration-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-supply-duration-without-a-value" ;
+  rdfs:comment "A MedicationRequest whose expected supply duration states a unit and the UCUM code d and no number: it is dropped whole, with one finding at the duration holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-request-supply-duration-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-supply-duration-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-request-supply-duration-without-a-value.ttl>
+  ] .
+
+<#bundle-medication-supply-numbers-out-of-range> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-supply-numbers-out-of-range" ;
+  rdfs:comment "A Bundle of a MedicationDispense and a MedicationRequest whose supply numbers lie beyond twenty digits of the point, 1e30 and 1e-30, which pass FHIR's decimal form: the dispense's quantity and days' supply, the request's dose quantity and expected supply duration are each dropped whole, with one finding at the quantity holding the number." ;
+  mf:action [
+    bridge:input <in/bundle-medication-supply-numbers-out-of-range.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-supply-numbers-out-of-range.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-supply-numbers-out-of-range.ttl>
+  ] .
+
+<#bundle-medication-supply-reason-held-in-the-value> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-supply-reason-held-in-the-value" ;
+  rdfs:comment "A Bundle of two MedicationDispenses and two MedicationRequests whose days' supply or supply duration is dropped for its unit, each finding holding what shows the reason: a number with the time code d in a system that is not UCUM holds that system, and a number with no unit holds nothing." ;
+  mf:action [
+    bridge:input <in/bundle-medication-supply-reason-held-in-the-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-supply-reason-held-in-the-value.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-supply-reason-held-in-the-value.ttl>
   ] .
 
 <#medication-dispense-codings-not-carried> a bridge:IsomorphicConversionTest ;

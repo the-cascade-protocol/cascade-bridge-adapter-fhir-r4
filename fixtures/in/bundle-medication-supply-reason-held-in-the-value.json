@@ -1,0 +1,88 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://fhir.meridian.example/api/FHIR/R4/MedicationDispense/meddisp-reason-1",
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "id": "meddisp-reason-1",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "text": "Metformin 500 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/pat-conformance-1"
+        },
+        "daysSupply": {
+          "value": 30,
+          "unit": "days",
+          "system": "http://example.org/units",
+          "code": "d"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://fhir.meridian.example/api/FHIR/R4/MedicationDispense/meddisp-reason-2",
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "id": "meddisp-reason-2",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "text": "Metformin 500 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/pat-conformance-1"
+        },
+        "daysSupply": {
+          "value": 30
+        }
+      }
+    },
+    {
+      "fullUrl": "https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-reason-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medrx-reason-1",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Atorvastatin 10 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/pat-conformance-1"
+        },
+        "authoredOn": "2026-03-02",
+        "dispenseRequest": {
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://example.org/units",
+            "code": "d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-reason-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medrx-reason-2",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Atorvastatin 10 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/pat-conformance-1"
+        },
+        "authoredOn": "2026-03-02",
+        "dispenseRequest": {
+          "expectedSupplyDuration": {
+            "value": 30
+          }
+        }
+      }
+    }
+  ]
+}
