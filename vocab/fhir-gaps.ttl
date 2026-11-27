@@ -122,6 +122,11 @@ fhirr4:diagnosticReportPeriodEnd a skos:Concept ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 
+fhirr4:variantDerivedFromNotCarried a skos:Concept ;
+  skos:prefLabel "A variant references the resources it is derived from, and no Cascade predicate carries the link; a diagnostic implication's link to a variant is carried."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
 fhirr4:codedValueText a skos:Concept ;
   skos:prefLabel "A coded value carries text beside its coding, such as a therapy course type's, an interpretation's or an absent reason's, and no Cascade predicate carries it."@en ;
   skos:inScheme fhirr4:gaps ;
@@ -226,7 +231,7 @@ fhirr4:interpretationVariantLink a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:performerCarriedOnlyAsOneOrganizationRecord a skos:Concept ;
-  skos:prefLabel "A performer or an author is carried only as the one organization record it names: a diagnostic implication's, an Organization of its document, and a lab result's or a report's performer and a note's author from a server, an Organization of that server by type and id; one whose performers or authors name no organization record, or more than one, is attributed to none, and any other is not carried."@en ;
+  skos:prefLabel "A performer or an author is carried only as the one organization record it names: a diagnostic implication's, an Organization of its document, and a lab result's or a report's performer and a note's author from a server, an Organization of that server by type and id; one whose performers or authors name no organization record, or more than one, is attributed to none, and any other, a variant's among them, is not carried."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
@@ -247,7 +252,7 @@ fhirr4:variantTimeNotCarried a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:absentReasonNotCarried a skos:Concept ;
-  skos:prefLabel "A value FHIR says is absent gives a reason in a code system other than FHIR's data absent reasons and v3 NullFlavor, or a code its system does not define, and that reason is not carried; the absence is, where another reason is given."@en ;
+  skos:prefLabel "A value FHIR says is absent gives a reason in a code system other than FHIR's data absent reasons and v3 NullFlavor, or a code its system does not define, and that reason is not carried; the absence is, where another reason is given. A variant's data absent reason is not carried at all, a variant stating a value and no absence."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss .
 
@@ -278,7 +283,7 @@ fhirr4:codingNotCarried a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:labResultInterpretationNotCarried a skos:Concept ;
-  skos:prefLabel "A lab result's interpretation is a coding in a system other than HL7's v3 ObservationInterpretation, v2's table 0078 among them, or a coding with no system or no code, and it is not carried."@en ;
+  skos:prefLabel "A lab result's interpretation is a coding in a system other than HL7's v3 ObservationInterpretation, v2's table 0078 among them, or a coding with no system or no code, and it is not carried; nor is a variant's interpretation, whatever it holds, since a variant has no interpretation flag."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss .
 
