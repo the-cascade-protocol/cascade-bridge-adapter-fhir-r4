@@ -180,11 +180,16 @@ refill where absence says nothing; `dispenseRequest.expectedSupplyDuration`, a
 quantity node, only in one of UCUM's seven units of time FHIR's `Duration`
 allows; and `dispenseRequest.validityPeriod`. A supply duration with a
 comparator is carried with it and is a finding, since a bound gives no end; one
-in no unit of time, a course of therapy in another system, after its first coding
-or of text alone, and `dispenseRequest.quantity`, which no term holds, are
-findings, as are the initial fill, the dispense interval and the performer. A
-number that is no number, a repeat frequency of 0 and a period unit outside the
-seven units of time are findings too, not dropped under a carried path.
+with a comparator outside R4's four, one in no unit of time and one whose number
+is no number are not carried at all, and each is one finding at the duration
+(`fhirr4:expectedSupplyDurationBound`, `fhirr4:expectedSupplyDurationNotInUnitOfTime`,
+`fhirr4:medicationNumberNotCarried`), holding the value that stopped it, so that it
+speaks for the duration's unit and code too. A course of therapy in another system,
+after its first coding or of text alone, and `dispenseRequest.quantity`, which no
+term holds, are findings, as are the initial fill, the dispense interval and the
+performer. Any other number that is no number, a repeat frequency of 0 and a
+period unit outside the seven units of time are findings too, not dropped under a
+carried path.
 
 Every dosage (`dosageInstruction` of a request, `dosage` of a statement) is a
 node of the version, `<version>#dosage-n`, whatever it holds, so that a
@@ -239,10 +244,11 @@ unit is a UCUM unit only where its system is UCUM's
 UCUM's seven units of time, as FHIR's `Duration` allows, and otherwise in none
 (`fhirr4:dispenseDaysSupplyNotInUnitOfTime`). A quantity or days' supply with a
 comparator, which `SimpleQuantity` forbids, and one whose number is no decimal
-(`fhirr4:medicationNumberNotCarried`) write no node. The comparator is reported at
-the quantity (`fhirr4:medicationDispenseElementNotCarried`), holding the
-comparator, so that one finding speaks for the quantity's number, unit and code
-too. A time that is no date, such as
+(`fhirr4:medicationNumberNotCarried`) write no node. Each is one finding at the
+quantity or days' supply, holding the value that stopped it (for a comparator,
+`fhirr4:medicationDispenseElementNotCarried`), so that it speaks for the
+number, unit and code of what it drops, and a unit code outside UCUM is not a
+finding of its own on a quantity that is dropped. A time that is no date, such as
 2026-02-30 or month 13, writes none either (`fhirr4:dateNotCarried`).
 
 Each `authorizingPrescription`, a reference to a `MedicationRequest`, is

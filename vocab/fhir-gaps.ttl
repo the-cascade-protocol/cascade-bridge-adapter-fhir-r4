@@ -283,7 +283,7 @@ fhirr4:expectedSupplyDurationNotInUnitOfTime a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:expectedSupplyDurationBound a skos:Concept ;
-  skos:prefLabel "A prescription's expected supply duration carries a comparator: it is carried with the comparator where that is one of R4's four, and not at all where it is another, and a bound gives the exposure derivation no end."@en ;
+  skos:prefLabel "A prescription's expected supply duration carries a comparator: it is carried with the comparator where that is one of R4's four, and not at all, number, unit and code with it, where it is another, and a bound gives the exposure derivation no end."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
@@ -305,7 +305,7 @@ fhirr4:doseUnitCodeOutsideUcum a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:medicationNumberNotCarried a skos:Concept ;
-  skos:prefLabel "A number of a medication's supply or dosage is not in the form its predicate states, so it is not carried: the number of repeats a dispense allows is not a whole number, a repeat frequency is not a whole number of 1 or more, and an expected supply duration, a repeat period, a dose quantity, or the quantity or days' supply of a MedicationDispense is not in FHIR's decimal form."@en ;
+  skos:prefLabel "A number of a medication's supply or dosage is not in the form its predicate states, so it is not carried: the number of repeats a dispense allows is not a whole number, a repeat frequency is not a whole number of 1 or more, and an expected supply duration, a repeat period, a dose quantity, or the quantity or days' supply of a MedicationDispense is not in FHIR's decimal form; an expected supply duration or a MedicationDispense's quantity or days' supply holding such a number is not carried at all, its unit and code with it."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .

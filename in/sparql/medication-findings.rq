@@ -18,12 +18,14 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # medication.rq makes no 11-digit code of, whether the medication's own or the
 # referenced Medication's, every dosage text but the first, every dose
 # quantity of a dosage after its first, a course of therapy's coding outside
-# FHIR's three codes or after the first of them, an expected supply duration in no unit of time, and its
-# comparator, a bound the exposure derivation reads no end from, a
-# prescription's, a use's or a bound's date that matches no form of FHIR's date
-# and dateTime, a dose quantity's unit code outside UCUM, and a number or a
-# period unit the structure of a dosage or the supply states in a form no
-# predicate takes. A
+# FHIR's three codes or after the first of them, an expected supply duration in
+# no unit of time or whose number is in no decimal form, and its comparator, a
+# bound the exposure derivation reads no end from, a prescription's, a use's or
+# a bound's date that matches no form of FHIR's date and dateTime, a dose
+# quantity's unit code outside UCUM, and a number or a period unit the
+# structure of a dosage or the supply states in a form no predicate takes. A
+# duration that is none is reported at the duration, holding the value that
+# stopped it, so that one finding speaks for its unit, code and number too. A
 # reference resolves as medication-table.rq says, and a Medication's codes are
 # reported only where a reference resolves to it: resource-type-findings.rq
 # reports one nothing resolves to. A MedicationDispense states a Medication
@@ -183,8 +185,7 @@ WHERE {
     OPTIONAL { ?duration xyz:value ?durationValue }
     BIND (COALESCE(?durationCode, ?durationUnit, ?durationValue) AS ?value)
     FILTER (BOUND(?value))
-    BIND (CONCAT("/dispenseRequest/expectedSupplyDuration/",
-                 IF(BOUND(?durationCode), "code", IF(BOUND(?durationUnit), "unit", "value"))) AS ?step)
+    BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
     BIND (fhirr4:expectedSupplyDurationNotInUnitOfTime AS ?gap)
   }
   UNION
@@ -192,7 +193,8 @@ WHERE {
     ?resource xyz:dispenseRequest ?boundRequest .
     ?boundRequest xyz:expectedSupplyDuration ?boundDuration .
     ?boundDuration xyz:comparator ?value .
-    BIND ("/dispenseRequest/expectedSupplyDuration/comparator" AS ?step)
+    BIND (IF(?value IN ("<", "<=", ">=", ">"), "/dispenseRequest/expectedSupplyDuration/comparator",
+             "/dispenseRequest/expectedSupplyDuration") AS ?step)
     BIND (fhirr4:expectedSupplyDurationBound AS ?gap)
   }
   UNION
@@ -274,7 +276,7 @@ WHERE {
         xyz:value ?value .
       FILTER (?supplyUnit IN ("s", "min", "h", "d", "wk", "mo", "a")
         && !REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
-      BIND ("/dispenseRequest/expectedSupplyDuration/value" AS ?step)
+      BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
     }
     BIND (fhirr4:medicationNumberNotCarried AS ?gap)
   }

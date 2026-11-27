@@ -104,7 +104,7 @@ WHERE {
         ?quantity xyz:system "http://unitsofmeasure.org" ; xyz:code ?timeUnit .
         FILTER (?timeUnit IN ("s", "min", "h", "d", "wk", "mo", "a"))
       }))
-    BIND (CONCAT(?quantityStep, "/value") AS ?step)
+    BIND (?quantityStep AS ?step)
     BIND (fhirr4:medicationNumberNotCarried AS ?gap)
   }
   UNION
@@ -126,7 +126,7 @@ WHERE {
     OPTIONAL { ?quantity xyz:value ?daysValue }
     BIND (COALESCE(?daysCode, ?daysUnit, ?daysValue) AS ?value)
     FILTER (BOUND(?value))
-    BIND (CONCAT(?quantityStep, "/", IF(BOUND(?daysCode), "code", IF(BOUND(?daysUnit), "unit", "value"))) AS ?step)
+    BIND (?quantityStep AS ?step)
     BIND (fhirr4:dispenseDaysSupplyNotInUnitOfTime AS ?gap)
   }
   UNION
@@ -140,6 +140,10 @@ WHERE {
     ?quantity xyz:code ?value .
     FILTER NOT EXISTS { ?quantity xyz:comparator ?quantityComparator }
     FILTER NOT EXISTS { ?quantity xyz:system "http://unitsofmeasure.org" }
+    FILTER NOT EXISTS {
+      ?quantity xyz:value ?quantityWritten .
+      FILTER (!REGEX(STR(?quantityWritten), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
+    }
     BIND (CONCAT(?quantityStep, "/code") AS ?step)
     BIND (fhirr4:doseUnitCodeOutsideUcum AS ?gap)
   }
