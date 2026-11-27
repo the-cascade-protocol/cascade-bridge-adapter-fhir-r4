@@ -1133,7 +1133,7 @@
 
 <#lab-every-mapped-element> a bridge:IsomorphicConversionTest ;
   mf:name "lab-every-mapped-element" ;
-  rdfs:comment "A lab result carrying every element in/sparql/lab-result.rq reads: a value written with a trailing zero, a unit, a reference range, an interpretation and a time with an offset." ;
+  rdfs:comment "A lab result carrying every element in/sparql/lab-result.rq reads: a value written with a trailing zero, a unit, a reference range, an interpretation and a time with an offset; its issued time, which no mapping carries, is reported." ;
   mf:action [
     bridge:input <in/lab-every-mapped-element.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -2120,7 +2120,7 @@
 
 <#diagnostic-report-contained-results> a bridge:IsomorphicConversionTest ;
   mf:name "diagnostic-report-contained-results" ;
-  rdfs:comment "A DiagnosticReport whose results and whose contained DiagnosticReport's result are \"#\" and the id of an Observation it contains: a lab result's names its contained record, by the report's name and its meta.versionId, and a vital sign's names none; the contained report's issued, a day where FHIR's instant needs a time, is not carried, which FHIR's schema refuses." ;
+  rdfs:comment "A DiagnosticReport whose results and whose contained DiagnosticReport's result are \"#\" and the id of an Observation it contains: a lab result's names its contained record, by the report's name and its meta.versionId, and a vital sign's names none; the contained report's issued, a day where FHIR's instant needs a time, is not carried and is reported as a date that is no value, which FHIR's schema refuses too." ;
   mf:action [
     bridge:input <in/diagnostic-report-contained-results.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
