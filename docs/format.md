@@ -239,7 +239,10 @@ unit is a UCUM unit only where its system is UCUM's
 UCUM's seven units of time, as FHIR's `Duration` allows, and otherwise in none
 (`fhirr4:dispenseDaysSupplyNotInUnitOfTime`). A quantity or days' supply with a
 comparator, which `SimpleQuantity` forbids, and one whose number is no decimal
-(`fhirr4:medicationNumberNotCarried`) write no node. A time that is no date, such as
+(`fhirr4:medicationNumberNotCarried`) write no node. The comparator is reported at
+the quantity (`fhirr4:medicationDispenseElementNotCarried`), holding the
+comparator, so that one finding speaks for the quantity's number, unit and code
+too. A time that is no date, such as
 2026-02-30 or month 13, writes none either (`fhirr4:dateNotCarried`).
 
 Each `authorizingPrescription`, a reference to a `MedicationRequest`, is

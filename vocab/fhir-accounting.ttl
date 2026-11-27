@@ -1383,8 +1383,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/daysSupply/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -1399,14 +1400,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/daysSupply/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/daysSupply/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:writtenValue ] .
@@ -4246,7 +4248,7 @@
   bridge:sourcePath "/contained/quantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -4261,7 +4263,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/quantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
@@ -5241,8 +5244,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/daysSupply/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -5257,14 +5261,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/daysSupply/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/daysSupply/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:writtenValue ] .
@@ -8079,7 +8084,7 @@
   bridge:sourcePath "/quantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -8094,7 +8099,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/quantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
@@ -9699,8 +9705,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/daysSupply/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -9715,14 +9722,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/daysSupply/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/daysSupply/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:writtenValue ] .
@@ -12562,7 +12570,7 @@
   bridge:sourcePath "/resource/contained/quantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -12577,7 +12585,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/quantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
@@ -13557,8 +13566,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/daysSupply/code" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -13573,14 +13583,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/daysSupply/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/daysSupply/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:writtenValue ] .
@@ -16391,7 +16402,7 @@
   bridge:sourcePath "/resource/quantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ucumUnit ] .
 
@@ -16406,7 +16417,8 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/quantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:medicationNumberNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationDispense" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:unitText ] .
 

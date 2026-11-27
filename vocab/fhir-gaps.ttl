@@ -334,7 +334,7 @@ fhirr4:dispenseDaysSupplyNotInUnitOfTime a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:medicationDispenseElementNotCarried a skos:Concept ;
-  skos:prefLabel "A MedicationDispense carries an element no Cascade predicate carries, such as its type, category, status reason, performers, location, context, destination, receivers, the resource it is part of, its supporting information, its dosage instructions, its substitution, its detected issues or its event history, or a comparator on its quantity or days' supply (FHIR's SimpleQuantity forbids one, so neither is carried)."@en ;
+  skos:prefLabel "A MedicationDispense carries an element no Cascade predicate carries, such as its type, category, status reason, performers, location, context, destination, receivers, the resource it is part of, its supporting information, its dosage instructions, its substitution, its detected issues or its event history, or a quantity or days' supply with a comparator (FHIR's SimpleQuantity forbids one, so nothing of that quantity is carried: not its number, unit or code)."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 
