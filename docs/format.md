@@ -67,9 +67,10 @@ attributed to the one `Organization` its `performer`s name, by
 not the document holds it, so a pull fetching it later joins it by name. A
 reference made from an entry whose `fullUrl` is a `urn:uuid:`, or to an
 `Organization` held under one, or to an `id` two entries hold an
-`Organization` under, names none; performers naming two
-`Organization`s name none, and each performer is a finding; a performer of
-another type is not read. The performing organization is on the version, so a
+`Organization` under, names none, as does one in a document from no known server;
+performers naming two `Organization`s name none. A performer's reference
+that does not give the attribution is a finding, for any of those reasons and
+for a performer of another type, which is not read. The performing organization is on the version, so a
 pull naming another leaves the record's name as it was.
 
 An `Observation`'s `category` says what kind it is, from
@@ -106,9 +107,9 @@ lab result's. Each `result` is the IRI of the record it names, under RO's
 `fullUrl` of the report's entry to resolve it and is named from a `urn:uuid:` entry as from any other, or `#` and the id of an `Observation` the report contains, as a
 contained record is named. It names a record only where the `Observation` is
 one, never a panel; one on another server, or one that resolves to no one
-entry, is `fhirr4:reportResultNotNamed`. Performers naming two
-`Organization`s name none, and each is a finding, as a lab result's are; so
-are a note's authors.
+entry, is `fhirr4:reportResultNotNamed`. A performer whose reference gives
+the attribution to no organization, for any reason, is a finding, as a lab result's
+is; so is a note's author.
 
 A `DocumentReference` is a note or document record unless its content is a
 structured C-CDA document: a `content.format` coded
