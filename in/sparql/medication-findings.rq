@@ -18,7 +18,7 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # medication.rq makes no 11-digit code of, whether the medication's own or the
 # referenced Medication's, every userSelected that marks no selected code, every
 # dosage text but the first, every dose
-# quantity of a dosage after its first, a course of therapy's coding outside
+# quantity of a dosage after its first, a dose quantity with a comparator or in no decimal form, a course of therapy's coding outside
 # FHIR's three codes or after the first of them, an expected supply duration in
 # no unit of time, whose number is in no decimal form or whose comparator is none
 # of R4's four, and its comparator, a bound the exposure derivation reads no end
@@ -174,14 +174,37 @@ WHERE {
     }
     ?laterDosages ?laterDosageSlot ?laterDosage .
     ?laterDosage xyz:doseAndRate ?doseRates . ?doseRates ?doseSlot ?doseRate .
-    ?doseRate xyz:doseQuantity ?laterDose . ?laterDose xyz:value ?value .
+    ?doseRate xyz:doseQuantity ?laterDose .
+    OPTIONAL { ?laterDose xyz:value ?laterValue }
+    OPTIONAL { ?laterDose xyz:code ?laterCode }
+    OPTIONAL { ?laterDose xyz:unit ?laterUnit }
+    BIND (COALESCE(?laterValue, ?laterCode, ?laterUnit) AS ?value)
+    FILTER (BOUND(?value))
     FILTER EXISTS {
       ?doseRates ?earlierDoseSlot ?earlierDoseRate . ?earlierDoseRate xyz:doseQuantity ?earlierDose .
       FILTER (xsd:integer(STRAFTER(STR(?earlierDoseSlot), "#_")) < xsd:integer(STRAFTER(STR(?doseSlot), "#_")))
     }
     BIND (CONCAT(?laterDosageStep, STR(xsd:integer(STRAFTER(STR(?laterDosageSlot), "#_")) - 1), "/doseAndRate/",
-                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity/value") AS ?step)
-    BIND (fhirr4:dosageElementNotCarried AS ?gap)
+                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity") AS ?step)
+    BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+  }
+  UNION
+  {
+    ?resource ?statedDoseMember ?statedDosages .
+    VALUES (?statedDoseMember ?statedDoseStep) {
+      (xyz:dosage "/dosage/")
+      (xyz:dosageInstruction "/dosageInstruction/")
+    }
+    ?statedDosages ?statedDosageSlot ?statedDosage .
+    ?statedDosage xyz:doseAndRate ?statedRates . ?statedRates ?statedSlot ?statedRate .
+    ?statedRate xyz:doseQuantity ?statedDose . ?statedDose xyz:comparator ?value .
+    FILTER NOT EXISTS {
+      ?statedRates ?earlierStatedSlot ?earlierStatedRate . ?earlierStatedRate xyz:doseQuantity ?earlierStatedDose .
+      FILTER (xsd:integer(STRAFTER(STR(?earlierStatedSlot), "#_")) < xsd:integer(STRAFTER(STR(?statedSlot), "#_")))
+    }
+    BIND (CONCAT(?statedDoseStep, STR(xsd:integer(STRAFTER(STR(?statedDosageSlot), "#_")) - 1), "/doseAndRate/",
+                 STR(xsd:integer(STRAFTER(STR(?statedSlot), "#_")) - 1), "/doseQuantity") AS ?step)
+    BIND (fhirr4:doseQuantityNotCarried AS ?gap)
   }
   UNION
   {
@@ -258,18 +281,22 @@ WHERE {
     {
       ?doseQuantity xyz:code ?value .
       FILTER NOT EXISTS { ?doseQuantity xyz:system "http://unitsofmeasure.org" }
-      BIND ("code" AS ?doseLeaf)
+      FILTER NOT EXISTS {
+        ?doseQuantity xyz:value ?doseWritten .
+        FILTER (!REGEX(STR(?doseWritten), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
+      }
+      BIND ("/code" AS ?doseLeaf)
       BIND (fhirr4:doseUnitCodeOutsideUcum AS ?gap)
     }
     UNION
     {
       ?doseQuantity xyz:value ?value .
       FILTER (!REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
-      BIND ("value" AS ?doseLeaf)
-      BIND (fhirr4:medicationNumberNotCarried AS ?gap)
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
     }
     BIND (CONCAT(?doseStep, STR(xsd:integer(STRAFTER(STR(?doseDosageSlot), "#_")) - 1), "/doseAndRate/",
-                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity/", ?doseLeaf) AS ?step)
+                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity", ?doseLeaf) AS ?step)
   }
   UNION
   {

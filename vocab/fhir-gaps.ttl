@@ -300,9 +300,15 @@ fhirr4:courseOfTherapyTypeNotMapped a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:dosageElementNotCarried a skos:Concept ;
-  skos:prefLabel "A dosage carries an element no Cascade predicate carries, such as its timing's count, duration, days, times of day or events, a bound that is no period, an as-needed condition, a site, a method, a rate, a dose range or a dose after the first, a dose quantity with a comparator (FHIR's SimpleQuantity forbids one), a maximum dose, its sequence, a route coding's version or userSelected, or an instruction beside its text."@en ;
+  skos:prefLabel "A dosage carries an element no Cascade predicate carries, such as its timing's count, duration, days, times of day or events, a bound that is no period, an as-needed condition, a site, a method, a rate, a dose range, a maximum dose, its sequence, a route coding's version or userSelected, or an instruction beside its text."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
+
+fhirr4:doseQuantityNotCarried a skos:Concept ;
+  skos:prefLabel "A dose quantity is not carried at all, its number, unit and code with it: it states a comparator, which FHIR's SimpleQuantity forbids, its number is in no decimal form, or it is a dose after the first of its dosage."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:valueNotMapped ;
+  sh:resultSeverity sh:Warning .
 
 fhirr4:doseUnitCodeOutsideUcum a skos:Concept ;
   skos:prefLabel "A dose quantity, or the quantity a MedicationDispense supplies, carries a unit code in a system other than UCUM, or in none, which is not carried as a UCUM unit; its unit text is."@en ;
@@ -310,7 +316,7 @@ fhirr4:doseUnitCodeOutsideUcum a skos:Concept ;
   skos:broader bridge:carriedWithLoss .
 
 fhirr4:medicationNumberNotCarried a skos:Concept ;
-  skos:prefLabel "A number of a medication's supply or dosage is not in the form its predicate states, so it is not carried: the number of repeats a dispense allows is not a whole number, a repeat frequency is not a whole number of 1 or more, and a repeat period or a dose quantity is not in FHIR's decimal form."@en ;
+  skos:prefLabel "A number of a medication's supply or dosage is not in the form its predicate states, so it is not carried: the number of repeats a dispense allows is not a whole number, a repeat frequency is not a whole number of 1 or more, and a repeat period is not in FHIR's decimal form."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .

@@ -202,10 +202,13 @@ timing's `repeat.frequency`, `period`, `periodUnit` and `boundsPeriod`, and its
 route's codings, SNOMED CT's as IRIs and any other system's (the NCI
 Thesaurus's, which US Core's binding names) as literals typed by the system.
 A dose quantity is carried as a UCUM unit only where its system is UCUM's
-(`fhirr4:doseUnitCodeOutsideUcum`), and one with a comparator, which FHIR's
-SimpleQuantity forbids, writes no node and is `fhirr4:dosageElementNotCarried`.
-Every other dosage element, a later dose and a later dosage's text are findings;
-the first dosage's text is the version's `cascade:dosageInstructionText`.
+(`fhirr4:doseUnitCodeOutsideUcum`). A dose quantity with a comparator, which FHIR's
+SimpleQuantity forbids, one whose number is no decimal and every dose after the
+first of its dosage write no node: each is a finding at the dose quantity
+(`fhirr4:doseQuantityNotCarried`), holding the value that stopped it, so that it
+speaks for the quantity's number, unit and code. Every other dosage element and a
+later dosage's text are findings; the first dosage's text is the version's
+`cascade:dosageInstructionText`.
 
 A `Patient`'s `gender` is carried as one of the four codes of
 [administrative-gender](https://hl7.org/fhir/R4/valueset-administrative-gender.html),

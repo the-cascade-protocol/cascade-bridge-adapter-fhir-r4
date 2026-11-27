@@ -1850,14 +1850,13 @@
   bridge:sourcePath "/contained/dosage/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosage/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosage/doseAndRate/doseQuantity/system" ;
@@ -1866,14 +1865,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosage/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosage/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -2742,14 +2742,13 @@
   bridge:sourcePath "/contained/dosageInstruction/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosageInstruction/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosageInstruction/doseAndRate/doseQuantity/system" ;
@@ -2758,14 +2757,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosageInstruction/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/dosageInstruction/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -5716,14 +5716,13 @@
   bridge:sourcePath "/dosage/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosage/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosage/doseAndRate/doseQuantity/system" ;
@@ -5732,14 +5731,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosage/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosage/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -6608,14 +6608,13 @@
   bridge:sourcePath "/dosageInstruction/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosageInstruction/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosageInstruction/doseAndRate/doseQuantity/system" ;
@@ -6624,14 +6623,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosageInstruction/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/dosageInstruction/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -10178,14 +10178,13 @@
   bridge:sourcePath "/resource/contained/dosage/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosage/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosage/doseAndRate/doseQuantity/system" ;
@@ -10194,14 +10193,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosage/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosage/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -11070,14 +11070,13 @@
   bridge:sourcePath "/resource/contained/dosageInstruction/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosageInstruction/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosageInstruction/doseAndRate/doseQuantity/system" ;
@@ -11086,14 +11085,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosageInstruction/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/dosageInstruction/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -14044,14 +14044,13 @@
   bridge:sourcePath "/resource/dosage/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosage/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosage/doseAndRate/doseQuantity/system" ;
@@ -14060,14 +14059,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosage/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosage/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
@@ -14936,14 +14936,13 @@
   bridge:sourcePath "/resource/dosageInstruction/doseAndRate/doseQuantity/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:doseUnitCodeOutsideUcum ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ucumUnit ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosageInstruction/doseAndRate/doseQuantity/comparator" ;
-  bridge:verdict bridge:noHome ;
-  bridge:namesGap fhirr4:dosageElementNotCarried .
+  bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosageInstruction/doseAndRate/doseQuantity/system" ;
@@ -14952,14 +14951,15 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosageInstruction/doseAndRate/doseQuantity/unit" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:unitText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/dosageInstruction/doseAndRate/doseQuantity/value" ;
   bridge:verdict bridge:carriedInPart ;
-  bridge:namesGap fhirr4:medicationNumberNotCarried ;
+  bridge:namesGap fhirr4:doseQuantityNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:decimalValue ] ,
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:writtenValue ] .
