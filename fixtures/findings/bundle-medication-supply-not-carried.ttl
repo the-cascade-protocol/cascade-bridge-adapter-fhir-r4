@@ -2,63 +2,63 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:c99fd77e51f76e5f34992c22825790e7 a oa:FragmentSelector ;
+_:a0b64311debb64b50633248b87a6b0ef a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:f503f8830e7c41a7a3ae7a116af4b00 a oa:FragmentSelector ;
+_:b6c267ab175b8751ffbf85576e443b3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/courseOfTherapyType/text" .
-_:c99fd77e51f76e5f34992c22825790e7 oa:refinedBy _:f503f8830e7c41a7a3ae7a116af4b00 .
-_:bb6fdde7fe4b35936c2d22e596beee6f a oa:Annotation ;
-	oa:hasTarget _:fd3218d64a515877e6dad3ea8651ec51 .
-_:fd3218d64a515877e6dad3ea8651ec51 oa:hasSource <../in/bundle-medication-supply-not-carried.json> ;
-	oa:hasSelector _:c99fd77e51f76e5f34992c22825790e7 .
-_:bb6fdde7fe4b35936c2d22e596beee6f oa:hasBody fhirr4:codedValueText ;
+_:a0b64311debb64b50633248b87a6b0ef oa:refinedBy _:b6c267ab175b8751ffbf85576e443b3 .
+_:f2e32253b3ff30c804509cebb6c61075 a oa:Annotation ;
+	oa:hasTarget _:a7fb10c8350dcb42041846b3d5262704 .
+_:a7fb10c8350dcb42041846b3d5262704 oa:hasSource <../in/bundle-medication-supply-not-carried.json> ;
+	oa:hasSelector _:a0b64311debb64b50633248b87a6b0ef .
+_:f2e32253b3ff30c804509cebb6c61075 oa:hasBody fhirr4:codedValueText ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/resource/courseOfTherapyType/text" ;
 	sh:resultSeverity sh:Info .
-_:be11ac03a88fcedf6663e25ae79a9931 a oa:FragmentSelector ;
+_:de581d71cf906de609153dabc8e3f04d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:a8d846bb55db3c5f5dc6e88f00f98127 oa:hasSource <../in/bundle-medication-supply-not-carried.json> .
-_:be11ac03a88fcedf6663e25ae79a9931 oa:refinedBy _:f254bf3f588cb3b6c45c0e39b5f89b19 .
-_:f254bf3f588cb3b6c45c0e39b5f89b19 a oa:FragmentSelector ;
+_:e62d3f17f6369349fb3f89b930b7ae01 oa:hasSource <../in/bundle-medication-supply-not-carried.json> .
+_:de581d71cf906de609153dabc8e3f04d oa:refinedBy _:b6052d4859ef19896a55fd482affcd25 .
+_:b6052d4859ef19896a55fd482affcd25 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/dispenseRequest/expectedSupplyDuration/comparator" .
-_:a8d846bb55db3c5f5dc6e88f00f98127 oa:hasSelector _:be11ac03a88fcedf6663e25ae79a9931 .
-_:f514a7723ddf09b076cb9afd43961b9 oa:hasTarget _:a8d846bb55db3c5f5dc6e88f00f98127 ;
+_:e62d3f17f6369349fb3f89b930b7ae01 oa:hasSelector _:de581d71cf906de609153dabc8e3f04d .
+_:f2081f9a549d3016857e37e6dded7e16 oa:hasTarget _:e62d3f17f6369349fb3f89b930b7ae01 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:expectedSupplyDurationBound ;
 	oa:motivatedBy oa:classifying ;
 	sh:value ">=" .
-_:aaee1a15809bc83e9ec429cca7480f3e a oa:FragmentSelector ;
+_:ebf6e1f232b4fd5393e4edb824469e43 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
-_:b4ea9d6062073f6818131bb0b1c30095 oa:hasSource <../in/bundle-medication-supply-not-carried.json> .
-_:aaee1a15809bc83e9ec429cca7480f3e oa:refinedBy _:ed4cee9e87fecc59ad39a6bf6f5a89b0 .
-_:ed4cee9e87fecc59ad39a6bf6f5a89b0 a oa:FragmentSelector ;
+_:c4a9001d332fdfa90f1f1f60bfc5b0bc oa:hasSource <../in/bundle-medication-supply-not-carried.json> .
+_:ebf6e1f232b4fd5393e4edb824469e43 oa:refinedBy _:c21627fcc16d866ec6edb209d2c28fae .
+_:c21627fcc16d866ec6edb209d2c28fae a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/courseOfTherapyType/coding/0/code" .
-_:b4ea9d6062073f6818131bb0b1c30095 oa:hasSelector _:aaee1a15809bc83e9ec429cca7480f3e .
-_:f5f03ae8694bd36395c69c93c8e95ad2 oa:hasTarget _:b4ea9d6062073f6818131bb0b1c30095 .
-_:fa4358d04724a92334bbed434f8ddb04 a oa:FragmentSelector ;
+_:c4a9001d332fdfa90f1f1f60bfc5b0bc oa:hasSelector _:ebf6e1f232b4fd5393e4edb824469e43 .
+_:d3986eb37dc944d1ef867f70ab5254d oa:hasTarget _:c4a9001d332fdfa90f1f1f60bfc5b0bc .
+_:c32040d1fd27839959c5137d0d8ed496 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
-_:ef8394a544441c1d6690d5c108fc4826 oa:hasSource <../in/bundle-medication-supply-not-carried.json> .
-_:fa4358d04724a92334bbed434f8ddb04 oa:refinedBy _:c717a2255684e1e0f476b3f096b19c7a .
-_:c717a2255684e1e0f476b3f096b19c7a a oa:FragmentSelector ;
+_:a06f223fcdf43507322251c8ff733203 oa:hasSource <../in/bundle-medication-supply-not-carried.json> .
+_:c32040d1fd27839959c5137d0d8ed496 oa:refinedBy _:cfb597c4b2150c4473fa126dbab9cf54 .
+_:cfb597c4b2150c4473fa126dbab9cf54 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/dispenseRequest/expectedSupplyDuration" .
-_:ef8394a544441c1d6690d5c108fc4826 oa:hasSelector _:fa4358d04724a92334bbed434f8ddb04 .
-_:d9de49760f4f4197e10c6212adbb0955 oa:hasTarget _:ef8394a544441c1d6690d5c108fc4826 .
-_:f5f03ae8694bd36395c69c93c8e95ad2 sh:resultSeverity sh:Warning .
-_:d9de49760f4f4197e10c6212adbb0955 sh:resultSeverity sh:Warning .
-_:f5f03ae8694bd36395c69c93c8e95ad2 a oa:Annotation ;
+_:a06f223fcdf43507322251c8ff733203 oa:hasSelector _:c32040d1fd27839959c5137d0d8ed496 .
+_:d222c9362ad12cb249380fdcfa4c64f5 oa:hasTarget _:a06f223fcdf43507322251c8ff733203 .
+_:d3986eb37dc944d1ef867f70ab5254d sh:resultSeverity sh:Warning .
+_:d222c9362ad12cb249380fdcfa4c64f5 sh:resultSeverity sh:Warning .
+_:d3986eb37dc944d1ef867f70ab5254d a oa:Annotation ;
 	oa:hasBody fhirr4:courseOfTherapyTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "chronic" .
-_:d9de49760f4f4197e10c6212adbb0955 a oa:Annotation ;
-	oa:hasBody fhirr4:expectedSupplyDurationNotInUnitOfTime ;
+_:d222c9362ad12cb249380fdcfa4c64f5 a oa:Annotation ;
+	oa:hasBody fhirr4:expectedSupplyDurationNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "packs" .
