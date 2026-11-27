@@ -950,6 +950,9 @@
           "@id": "fixtures/in/bundle-medication-supply-not-carried.json"
         },
         {
+          "@id": "fixtures/in/medication-request-supply-duration-comparator-outside-the-four.json"
+        },
+        {
           "@id": "fixtures/in/bundle-codings-without-system.json"
         },
         {
@@ -972,6 +975,9 @@
         },
         {
           "@id": "fixtures/in/bundle-medication-dispense-supply-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/bundle-medication-dispense-quantity-dropped-whole.json"
         },
         {
           "@id": "fixtures/in/medication-dispense-prescription-without-server.json"
@@ -1931,6 +1937,9 @@
           "@id": "fixtures/expected/bundle-medication-supply-not-carried.ttl"
         },
         {
+          "@id": "fixtures/expected/medication-request-supply-duration-comparator-outside-the-four.ttl"
+        },
+        {
           "@id": "fixtures/expected/bundle-codings-without-system.ttl"
         },
         {
@@ -1953,6 +1962,9 @@
         },
         {
           "@id": "fixtures/expected/bundle-medication-dispense-supply-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/bundle-medication-dispense-quantity-dropped-whole.ttl"
         },
         {
           "@id": "fixtures/expected/medication-dispense-prescription-without-server.ttl"
@@ -2081,6 +2093,9 @@
           "@id": "fixtures/findings/bundle-medication-supply-not-carried.ttl"
         },
         {
+          "@id": "fixtures/findings/medication-request-supply-duration-comparator-outside-the-four.ttl"
+        },
+        {
           "@id": "fixtures/findings/bundle-codings-without-system.ttl"
         },
         {
@@ -2103,6 +2118,9 @@
         },
         {
           "@id": "fixtures/findings/bundle-medication-dispense-supply-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/bundle-medication-dispense-quantity-dropped-whole.ttl"
         },
         {
           "@id": "fixtures/findings/medication-dispense-prescription-without-server.ttl"
@@ -4938,6 +4956,17 @@
       "description": "A collection Bundle of two MedicationRequests of atorvastatin (RxNorm 617312): medrx-atorvastatin-5, with an expectedSupplyDuration of >= 30 d and a courseOfTherapyType of text alone; medrx-atorvastatin-6, with an expectedSupplyDuration of 2 packs with no system and a courseOfTherapyType coded chronic in https://formulary.meridian.example/course. Authored here on 2026-10-29, for a case the conformance corpus does not hold."
     },
     {
+      "@id": "fixtures/in/medication-request-supply-duration-comparator-outside-the-four.json",
+      "@type": "File",
+      "name": "MedicationRequest whose expected supply duration states a comparator outside R4's four",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A MedicationRequest of atorvastatin (RxNorm 617312), id medrx-atorvastatin-10, with an expectedSupplyDuration of 30 d that states the comparator ~, which is none of <, <=, >= and >. Authored here on 2026-11-26, for a case the conformance corpus does not hold."
+    },
+    {
       "@id": "fixtures/in/bundle-codings-without-system.json",
       "@type": "File",
       "name": "Bundle of a lab result and a MedicationRequest with codings without a system",
@@ -5024,6 +5053,17 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A Bundle of three MedicationDispenses: a quantity of the text sixty and a days' supply in the UCUM annotation {tbl}; a quantity coded in a system that is no UCUM (an example.org system, authored here) and a days' supply of days with no system; a quantity with the comparator > and a days' supply with the comparator <. Authored here on 2026-10-31, for a case the conformance corpus does not hold."
+    },
+    {
+      "@id": "fixtures/in/bundle-medication-dispense-quantity-dropped-whole.json",
+      "@type": "File",
+      "name": "Bundle of MedicationDispenses whose quantity is dropped whole",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of two MedicationDispenses of metformin: meddisp-whole-1, with a quantity of <= 60 tablet and a daysSupply of the text thirty in UCUM days; meddisp-whole-2, with a quantity of the text sixty in a system that is no UCUM, unit code TAB, and a daysSupply of 30 d. Authored here on 2026-11-26, for a case the conformance corpus does not hold."
     },
     {
       "@id": "fixtures/in/medication-dispense-prescription-without-server.json",
@@ -8836,6 +8876,20 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/medication-request-supply-duration-comparator-outside-the-four.ttl",
+      "@type": "File",
+      "name": "Expected graph for medication-request-supply-duration-comparator-outside-the-four",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-supply-duration-comparator-outside-the-four.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/bundle-codings-without-system.ttl",
       "@type": "File",
       "name": "Expected graph for bundle-codings-without-system",
@@ -8942,6 +8996,20 @@
         "@id": "fixtures/in/bundle-medication-dispense-supply-not-carried.json"
       },
       "dateCreated": "2026-10-31",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/bundle-medication-dispense-quantity-dropped-whole.ttl",
+      "@type": "File",
+      "name": "Expected graph for bundle-medication-dispense-quantity-dropped-whole",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/bundle-medication-dispense-quantity-dropped-whole.json"
+      },
+      "dateCreated": "2026-11-26",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
@@ -9536,6 +9604,20 @@
       "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
     },
     {
+      "@id": "fixtures/findings/medication-request-supply-duration-comparator-outside-the-four.ttl",
+      "@type": "File",
+      "name": "Expected findings for medication-request-supply-duration-comparator-outside-the-four",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-supply-duration-comparator-outside-the-four.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
       "@id": "fixtures/findings/bundle-codings-without-system.ttl",
       "@type": "File",
       "name": "Expected findings for bundle-codings-without-system",
@@ -9642,6 +9724,20 @@
         "@id": "fixtures/in/bundle-medication-dispense-supply-not-carried.json"
       },
       "dateCreated": "2026-10-31",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/bundle-medication-dispense-quantity-dropped-whole.ttl",
+      "@type": "File",
+      "name": "Expected findings for bundle-medication-dispense-quantity-dropped-whole",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/bundle-medication-dispense-quantity-dropped-whole.json"
+      },
+      "dateCreated": "2026-11-26",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
