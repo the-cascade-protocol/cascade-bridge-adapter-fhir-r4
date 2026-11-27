@@ -146,6 +146,8 @@
     <#variant-effective-date-time-not-carried>
     <#variant-effective-instant-not-carried>
     <#variant-effective-period-start-not-carried>
+    <#variant-effective-period-end-not-carried>
+    <#diagnostic-report-effective-period-end-not-carried>
     <#medication-dispense-days-supply-system-only>
     <#medication-request-supply-duration-system-only>
     <#lab-performer-differs-names-one-record>
@@ -1972,6 +1974,32 @@
   mf:result [
     bridge:expectedGraph <expected/variant-effective-period-start-not-carried.ttl> ;
     bridge:expectedFindings <findings/variant-effective-period-start-not-carried.ttl>
+  ] .
+
+<#variant-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-effective-period-end-not-carried" ;
+  rdfs:comment "A genetic variant Observation whose effective period states only an end: the end is the time it was collected or resulted, which no Cascade term carries, so it is a fhirr4:variantTimeNotCarried finding at the end." ;
+  mf:action [
+    bridge:input <in/variant-effective-period-end-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-effective-period-end-not-carried.ttl> ;
+    bridge:expectedFindings <findings/variant-effective-period-end-not-carried.ttl>
+  ] .
+
+<#diagnostic-report-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;
+  mf:name "diagnostic-report-effective-period-end-not-carried" ;
+  rdfs:comment "A DiagnosticReport whose effective period states a start and an end: the start is the report's effective time, and the end is carried by no Cascade term, so it is a fhirr4:diagnosticReportPeriodEnd finding at the end." ;
+  mf:action [
+    bridge:input <in/diagnostic-report-effective-period-end-not-carried.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/diagnostic-report-effective-period-end-not-carried.ttl> ;
+    bridge:expectedFindings <findings/diagnostic-report-effective-period-end-not-carried.ttl>
   ] .
 
 <#medication-dispense-days-supply-system-only> a bridge:IsomorphicConversionTest ;
