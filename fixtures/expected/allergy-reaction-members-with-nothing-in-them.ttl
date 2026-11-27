@@ -1,0 +1,57 @@
+@prefix bridge: <https://ns.cascadeprotocol.org/bridge/v1-draft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cascade: <https://ns.cascadeprotocol.org/cascade#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix pav: <http://purl.org/pav/> .
+<ni:///sha-256;R_1JLa9B4tPtTr-GvAN5H-RhZAkwyofZ51JIHgvodqI> cascade:allergenName "Penicillin" ;
+	cascade:clinicalStatus "active" ;
+	cascade:allergyType "allergy" ;
+	cascade:allergyCriticality "low" ;
+	cascade:allergyCategory "medication" ;
+	cascade:reactionManifestationText "Itching" , "Hives" .
+<urn:uuid:85969617-4864-8e23-9acc-204a69539b14> a cascade:AllergyOrIntolerance ;
+	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/AllergyIntolerance/alg-penicillin-reaction-members-blank> ;
+	cascade:sourceRecordId "alg-penicillin-reaction-members-blank" .
+<ni:///sha-256;R_1JLa9B4tPtTr-GvAN5H-RhZAkwyofZ51JIHgvodqI> prov:specializationOf <urn:uuid:85969617-4864-8e23-9acc-204a69539b14> ;
+	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
+_:a6406c37ef04dd35397c854e3d2c01df bridge:arrivedAs <ni:///sha-256;R_1JLa9B4tPtTr-GvAN5H-RhZAkwyofZ51JIHgvodqI> ;
+	oa:hasSelector _:c6df116fef5c11294e4023a940c151ec ;
+	oa:hasSource <ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> ;
+	prov:wasDerivedFrom <ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> ;
+	prov:wasGeneratedBy _:cc4833ac78a3f7904e421dbe9188985c .
+_:c6df116fef5c11294e4023a940c151ec a oa:FragmentSelector ;
+	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+<ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> cascade:serverBaseUrl "https://fhir.meridian.example/api/FHIR/R4" ;
+	pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+	prov:wasGeneratedBy _:293acff461778fdb2c9810f744daa526 ;
+	prov:wasAttributedTo _:69e7c12c2bb56c5214e749a2b13d0c5d ;
+	cascade:authenticatedPatient "Patient/eM5vN8qTz2Hc4Rk7Jw0Pb3" ;
+	cascade:authenticatedAsProxy false ;
+	cascade:sourceFormatVersion "4.0.1" .
+_:7ed54d7601df32152ef3fb243a3b67d9 prov:agent _:69e7c12c2bb56c5214e749a2b13d0c5d ;
+	prov:hadRole cascade:AuthorRole .
+_:293acff461778fdb2c9810f744daa526 prov:qualifiedAssociation _:7ed54d7601df32152ef3fb243a3b67d9 .
+_:c427c7b091a22812f75fccff7b1b3c28 prov:agent _:25733555772485e3309f40b628786f7d ;
+	prov:hadRole cascade:TransmitterRole .
+_:293acff461778fdb2c9810f744daa526 prov:qualifiedAssociation _:c427c7b091a22812f75fccff7b1b3c28 .
+_:69e7c12c2bb56c5214e749a2b13d0c5d <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
+_:25733555772485e3309f40b628786f7d <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
+_:cc4833ac78a3f7904e421dbe9188985c <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
+	prov:startedAtTime "2026-09-01T10:00:04Z"^^xsd:dateTime .
+<ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> a prov:Entity .
+_:cc4833ac78a3f7904e421dbe9188985c a prov:Activity ;
+	prov:used <ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> ;
+	prov:qualifiedAssociation _:1db70c0c9df63fa295ca3204b9e8dd65 .
+_:1db70c0c9df63fa295ca3204b9e8dd65 prov:hadPlan _:18ac7df7a2464a938ed6650b6aa4144c .
+_:18ac7df7a2464a938ed6650b6aa4144c a prov:Plan ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "fhir-r4" ;
+	pav:version "0.1.0" .
+_:1db70c0c9df63fa295ca3204b9e8dd65 prov:agent _:dbcdb658c92f0f3f5934c8f7205de82a .
+_:dbcdb658c92f0f3f5934c8f7205de82a a prov:SoftwareAgent ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Cascade Bridge for Rust" ;
+	pav:version "0.1.0" .

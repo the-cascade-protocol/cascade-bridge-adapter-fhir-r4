@@ -140,8 +140,18 @@ fhirr4:allergyReactionSeverityRepeated a skos:Concept ;
   skos:broader bridge:carriedWithLoss ;
   sh:resultSeverity sh:Warning .
 
+fhirr4:allergyReactionMemberNotCarried a skos:Concept ;
+  skos:prefLabel "A reaction of an allergy states a substance, an onset, a description, an exposure route or a note, and no Cascade predicate carries it: the allergen, the onset and the notes the vocabulary holds are the allergy's own."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
 fhirr4:patientTelecomNotCarried a skos:Concept ;
   skos:prefLabel "A patient states a contact point, a phone number or an email address, and no Cascade predicate carries it."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
+fhirr4:organizationTelecomNotCarried a skos:Concept ;
+  skos:prefLabel "An organization states a contact point, a phone number or an email address, and no Cascade predicate carries it."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 

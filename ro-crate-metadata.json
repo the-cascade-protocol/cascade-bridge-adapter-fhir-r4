@@ -278,6 +278,9 @@
         },
         {
           "@id": "in/sparql/identifier-and-address-findings.rq"
+        },
+        {
+          "@id": "in/sparql/organization-telecom-findings.rq"
         }
       ],
       "bridge:table": [
@@ -482,6 +485,9 @@
           "@id": "in/sparql/identifier-and-address-findings.rq"
         },
         {
+          "@id": "in/sparql/organization-telecom-findings.rq"
+        },
+        {
           "@id": "vocab/fhir-accounting.ttl"
         },
         {
@@ -519,6 +525,12 @@
         },
         {
           "@id": "fixtures/in/allergy-reactions-after-the-first-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/allergy-reaction-members-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/allergy-reaction-members-with-nothing-in-them.json"
         },
         {
           "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json"
@@ -855,6 +867,12 @@
         },
         {
           "@id": "fixtures/in/bundle-pull-organization.json"
+        },
+        {
+          "@id": "fixtures/in/organization-telecom-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/document-organizations-telecom-not-carried.json"
         },
         {
           "@id": "fixtures/in/lab-performed-by-an-organization.json"
@@ -1337,6 +1355,12 @@
           "@id": "fixtures/expected/allergy-reactions-after-the-first-not-carried.ttl"
         },
         {
+          "@id": "fixtures/expected/allergy-reaction-members-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/allergy-reaction-members-with-nothing-in-them.ttl"
+        },
+        {
           "@id": "fixtures/expected/allergy-reaction-severity-after-a-reaction-without-one.ttl"
         },
         {
@@ -1347,6 +1371,12 @@
         },
         {
           "@id": "fixtures/findings/allergy-reactions-after-the-first-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/allergy-reaction-members-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/allergy-reaction-members-with-nothing-in-them.ttl"
         },
         {
           "@id": "fixtures/findings/allergy-reaction-severity-after-a-reaction-without-one.ttl"
@@ -1895,6 +1925,12 @@
           "@id": "fixtures/expected/bundle-pull-organization.ttl"
         },
         {
+          "@id": "fixtures/expected/organization-telecom-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/expected/document-organizations-telecom-not-carried.ttl"
+        },
+        {
           "@id": "fixtures/expected/lab-performed-by-an-organization.ttl"
         },
         {
@@ -2082,6 +2118,12 @@
         },
         {
           "@id": "fixtures/findings/bundle-pull-organization.ttl"
+        },
+        {
+          "@id": "fixtures/findings/organization-telecom-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/document-organizations-telecom-not-carried.ttl"
         },
         {
           "@id": "fixtures/findings/lab-performed-by-an-organization.ttl"
@@ -3236,12 +3278,12 @@
     {
       "@id": "in/sparql/allergy-and-condition-findings.rq",
       "@type": "File",
-      "name": "Findings: an allergy's and a condition's repeats",
+      "name": "Findings: an allergy's and a condition's repeats, and an allergy reaction's members",
       "encodingFormat": "application/sparql-query",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A finding for each category of an allergy or a condition after the first, fhirr4:conditionOrAllergyCategoryRepeated, and for the severity of each reaction of an allergy after the first, fhirr4:allergyReactionSeverityRepeated, which allergy-intolerance.rq and condition.rq do not carry as the vocabulary holds one of each."
+      "description": "A finding for each category of an allergy or a condition after the first, fhirr4:conditionOrAllergyCategoryRepeated, and for the severity of each reaction of an allergy after the first, fhirr4:allergyReactionSeverityRepeated, which allergy-intolerance.rq and condition.rq do not carry as the vocabulary holds one of each; and for each substance, onset, description, exposure route and note of a reaction of an allergy with something in it, fhirr4:allergyReactionMemberNotCarried, which the vocabulary has no term for."
     },
     {
       "@id": "in/sparql/observation-component-findings.rq",
@@ -3362,6 +3404,16 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "Reports fhirr4:duplicateOrganizationNotCarried for an Organization organization.rq makes a record whose version another Organization of the document gives, as organization.rq picks it, when it holds a name, an identifier or an address that version lacks, as organization-table.rq lists them. Its value is the identifier the record is named by, typed by its system."
+    },
+    {
+      "@id": "in/sparql/organization-telecom-findings.rq",
+      "@type": "File",
+      "name": "Findings: an Organization's contact points",
+      "encodingFormat": "application/sparql-query",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "Reports fhirr4:organizationTelecomNotCarried at each contact point with a value of an Organization a mapping reads, which no Cascade predicate carries; an Organization no mapping reads is reported whole by resource-type-findings.rq."
     },
     {
       "@id": "in/sparql/report-and-note-findings.rq",
@@ -3575,6 +3627,28 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "An AllergyIntolerance to peanut with four reactions, three of them with a severity. Authored here on 2026-11-27, for a case the conformance corpus does not hold: the severity of a reaction after the first, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/allergy-reaction-members-not-carried.json",
+      "@type": "File",
+      "name": "An AllergyIntolerance whose reaction states every member",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "An AllergyIntolerance to penicillin with two reactions, the first with a substance, a description, an onset, a severity, an exposure route and two notes, the second with a description. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a reaction's substance, onset, description, exposure route and notes, which were reported by nothing."
+    },
+    {
+      "@id": "fixtures/in/allergy-reaction-members-with-nothing-in-them.json",
+      "@type": "File",
+      "name": "An AllergyIntolerance whose first reaction's members hold nothing",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "An AllergyIntolerance to penicillin with two reactions, the first whose substance, description, exposure route and notes hold nothing, the second with a substance whose text and first coding are blank and whose second coding has a display, a description and two notes, the first of them blank. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a reaction's member with nothing in it, which no finding reports, and a member after one with nothing in it, which none may hide."
     },
     {
       "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json",
@@ -5104,6 +5178,28 @@
       "description": "A collection Bundle as a pull saves one: an Organization (id org-lab-1, versionId 3) with the NPI by its OID, a second identifier and an address, under its server's fullUrl. Authored here on 2026-10-25, for a case the conformance corpus does not hold: an Organization read from a server, or a lab result from a server naming its performer."
     },
     {
+      "@id": "fixtures/in/organization-telecom-not-carried.json",
+      "@type": "File",
+      "name": "A pulled Organization with four contact points",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "An Organization of a server, a laboratory with an NPI, whose telecom holds a phone number with its use and rank, an email address, a fax with no number and a phone with a blank value. Authored here on 2026-11-27, for a case the conformance corpus does not hold: an Organization's contact points, which were reported by nothing."
+    },
+    {
+      "@id": "fixtures/in/document-organizations-telecom-not-carried.json",
+      "@type": "File",
+      "name": "A document whose Organizations state contact points",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A document Bundle of a Composition, a Patient, a custodian and an author that are Organizations with one NPI, each with a contact point, and an Organization named by no reference with a contact point. Authored here on 2026-11-27, for a case the conformance corpus does not hold: the contact points of Organizations a mapping reads, which were reported by nothing, and of one it does not, which the whole-resource finding already reports."
+    },
+    {
       "@id": "fixtures/in/lab-performed-by-an-organization.json",
       "@type": "File",
       "name": "Potassium result whose performers are a Practitioner and an Organization",
@@ -6618,6 +6714,34 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/allergy-reaction-members-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for allergy-reaction-members-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-reaction-members-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/allergy-reaction-members-with-nothing-in-them.ttl",
+      "@type": "File",
+      "name": "Expected graph for allergy-reaction-members-with-nothing-in-them",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-reaction-members-with-nothing-in-them.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/allergy-reaction-severity-after-a-reaction-without-one.ttl",
       "@type": "File",
       "name": "Expected graph for allergy-reaction-severity-after-a-reaction-without-one",
@@ -6666,6 +6790,34 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/allergy-reactions-after-the-first-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/allergy-reaction-members-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for allergy-reaction-members-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-reaction-members-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/allergy-reaction-members-with-nothing-in-them.ttl",
+      "@type": "File",
+      "name": "Expected findings for allergy-reaction-members-with-nothing-in-them",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-reaction-members-with-nothing-in-them.json"
       },
       "dateCreated": "2026-11-27",
       "license": {
@@ -9124,6 +9276,34 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/organization-telecom-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for organization-telecom-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/organization-telecom-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/document-organizations-telecom-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected graph for document-organizations-telecom-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/document-organizations-telecom-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/lab-performed-by-an-organization.ttl",
       "@type": "File",
       "name": "Expected graph for lab-performed-by-an-organization",
@@ -9888,6 +10068,34 @@
         "@id": "fixtures/in/bundle-pull-organization.json"
       },
       "dateCreated": "2026-10-25",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/organization-telecom-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for organization-telecom-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/organization-telecom-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/document-organizations-telecom-not-carried.ttl",
+      "@type": "File",
+      "name": "Expected findings for document-organizations-telecom-not-carried",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/document-organizations-telecom-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },

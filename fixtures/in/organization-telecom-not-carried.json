@@ -1,0 +1,30 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://fhir.example.org/r4/Organization/org-lab-1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lab-1",
+        "meta": {
+          "versionId": "3",
+          "lastUpdated": "2026-09-30T08:00:00Z"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.6",
+            "value": "1234567893"
+          }
+        ],
+        "name": "Example Reference Laboratory",
+        "telecom": [
+          { "system": "phone", "value": "+1 360 555 0142", "use": "work", "rank": 1 },
+          { "system": "email", "value": "lab@example.org" },
+          { "system": "fax" },
+          { "system": "phone", "value": "   " }
+        ]
+      }
+    }
+  ]
+}

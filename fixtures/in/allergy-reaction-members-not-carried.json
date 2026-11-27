@@ -1,0 +1,81 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "alg-penicillin-reaction-members",
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "type": "allergy",
+  "category": [
+    "medication"
+  ],
+  "criticality": "low",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "7980",
+        "display": "Penicillin G"
+      }
+    ],
+    "text": "Penicillin"
+  },
+  "patient": {
+    "reference": "Patient/pat-conformance-1"
+  },
+  "onsetDateTime": "2015-06-01",
+  "reaction": [
+    {
+      "substance": {
+        "coding": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "1659263",
+            "display": "Penicillin G benzathine"
+          }
+        ],
+        "text": "Bicillin injection"
+      },
+      "manifestation": [
+        {
+          "text": "Hives"
+        }
+      ],
+      "description": "Hives within minutes of the first injection, spreading to the trunk",
+      "onset": "2015-06-01T09:30:00Z",
+      "severity": "mild",
+      "exposureRoute": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "78421000",
+            "display": "Intramuscular route"
+          }
+        ],
+        "text": "Injected into the thigh"
+      },
+      "note": [
+        {
+          "authorString": "Dr Rao",
+          "time": "2015-06-02T10:00:00Z",
+          "text": "Stopped the course at once"
+        },
+        {
+          "text": "Antihistamine given"
+        }
+      ]
+    },
+    {
+      "manifestation": [
+        {
+          "text": "Itching"
+        }
+      ],
+      "description": "Itching of the arms the next morning"
+    }
+  ]
+}
