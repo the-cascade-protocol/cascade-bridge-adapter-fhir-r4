@@ -119,6 +119,7 @@
     <#bundle-pull-id-shared-across-types>
     <#bundle-pull-performer-held-under-urn-uuid>
     <#bundle-performers-from-no-known-server>
+    <#bundle-report-and-note-subjects-that-name-no-patient>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
     <#Bundle-bundle-compound-heterozygote>
@@ -1583,6 +1584,19 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-performers-from-no-known-server.ttl> ;
     bridge:expectedFindings <findings/bundle-performers-from-no-known-server.ttl>
+  ] .
+
+<#bundle-report-and-note-subjects-that-name-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-report-and-note-subjects-that-name-no-patient" ;
+  rdfs:comment "A report's subject Patient/<id> in a document from no known server, and a note's subject a urn:uuid no entry holds: each names no patient record, so each version has no patient and each reference is a finding, as for any other kind." ;
+  mf:action [
+    bridge:input <in/bundle-report-and-note-subjects-that-name-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/no-server.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-report-and-note-subjects-that-name-no-patient.ttl> ;
+    bridge:expectedFindings <findings/bundle-report-and-note-subjects-that-name-no-patient.ttl>
   ] .
 
 <#lab-performer-differs-names-one-record> a bridge:IdentityRelationTest ;

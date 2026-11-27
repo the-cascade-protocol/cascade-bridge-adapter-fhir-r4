@@ -1,0 +1,64 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b12-report-3",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2132-9",
+              "display": "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Vitamin B12"
+        },
+        "subject": {
+          "reference": "Patient/pat-1"
+        },
+        "effectiveDateTime": "2026-08-14",
+        "presentedForm": [
+          {
+            "contentType": "application/pdf",
+            "data": "JVBERi0xLjQK",
+            "title": "Vitamin B12 report"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "progress-note-3",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ],
+          "text": "Progress note"
+        },
+        "subject": {
+          "reference": "urn:uuid:7d2f4c0e-3b9a-4e51-8c6d-1a5b9e0f3c27"
+        },
+        "date": "2026-08-20T14:05:00Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U2VlbiBmb3IgZm9sbG93LXVwIG9mIGEgbG93IHZpdGFtaW4gQjEyLg==",
+              "title": "Progress note"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
