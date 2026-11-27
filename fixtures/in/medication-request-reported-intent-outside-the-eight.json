@@ -1,0 +1,14 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "medrx-reported-intent-1",
+  "status": "active",
+  "intent": "directive",
+  "reportedBoolean": true,
+  "medicationCodeableConcept": {
+    "text": "Omeprazole 20 mg capsule"
+  },
+  "subject": {
+    "reference": "Patient/pat-conformance-1"
+  },
+  "authoredOn": "2025-11-04"
+}

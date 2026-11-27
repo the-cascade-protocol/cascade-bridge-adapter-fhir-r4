@@ -158,16 +158,20 @@ entry of its Bundle, or a resource the document does not hold. An Apple Health
 export holds one resource per file, so a reference there points outside it.
 Every coding of the drug is carried (see [Codes](#codes)), and the first RxNorm
 or NDC coding `medicationCodeableConcept` marks `userSelected` is the
-medication's selected code; a selected code in another system marks nothing. A
-`userSelected` on a referenced `Medication`'s coding is not read.
+medication's selected code, because the vocabulary's selected code is an RxNorm or
+NDC IRI. Any other `userSelected` marks nothing and is a finding at it,
+`fhirr4:userSelectedNotCarried`: one on a code in another system, on an NDC that is
+no 11-digit code, on a later coding after the first selected one, or of false.
+A `userSelected` on a referenced `Medication`'s coding is not read.
 A request's `authoredOn` is the day the prescription was written, never the
 start of use, which only `effective[x]` gives. A `MedicationStatement` is
 reported use. A `MedicationRequest` is too where its `reported[x]` says the
 source reported it rather than ordered it (`reportedBoolean` true, or a
 `reportedReference`, whose reference to who reported it is not carried), and is
-otherwise prescribed. Only a prescribed request carries its `intent`
+otherwise prescribed. Every request, reported or prescribed, carries its `intent`
 ([medicationrequest-intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html),
-read on 2026-10-29), because a reported request's intent is not read. An intent
+read on 2026-10-29): FHIR requires one on each, and `cascade:prescribedOrReported`
+tells a reader which kind the version is. An intent
 outside R4's eight codes is not carried and is a finding,
 `fhirr4:medicationRequestIntentNotMapped`.
 
@@ -180,12 +184,20 @@ A request's supply is carried as US Core sends it, so an order with only
 refill where absence says nothing; `dispenseRequest.expectedSupplyDuration`, a
 quantity node, only in one of UCUM's seven units of time FHIR's `Duration`
 allows; and `dispenseRequest.validityPeriod`. A supply duration with a
-comparator is carried with it and is a finding, since a bound gives no end; one
-in no unit of time, a course of therapy in another system, after its first coding
-or of text alone, and `dispenseRequest.quantity`, which no term holds, are
-findings, as are the initial fill, the dispense interval and the performer. A
-number that is no number, a repeat frequency of 0 and a period unit outside the
-seven units of time are findings too, not dropped under a carried path.
+comparator is carried with it and is a finding, since a bound gives no end
+(`fhirr4:expectedSupplyDurationBound`, at the comparator); one with a comparator
+outside R4's four, one in no unit of time and one whose number is absent, is no
+number or lies beyond twenty digits of the point are
+not carried at all, and each is a finding at the duration
+(`fhirr4:expectedSupplyDurationNotCarried`), holding the value that stopped it, so that
+it speaks for the duration's number, unit and code. Where the stopper is the unit,
+the value is its code, else its unit text; where the code is a unit of time and its
+system is not UCUM's it is that system, and where no unit is stated it is empty. A course of therapy in another system,
+after its first coding or of text alone, and `dispenseRequest.quantity`, which no
+term holds, are findings, as are the initial fill, the dispense interval and the
+performer. Any other number that is no number, a repeat frequency of 0 and a
+period unit outside the seven units of time are findings too, not dropped under a
+carried path.
 
 Every dosage (`dosageInstruction` of a request, `dosage` of a statement) is a
 node of the version, `<version>#dosage-n`, whatever it holds, so that a
@@ -194,10 +206,13 @@ timing's `repeat.frequency`, `period`, `periodUnit` and `boundsPeriod`, and its
 route's codings, SNOMED CT's as IRIs and any other system's (the NCI
 Thesaurus's, which US Core's binding names) as literals typed by the system.
 A dose quantity is carried as a UCUM unit only where its system is UCUM's
-(`fhirr4:doseUnitCodeOutsideUcum`), and one with a comparator, which FHIR's
-SimpleQuantity forbids, writes no node and is `fhirr4:dosageElementNotCarried`.
-Every other dosage element, a later dose and a later dosage's text are findings;
-the first dosage's text is the version's `cascade:dosageInstructionText`.
+(`fhirr4:doseUnitCodeOutsideUcum`). A dose quantity with a comparator, which FHIR's
+SimpleQuantity forbids, one whose number is absent, is no decimal or lies beyond
+twenty digits of the point, and every dose after the first of its dosage write no node: each is a finding at the dose quantity
+(`fhirr4:doseQuantityNotCarried`), holding the value that stopped it, so that it
+speaks for the quantity's number, unit and code. Every other dosage element and a
+later dosage's text are findings; the first dosage's text is the version's
+`cascade:dosageInstructionText`.
 
 A `Patient`'s `gender` is carried as one of the four codes of
 [administrative-gender](https://hl7.org/fhir/R4/valueset-administrative-gender.html),
@@ -237,10 +252,16 @@ data-absent-reason extension on either `_` member is a value absent for a reason
 as written and as a canonical `xsd:decimal`, as a dose quantity is. A quantity's
 unit is a UCUM unit only where its system is UCUM's
 (`fhirr4:doseUnitCodeOutsideUcum`); a days' supply is carried only in one of
-UCUM's seven units of time, as FHIR's `Duration` allows, and otherwise in none
-(`fhirr4:dispenseDaysSupplyNotInUnitOfTime`). A quantity or days' supply with a
-comparator, which `SimpleQuantity` forbids, and one whose number is no decimal
-(`fhirr4:medicationNumberNotCarried`) write no node. A time that is no date, such as
+UCUM's seven units of time, as FHIR's `Duration` allows, and otherwise in none.
+A quantity or days' supply with a comparator, which `SimpleQuantity` forbids, and
+one whose number is absent, is no decimal or lies beyond twenty digits of the point
+write no node, nor does a days' supply in no unit
+of time. Each is a finding at the quantity or days' supply, holding the value that
+stopped it (`fhirr4:medicationDispenseQuantityNotCarried`,
+`fhirr4:dispenseDaysSupplyNotCarried`; a days' supply stopped by its unit holds what
+a supply duration does, above), so that it speaks for the number, unit and
+code of what it drops, and a unit code outside UCUM is not a finding of its own on
+a quantity that is dropped. A time that is no date, such as
 2026-02-30 or month 13, writes none either (`fhirr4:dateNotCarried`).
 
 Each `authorizingPrescription`, a reference to a `MedicationRequest`, is

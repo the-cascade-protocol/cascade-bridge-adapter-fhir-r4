@@ -11,19 +11,27 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 
 # What medication.rq and medication-supply-and-dosages.rq leave behind at a
 # path the source accounting carries for another kind, or carries where it
-# holds one value: a prescribed request's intent outside the eight codes of
+# holds one value: a request's intent outside the eight codes of
 # FHIR's medicationrequest-intent, a reference that resolves to no one
 # Medication, a note, every coding with no system, a system
 # coding-system-table.rq gives no row, or no code, and every NDC that
 # medication.rq makes no 11-digit code of, whether the medication's own or the
-# referenced Medication's, every dosage text but the first, every dose
-# quantity of a dosage after its first, a course of therapy's coding outside
-# FHIR's three codes or after the first of them, an expected supply duration in no unit of time, and its
-# comparator, a bound the exposure derivation reads no end from, a
-# prescription's, a use's or a bound's date that matches no form of FHIR's date
-# and dateTime, a dose quantity's unit code outside UCUM, and a number or a
-# period unit the structure of a dosage or the supply states in a form no
-# predicate takes. A
+# referenced Medication's, every userSelected that marks no selected code, every
+# dosage text but the first, every dose
+# quantity of a dosage after its first, a dose quantity with a comparator or a number absent, in no decimal form or beyond
+# twenty digits of the point, a course of therapy's coding outside
+# FHIR's three codes or after the first of them, an expected supply duration in
+# no unit of time, whose number is absent, in no decimal form or beyond twenty
+# digits of the point, or whose comparator is none
+# of R4's four, and its comparator, a bound the exposure derivation reads no end
+# from, a prescription's, a use's or
+# a bound's date that matches no form of FHIR's date and dateTime, a dose
+# quantity's unit code outside UCUM, and a number or a period unit the
+# structure of a dosage or the supply states in a form no predicate takes. A
+# duration that is none is reported at the duration, holding the value that
+# stopped it (the unit's system where its code is a unit of time and the system
+# is not UCUM's, nothing where it states no unit), so that one finding speaks
+# for its unit, code and number too. A
 # reference resolves as medication-table.rq says, and a Medication's codes are
 # reported only where a reference resolves to it: resource-type-findings.rq
 # reports one nothing resolves to. A MedicationDispense states a Medication
@@ -77,9 +85,7 @@ WHERE {
     ?resource xyz:resourceType "MedicationRequest" ;
       xyz:intent ?value .
     FILTER (!(?value IN ("proposal", "plan", "order", "original-order", "reflex-order",
-                           "filler-order", "instance-order", "option"))
-      && NOT EXISTS { ?resource xyz:reportedReference ?reportedReference }
-      && NOT EXISTS { ?resource xyz:reportedBoolean "true" })
+                           "filler-order", "instance-order", "option")))
     BIND ("/intent" AS ?step)
     BIND (fhirr4:medicationRequestIntentNotMapped AS ?gap)
   }
@@ -118,6 +124,41 @@ WHERE {
   }
   UNION
   {
+    ?resource xyz:medicationCodeableConcept ?selectConcept .
+    ?selectConcept xyz:coding ?selectCodings . ?selectCodings ?selectSlot ?selectCoding .
+    FILTER (STRSTARTS(STR(?selectSlot), STR(rdf:_)))
+    ?selectCoding xyz:userSelected ?value .
+    FILTER NOT EXISTS {
+      FILTER (STR(?value) = "true")
+      ?selectCoding xyz:system ?selectSystemWritten ;
+        xyz:code ?selectCodeWritten .
+      ?selectSystemRow fhirr4:systemWritten ?selectSystemWritten ;
+        fhirr4:systemRead ?selectSystem .
+      BIND (REPLACE(STR(?selectCodeWritten), "^\\s+|\\s+$", "") AS ?selectCode)
+      FILTER ((?selectSystem = "http://www.nlm.nih.gov/research/umls/rxnorm" && ?selectCode != "")
+        || (?selectSystem = "http://hl7.org/fhir/sid/ndc"
+            && REGEX(?selectCode, "^([0-9]{11}|[0-9]{5}-[0-9]{4}-[0-9]{2}|[0-9]{4}-[0-9]{4}-[0-9]{2}|[0-9]{5}-[0-9]{3}-[0-9]{2}|[0-9]{5}-[0-9]{4}-[0-9])$")))
+      FILTER NOT EXISTS {
+        ?selectCodings ?earlierSelectSlot ?earlierSelect .
+        ?earlierSelect xyz:userSelected ?earlierSelected ;
+          xyz:system ?earlierSelectSystemWritten ;
+          xyz:code ?earlierSelectCodeWritten .
+        ?earlierSelectSystemRow fhirr4:systemWritten ?earlierSelectSystemWritten ;
+          fhirr4:systemRead ?earlierSelectSystem .
+        BIND (REPLACE(STR(?earlierSelectCodeWritten), "^\\s+|\\s+$", "") AS ?earlierSelectCode)
+        FILTER (STR(?earlierSelected) = "true"
+          && xsd:integer(STRAFTER(STR(?earlierSelectSlot), "#_")) < xsd:integer(STRAFTER(STR(?selectSlot), "#_"))
+          && ((?earlierSelectSystem = "http://www.nlm.nih.gov/research/umls/rxnorm" && ?earlierSelectCode != "")
+              || (?earlierSelectSystem = "http://hl7.org/fhir/sid/ndc"
+                  && REGEX(?earlierSelectCode, "^([0-9]{11}|[0-9]{5}-[0-9]{4}-[0-9]{2}|[0-9]{4}-[0-9]{4}-[0-9]{2}|[0-9]{5}-[0-9]{3}-[0-9]{2}|[0-9]{5}-[0-9]{4}-[0-9])$"))))
+      }
+    }
+    BIND (CONCAT("/medicationCodeableConcept/coding/", STR(xsd:integer(STRAFTER(STR(?selectSlot), "#_")) - 1), "/userSelected")
+          AS ?step)
+    BIND (fhirr4:userSelectedNotCarried AS ?gap)
+  }
+  UNION
+  {
     ?resource ?dosageMember ?dosages .
     VALUES (?dosageMember ?dosageStep) {
       (xyz:dosage "/dosage/")
@@ -137,14 +178,37 @@ WHERE {
     }
     ?laterDosages ?laterDosageSlot ?laterDosage .
     ?laterDosage xyz:doseAndRate ?doseRates . ?doseRates ?doseSlot ?doseRate .
-    ?doseRate xyz:doseQuantity ?laterDose . ?laterDose xyz:value ?value .
+    ?doseRate xyz:doseQuantity ?laterDose .
+    OPTIONAL { ?laterDose xyz:value ?laterValue }
+    OPTIONAL { ?laterDose xyz:code ?laterCode }
+    OPTIONAL { ?laterDose xyz:unit ?laterUnit }
+    BIND (COALESCE(?laterValue, ?laterCode, ?laterUnit) AS ?value)
+    FILTER (BOUND(?value))
     FILTER EXISTS {
       ?doseRates ?earlierDoseSlot ?earlierDoseRate . ?earlierDoseRate xyz:doseQuantity ?earlierDose .
       FILTER (xsd:integer(STRAFTER(STR(?earlierDoseSlot), "#_")) < xsd:integer(STRAFTER(STR(?doseSlot), "#_")))
     }
     BIND (CONCAT(?laterDosageStep, STR(xsd:integer(STRAFTER(STR(?laterDosageSlot), "#_")) - 1), "/doseAndRate/",
-                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity/value") AS ?step)
-    BIND (fhirr4:dosageElementNotCarried AS ?gap)
+                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity") AS ?step)
+    BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+  }
+  UNION
+  {
+    ?resource ?statedDoseMember ?statedDosages .
+    VALUES (?statedDoseMember ?statedDoseStep) {
+      (xyz:dosage "/dosage/")
+      (xyz:dosageInstruction "/dosageInstruction/")
+    }
+    ?statedDosages ?statedDosageSlot ?statedDosage .
+    ?statedDosage xyz:doseAndRate ?statedRates . ?statedRates ?statedSlot ?statedRate .
+    ?statedRate xyz:doseQuantity ?statedDose . ?statedDose xyz:comparator ?value .
+    FILTER NOT EXISTS {
+      ?statedRates ?earlierStatedSlot ?earlierStatedRate . ?earlierStatedRate xyz:doseQuantity ?earlierStatedDose .
+      FILTER (xsd:integer(STRAFTER(STR(?earlierStatedSlot), "#_")) < xsd:integer(STRAFTER(STR(?statedSlot), "#_")))
+    }
+    BIND (CONCAT(?statedDoseStep, STR(xsd:integer(STRAFTER(STR(?statedDosageSlot), "#_")) - 1), "/doseAndRate/",
+                 STR(xsd:integer(STRAFTER(STR(?statedSlot), "#_")) - 1), "/doseQuantity") AS ?step)
+    BIND (fhirr4:doseQuantityNotCarried AS ?gap)
   }
   UNION
   {
@@ -181,11 +245,12 @@ WHERE {
     OPTIONAL { ?duration xyz:code ?durationCode }
     OPTIONAL { ?duration xyz:unit ?durationUnit }
     OPTIONAL { ?duration xyz:value ?durationValue }
-    BIND (COALESCE(?durationCode, ?durationUnit, ?durationValue) AS ?value)
-    FILTER (BOUND(?value))
-    BIND (CONCAT("/dispenseRequest/expectedSupplyDuration/",
-                 IF(BOUND(?durationCode), "code", IF(BOUND(?durationUnit), "unit", "value"))) AS ?step)
-    BIND (fhirr4:expectedSupplyDurationNotInUnitOfTime AS ?gap)
+    OPTIONAL { ?duration xyz:system ?durationSystem }
+    FILTER (BOUND(?durationCode) || BOUND(?durationUnit) || BOUND(?durationValue))
+    BIND (IF(BOUND(?durationCode) && ?durationCode IN ("s", "min", "h", "d", "wk", "mo", "a"), COALESCE(?durationSystem, ""),
+             COALESCE(?durationCode, ?durationUnit, "")) AS ?value)
+    BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+    BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
   }
   UNION
   {
@@ -194,6 +259,15 @@ WHERE {
     ?boundDuration xyz:comparator ?value .
     BIND ("/dispenseRequest/expectedSupplyDuration/comparator" AS ?step)
     BIND (fhirr4:expectedSupplyDurationBound AS ?gap)
+  }
+  UNION
+  {
+    ?resource xyz:dispenseRequest ?outsideRequest .
+    ?outsideRequest xyz:expectedSupplyDuration ?outsideDuration .
+    ?outsideDuration xyz:comparator ?value .
+    FILTER (!(?value IN ("<", "<=", ">=", ">")))
+    BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+    BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
   }
   UNION
   {
@@ -213,18 +287,48 @@ WHERE {
     {
       ?doseQuantity xyz:code ?value .
       FILTER NOT EXISTS { ?doseQuantity xyz:system "http://unitsofmeasure.org" }
-      BIND ("code" AS ?doseLeaf)
+      FILTER EXISTS { ?doseQuantity xyz:value ?doseStated }
+      FILTER NOT EXISTS {
+        ?doseQuantity xyz:value ?doseWritten .
+        BIND (STR(?doseWritten) AS ?doseNumber)
+        BIND (REPLACE(REPLACE(?doseNumber, "^[+-]", ""), "[eE].*$", "") AS ?doseMantissa)
+        BIND (IF(CONTAINS(?doseMantissa, "."), STRBEFORE(?doseMantissa, "."), ?doseMantissa) AS ?doseWhole)
+        BIND (STRLEN(?doseWhole) + IF(REGEX(?doseNumber, "[eE]"), xsd:integer(REPLACE(?doseNumber, "^[^eE]*[eE]", "")), 0) AS ?dosePoint)
+        FILTER (!REGEX(?doseNumber, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+          || COALESCE(?dosePoint + 20 < 0 || ?dosePoint - STRLEN(CONCAT(?doseWhole, STRAFTER(?doseMantissa, "."))) > 20, true))
+      }
+      BIND ("/code" AS ?doseLeaf)
       BIND (fhirr4:doseUnitCodeOutsideUcum AS ?gap)
     }
     UNION
     {
       ?doseQuantity xyz:value ?value .
-      FILTER (!REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
-      BIND ("value" AS ?doseLeaf)
-      BIND (fhirr4:medicationNumberNotCarried AS ?gap)
+      BIND (STR(?value) AS ?doseNumber)
+      BIND (REPLACE(REPLACE(?doseNumber, "^[+-]", ""), "[eE].*$", "") AS ?doseMantissa)
+      BIND (IF(CONTAINS(?doseMantissa, "."), STRBEFORE(?doseMantissa, "."), ?doseMantissa) AS ?doseWhole)
+      BIND (STRLEN(?doseWhole) + IF(REGEX(?doseNumber, "[eE]"), xsd:integer(REPLACE(?doseNumber, "^[^eE]*[eE]", "")), 0) AS ?dosePoint)
+      FILTER (!REGEX(?doseNumber, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+        || COALESCE(?dosePoint + 20 < 0 || ?dosePoint - STRLEN(CONCAT(?doseWhole, STRAFTER(?doseMantissa, "."))) > 20, true))
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?doseQuantity xyz:code ?value .
+      FILTER NOT EXISTS { ?doseQuantity xyz:value ?doseAbsent }
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?doseQuantity xyz:unit ?value .
+      FILTER NOT EXISTS { ?doseQuantity xyz:code ?doseAbsentCode }
+      FILTER NOT EXISTS { ?doseQuantity xyz:value ?doseAbsent }
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
     }
     BIND (CONCAT(?doseStep, STR(xsd:integer(STRAFTER(STR(?doseDosageSlot), "#_")) - 1), "/doseAndRate/",
-                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity/", ?doseLeaf) AS ?step)
+                 STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity", ?doseLeaf) AS ?step)
   }
   UNION
   {
@@ -265,6 +369,7 @@ WHERE {
       ?supplyRequest xyz:numberOfRepeatsAllowed ?value .
       FILTER (!REGEX(STR(?value), "^[0-9]+$"))
       BIND ("/dispenseRequest/numberOfRepeatsAllowed" AS ?step)
+      BIND (fhirr4:medicationNumberNotCarried AS ?gap)
     }
     UNION
     {
@@ -272,11 +377,28 @@ WHERE {
       ?supplyDuration xyz:system "http://unitsofmeasure.org" ;
         xyz:code ?supplyUnit ;
         xyz:value ?value .
+      BIND (STR(?value) AS ?supplyNumber)
+      BIND (REPLACE(REPLACE(?supplyNumber, "^[+-]", ""), "[eE].*$", "") AS ?supplyMantissa)
+      BIND (IF(CONTAINS(?supplyMantissa, "."), STRBEFORE(?supplyMantissa, "."), ?supplyMantissa) AS ?supplyWhole)
+      BIND (STRLEN(?supplyWhole) + IF(REGEX(?supplyNumber, "[eE]"), xsd:integer(REPLACE(?supplyNumber, "^[^eE]*[eE]", "")), 0) AS ?supplyPoint)
       FILTER (?supplyUnit IN ("s", "min", "h", "d", "wk", "mo", "a")
-        && !REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
-      BIND ("/dispenseRequest/expectedSupplyDuration/value" AS ?step)
+        && (!REGEX(?supplyNumber, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+          || COALESCE(?supplyPoint + 20 < 0 || ?supplyPoint - STRLEN(CONCAT(?supplyWhole, STRAFTER(?supplyMantissa, "."))) > 20, true)))
+      BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+      BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
     }
-    BIND (fhirr4:medicationNumberNotCarried AS ?gap)
+    UNION
+    {
+      ?supplyDurationAbsent xyz:system "http://unitsofmeasure.org" ;
+        xyz:code ?value .
+      ?supplyRequest xyz:expectedSupplyDuration ?supplyDurationAbsent .
+      FILTER (?value IN ("s", "min", "h", "d", "wk", "mo", "a"))
+      FILTER NOT EXISTS { ?supplyDurationAbsent xyz:value ?supplyStated }
+      OPTIONAL { ?supplyDurationAbsent xyz:comparator ?supplyAbsentComparator }
+      FILTER (!BOUND(?supplyAbsentComparator) || ?supplyAbsentComparator IN ("<", "<=", ">=", ">"))
+      BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+      BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
+    }
   }
   UNION
   {
@@ -340,7 +462,7 @@ WHERE {
              (?type IN ("MedicationRequest", "MedicationStatement")
                || (?type = "MedicationDispense"
                    && ?gap IN (fhirr4:medicationReferenceUnresolved, fhirr4:medicationNote, fhirr4:codingNotCarried,
-                               fhirr4:ndcNotNormalised)))
+                               fhirr4:ndcNotNormalised, fhirr4:userSelectedNotCarried)))
              && !STRSTARTS(?step, "/code/")
              && (?gap != fhirr4:medicationReferenceUnresolved || NOT EXISTS {
                ?resolving fhirr4:medicationReferenceFrom ?resourcePointer ;

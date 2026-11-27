@@ -1,0 +1,16 @@
+{
+  "resourceType": "MedicationDispense",
+  "id": "meddisp-no-quantity-value-1",
+  "status": "completed",
+  "medicationCodeableConcept": {
+    "text": "Metformin 500 mg tablet"
+  },
+  "subject": {
+    "reference": "Patient/pat-conformance-1"
+  },
+  "quantity": {
+    "unit": "tablet",
+    "system": "http://unitsofmeasure.org",
+    "code": "{tbl}"
+  }
+}

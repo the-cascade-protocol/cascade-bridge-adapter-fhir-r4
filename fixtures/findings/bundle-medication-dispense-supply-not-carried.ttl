@@ -2,107 +2,107 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:a4521fff8cb529555f1ff807c886b476 a oa:FragmentSelector ;
+_:a255dfd922b477a7c835169ee0ee3dfe a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:dbfaa74e61532c1d0e6671c35b8f3226 a oa:FragmentSelector ;
+_:e0b4d98ee8ceb9c125446647fe108cac a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource" .
-_:a4521fff8cb529555f1ff807c886b476 oa:refinedBy _:dbfaa74e61532c1d0e6671c35b8f3226 .
-_:b983b16611914896427b7378813bb819 a oa:Annotation ;
-	oa:hasTarget _:db0164d52874a2355ed3d080b18dcacc .
-_:db0164d52874a2355ed3d080b18dcacc oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> ;
-	oa:hasSelector _:a4521fff8cb529555f1ff807c886b476 .
-_:b983b16611914896427b7378813bb819 oa:hasBody <https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-01#section-6.28> ;
+_:a255dfd922b477a7c835169ee0ee3dfe oa:refinedBy _:e0b4d98ee8ceb9c125446647fe108cac .
+_:b4de5bb5af2f85f47f1dcd135f9db196 a oa:Annotation ;
+	oa:hasTarget _:cb3fcdacabcfe2740fc9ed1ecf51c54b .
+_:cb3fcdacabcfe2740fc9ed1ecf51c54b oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> ;
+	oa:hasSelector _:a255dfd922b477a7c835169ee0ee3dfe .
+_:b4de5bb5af2f85f47f1dcd135f9db196 oa:hasBody <https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-01#section-6.28> ;
 	oa:motivatedBy oa:classifying ;
 	sh:resultSeverity sh:Violation .
-_:d168a09cd07138e51fc2b2cfe9d24cf9 a oa:FragmentSelector ;
+_:cee7b500492c433d77aff5dce6481ceb a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:f0b60cde904e1572d42bb46c2ce9e759 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
-_:d168a09cd07138e51fc2b2cfe9d24cf9 oa:refinedBy _:df66a3bdcc9e3c188278d72df0a39767 .
-_:df66a3bdcc9e3c188278d72df0a39767 a oa:FragmentSelector ;
+_:cf4b30dbd0103e86b51ecc680b4ba26a oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
+_:cee7b500492c433d77aff5dce6481ceb oa:refinedBy _:f14354b22e04ee45d66583c0cbfa41dd .
+_:f14354b22e04ee45d66583c0cbfa41dd a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/quantity/value" .
-_:f0b60cde904e1572d42bb46c2ce9e759 oa:hasSelector _:d168a09cd07138e51fc2b2cfe9d24cf9 .
-_:ab145fe8ba658bddb13d1be85ddcf33c oa:hasTarget _:f0b60cde904e1572d42bb46c2ce9e759 .
-_:d3144145cd5846d657a3fa6263ecd766 a oa:FragmentSelector ;
+	rdf:value "/resource/quantity" .
+_:cf4b30dbd0103e86b51ecc680b4ba26a oa:hasSelector _:cee7b500492c433d77aff5dce6481ceb .
+_:c04cb73902355ea3549d66a8b195b615 oa:hasTarget _:cf4b30dbd0103e86b51ecc680b4ba26a .
+_:b18ad9b5e42ef36f50ca600ff9d93744 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:be937f749e8b40df0c6172534f63a253 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
-_:d3144145cd5846d657a3fa6263ecd766 oa:refinedBy _:aa2d0a627874cc10edf7b13d97364622 .
-_:aa2d0a627874cc10edf7b13d97364622 a oa:FragmentSelector ;
+_:aad232d80984437929269a2739324296 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
+_:b18ad9b5e42ef36f50ca600ff9d93744 oa:refinedBy _:fd422b60d288102ec9752c7b202dbbaf .
+_:fd422b60d288102ec9752c7b202dbbaf a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/daysSupply/code" .
-_:be937f749e8b40df0c6172534f63a253 oa:hasSelector _:d3144145cd5846d657a3fa6263ecd766 .
-_:d61d213541fdcb16a47e48584e7f68f0 oa:hasTarget _:be937f749e8b40df0c6172534f63a253 .
-_:ab145fe8ba658bddb13d1be85ddcf33c sh:resultSeverity sh:Warning .
-_:d61d213541fdcb16a47e48584e7f68f0 sh:resultSeverity sh:Warning .
-_:ab145fe8ba658bddb13d1be85ddcf33c a oa:Annotation ;
-	oa:hasBody fhirr4:medicationNumberNotCarried ;
+	rdf:value "/resource/daysSupply" .
+_:aad232d80984437929269a2739324296 oa:hasSelector _:b18ad9b5e42ef36f50ca600ff9d93744 .
+_:f5c171d37d17d09a7b657837a33b943d oa:hasTarget _:aad232d80984437929269a2739324296 .
+_:c04cb73902355ea3549d66a8b195b615 sh:resultSeverity sh:Warning .
+_:f5c171d37d17d09a7b657837a33b943d sh:resultSeverity sh:Warning .
+_:c04cb73902355ea3549d66a8b195b615 a oa:Annotation ;
+	oa:hasBody fhirr4:medicationDispenseQuantityNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "sixty" .
-_:d61d213541fdcb16a47e48584e7f68f0 a oa:Annotation ;
-	oa:hasBody fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
+_:f5c171d37d17d09a7b657837a33b943d a oa:Annotation ;
+	oa:hasBody fhirr4:dispenseDaysSupplyNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "{tbl}" .
-_:fbdb2f86f202e62ee2d1fb855d8c4ad a oa:FragmentSelector ;
+_:dfff0405ed7f5a44f1986d8ae808869f a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
-_:e87fd6ea2aec511a1d52eb89dcac2ca1 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
-_:fbdb2f86f202e62ee2d1fb855d8c4ad oa:refinedBy _:a435b7bc76a0da6f1b90e5fcc7b4afb4 .
-_:a435b7bc76a0da6f1b90e5fcc7b4afb4 a oa:FragmentSelector ;
+_:c74efabb01d48caa27d67f0a0fda03e7 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
+_:dfff0405ed7f5a44f1986d8ae808869f oa:refinedBy _:de0521f82c350b0036cb78afafb1d1c4 .
+_:de0521f82c350b0036cb78afafb1d1c4 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/daysSupply/unit" .
-_:e87fd6ea2aec511a1d52eb89dcac2ca1 oa:hasSelector _:fbdb2f86f202e62ee2d1fb855d8c4ad .
-_:fc9b76206309e2010e7aceb748fb154b oa:hasTarget _:e87fd6ea2aec511a1d52eb89dcac2ca1 .
-_:b1e2c60558d9bc7fa117dd92f64cb284 a oa:FragmentSelector ;
+	rdf:value "/resource/daysSupply" .
+_:c74efabb01d48caa27d67f0a0fda03e7 oa:hasSelector _:dfff0405ed7f5a44f1986d8ae808869f .
+_:a0f2f7e3a031a47ea1106fe9405db3d8 oa:hasTarget _:c74efabb01d48caa27d67f0a0fda03e7 .
+_:a600ef0171261aaf455685621d823694 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
-_:db834f9dc5ffade04f23a9767ded53da oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
-_:b1e2c60558d9bc7fa117dd92f64cb284 oa:refinedBy _:b19d23c4743a33e4f820f6844cf26ec2 .
-_:b19d23c4743a33e4f820f6844cf26ec2 a oa:FragmentSelector ;
+_:c8a45636ac4dbb192077dbace30c8446 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
+_:a600ef0171261aaf455685621d823694 oa:refinedBy _:fa555a05a39d5f4a8bf79420c91c863d .
+_:fa555a05a39d5f4a8bf79420c91c863d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/quantity/code" .
-_:db834f9dc5ffade04f23a9767ded53da oa:hasSelector _:b1e2c60558d9bc7fa117dd92f64cb284 .
-_:ed5bc478bcf78f6f7a8cf030a75ebc05 oa:hasTarget _:db834f9dc5ffade04f23a9767ded53da .
-_:fc9b76206309e2010e7aceb748fb154b sh:resultSeverity sh:Warning .
-_:ed5bc478bcf78f6f7a8cf030a75ebc05 sh:resultSeverity sh:Info .
-_:fc9b76206309e2010e7aceb748fb154b a oa:Annotation ;
-	oa:hasBody fhirr4:dispenseDaysSupplyNotInUnitOfTime ;
+_:c8a45636ac4dbb192077dbace30c8446 oa:hasSelector _:a600ef0171261aaf455685621d823694 .
+_:b2384ac4aedce6c331cce487a47ef5a9 oa:hasTarget _:c8a45636ac4dbb192077dbace30c8446 .
+_:a0f2f7e3a031a47ea1106fe9405db3d8 sh:resultSeverity sh:Warning .
+_:b2384ac4aedce6c331cce487a47ef5a9 sh:resultSeverity sh:Info .
+_:a0f2f7e3a031a47ea1106fe9405db3d8 a oa:Annotation ;
+	oa:hasBody fhirr4:dispenseDaysSupplyNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "days" .
-_:ed5bc478bcf78f6f7a8cf030a75ebc05 a oa:Annotation ;
+_:b2384ac4aedce6c331cce487a47ef5a9 a oa:Annotation ;
 	oa:hasBody fhirr4:doseUnitCodeOutsideUcum ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "TAB" .
-_:f1bf20cd534a043bdaf4b36337ec17b1 a oa:FragmentSelector ;
+_:fd30cc2bb7c92796c3c6734fd4da1098 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/2" .
-_:cd080f134a51182cf076852c784286b2 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
-_:f1bf20cd534a043bdaf4b36337ec17b1 oa:refinedBy _:dce8d48e2ebe70300883f9c00e7c245a .
-_:dce8d48e2ebe70300883f9c00e7c245a a oa:FragmentSelector ;
+_:c1235234bcdb497cd9bd7fd5e7ade5f5 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
+_:fd30cc2bb7c92796c3c6734fd4da1098 oa:refinedBy _:e9188c7432d89105936332a3585e3551 .
+_:e9188c7432d89105936332a3585e3551 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/quantity/comparator" .
-_:cd080f134a51182cf076852c784286b2 oa:hasSelector _:f1bf20cd534a043bdaf4b36337ec17b1 .
-_:a8683727b4e332a9112207e4d088ae64 oa:hasTarget _:cd080f134a51182cf076852c784286b2 .
-_:e2765b455eb5612a78635685434910ac a oa:FragmentSelector ;
+	rdf:value "/resource/quantity" .
+_:c1235234bcdb497cd9bd7fd5e7ade5f5 oa:hasSelector _:fd30cc2bb7c92796c3c6734fd4da1098 .
+_:a10537523559cfb833fa7d0553d3a3e oa:hasTarget _:c1235234bcdb497cd9bd7fd5e7ade5f5 .
+_:f3f6b38d974bd1ecaaa14ebb0c8a9d4a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/2" .
-_:a0f6338a6d4bc8573120e22165322389 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
-_:e2765b455eb5612a78635685434910ac oa:refinedBy _:e35052a93909bec4ac1d02f80f5555b7 .
-_:e35052a93909bec4ac1d02f80f5555b7 a oa:FragmentSelector ;
+_:b545d68ccbd9b8577fcfe549bc9304f1 oa:hasSource <../in/bundle-medication-dispense-supply-not-carried.json> .
+_:f3f6b38d974bd1ecaaa14ebb0c8a9d4a oa:refinedBy _:dadaa53f68863d039b0a676c79cf839a .
+_:dadaa53f68863d039b0a676c79cf839a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/daysSupply/comparator" .
-_:a0f6338a6d4bc8573120e22165322389 oa:hasSelector _:e2765b455eb5612a78635685434910ac .
-_:bfb839f3a14e9e4b0246ed5ad9daf508 oa:hasTarget _:a0f6338a6d4bc8573120e22165322389 .
-_:a8683727b4e332a9112207e4d088ae64 sh:resultSeverity sh:Info .
-_:bfb839f3a14e9e4b0246ed5ad9daf508 sh:resultSeverity sh:Info .
-_:a8683727b4e332a9112207e4d088ae64 a oa:Annotation ;
-	oa:hasBody fhirr4:medicationDispenseElementNotCarried ;
+	rdf:value "/resource/daysSupply" .
+_:b545d68ccbd9b8577fcfe549bc9304f1 oa:hasSelector _:f3f6b38d974bd1ecaaa14ebb0c8a9d4a .
+_:bb7fe2404260d3232d37db1810dca737 oa:hasTarget _:b545d68ccbd9b8577fcfe549bc9304f1 .
+_:a10537523559cfb833fa7d0553d3a3e sh:resultSeverity sh:Warning .
+_:bb7fe2404260d3232d37db1810dca737 sh:resultSeverity sh:Warning .
+_:a10537523559cfb833fa7d0553d3a3e a oa:Annotation ;
+	oa:hasBody fhirr4:medicationDispenseQuantityNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value ">" .
-_:bfb839f3a14e9e4b0246ed5ad9daf508 a oa:Annotation ;
-	oa:hasBody fhirr4:medicationDispenseElementNotCarried ;
+_:bb7fe2404260d3232d37db1810dca737 a oa:Annotation ;
+	oa:hasBody fhirr4:dispenseDaysSupplyNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "<" .

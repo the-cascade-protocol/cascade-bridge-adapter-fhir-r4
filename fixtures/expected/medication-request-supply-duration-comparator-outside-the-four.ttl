@@ -1,0 +1,57 @@
+@prefix bridge: <https://ns.cascadeprotocol.org/bridge/v1-draft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cascade: <https://ns.cascadeprotocol.org/cascade#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix pav: <http://purl.org/pav/> .
+<ni:///sha-256;HZatxf7UOADawDHbrpL3v8mJ7znXcow2KiuBAuBFyms> cascade:prescribedOrReported "prescribed" ;
+	cascade:drugName "Atorvastatin 10 mg tablet" ;
+	cascade:rxNormCode <https://ns.cascadeprotocol.org/codes/rxnorm/617312> ;
+	cascade:workflowStatus "active" ;
+	cascade:medicationRequestIntent "order" ;
+	cascade:prescriptionWrittenDate "2026-03-02"^^xsd:date .
+<urn:uuid:044e7d33-b594-881c-89a1-ac6302407bdd> a cascade:PrescribedOrReportedMedication ;
+	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/MedicationRequest/medrx-atorvastatin-10> ;
+	cascade:sourceRecordId "medrx-atorvastatin-10" .
+<ni:///sha-256;HZatxf7UOADawDHbrpL3v8mJ7znXcow2KiuBAuBFyms> prov:specializationOf <urn:uuid:044e7d33-b594-881c-89a1-ac6302407bdd> ;
+	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
+_:8dfc575d043f8b37657023d6fd0215e4 bridge:arrivedAs <ni:///sha-256;HZatxf7UOADawDHbrpL3v8mJ7znXcow2KiuBAuBFyms> ;
+	oa:hasSelector _:3e3e67f3d10f3cb09536e55e66f05b61 ;
+	oa:hasSource <ni:///sha-256;JV04o_YigurDDW07cMDTr4kXoYyhVYIRx75HKqHhdAc> ;
+	prov:wasDerivedFrom <ni:///sha-256;JV04o_YigurDDW07cMDTr4kXoYyhVYIRx75HKqHhdAc> ;
+	prov:wasGeneratedBy _:34bc582b338d7434e2ca0fcacd0a0418 .
+_:3e3e67f3d10f3cb09536e55e66f05b61 a oa:FragmentSelector ;
+	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+<ni:///sha-256;JV04o_YigurDDW07cMDTr4kXoYyhVYIRx75HKqHhdAc> cascade:serverBaseUrl "https://fhir.meridian.example/api/FHIR/R4" ;
+	pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+	prov:wasGeneratedBy _:6b8209fed8d5fc2b6f660d05e10ca118 ;
+	prov:wasAttributedTo _:1d14b34b918f00d6be73cdb9384a802f ;
+	cascade:authenticatedPatient "Patient/eM5vN8qTz2Hc4Rk7Jw0Pb3" ;
+	cascade:authenticatedAsProxy false ;
+	cascade:sourceFormatVersion "4.0.1" .
+_:38cf82a1c55c41d22914535953daa8b0 prov:agent _:1d14b34b918f00d6be73cdb9384a802f ;
+	prov:hadRole cascade:AuthorRole .
+_:6b8209fed8d5fc2b6f660d05e10ca118 prov:qualifiedAssociation _:38cf82a1c55c41d22914535953daa8b0 .
+_:42f267a140248ae088b61585e85169a5 prov:agent _:424bafe31c7cf4cef250bd18e4015da7 ;
+	prov:hadRole cascade:TransmitterRole .
+_:6b8209fed8d5fc2b6f660d05e10ca118 prov:qualifiedAssociation _:42f267a140248ae088b61585e85169a5 .
+_:1d14b34b918f00d6be73cdb9384a802f <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
+_:424bafe31c7cf4cef250bd18e4015da7 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
+_:34bc582b338d7434e2ca0fcacd0a0418 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
+	prov:startedAtTime "2026-09-01T10:00:04Z"^^xsd:dateTime .
+<ni:///sha-256;JV04o_YigurDDW07cMDTr4kXoYyhVYIRx75HKqHhdAc> a prov:Entity .
+_:34bc582b338d7434e2ca0fcacd0a0418 a prov:Activity ;
+	prov:used <ni:///sha-256;JV04o_YigurDDW07cMDTr4kXoYyhVYIRx75HKqHhdAc> ;
+	prov:qualifiedAssociation _:93cf0631308dd9a5343464f2efbbebe8 .
+_:93cf0631308dd9a5343464f2efbbebe8 prov:hadPlan _:b910c1d22c5db787aca2ac02aa9c4cc4 .
+_:b910c1d22c5db787aca2ac02aa9c4cc4 a prov:Plan ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "fhir-r4" ;
+	pav:version "0.1.0" .
+_:93cf0631308dd9a5343464f2efbbebe8 prov:agent _:1c20868f498a7342ab38913dbfb85efc .
+_:1c20868f498a7342ab38913dbfb85efc a prov:SoftwareAgent ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Cascade Bridge for Rust" ;
+	pav:version "0.1.0" .
