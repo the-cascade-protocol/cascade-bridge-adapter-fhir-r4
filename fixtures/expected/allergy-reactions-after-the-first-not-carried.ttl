@@ -1,0 +1,61 @@
+@prefix bridge: <https://ns.cascadeprotocol.org/bridge/v1-draft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cascade: <https://ns.cascadeprotocol.org/cascade#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix pav: <http://purl.org/pav/> .
+<ni:///sha-256;A3PO_KDo7au4GLI5ITvXQGnphyCrIM5B3RVrteyMnQE> cascade:allergenName "Peanut" ;
+	cascade:allergenCode <http://snomed.info/id/91935009> ;
+	cascade:clinicalStatus "active" ;
+	cascade:allergyType "allergy" ;
+	cascade:allergyCriticality "high" ;
+	cascade:allergyCategory "food" ;
+	cascade:onsetDate "2019-03-14"^^xsd:date ;
+	cascade:reactionManifestationText "Itchy eyes" , "Wheezing" , "Anaphylaxis" , "Hives" ;
+	cascade:reactionManifestationCode <http://snomed.info/id/39579001> , <http://snomed.info/id/247472004> ;
+	cascade:allergySeverity "mild" .
+<urn:uuid:6e393e1f-98bf-8bd7-825d-4d0ac73d19d0> a cascade:AllergyOrIntolerance ;
+	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/AllergyIntolerance/alg-peanut-reactions> ;
+	cascade:sourceRecordId "alg-peanut-reactions" .
+<ni:///sha-256;A3PO_KDo7au4GLI5ITvXQGnphyCrIM5B3RVrteyMnQE> prov:specializationOf <urn:uuid:6e393e1f-98bf-8bd7-825d-4d0ac73d19d0> ;
+	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
+_:fd409e342f8d9a2ae66f57c7ed446742 bridge:arrivedAs <ni:///sha-256;A3PO_KDo7au4GLI5ITvXQGnphyCrIM5B3RVrteyMnQE> ;
+	oa:hasSelector _:534c3ce433abd85eb88c916583bdd15e ;
+	oa:hasSource <ni:///sha-256;Y6DYqM1pM2t8ig6FfDR-wW9t_Z1bWQcgPE4waVqEvro> ;
+	prov:wasDerivedFrom <ni:///sha-256;Y6DYqM1pM2t8ig6FfDR-wW9t_Z1bWQcgPE4waVqEvro> ;
+	prov:wasGeneratedBy _:5a49fd44ec53cb6cb35eae7199ca37b9 .
+_:534c3ce433abd85eb88c916583bdd15e a oa:FragmentSelector ;
+	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+<ni:///sha-256;Y6DYqM1pM2t8ig6FfDR-wW9t_Z1bWQcgPE4waVqEvro> cascade:serverBaseUrl "https://fhir.meridian.example/api/FHIR/R4" ;
+	pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+	prov:wasGeneratedBy _:ec807d316c71e3325bce9c959aabbd59 ;
+	prov:wasAttributedTo _:4c600759509591047432f603e39858e9 ;
+	cascade:authenticatedPatient "Patient/eM5vN8qTz2Hc4Rk7Jw0Pb3" ;
+	cascade:authenticatedAsProxy false ;
+	cascade:sourceFormatVersion "4.0.1" .
+_:9d7af3f603fb355b84a1bfd621737b02 prov:agent _:4c600759509591047432f603e39858e9 ;
+	prov:hadRole cascade:AuthorRole .
+_:ec807d316c71e3325bce9c959aabbd59 prov:qualifiedAssociation _:9d7af3f603fb355b84a1bfd621737b02 .
+_:adda3bc9bc66b84fe89ae7086a93e400 prov:agent _:39dd1ddd64be4e29b35d4b0a5baeb8dd ;
+	prov:hadRole cascade:TransmitterRole .
+_:ec807d316c71e3325bce9c959aabbd59 prov:qualifiedAssociation _:adda3bc9bc66b84fe89ae7086a93e400 .
+_:4c600759509591047432f603e39858e9 <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
+_:39dd1ddd64be4e29b35d4b0a5baeb8dd <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
+_:5a49fd44ec53cb6cb35eae7199ca37b9 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
+	prov:startedAtTime "2026-09-01T10:00:04Z"^^xsd:dateTime .
+<ni:///sha-256;Y6DYqM1pM2t8ig6FfDR-wW9t_Z1bWQcgPE4waVqEvro> a prov:Entity .
+_:5a49fd44ec53cb6cb35eae7199ca37b9 a prov:Activity ;
+	prov:used <ni:///sha-256;Y6DYqM1pM2t8ig6FfDR-wW9t_Z1bWQcgPE4waVqEvro> ;
+	prov:qualifiedAssociation _:f1861ffae652f79b55741f26362e9c1d .
+_:f1861ffae652f79b55741f26362e9c1d prov:hadPlan _:461af61c570148d8e5e0ebe26b1b66f3 .
+_:461af61c570148d8e5e0ebe26b1b66f3 a prov:Plan ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "fhir-r4" ;
+	pav:version "0.1.0" .
+_:f1861ffae652f79b55741f26362e9c1d prov:agent _:14948857c797b9926470b82a3ce1dcf9 .
+_:14948857c797b9926470b82a3ce1dcf9 a prov:SoftwareAgent ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Cascade Bridge for Rust" ;
+	pav:version "0.1.0" .

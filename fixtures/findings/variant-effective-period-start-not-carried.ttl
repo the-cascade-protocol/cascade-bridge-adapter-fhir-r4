@@ -2,33 +2,33 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:c8a3861eca3ee139f747af001af5109c a oa:FragmentSelector ;
+_:ce89e99abefe375728c33d6fac17abfa a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:f894af642355a7a2ecf214b9c125ec3e oa:hasSource <../in/variant-effective-period-start-not-carried.json> .
-_:c8a3861eca3ee139f747af001af5109c oa:refinedBy _:b5ba7c8d2a94252a41c2d48d56bf052f .
-_:b5ba7c8d2a94252a41c2d48d56bf052f a oa:FragmentSelector ;
+_:ce5d1d5bad48dcbc54d1a696023b8e30 oa:hasSource <../in/variant-effective-period-start-not-carried.json> .
+_:ce89e99abefe375728c33d6fac17abfa oa:refinedBy _:f015e8a2c0d123cc04de727b0fe3c531 .
+_:f015e8a2c0d123cc04de727b0fe3c531 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/effectivePeriod/start" .
-_:f894af642355a7a2ecf214b9c125ec3e oa:hasSelector _:c8a3861eca3ee139f747af001af5109c .
-_:cef5c8a375e7816ac4fcc444a2360300 oa:hasTarget _:f894af642355a7a2ecf214b9c125ec3e .
-_:e2e209b677c4bd359aa098144aa1b50c a oa:FragmentSelector ;
+_:ce5d1d5bad48dcbc54d1a696023b8e30 oa:hasSelector _:ce89e99abefe375728c33d6fac17abfa .
+_:f3facb9483a9a3fe4efae6bd358ea854 oa:hasTarget _:ce5d1d5bad48dcbc54d1a696023b8e30 .
+_:fe2520a593d26d74e52f299e13d48b6d a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:f6f6271276d979b38decc9c21c087663 oa:hasSource <../in/variant-effective-period-start-not-carried.json> .
-_:e2e209b677c4bd359aa098144aa1b50c oa:refinedBy _:b04c8406fb9a5cf5537da0b4fb387c3a .
-_:b04c8406fb9a5cf5537da0b4fb387c3a a oa:FragmentSelector ;
+_:f2f3321af91022c9cb492a19484f98b1 oa:hasSource <../in/variant-effective-period-start-not-carried.json> .
+_:fe2520a593d26d74e52f299e13d48b6d oa:refinedBy _:ad6766b908523cc7d7fb55b5799145bd .
+_:ad6766b908523cc7d7fb55b5799145bd a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/effectivePeriod/end" .
-_:f6f6271276d979b38decc9c21c087663 oa:hasSelector _:e2e209b677c4bd359aa098144aa1b50c .
-_:cd6503a0c2feec3d5be30535ca84f965 oa:hasTarget _:f6f6271276d979b38decc9c21c087663 .
-_:cef5c8a375e7816ac4fcc444a2360300 sh:resultSeverity sh:Info .
-_:cd6503a0c2feec3d5be30535ca84f965 sh:resultSeverity sh:Info .
-_:cef5c8a375e7816ac4fcc444a2360300 a oa:Annotation ;
+_:f2f3321af91022c9cb492a19484f98b1 oa:hasSelector _:fe2520a593d26d74e52f299e13d48b6d .
+_:f9768374be67671dcaefaf4382d87a55 oa:hasTarget _:f2f3321af91022c9cb492a19484f98b1 .
+_:f3facb9483a9a3fe4efae6bd358ea854 sh:resultSeverity sh:Info .
+_:f9768374be67671dcaefaf4382d87a55 sh:resultSeverity sh:Info .
+_:f3facb9483a9a3fe4efae6bd358ea854 a oa:Annotation ;
 	oa:hasBody fhirr4:variantTimeNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2026-09-29T07:30:00Z" .
-_:cd6503a0c2feec3d5be30535ca84f965 a oa:Annotation ;
-	oa:hasBody fhirr4:variantTimeNotCarried ;
+_:f9768374be67671dcaefaf4382d87a55 a oa:Annotation ;
+	oa:hasBody fhirr4:effectivePeriodEndNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2026-09-30T07:30:00Z" .

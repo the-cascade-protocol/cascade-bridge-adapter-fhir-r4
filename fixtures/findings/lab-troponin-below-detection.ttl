@@ -2,63 +2,63 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:a9e80ae4a6442724d382a757e8fabb67 a oa:FragmentSelector ;
+_:ccc4703d23201d2c1df201537de4e263 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:e1aaf49a8dcbc46ace01d631d030c19a a oa:FragmentSelector ;
+_:a81cb1c8f826eaf316a495bc44dc1c17 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/interpretation/1/text" .
-_:a9e80ae4a6442724d382a757e8fabb67 oa:refinedBy _:e1aaf49a8dcbc46ace01d631d030c19a .
-_:e26cd4c91146cfee9ac55a9d8d87a38b a oa:Annotation ;
-	oa:hasTarget _:cf769d0ebd29026ef30f35c30a8bd0b1 .
-_:cf769d0ebd29026ef30f35c30a8bd0b1 oa:hasSource <../in/lab-troponin-below-detection.json> ;
-	oa:hasSelector _:a9e80ae4a6442724d382a757e8fabb67 .
-_:e26cd4c91146cfee9ac55a9d8d87a38b oa:hasBody fhirr4:codedValueText ;
+_:ccc4703d23201d2c1df201537de4e263 oa:refinedBy _:a81cb1c8f826eaf316a495bc44dc1c17 .
+_:e201e732f9c9b1486bc7ea60ec3a88ab a oa:Annotation ;
+	oa:hasTarget _:a68cd6405ddd5890752c5bf37596b2f .
+_:a68cd6405ddd5890752c5bf37596b2f oa:hasSource <../in/lab-troponin-below-detection.json> ;
+	oa:hasSelector _:ccc4703d23201d2c1df201537de4e263 .
+_:e201e732f9c9b1486bc7ea60ec3a88ab oa:hasBody fhirr4:codedValueText ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "/interpretation/text" ;
 	sh:resultSeverity sh:Info .
-_:ff6245fe779ac4b27574a79dd90724ff a oa:FragmentSelector ;
+_:fb89038c622d07c6d65ef56aae4b319a a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:fd9ffb724d7eb3e4c16b5f3bdd1eb731 oa:hasSource <../in/lab-troponin-below-detection.json> .
-_:ff6245fe779ac4b27574a79dd90724ff oa:refinedBy _:aba867e34a49c8ec476bed316aa76be .
-_:aba867e34a49c8ec476bed316aa76be a oa:FragmentSelector ;
+_:cf7d7d306529dc90d28bc687e89173a5 oa:hasSource <../in/lab-troponin-below-detection.json> .
+_:fb89038c622d07c6d65ef56aae4b319a oa:refinedBy _:ee34765f61331e1fbdef75d148499ac3 .
+_:ee34765f61331e1fbdef75d148499ac3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/effectivePeriod/end" .
-_:fd9ffb724d7eb3e4c16b5f3bdd1eb731 oa:hasSelector _:ff6245fe779ac4b27574a79dd90724ff .
-_:e5cb8244ec0796dbb5fef1edda2f5ed8 oa:hasTarget _:fd9ffb724d7eb3e4c16b5f3bdd1eb731 .
-_:fee47228c2897a6e216f476256b92f70 a oa:FragmentSelector ;
+_:cf7d7d306529dc90d28bc687e89173a5 oa:hasSelector _:fb89038c622d07c6d65ef56aae4b319a .
+_:b612ae110eb6788f2ff9ae7116e30ade oa:hasTarget _:cf7d7d306529dc90d28bc687e89173a5 .
+_:dd6be7b404b713bdd34fe34f8125bbef a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:e1b4e8acf2dfa3e6fd8030e591ec8c oa:hasSource <../in/lab-troponin-below-detection.json> .
-_:fee47228c2897a6e216f476256b92f70 oa:refinedBy _:a187336eb99c8997e705271960df4f58 .
-_:a187336eb99c8997e705271960df4f58 a oa:FragmentSelector ;
+_:abf58405dd149a4eca5475d84cf10edb oa:hasSource <../in/lab-troponin-below-detection.json> .
+_:dd6be7b404b713bdd34fe34f8125bbef oa:refinedBy _:e087148f44abaa847ea3aed47f1f530b .
+_:e087148f44abaa847ea3aed47f1f530b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/referenceRange/1/text" .
-_:e1b4e8acf2dfa3e6fd8030e591ec8c oa:hasSelector _:fee47228c2897a6e216f476256b92f70 .
-_:fcbfb6ee843114c30f3340da3bfb4938 oa:hasTarget _:e1b4e8acf2dfa3e6fd8030e591ec8c .
-_:f1d9449129dfa6d4757d2783994db99 a oa:FragmentSelector ;
+_:abf58405dd149a4eca5475d84cf10edb oa:hasSelector _:dd6be7b404b713bdd34fe34f8125bbef .
+_:f6d2714f778f73426186224bccca95d2 oa:hasTarget _:abf58405dd149a4eca5475d84cf10edb .
+_:a04f2552f0176007a9ae6abc4349cff3 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:bf702612024707e1ab0a9011704a0a40 oa:hasSource <../in/lab-troponin-below-detection.json> .
-_:f1d9449129dfa6d4757d2783994db99 oa:refinedBy _:af66b1c7849402cbc64cdadcc3671afe .
-_:af66b1c7849402cbc64cdadcc3671afe a oa:FragmentSelector ;
+_:ce46806f603852e756fc4fea9932b3e5 oa:hasSource <../in/lab-troponin-below-detection.json> .
+_:a04f2552f0176007a9ae6abc4349cff3 oa:refinedBy _:a299b9ca89b2aba667374362a80b4c22 .
+_:a299b9ca89b2aba667374362a80b4c22 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/referenceRange/1/high/value" .
-_:bf702612024707e1ab0a9011704a0a40 oa:hasSelector _:f1d9449129dfa6d4757d2783994db99 .
-_:e394437aaad2a0766346ad5b18d435f2 oa:hasTarget _:bf702612024707e1ab0a9011704a0a40 .
-_:e5cb8244ec0796dbb5fef1edda2f5ed8 sh:resultSeverity sh:Info .
-_:fcbfb6ee843114c30f3340da3bfb4938 sh:resultSeverity sh:Warning .
-_:e394437aaad2a0766346ad5b18d435f2 sh:resultSeverity sh:Warning .
-_:e5cb8244ec0796dbb5fef1edda2f5ed8 a oa:Annotation ;
-	oa:hasBody fhirr4:labResultPeriodEnd ;
+_:ce46806f603852e756fc4fea9932b3e5 oa:hasSelector _:a04f2552f0176007a9ae6abc4349cff3 .
+_:fe6792db16c0d83d064c72d830fce2f0 oa:hasTarget _:ce46806f603852e756fc4fea9932b3e5 .
+_:b612ae110eb6788f2ff9ae7116e30ade sh:resultSeverity sh:Info .
+_:f6d2714f778f73426186224bccca95d2 sh:resultSeverity sh:Warning .
+_:fe6792db16c0d83d064c72d830fce2f0 sh:resultSeverity sh:Warning .
+_:b612ae110eb6788f2ff9ae7116e30ade a oa:Annotation ;
+	oa:hasBody fhirr4:effectivePeriodEndNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "2026-05-02T07:55:00-04:00" .
-_:fcbfb6ee843114c30f3340da3bfb4938 a oa:Annotation ;
+_:f6d2714f778f73426186224bccca95d2 a oa:Annotation ;
 	oa:hasBody fhirr4:labResultRangeRepeated ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Women: up to 0.03 ng/mL" .
-_:e394437aaad2a0766346ad5b18d435f2 a oa:Annotation ;
+_:fe6792db16c0d83d064c72d830fce2f0 a oa:Annotation ;
 	oa:hasBody fhirr4:labResultRangeRepeated ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "0.03" .
