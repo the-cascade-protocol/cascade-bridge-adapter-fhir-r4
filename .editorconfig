@@ -12,8 +12,9 @@ indent_size = 2
 [*.md]
 trim_trailing_whitespace = false
 
-# Digested files: an editor must not touch a byte of these, or the digests in
-# ro-crate-metadata.json stop being true.
-[{schema/*,in/sparql/*,fixtures/in/*,fixtures/facts/*,fixtures/expected/*,fixtures/findings/*}]
+# An editor must not touch a byte of a copied file, or its checksum in
+# ro-crate-metadata.json stops being true. Copied and written-here files share
+# schema/ and fixtures/in/, so it touches none of them.
+[{schema/*,fixtures/in/*}]
 insert_final_newline = false
 trim_trailing_whitespace = false

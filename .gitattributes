@@ -2,11 +2,10 @@
 # so the bytes a Linux Bridge reads are the bytes a Windows editor wrote.
 * text=auto eol=lf
 
-# Digested files. Their bytes must keep matching the digests recorded in
-# ro-crate-metadata.json, so git must never normalise them.
+# A copied file's bytes must keep matching the checksum recorded in
+# ro-crate-metadata.json. Copied and written-here files share schema/ and
+# fixtures/in/, so git normalises none of them. No other folder holds a copied
+# file.
 schema/**             -text
 fixtures/in/**        -text
-fixtures/expected/**  -text
-fixtures/findings/**  -text
-fixtures/facts/**     -text
 bench/*.gz            -text
