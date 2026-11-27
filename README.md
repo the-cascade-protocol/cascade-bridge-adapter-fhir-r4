@@ -15,8 +15,8 @@ thing that runs it is a Bridge.
 
 ## Docs
 
-- [The Cascade hub](https://the-cascade-protocol.github.io/cascade-runtime-js/): where to go for each thing, and every repository.
-- [This adapter's crosswalk](https://the-cascade-protocol.github.io/cascade-runtime-js/adapters/fhir-r4/): this adapter's crosswalk and what it drops.
+- [The Cascade hub](https://reference.cascadeprotocol.org/): where to go for each thing, and every repository.
+- [This adapter's crosswalk](https://reference.cascadeprotocol.org/adapters/fhir-r4/): this adapter's crosswalk and what it drops.
 
 ## Layout
 
