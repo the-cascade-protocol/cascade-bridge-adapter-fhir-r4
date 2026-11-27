@@ -38,12 +38,13 @@ _:149012f2aef2c79275d887dc34a6ac23 a oa:FragmentSelector ;
 <ni:///sha-256;K1ZzkwqM1bi1egK7ULitJhxAQtloSPw4BPCT4rXtwoY> prov:specializationOf <urn:uuid:ef5acc4e-c91b-8a72-a2af-574f272ae25c> ;
 	cascade:patient <urn:uuid:55abcf6c-2eb3-8670-8d12-d344e6d33e8f> .
 _:b010e9180faeb6fad844ffeb32f6a292 bridge:arrivedAs <ni:///sha-256;K1ZzkwqM1bi1egK7ULitJhxAQtloSPw4BPCT4rXtwoY> .
-<urn:uuid:537918e1-0abf-837b-8ac7-5975ce0e87da> a cascade:GeneticVariantFinding .
+<urn:uuid:537918e1-0abf-837b-8ac7-5975ce0e87da> a cascade:GeneticVariantFinding ;
+	cascade:sourceRecordId "variant-unread-2" .
 <ni:///sha-256;tXXDd1EImhpQTelusexi7lBpVqZGZnfW9qJFMrBd_hU> prov:specializationOf <urn:uuid:537918e1-0abf-837b-8ac7-5975ce0e87da> ;
 	cascade:patient <urn:uuid:55abcf6c-2eb3-8670-8d12-d344e6d33e8f> .
 _:929245553a58705a07fdfc801eb8fffa bridge:arrivedAs <ni:///sha-256;tXXDd1EImhpQTelusexi7lBpVqZGZnfW9qJFMrBd_hU> ;
-	oa:hasSelector _:a0ee0a30ea892b176db977a440575547 .
-_:a0ee0a30ea892b176db977a440575547 a oa:FragmentSelector ;
+	oa:hasSelector _:faec6ccb608572d0489ab4f31e5fe8a7 .
+_:faec6ccb608572d0489ab4f31e5fe8a7 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/2/resource/contained/0" .
 <ni:///sha-256;K1ZzkwqM1bi1egK7ULitJhxAQtloSPw4BPCT4rXtwoY> cascade:acmgClassification cascade:Pathogenic ;

@@ -59,7 +59,8 @@ _:3b5b8358486b0acf6ac7f10ff335049a a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/3" .
 <urn:uuid:5a27263d-270b-8a7e-84aa-393ee6fb0eb1> a cascade:GeneticVariantFinding ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/discrete-variant> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/discrete-variant> ;
+	cascade:sourceRecordId "discrete-variant" .
 <ni:///sha-256;49_JQqta3daNCiPeaMCRYa9Gc6sJkl2QHKk_AO4EaBo> prov:specializationOf <urn:uuid:5a27263d-270b-8a7e-84aa-393ee6fb0eb1> ;
 	cascade:patient <urn:uuid:578d95d0-f38a-8c54-95d4-3ab764e59f21> .
 _:7a08a0a2bf89a904d1c511c77dc22561 bridge:arrivedAs <ni:///sha-256;49_JQqta3daNCiPeaMCRYa9Gc6sJkl2QHKk_AO4EaBo> .
@@ -75,7 +76,8 @@ _:454f69703330293c7aeebb2be8b0559a a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
 <urn:uuid:dc583197-0fb3-8f76-988c-2bf7d538476c> a cascade:VariantInterpretation ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/dis-path> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/dis-path> ;
+	cascade:sourceRecordId "dis-path" .
 <ni:///sha-256;Usd1C3BAdYem3qjt5OvfQtG0HOm77_P0QF492feKE2M> prov:specializationOf <urn:uuid:dc583197-0fb3-8f76-988c-2bf7d538476c> ;
 	cascade:patient <urn:uuid:578d95d0-f38a-8c54-95d4-3ab764e59f21> .
 _:1c77f7efa605f4deddcbe2136f2bec8 bridge:arrivedAs <ni:///sha-256;Usd1C3BAdYem3qjt5OvfQtG0HOm77_P0QF492feKE2M> .
@@ -92,7 +94,8 @@ _:b5e4ada9f2f2c820af98dbeea7289f77 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/6" .
 <urn:uuid:cc01d168-e795-8c4c-bd85-e037c82914e5> a cascade:GeneticVariantFinding ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/complex-variant> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/complex-variant> ;
+	cascade:sourceRecordId "complex-variant" .
 <ni:///sha-256;IlYeuokWGofLf92UmqXXjZ5F75RZfSxfGnXZhmd40Ac> prov:specializationOf <urn:uuid:cc01d168-e795-8c4c-bd85-e037c82914e5> ;
 	cascade:patient <urn:uuid:578d95d0-f38a-8c54-95d4-3ab764e59f21> .
 _:2bf9c0be3a2a560b211b8296c8d3a41e bridge:arrivedAs <ni:///sha-256;IlYeuokWGofLf92UmqXXjZ5F75RZfSxfGnXZhmd40Ac> .
@@ -105,7 +108,8 @@ _:50005717cafd98e21f333a2cd82422a2 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/7" .
 <urn:uuid:c73c3c72-9611-8100-9ef6-ba6a2d921254> a cascade:VariantInterpretation ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/complex-dis-path> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/complex-dis-path> ;
+	cascade:sourceRecordId "complex-dis-path" .
 <ni:///sha-256;_-oxNLambgPdp203n2VxRVblect5VShRKhN-QBYj9pI> prov:specializationOf <urn:uuid:c73c3c72-9611-8100-9ef6-ba6a2d921254> ;
 	cascade:patient <urn:uuid:578d95d0-f38a-8c54-95d4-3ab764e59f21> .
 _:a367492a4bfcc2cf493e8fa6657b8752 bridge:arrivedAs <ni:///sha-256;_-oxNLambgPdp203n2VxRVblect5VShRKhN-QBYj9pI> .
@@ -122,7 +126,8 @@ _:42df45f9fefc00a9939d9b02c08a0154 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/8" .
 <urn:uuid:382e8a87-8258-8f75-8744-a464ab3a4919> a cascade:GeneticVariantFinding ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/complex-component-D> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/complex-component-D> ;
+	cascade:sourceRecordId "complex-component-D" .
 <ni:///sha-256;QEm-9RiivKq9XgVQC3WYhMHQfCeq3cJxILcLsx0YWfE> prov:specializationOf <urn:uuid:382e8a87-8258-8f75-8744-a464ab3a4919> ;
 	cascade:patient <urn:uuid:578d95d0-f38a-8c54-95d4-3ab764e59f21> .
 _:2393cda59c612a6abd2ebdc24f2a7f31 bridge:arrivedAs <ni:///sha-256;QEm-9RiivKq9XgVQC3WYhMHQfCeq3cJxILcLsx0YWfE> .
@@ -137,7 +142,8 @@ _:520d5734c16b2c61ed52106076842a6d a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/9" .
 <urn:uuid:2bf9a649-06a9-8e7d-a44e-e9807c28df20> a cascade:GeneticVariantFinding ;
-	cascade:sourceUrl <http://example.org/fhir/Observation/complex-component-E> .
+	cascade:sourceUrl <http://example.org/fhir/Observation/complex-component-E> ;
+	cascade:sourceRecordId "complex-component-E" .
 <ni:///sha-256;VsdDf6KJJiHeosQRYZFDULOmjLrY0ziFK7FwN8LL5F8> prov:specializationOf <urn:uuid:2bf9a649-06a9-8e7d-a44e-e9807c28df20> ;
 	cascade:patient <urn:uuid:578d95d0-f38a-8c54-95d4-3ab764e59f21> .
 _:6aeaa0370135b919b6b96b9be86b8de6 bridge:arrivedAs <ni:///sha-256;VsdDf6KJJiHeosQRYZFDULOmjLrY0ziFK7FwN8LL5F8> .

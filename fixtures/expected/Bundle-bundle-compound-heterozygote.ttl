@@ -8,7 +8,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix pav: <http://purl.org/pav/> .
-<urn:uuid:0bfad897-353b-8f23-b8b9-6f17f8b292e7> a cascade:GeneticVariantFinding .
+<urn:uuid:0bfad897-353b-8f23-b8b9-6f17f8b292e7> a cascade:GeneticVariantFinding ;
+	cascade:sourceRecordId "Inline-Instance-for-compound-heterozygote-1" .
 <ni:///sha-256;cbmZiipbqmhaOjxkRQcUhuB3b-cpdyTaieh8dOLSOvQ> prov:specializationOf <urn:uuid:0bfad897-353b-8f23-b8b9-6f17f8b292e7> ;
 	cascade:patient <urn:uuid:afbce8ca-06af-8140-a016-dcb382fe189f> .
 _:ca3e490326293c54cee4ba319b06d77 bridge:arrivedAs <ni:///sha-256;cbmZiipbqmhaOjxkRQcUhuB3b-cpdyTaieh8dOLSOvQ> .
@@ -21,7 +22,8 @@ _:ca3e490326293c54cee4ba319b06d77 oa:hasSelector _:409f5c644e60a658c980bec0b76fc
 _:409f5c644e60a658c980bec0b76fc70 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-<urn:uuid:ddcb3d4e-3930-8dab-b04b-51e8a3d99898> a cascade:GeneticVariantFinding .
+<urn:uuid:ddcb3d4e-3930-8dab-b04b-51e8a3d99898> a cascade:GeneticVariantFinding ;
+	cascade:sourceRecordId "Inline-Instance-for-compound-heterozygote-2" .
 <ni:///sha-256;AJd_6hR7zN3aqiRZ_c8Q1weDpSi0LOLmbsRMdsvJbX0> prov:specializationOf <urn:uuid:ddcb3d4e-3930-8dab-b04b-51e8a3d99898> ;
 	cascade:patient <urn:uuid:afbce8ca-06af-8140-a016-dcb382fe189f> .
 _:7b9aa403f027f307077116b95584c5b2 bridge:arrivedAs <ni:///sha-256;AJd_6hR7zN3aqiRZ_c8Q1weDpSi0LOLmbsRMdsvJbX0> .
