@@ -4030,19 +4030,22 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -4814,27 +4817,27 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/rank" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/system" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/use" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/value" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/text" ;
@@ -7895,22 +7898,25 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -12376,19 +12382,22 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -13160,27 +13169,27 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/rank" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/system" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/use" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/value" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/text" ;
@@ -16237,22 +16246,25 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/name/family" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:familyName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/name/given" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:givenName ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/name/text" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernIdentity ;
+  bridge:namesGap fhirr4:patientNameRepeated ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Patient" ; bridge:inRecordClass cascade:PatientProfile ; bridge:asProperty foaf:name ] .
 
@@ -16981,31 +16993,31 @@
   bridge:sourcePath "/resource/telecom" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/rank" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/use" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/value" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/text" ;
@@ -17642,31 +17654,31 @@
   bridge:sourcePath "/telecom" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/rank" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/use" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/value" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/text" ;

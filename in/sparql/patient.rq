@@ -6,7 +6,9 @@ PREFIX bridge:   <https://ns.cascadeprotocol.org/bridge/v1-draft#>
 PREFIX cascade:  <https://ns.cascadeprotocol.org/cascade#>
 PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
 
-# Only the first name a Patient states is carried: the vocabulary holds one.
+# Only the first name a Patient states is carried, and of it the first given name that
+# is not blank: the vocabulary holds one of each, and writes no blank name.
+# patient-findings.rq reports the rest.
 # A birth date is typed by the precision FHIR wrote it to: a year is an
 # xsd:gYear, a year and month an xsd:gYearMonth, a day an xsd:date. A gender is
 # carried only as one of the four codes its required binding allows; any other
@@ -47,16 +49,25 @@ WHERE {
 
   {
     ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:family ?o .
+    FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
     BIND (foaf:familyName AS ?p)
   }
   UNION
   {
-    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:given ?given . ?given rdf:_1 ?o .
+    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:given ?given . ?given ?givenSlot ?o .
+    FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_)) && REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+    FILTER NOT EXISTS {
+      ?given ?earlierSlot ?earlier .
+      FILTER (STRSTARTS(STR(?earlierSlot), STR(rdf:_))
+              && xsd:integer(STRAFTER(STR(?earlierSlot), "#_")) < xsd:integer(STRAFTER(STR(?givenSlot), "#_"))
+              && REPLACE(STR(?earlier), "^\\s+|\\s+$", "") != "")
+    }
     BIND (foaf:givenName AS ?p)
   }
   UNION
   {
     ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:text ?o .
+    FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
     BIND (foaf:name AS ?p)
   }
   UNION
