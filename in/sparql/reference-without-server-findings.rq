@@ -46,10 +46,14 @@ WHERE {
   BIND (CONCAT(?topStep, ?containedStep) AS ?resourcePointer)
   ?resource xyz:resourceType ?type .
   FILTER (?type IN ("AllergyIntolerance", "Condition", "Immunization", "Procedure", "Patient",
-                    "MedicationRequest", "MedicationStatement", "MedicationDispense", "Observation"))
-  FILTER (?type != "Observation" || EXISTS {
-    ?lab fhirr4:labResultAt ?labPointer .
-    FILTER (?labPointer = CONCAT(?recordSelector, ?resourcePointer))
+                    "MedicationRequest", "MedicationStatement", "MedicationDispense", "Observation",
+                    "DiagnosticReport", "DocumentReference"))
+  FILTER (!(?type IN ("Observation", "DocumentReference")) || EXISTS {
+    { ?lab fhirr4:labResultAt ?recordPointer }
+    UNION { ?variantRow fhirr4:variantAt ?recordPointer }
+    UNION { ?interpretationRow fhirr4:interpretationAt ?recordPointer }
+    UNION { ?note fhirr4:noteOrDocumentAt ?recordPointer }
+    FILTER (?recordPointer = CONCAT(?recordSelector, ?resourcePointer))
   })
   ?resource ?member ?reference .
   FILTER (?member IN (xyz:patient, xyz:subject))
