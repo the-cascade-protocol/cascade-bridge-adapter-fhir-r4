@@ -451,7 +451,7 @@ As cascade-vocabulary says, read on 2026-10-24:
   the data-absent-reason extension, has no `cascade:conditionCode` or
   `cascade:procedureCode`: the reason is a `cascade:ValueAbsentForReason` node
   naming that property, one `cascade:absentReasonCode` for each such coding, a code the
-  CodeSystem does not define being a finding. Beside a coding in any other system those
+  CodeSystem does not define being a finding, at the coding's system and at its code. Beside a coding in any other system those
   codings are dropped, since a code of the condition is not a reason it has none. An
   absent-reason coding beside a real code is dropped with no finding, so only the real codes are written, and
   that coding is not carried by `/code/coding/code`.
@@ -476,7 +476,8 @@ lists as not preferred are read as the system's URI, the rows of
 [`vocab/fhir-code-systems.ttl`](../vocab/fhir-code-systems.ttl) the C-CDA
 adapter holds too, so one code from either adapter is one term; an OID no row
 holds is `urn:oid:` and the OID. A coding with no system, a system that is no
-absolute URI, or no code is a finding, `fhirr4:codingNotCarried`. A lab result's interpretation is carried as every coding in HL7's
+absolute URI, or no code is a finding, `fhirr4:codingNotCarried`, at the part that fails, and at a code that is
+dropped with a system no row reads. A lab result's interpretation is carried as every coding in HL7's
 [v3 ObservationInterpretation](https://terminology.hl7.org/CodeSystem-v3-ObservationInterpretation.html),
 the code kept as written
 ([cascade-vocabulary#298](https://github.com/the-cascade-protocol/cascade-vocabulary/issues/298));
