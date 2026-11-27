@@ -144,7 +144,13 @@ WHERE {
   }
   UNION
   {
-    ?resource xyz:reaction ?reactions . ?reactions rdf:_1 ?reaction . ?reaction xyz:severity ?o .
+    ?resource xyz:reaction ?reactions . ?reactions ?reactionSlot ?reaction . ?reaction xyz:severity ?o .
+    FILTER (STRSTARTS(STR(?reactionSlot), STR(rdf:_)))
+    FILTER NOT EXISTS {
+      ?reactions ?earlierReactionSlot ?earlierReaction . ?earlierReaction xyz:severity ?earlierSeverity .
+      FILTER (STRSTARTS(STR(?earlierReactionSlot), STR(rdf:_))
+              && xsd:integer(STRAFTER(STR(?earlierReactionSlot), "#_")) < xsd:integer(STRAFTER(STR(?reactionSlot), "#_")))
+    }
     BIND (cascade:allergySeverity AS ?p)
   }
   UNION

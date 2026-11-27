@@ -104,10 +104,19 @@ WHERE {
   }
   UNION
   {
-    ?resource xyz:category ?categories . ?categories rdf:_1 ?category .
+    ?resource xyz:category ?categories . ?categories ?categorySlot ?category .
+    FILTER (STRSTARTS(STR(?categorySlot), STR(rdf:_)))
     ?category xyz:coding ?codings . ?codings ?codingSlot ?coding .
     ?coding xyz:system "http://terminology.hl7.org/CodeSystem/condition-category" ;
       xyz:code ?o .
+    FILTER NOT EXISTS {
+      ?categories ?earlierCategorySlot ?earlierCategory .
+      FILTER (STRSTARTS(STR(?earlierCategorySlot), STR(rdf:_))
+              && xsd:integer(STRAFTER(STR(?earlierCategorySlot), "#_")) < xsd:integer(STRAFTER(STR(?categorySlot), "#_")))
+      ?earlierCategory xyz:coding ?earlierCodings . ?earlierCodings ?earlierCodingSlot ?earlierCoding .
+      ?earlierCoding xyz:system "http://terminology.hl7.org/CodeSystem/condition-category" ;
+        xyz:code ?earlierCode .
+    }
     BIND (cascade:conditionCategory AS ?p)
   }
   UNION
