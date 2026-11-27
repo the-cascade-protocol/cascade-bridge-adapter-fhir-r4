@@ -12099,6 +12099,14 @@
     [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty org:identifier ] .
 
 [] a bridge:PathEntry ;
+  bridge:sourcePath "/resource/contained/identifier/system" ;
+  bridge:verdict bridge:carriedInPart ;
+  bridge:namesGap fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly ;
+  bridge:carriedAs
+    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:LaboratoryTestResult ; bridge:asProperty dct:identifier ] ,
+    [ bridge:inSourceRecordType "Organization" ; bridge:inRecordClass cascade:Organization ; bridge:asProperty org:identifier ] .
+
+[] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/identifier/value" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:namesGap fhirr4:identifierCarriedForLabResultsAndOrganizationsOnly ;
