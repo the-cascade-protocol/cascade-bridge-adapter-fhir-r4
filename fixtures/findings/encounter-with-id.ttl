@@ -2,16 +2,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:bfcfa7c92380c9969096b2b9a2ca9245 a oa:FragmentSelector ;
+_:d13949bcd753761db923d4680790f268 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:b35faff30059141ec2cd7bc6050d776d oa:hasSource <../in/encounter-with-id.json> .
-_:bfcfa7c92380c9969096b2b9a2ca9245 oa:refinedBy _:de0a743eb2cf680e5a967d0c3010ee38 .
-_:de0a743eb2cf680e5a967d0c3010ee38 a oa:FragmentSelector ;
+_:a68b5a3dbbdf26c9e971fc8b403860da oa:hasSource <../in/encounter-with-id.json> .
+_:d13949bcd753761db923d4680790f268 oa:refinedBy _:b473cf38dd53df70558eca68a94d24 .
+_:b473cf38dd53df70558eca68a94d24 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resourceType" .
-_:b35faff30059141ec2cd7bc6050d776d oa:hasSelector _:bfcfa7c92380c9969096b2b9a2ca9245 .
-_:eb652840e457383748d621a6101135a oa:hasTarget _:b35faff30059141ec2cd7bc6050d776d ;
+	rdf:value "" .
+_:a68b5a3dbbdf26c9e971fc8b403860da oa:hasSelector _:d13949bcd753761db923d4680790f268 .
+_:dc18232ff2baaf81aaf681371d21c023 oa:hasTarget _:a68b5a3dbbdf26c9e971fc8b403860da ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;

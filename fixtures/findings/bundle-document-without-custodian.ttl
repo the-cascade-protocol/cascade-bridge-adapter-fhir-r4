@@ -2,46 +2,46 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:a20333417f4ded20e2562456fd9284c2 a oa:FragmentSelector ;
+_:c8e6add3c137b42344a20f10bf5fa042 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:f25f9f681cb8c446a6df3b94c267edde oa:hasSource <../in/bundle-document-without-custodian.json> .
-_:a20333417f4ded20e2562456fd9284c2 oa:refinedBy _:ede67a17b8be732320c100f64542b849 .
-_:ede67a17b8be732320c100f64542b849 a oa:FragmentSelector ;
+_:de8bb7f754cf8958b734d056a63579e9 oa:hasSource <../in/bundle-document-without-custodian.json> .
+_:c8e6add3c137b42344a20f10bf5fa042 oa:refinedBy _:b74bfe8653bb99332ad1e6be4fde0d95 .
+_:b74bfe8653bb99332ad1e6be4fde0d95 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:f25f9f681cb8c446a6df3b94c267edde oa:hasSelector _:a20333417f4ded20e2562456fd9284c2 .
-_:e6cc405ae872d36ad344e61059d780de oa:hasTarget _:f25f9f681cb8c446a6df3b94c267edde ;
+	rdf:value "/resource" .
+_:de8bb7f754cf8958b734d056a63579e9 oa:hasSelector _:c8e6add3c137b42344a20f10bf5fa042 .
+_:a96156234d6c7ac3511e807509618ee5 oa:hasTarget _:de8bb7f754cf8958b734d056a63579e9 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Composition" .
-_:dded3d8de6a72ed3696dd363cc451e92 a oa:FragmentSelector ;
+_:e790f22996a2d1a10438be17e1e663d6 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/2" .
-_:f16609850dc6676b212d7ac47f76d1a7 oa:hasSource <../in/bundle-document-without-custodian.json> .
-_:dded3d8de6a72ed3696dd363cc451e92 oa:refinedBy _:f97ddaf541d3222fd4b9433fb8b18510 .
-_:f97ddaf541d3222fd4b9433fb8b18510 a oa:FragmentSelector ;
+_:ef3a21720cf7da9b8978fedab5ea0466 oa:hasSource <../in/bundle-document-without-custodian.json> .
+_:e790f22996a2d1a10438be17e1e663d6 oa:refinedBy _:f84315e5c09fe46d7c3f690fadc11449 .
+_:f84315e5c09fe46d7c3f690fadc11449 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:f16609850dc6676b212d7ac47f76d1a7 oa:hasSelector _:dded3d8de6a72ed3696dd363cc451e92 .
-_:ac169b96146ce82c69d71d40b57f2647 oa:hasTarget _:f16609850dc6676b212d7ac47f76d1a7 ;
+	rdf:value "/resource" .
+_:ef3a21720cf7da9b8978fedab5ea0466 oa:hasSelector _:e790f22996a2d1a10438be17e1e663d6 .
+_:e0cde33488ff9607940a9b04a8b23f34 oa:hasTarget _:ef3a21720cf7da9b8978fedab5ea0466 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Organization" .
-_:fed008bbaf6fdc97e4ef9e9f0f319664 a oa:FragmentSelector ;
+_:b9961c996d4c50cfc2e702d2bb8196ab a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/3" .
-_:df6065890483e4cb76527e92bf85e899 oa:hasSource <../in/bundle-document-without-custodian.json> .
-_:fed008bbaf6fdc97e4ef9e9f0f319664 oa:refinedBy _:e361af53c2ba35d3cdfc9cb045cc8361 .
-_:e361af53c2ba35d3cdfc9cb045cc8361 a oa:FragmentSelector ;
+_:cb42fbc22bae28a031a8baa23ebe9c5e oa:hasSource <../in/bundle-document-without-custodian.json> .
+_:b9961c996d4c50cfc2e702d2bb8196ab oa:refinedBy _:eb107613d7ce281786ecf69e182eaeff .
+_:eb107613d7ce281786ecf69e182eaeff a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:df6065890483e4cb76527e92bf85e899 oa:hasSelector _:fed008bbaf6fdc97e4ef9e9f0f319664 .
-_:a49187cb23a545d41dba1651deace522 oa:hasTarget _:df6065890483e4cb76527e92bf85e899 ;
+	rdf:value "/resource" .
+_:cb42fbc22bae28a031a8baa23ebe9c5e oa:hasSelector _:b9961c996d4c50cfc2e702d2bb8196ab .
+_:a0b4e4571481894ddd7505497bcc2c19 oa:hasTarget _:cb42fbc22bae28a031a8baa23ebe9c5e ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;

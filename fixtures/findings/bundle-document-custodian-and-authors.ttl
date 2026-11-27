@@ -2,46 +2,46 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:ce5eba2be3fd2975897513e71cf1da6 a oa:FragmentSelector ;
+_:fdea61575ff31c2a4e6e0627f8ad5a4b a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:eb8eb8decff761d0830391c00616107d oa:hasSource <../in/bundle-document-custodian-and-authors.json> .
-_:ce5eba2be3fd2975897513e71cf1da6 oa:refinedBy _:bd78550499bf96debd1f3be69493ab59 .
-_:bd78550499bf96debd1f3be69493ab59 a oa:FragmentSelector ;
+_:f97977021999577028e8da88521334fa oa:hasSource <../in/bundle-document-custodian-and-authors.json> .
+_:fdea61575ff31c2a4e6e0627f8ad5a4b oa:refinedBy _:adffa0e0e37509946edf50ddd892faf5 .
+_:adffa0e0e37509946edf50ddd892faf5 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:eb8eb8decff761d0830391c00616107d oa:hasSelector _:ce5eba2be3fd2975897513e71cf1da6 .
-_:a82cfb4e76a2771ed2743b00b89757d8 oa:hasTarget _:eb8eb8decff761d0830391c00616107d ;
+	rdf:value "/resource" .
+_:f97977021999577028e8da88521334fa oa:hasSelector _:fdea61575ff31c2a4e6e0627f8ad5a4b .
+_:ef8323249b3bb8b18e8683bfa65d8e67 oa:hasTarget _:f97977021999577028e8da88521334fa ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Composition" .
-_:c06aa21e336d3a75edd385af89e94186 a oa:FragmentSelector ;
+_:e6a8f443ca1d486781cf52b5b79b09cf a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/4" .
-_:fa09b70a9ddee4abe33fad78e7a19e44 oa:hasSource <../in/bundle-document-custodian-and-authors.json> .
-_:c06aa21e336d3a75edd385af89e94186 oa:refinedBy _:c3c3783a5a0fd28f3b606836d8ac8721 .
-_:c3c3783a5a0fd28f3b606836d8ac8721 a oa:FragmentSelector ;
+_:e8a30ea7133616145239310e37b29c51 oa:hasSource <../in/bundle-document-custodian-and-authors.json> .
+_:e6a8f443ca1d486781cf52b5b79b09cf oa:refinedBy _:ffaa37a8e96ea297b952d59975335392 .
+_:ffaa37a8e96ea297b952d59975335392 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:fa09b70a9ddee4abe33fad78e7a19e44 oa:hasSelector _:c06aa21e336d3a75edd385af89e94186 .
-_:b2bbfdd55b6cdb7d4e6700deeb80090b oa:hasTarget _:fa09b70a9ddee4abe33fad78e7a19e44 ;
+	rdf:value "/resource" .
+_:e8a30ea7133616145239310e37b29c51 oa:hasSelector _:e6a8f443ca1d486781cf52b5b79b09cf .
+_:bf3026f5d21e03bb4686b8ded4e1ad57 oa:hasTarget _:e8a30ea7133616145239310e37b29c51 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Organization" .
-_:a1d1b20fff7e0d0314cb8d862c2d4f23 a oa:FragmentSelector ;
+_:ab97ec4b37082c3a5e5578845359f852 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/5" .
-_:d04c4546e0f050a54a5bcf63021fb07b oa:hasSource <../in/bundle-document-custodian-and-authors.json> .
-_:a1d1b20fff7e0d0314cb8d862c2d4f23 oa:refinedBy _:e1983f5bc99df096a318bf3b4a3d2bfe .
-_:e1983f5bc99df096a318bf3b4a3d2bfe a oa:FragmentSelector ;
+_:f7a3298bee88903d2a461133776584a oa:hasSource <../in/bundle-document-custodian-and-authors.json> .
+_:ab97ec4b37082c3a5e5578845359f852 oa:refinedBy _:f7dd55ba42b6ec134daf7d3f3b96bd63 .
+_:f7dd55ba42b6ec134daf7d3f3b96bd63 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:d04c4546e0f050a54a5bcf63021fb07b oa:hasSelector _:a1d1b20fff7e0d0314cb8d862c2d4f23 .
-_:edcd1202179cbffcf2ad35557d2440f4 oa:hasTarget _:d04c4546e0f050a54a5bcf63021fb07b ;
+	rdf:value "/resource" .
+_:f7a3298bee88903d2a461133776584a oa:hasSelector _:ab97ec4b37082c3a5e5578845359f852 .
+_:c8bbb7d56107ab473f645f98f971d589 oa:hasTarget _:f7a3298bee88903d2a461133776584a ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;

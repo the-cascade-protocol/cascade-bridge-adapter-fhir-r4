@@ -2,16 +2,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:a23e2e624b6cccc824dfc6d4e9da9563 a oa:FragmentSelector ;
+_:f7d0cf603e37cb9ebe2db7e3c5f715fa a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:fd178d761e7ceebb9c493318b6d73dc4 oa:hasSource <../in/document-reference-ccd.json> .
-_:a23e2e624b6cccc824dfc6d4e9da9563 oa:refinedBy _:eeb78b9fd9133b34d36813ab35c79e14 .
-_:eeb78b9fd9133b34d36813ab35c79e14 a oa:FragmentSelector ;
+_:e7b43fa3df8a3b036d1ca8cd8b575d9d oa:hasSource <../in/document-reference-ccd.json> .
+_:f7d0cf603e37cb9ebe2db7e3c5f715fa oa:refinedBy _:ce0d042b04de2d60c26d6951cb752633 .
+_:ce0d042b04de2d60c26d6951cb752633 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/content/0/format/code" .
-_:fd178d761e7ceebb9c493318b6d73dc4 oa:hasSelector _:a23e2e624b6cccc824dfc6d4e9da9563 .
-_:c48b0e9a65a3db5272fa8d000fb0af0b oa:hasTarget _:fd178d761e7ceebb9c493318b6d73dc4 ;
+	rdf:value "" .
+_:e7b43fa3df8a3b036d1ca8cd8b575d9d oa:hasSelector _:f7d0cf603e37cb9ebe2db7e3c5f715fa .
+_:af11461bb273f52ba7732f11e06eee49 oa:hasTarget _:e7b43fa3df8a3b036d1ca8cd8b575d9d ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:documentReferenceToCcdaDocument ;

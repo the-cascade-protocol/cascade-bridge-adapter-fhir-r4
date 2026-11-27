@@ -2,31 +2,31 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:ecc80aff7fd7cd664e8bd487a5a76f8b a oa:FragmentSelector ;
+_:facb3f509755c3e3b4a637a52b0583e9 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-_:bbcf852d7d357d88f300aa8043745283 oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
-_:ecc80aff7fd7cd664e8bd487a5a76f8b oa:refinedBy _:e4b65009092b0e27f28bf158aec3bf7a .
-_:e4b65009092b0e27f28bf158aec3bf7a a oa:FragmentSelector ;
+_:c8214f263c78266985d77884c5c56b06 oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
+_:facb3f509755c3e3b4a637a52b0583e9 oa:refinedBy _:bb14fbed68f8f94c1d4ce1b1a74ac170 .
+_:bb14fbed68f8f94c1d4ce1b1a74ac170 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/resource/resourceType" .
-_:bbcf852d7d357d88f300aa8043745283 oa:hasSelector _:ecc80aff7fd7cd664e8bd487a5a76f8b .
-_:beb72c332a7878a8c429e9899eaab5ad oa:hasTarget _:bbcf852d7d357d88f300aa8043745283 ;
+	rdf:value "/resource" .
+_:c8214f263c78266985d77884c5c56b06 oa:hasSelector _:facb3f509755c3e3b4a637a52b0583e9 .
+_:b0532ab5a95b40c0258fc55c5573a544 oa:hasTarget _:c8214f263c78266985d77884c5c56b06 ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:resourceTypeNotMapped ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Organization" .
-_:c9bd937651e68ce8e95ff20c8d0f7946 a oa:FragmentSelector ;
+_:b431ce9da6e91f907c6d3b116b80dada a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/1" .
-_:a5c60605634e0ae3d521bcfac9216119 oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
-_:c9bd937651e68ce8e95ff20c8d0f7946 oa:refinedBy _:d0bd050e28e85a80fb6bb83b3ed6098b .
-_:d0bd050e28e85a80fb6bb83b3ed6098b a oa:FragmentSelector ;
+_:c330647c453c6b42843e938ffe8bd0db oa:hasSource <../in/bundle-pull-performer-held-under-urn-uuid.json> .
+_:b431ce9da6e91f907c6d3b116b80dada oa:refinedBy _:c5e112f0e1c87c0bda4e4b2cc7ba2687 .
+_:c5e112f0e1c87c0bda4e4b2cc7ba2687 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/resource/performer/0/reference" .
-_:a5c60605634e0ae3d521bcfac9216119 oa:hasSelector _:c9bd937651e68ce8e95ff20c8d0f7946 .
-_:a30ae09a464abe19d194c5e73578df68 oa:hasTarget _:a5c60605634e0ae3d521bcfac9216119 ;
+_:c330647c453c6b42843e938ffe8bd0db oa:hasSelector _:b431ce9da6e91f907c6d3b116b80dada .
+_:ffafca8372aa8d8a47637ab1bace8206 oa:hasTarget _:c330647c453c6b42843e938ffe8bd0db ;
 	sh:resultSeverity sh:Warning ;
 	a oa:Annotation ;
 	oa:hasBody fhirr4:performerCarriedOnlyAsOneOrganizationRecord ;
