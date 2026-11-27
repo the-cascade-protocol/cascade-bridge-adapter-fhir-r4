@@ -261,6 +261,11 @@ fhirr4:medicationRequestIntentNotMapped a skos:Concept ;
   skos:broader bridge:valueNotMapped ;
   sh:resultSeverity sh:Warning .
 
+fhirr4:userSelectedNotCarried a skos:Concept ;
+  skos:prefLabel "A medication's coding states userSelected, and it marks no selected code, so it is not carried: the vocabulary's selected code is an RxNorm or NDC IRI, and only the first such coding the source marks true is one, not a coding in another system, an NDC that is no 11-digit code, a later coding, or a value of false."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss .
+
 fhirr4:codingNotCarried a skos:Concept ;
   skos:prefLabel "A coding of a lab result's test, a medication's drug, a condition, a procedure, a report or a note's type states no system, a system that is no absolute URI or holds a character an IRI may not, or no code, or a code of blanks, so its code is not carried."@en ;
   skos:inScheme fhirr4:gaps ;

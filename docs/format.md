@@ -157,8 +157,11 @@ entry of its Bundle, or a resource the document does not hold. An Apple Health
 export holds one resource per file, so a reference there points outside it.
 Every coding of the drug is carried (see [Codes](#codes)), and the first RxNorm
 or NDC coding `medicationCodeableConcept` marks `userSelected` is the
-medication's selected code; a selected code in another system marks nothing. A
-`userSelected` on a referenced `Medication`'s coding is not read.
+medication's selected code, because the vocabulary's selected code is an RxNorm or
+NDC IRI. Any other `userSelected` marks nothing and is a finding at it,
+`fhirr4:userSelectedNotCarried`: one on a code in another system, on an NDC that is
+no 11-digit code, on a later coding after the first selected one, or of false.
+A `userSelected` on a referenced `Medication`'s coding is not read.
 A request's `authoredOn` is the day the prescription was written, never the
 start of use, which only `effective[x]` gives. A `MedicationStatement` is
 reported use. A `MedicationRequest` is too where its `reported[x]` says the

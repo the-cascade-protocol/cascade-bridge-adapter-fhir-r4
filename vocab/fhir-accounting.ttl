@@ -3895,8 +3895,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/medicationCodeableConcept/coding/userSelected" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:userSelectedNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
@@ -7756,8 +7757,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/medicationCodeableConcept/coding/userSelected" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:userSelectedNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
@@ -12221,8 +12223,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/medicationCodeableConcept/coding/userSelected" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:userSelectedNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
@@ -16078,8 +16081,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/medicationCodeableConcept/coding/userSelected" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
+  bridge:namesGap fhirr4:userSelectedNotCarried ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "MedicationRequest" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,
     [ bridge:inSourceRecordType "MedicationStatement" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:userSelectedCode ] ,

@@ -30,7 +30,8 @@ PREFIX fhirr4:   <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 # the missing digit tells apart; ten digits with no hyphens, or any other
 # value, are no code, and medication-findings.rq reports them. The coding the
 # source marked userSelected is the selected code, the first such RxNorm or NDC
-# IRI: a code in another system marks nothing.
+# IRI: a code in another system marks nothing, and medication-findings.rq
+# reports each userSelected that marks none.
 # Every other value is single, so each is bound beside the others rather than
 # in a branch of its own, and a medication stating nothing still states whether
 # it was prescribed or reported. A MedicationDispense is a record of its own
