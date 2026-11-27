@@ -1,0 +1,24 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "medrx-dose-quantity-system-only-1",
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "text": "Metformin 500 mg tablet"
+  },
+  "subject": {
+    "reference": "Patient/pat-conformance-1"
+  },
+  "dosageInstruction": [
+    {
+      "text": "As directed",
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "system": "http://unitsofmeasure.org"
+          }
+        }
+      ]
+    }
+  ]
+}

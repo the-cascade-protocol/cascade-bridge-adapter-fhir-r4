@@ -149,6 +149,8 @@
     <#variant-effective-period-end-not-carried>
     <#diagnostic-report-effective-period-end-not-carried>
     <#medication-dispense-days-supply-system-only>
+    <#medication-dispense-quantity-system-only>
+    <#medication-request-dose-quantity-system-only>
     <#medication-request-supply-duration-system-only>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
@@ -2013,6 +2015,32 @@
   mf:result [
     bridge:expectedGraph <expected/medication-dispense-days-supply-system-only.ttl> ;
     bridge:expectedFindings <findings/medication-dispense-days-supply-system-only.ttl>
+  ] .
+
+<#medication-dispense-quantity-system-only> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-quantity-system-only" ;
+  rdfs:comment "A MedicationDispense whose quantity states only a system: it is dropped whole, with one finding at the quantity holding its system." ;
+  mf:action [
+    bridge:input <in/medication-dispense-quantity-system-only.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-quantity-system-only.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-quantity-system-only.ttl>
+  ] .
+
+<#medication-request-dose-quantity-system-only> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-dose-quantity-system-only" ;
+  rdfs:comment "A MedicationRequest whose dose quantity states only a system: it is dropped whole, with one finding at the dose quantity holding its system." ;
+  mf:action [
+    bridge:input <in/medication-request-dose-quantity-system-only.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-dose-quantity-system-only.ttl> ;
+    bridge:expectedFindings <findings/medication-request-dose-quantity-system-only.ttl>
   ] .
 
 <#medication-request-supply-duration-system-only> a bridge:IsomorphicConversionTest ;
