@@ -121,6 +121,18 @@
     <#bundle-pull-performer-held-under-urn-uuid>
     <#bundle-performers-from-no-known-server>
     <#bundle-report-and-note-subjects-that-name-no-patient>
+    <#allergy-subject-names-no-patient>
+    <#condition-subject-names-no-patient>
+    <#immunization-subject-names-no-patient>
+    <#procedure-subject-names-no-patient>
+    <#medication-request-subject-names-no-patient>
+    <#medication-statement-subject-names-no-patient>
+    <#medication-dispense-subject-names-no-patient>
+    <#lab-result-subject-names-no-patient>
+    <#variant-subject-names-no-patient>
+    <#variant-interpretation-subject-names-no-patient>
+    <#diagnostic-report-subject-names-no-patient>
+    <#document-reference-subject-names-no-patient>
     <#lab-performer-differs-names-one-record>
     <#Bundle-bundle-cgexample>
     <#Bundle-bundle-compound-heterozygote>
@@ -1620,6 +1632,162 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-report-and-note-subjects-that-name-no-patient.ttl> ;
     bridge:expectedFindings <findings/bundle-report-and-note-subjects-that-name-no-patient.ttl>
+  ] .
+
+<#allergy-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-subject-names-no-patient" ;
+  rdfs:comment "An AllergyIntolerance whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/allergy-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/allergy-subject-names-no-patient.ttl>
+  ] .
+
+<#condition-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "condition-subject-names-no-patient" ;
+  rdfs:comment "A Condition whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/condition-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/condition-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/condition-subject-names-no-patient.ttl>
+  ] .
+
+<#immunization-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "immunization-subject-names-no-patient" ;
+  rdfs:comment "An Immunization whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/immunization-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/immunization-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/immunization-subject-names-no-patient.ttl>
+  ] .
+
+<#procedure-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "procedure-subject-names-no-patient" ;
+  rdfs:comment "A Procedure whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/procedure-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/procedure-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/procedure-subject-names-no-patient.ttl>
+  ] .
+
+<#medication-request-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-subject-names-no-patient" ;
+  rdfs:comment "A MedicationRequest whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/medication-request-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/medication-request-subject-names-no-patient.ttl>
+  ] .
+
+<#medication-statement-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-statement-subject-names-no-patient" ;
+  rdfs:comment "A MedicationStatement whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/medication-statement-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-statement-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/medication-statement-subject-names-no-patient.ttl>
+  ] .
+
+<#medication-dispense-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-subject-names-no-patient" ;
+  rdfs:comment "A MedicationDispense whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/medication-dispense-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-subject-names-no-patient.ttl>
+  ] .
+
+<#lab-result-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "lab-result-subject-names-no-patient" ;
+  rdfs:comment "A laboratory Observation whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/lab-result-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/lab-result-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/lab-result-subject-names-no-patient.ttl>
+  ] .
+
+<#variant-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-subject-names-no-patient" ;
+  rdfs:comment "A genetic variant Observation whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/variant-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/variant-subject-names-no-patient.ttl>
+  ] .
+
+<#variant-interpretation-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "variant-interpretation-subject-names-no-patient" ;
+  rdfs:comment "A diagnostic implication Observation whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/variant-interpretation-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/variant-interpretation-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/variant-interpretation-subject-names-no-patient.ttl>
+  ] .
+
+<#diagnostic-report-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "diagnostic-report-subject-names-no-patient" ;
+  rdfs:comment "A DiagnosticReport whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/diagnostic-report-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/diagnostic-report-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/diagnostic-report-subject-names-no-patient.ttl>
+  ] .
+
+<#document-reference-subject-names-no-patient> a bridge:IsomorphicConversionTest ;
+  mf:name "document-reference-subject-names-no-patient" ;
+  rdfs:comment "A DocumentReference note whose subject is Group/g1, which is no Patient: the version has no patient and the reference is a fhirr4:referenceNotToAPatient finding, as for any other reference that names none." ;
+  mf:action [
+    bridge:input <in/document-reference-subject-names-no-patient.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/document-reference-subject-names-no-patient.ttl> ;
+    bridge:expectedFindings <findings/document-reference-subject-names-no-patient.ttl>
   ] .
 
 <#lab-performer-differs-names-one-record> a bridge:IdentityRelationTest ;

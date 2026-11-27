@@ -839,6 +839,42 @@
           "@id": "fixtures/in/bundle-report-and-note-subjects-that-name-no-patient.json"
         },
         {
+          "@id": "fixtures/in/allergy-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/condition-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/immunization-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/procedure-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/medication-request-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/medication-statement-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/medication-dispense-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/lab-result-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/variant-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/variant-interpretation-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/diagnostic-report-subject-names-no-patient.json"
+        },
+        {
+          "@id": "fixtures/in/document-reference-subject-names-no-patient.json"
+        },
+        {
           "@id": "fixtures/in/lab-potassium-performed-elsewhere.json"
         },
         {
@@ -1739,6 +1775,42 @@
           "@id": "fixtures/expected/bundle-report-and-note-subjects-that-name-no-patient.ttl"
         },
         {
+          "@id": "fixtures/expected/allergy-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/condition-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/immunization-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/procedure-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/medication-request-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/medication-statement-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/medication-dispense-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/lab-result-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/variant-interpretation-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/diagnostic-report-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/expected/document-reference-subject-names-no-patient.ttl"
+        },
+        {
           "@id": "fixtures/expected/Bundle-bundle-cgexample.ttl"
         },
         {
@@ -1818,6 +1890,42 @@
         },
         {
           "@id": "fixtures/findings/bundle-report-and-note-subjects-that-name-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/allergy-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/condition-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/immunization-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/procedure-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/medication-request-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/medication-statement-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/medication-dispense-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/lab-result-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/variant-interpretation-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/diagnostic-report-subject-names-no-patient.ttl"
+        },
+        {
+          "@id": "fixtures/findings/document-reference-subject-names-no-patient.ttl"
         },
         {
           "@id": "fixtures/findings/Bundle-bundle-cgexample.ttl"
@@ -4653,6 +4761,138 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A collection Bundle of a DiagnosticReport whose subject is Patient/pat-1, from no known server, and a DocumentReference note whose subject is a urn:uuid no entry holds. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a report's or a note's subject that names no patient record."
+    },
+    {
+      "@id": "fixtures/in/allergy-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "An AllergyIntolerance whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, an AllergyIntolerance, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/condition-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A Condition whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a Condition, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/immunization-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "An Immunization whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, an Immunization, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/procedure-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A Procedure whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a Procedure, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/medication-request-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A MedicationRequest whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a MedicationRequest, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/medication-statement-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A MedicationStatement whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a MedicationStatement, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/medication-dispense-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A MedicationDispense whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a MedicationDispense, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/lab-result-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A laboratory Observation whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a laboratory Observation, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/variant-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A genetic variant Observation whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a genetic variant Observation, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/variant-interpretation-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A diagnostic implication Observation whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a diagnostic implication Observation, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/diagnostic-report-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A DiagnosticReport whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a DiagnosticReport, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
+    },
+    {
+      "@id": "fixtures/in/document-reference-subject-names-no-patient.json",
+      "@type": "File",
+      "name": "A DocumentReference note whose subject is a Group",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A collection Bundle of one resource, a DocumentReference note, whose subject is Group/g1. Authored here on 2026-11-26, for a case the conformance corpus does not hold: a subject that names something other than a Patient."
     },
     {
       "@id": "fixtures/in/lab-potassium-performed-elsewhere.json",
@@ -8124,6 +8364,174 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/allergy-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for allergy-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/condition-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for condition-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/condition-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/immunization-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for immunization-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/immunization-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/procedure-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for procedure-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/procedure-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/medication-request-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for medication-request-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/medication-statement-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for medication-statement-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-statement-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/medication-dispense-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for medication-dispense-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-dispense-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/lab-result-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for lab-result-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/lab-result-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/variant-interpretation-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for variant-interpretation-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-interpretation-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/diagnostic-report-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for diagnostic-report-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/diagnostic-report-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
+      "@id": "fixtures/expected/document-reference-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected graph for document-reference-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/document-reference-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/Bundle-bundle-cgexample.ttl",
       "@type": "File",
       "name": "Expected graph for Bundle-bundle-cgexample",
@@ -8382,6 +8790,174 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/bundle-report-and-note-subjects-that-name-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/allergy-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for allergy-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/condition-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for condition-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/condition-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/immunization-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for immunization-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/immunization-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/procedure-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for procedure-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/procedure-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/medication-request-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for medication-request-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-request-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/medication-statement-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for medication-statement-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-statement-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/medication-dispense-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for medication-dispense-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/medication-dispense-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/lab-result-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for lab-result-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/lab-result-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/variant-interpretation-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for variant-interpretation-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/variant-interpretation-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/diagnostic-report-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for diagnostic-report-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/diagnostic-report-subject-names-no-patient.json"
+      },
+      "dateCreated": "2026-11-26",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/document-reference-subject-names-no-patient.ttl",
+      "@type": "File",
+      "name": "Expected findings for document-reference-subject-names-no-patient",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/document-reference-subject-names-no-patient.json"
       },
       "dateCreated": "2026-11-26",
       "license": {

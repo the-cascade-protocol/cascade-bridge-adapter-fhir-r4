@@ -1,0 +1,25 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "314076",
+              "display": "lisinopril 10 MG Oral Tablet"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Group/g1"
+        },
+        "id": "medication-dispense-subject-group"
+      }
+    }
+  ]
+}

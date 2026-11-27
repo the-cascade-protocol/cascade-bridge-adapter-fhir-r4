@@ -1,0 +1,54 @@
+@prefix bridge: <https://ns.cascadeprotocol.org/bridge/v1-draft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cascade: <https://ns.cascadeprotocol.org/cascade#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix pav: <http://purl.org/pav/> .
+<ni:///sha-256;MgRrsolBr5gJc-XpwEVqNGOzMSe04Ny8mWUPJXasVWg> cascade:prescribedOrReported "reportedUse" ;
+	cascade:drugName "lisinopril 10 MG Oral Tablet" ;
+	cascade:rxNormCode <https://ns.cascadeprotocol.org/codes/rxnorm/314076> ;
+	cascade:workflowStatus "active" .
+<urn:uuid:ed58b5cb-5646-8ad1-a362-57124cb0f659> a cascade:PrescribedOrReportedMedication ;
+	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/MedicationStatement/medication-statement-subject-group> ;
+	cascade:sourceRecordId "medication-statement-subject-group" .
+<ni:///sha-256;MgRrsolBr5gJc-XpwEVqNGOzMSe04Ny8mWUPJXasVWg> prov:specializationOf <urn:uuid:ed58b5cb-5646-8ad1-a362-57124cb0f659> .
+_:20163300ba1124ba35ebd0e034b2f7cb bridge:arrivedAs <ni:///sha-256;MgRrsolBr5gJc-XpwEVqNGOzMSe04Ny8mWUPJXasVWg> ;
+	oa:hasSelector _:686f9f08e570250d62458d14f754aeb6 ;
+	oa:hasSource <ni:///sha-256;jBywV6L8YT7-xsvGFJ2AkCq_C_nj6EfWyXTrqN-tQzk> ;
+	prov:wasDerivedFrom <ni:///sha-256;jBywV6L8YT7-xsvGFJ2AkCq_C_nj6EfWyXTrqN-tQzk> ;
+	prov:wasGeneratedBy _:6448b8d260a062afc17b854d48403f29 .
+_:686f9f08e570250d62458d14f754aeb6 a oa:FragmentSelector ;
+	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/entry/0" .
+<ni:///sha-256;jBywV6L8YT7-xsvGFJ2AkCq_C_nj6EfWyXTrqN-tQzk> cascade:serverBaseUrl "https://fhir.meridian.example/api/FHIR/R4" ;
+	pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+	prov:wasGeneratedBy _:af9d85a5f612f2abfdfbdf5cde53dc41 ;
+	prov:wasAttributedTo _:f97a26652d310c693ad46c8f376c47f4 ;
+	cascade:authenticatedPatient "Patient/eM5vN8qTz2Hc4Rk7Jw0Pb3" ;
+	cascade:authenticatedAsProxy false ;
+	cascade:sourceFormatVersion "4.0.1" .
+_:2a52dc4e95f7a081a2830c17e12e9e11 prov:agent _:f97a26652d310c693ad46c8f376c47f4 ;
+	prov:hadRole cascade:AuthorRole .
+_:af9d85a5f612f2abfdfbdf5cde53dc41 prov:qualifiedAssociation _:2a52dc4e95f7a081a2830c17e12e9e11 .
+_:cfb1911e01ca0773d36dba9c8bccf440 prov:agent _:6a5e4cafad534390072a4b88e321ac14 ;
+	prov:hadRole cascade:TransmitterRole .
+_:af9d85a5f612f2abfdfbdf5cde53dc41 prov:qualifiedAssociation _:cfb1911e01ca0773d36dba9c8bccf440 .
+_:f97a26652d310c693ad46c8f376c47f4 <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
+_:6a5e4cafad534390072a4b88e321ac14 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
+_:6448b8d260a062afc17b854d48403f29 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
+	prov:startedAtTime "2026-09-01T10:00:04Z"^^xsd:dateTime .
+<ni:///sha-256;jBywV6L8YT7-xsvGFJ2AkCq_C_nj6EfWyXTrqN-tQzk> a prov:Entity .
+_:6448b8d260a062afc17b854d48403f29 a prov:Activity ;
+	prov:used <ni:///sha-256;jBywV6L8YT7-xsvGFJ2AkCq_C_nj6EfWyXTrqN-tQzk> ;
+	prov:qualifiedAssociation _:dd08a026ed5826b211327207cac03f9a .
+_:dd08a026ed5826b211327207cac03f9a prov:hadPlan _:a46528b7526cf78ee7ce71b1e8d81aea .
+_:a46528b7526cf78ee7ce71b1e8d81aea a prov:Plan ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "fhir-r4" ;
+	pav:version "0.1.0" .
+_:dd08a026ed5826b211327207cac03f9a prov:agent _:b28446228f989d8de4bea4e356f20de8 .
+_:b28446228f989d8de4bea4e356f20de8 a prov:SoftwareAgent ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Cascade Bridge for Rust" ;
+	pav:version "0.1.0" .

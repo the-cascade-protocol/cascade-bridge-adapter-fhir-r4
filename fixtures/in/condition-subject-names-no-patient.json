@@ -1,0 +1,24 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertension"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Group/g1"
+        },
+        "id": "condition-subject-group"
+      }
+    }
+  ]
+}
