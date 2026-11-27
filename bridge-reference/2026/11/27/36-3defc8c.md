@@ -1,0 +1,22 @@
+The default executor's output digests match the reference executor's (`--executor spareval`), or could not be checked as listed.
+
+```
+before: AMD EPYC 9V74 80-Core Processor, 4 CPUs, Ubuntu 26.04.1 LTS, github-hosted, node on Node 24.22.3; cascade-bridge-adapter-fhir-r4 3defc8c, cascade-vocabulary 8f3fbea, cascade-bridge-rs 9f04313
+after: AMD EPYC 9V74 80-Core Processor, 4 CPUs, Ubuntu 26.04.1 LTS, github-hosted, node on Node 24.22.3; cascade-bridge-adapter-fhir-r4 3defc8c, cascade-vocabulary 8f3fbea, cascade-bridge-rs 9f04313
+
+EQUIVALENT fhir-r4-lab-pull-3000, fhir-r4-synthea-10y-trimmed: the output digests match
+
+| name | before | after | change | multiple (before ÷ after) |
+|---|---|---|---|---|
+| fhir-r4-lab-pull-3000/output/graph | 63,025 | 63,025 | same sha256 | |
+| fhir-r4-lab-pull-3000/output/findings | 90,090 | 90,090 | same sha256 | |
+| fhir-r4-synthea-10y-trimmed/output/graph | 12,654 | 12,654 | same sha256 | |
+| fhir-r4-synthea-10y-trimmed/output/findings | 40,099 | 40,099 | same sha256 | |
+```
+
+Left out of both, each being over 5000000 bytes (id, bytes), which the reference executor does not finish in a job's time:
+
+- fhir-r4-synthea-lifetime 51227791
+- fhir-r4-synthea-lifetime-ab74ec30 14900379
+- fhir-r4-synthea-lifetime-3541f47c 56150281
+- fhir-r4-synthea-lifetime-4f159b52 19009113
