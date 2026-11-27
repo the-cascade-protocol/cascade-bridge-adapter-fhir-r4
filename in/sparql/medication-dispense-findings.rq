@@ -127,7 +127,8 @@ WHERE {
     })
     OPTIONAL { ?quantity xyz:code ?absentCode }
     OPTIONAL { ?quantity xyz:unit ?absentUnit }
-    BIND (COALESCE(?absentCode, ?absentUnit) AS ?value)
+    OPTIONAL { ?quantity xyz:system ?absentSystem }
+    BIND (COALESCE(?absentCode, ?absentUnit, ?absentSystem) AS ?value)
     FILTER (BOUND(?value))
     BIND (?quantityStep AS ?step)
   }

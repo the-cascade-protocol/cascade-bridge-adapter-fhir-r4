@@ -327,6 +327,15 @@ WHERE {
       BIND ("" AS ?doseLeaf)
       BIND (fhirr4:doseQuantityNotCarried AS ?gap)
     }
+    UNION
+    {
+      ?doseQuantity xyz:system ?value .
+      FILTER NOT EXISTS { ?doseQuantity xyz:unit ?doseAbsentUnit }
+      FILTER NOT EXISTS { ?doseQuantity xyz:code ?doseAbsentCode }
+      FILTER NOT EXISTS { ?doseQuantity xyz:value ?doseAbsent }
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+    }
     BIND (CONCAT(?doseStep, STR(xsd:integer(STRAFTER(STR(?doseDosageSlot), "#_")) - 1), "/doseAndRate/",
                  STR(xsd:integer(STRAFTER(STR(?doseSlot), "#_")) - 1), "/doseQuantity", ?doseLeaf) AS ?step)
   }
