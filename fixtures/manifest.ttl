@@ -2535,7 +2535,7 @@
 
 <#procedure-performed-date-and-period> a bridge:IsomorphicConversionTest ;
   mf:name "procedure-performed-date-and-period" ;
-  rdfs:comment "A Procedure that states both a performedDateTime and a performedPeriod, which FHIR allows only one of and real feeds send: its date is the performedDateTime alone, one cascade:procedureDate, and the period start is not a second one; the period end is reported." ;
+  rdfs:comment "A Procedure that states both a performedDateTime and a performedPeriod, which FHIR allows only one of and real feeds send: its date is the performedDateTime alone, one cascade:procedureDate, and the period start is not a second one and is reported, as the period end is." ;
   mf:action [
     bridge:input <in/procedure-performed-date-and-period.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -2548,7 +2548,7 @@
 
 <#procedure-performed-date-beside-an-unreadable-period-start> a bridge:IsomorphicConversionTest ;
   mf:name "procedure-performed-date-beside-an-unreadable-period-start" ;
-  rdfs:comment "A Procedure with a readable performedDateTime and a performedPeriod whose start is a day the calendar lacks: the date is the performedDateTime, and the unused start is not reported as a date no mapping can type." ;
+  rdfs:comment "A Procedure with a readable performedDateTime and a performedPeriod whose start is a day the calendar lacks: the date is the performedDateTime, and the unused start is reported as a period start beside a date, not as a date no mapping can type." ;
   mf:action [
     bridge:input <in/procedure-performed-date-beside-an-unreadable-period-start.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -2561,7 +2561,7 @@
 
 <#procedure-unreadable-performed-date-beside-a-period> a bridge:IsomorphicConversionTest ;
   mf:name "procedure-unreadable-performed-date-beside-a-period" ;
-  rdfs:comment "A Procedure whose performedDateTime is a day the calendar lacks, beside a performedPeriod with a readable start: the performedDateTime is the date the source states, so the procedure has none and the date is reported; the period start does not stand in for it." ;
+  rdfs:comment "A Procedure whose performedDateTime is a day the calendar lacks, beside a performedPeriod with a readable start: the performedDateTime is the date the source states, so the procedure has none and the date is reported; the period start does not stand in for it and is reported too." ;
   mf:action [
     bridge:input <in/procedure-unreadable-performed-date-beside-a-period.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
