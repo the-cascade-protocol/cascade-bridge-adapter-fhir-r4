@@ -1998,7 +1998,7 @@
 
 <#medication-request-supply-duration-comparator-outside-the-four> a bridge:IsomorphicConversionTest ;
   mf:name "medication-request-supply-duration-comparator-outside-the-four" ;
-  rdfs:comment "A MedicationRequest whose expected supply duration states the comparator ~, which is none of R4's four: the whole duration is not carried, number, unit and code with it, and its one finding is at the duration." ;
+  rdfs:comment "A MedicationRequest whose expected supply duration states the comparator ~, which is none of R4's four: the whole duration is not carried, number, unit and code with it, and it is a finding at the duration; its comparator is a second finding, at the comparator." ;
   mf:action [
     bridge:input <in/medication-request-supply-duration-comparator-outside-the-four.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;

@@ -15,11 +15,13 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # context, destination, receivers, substitution or dosage instructions, whose
 # paths other kinds of resource carry; a quantity or a days' supply that
 # states a comparator, which FHIR's SimpleQuantity forbids, or whose number is
-# in no decimal form, and a days' supply in no UCUM unit of time, and so are
-# none; a dispensed quantity whose unit code is not UCUM's; and a time prepared
-# or handed over that matches no form of FHIR's date and dateTime. A quantity
-# that is none is reported at the quantity, holding the value that stopped it,
-# so that one finding speaks for its unit, code and number too. A note, a
+# absent, in no decimal form or beyond twenty digits of the point, and a days'
+# supply in no UCUM unit of time, and so are none; a dispensed quantity whose
+# unit code is not UCUM's; and a time prepared or handed over that matches no
+# form of FHIR's date and dateTime. A quantity that is none is reported at the
+# quantity, holding the value that stopped it (the unit's system where its code
+# is a unit of time and the system is not UCUM's, nothing where it states no
+# unit), so that one finding speaks for its unit, code and number too. A note, a
 # reference to a Medication and a coding are medication-findings.rq's.
 
 CONSTRUCT {
@@ -98,11 +100,35 @@ WHERE {
     ?resource ?quantityMember ?quantity .
     ?quantity xyz:value ?value .
     FILTER NOT EXISTS { ?quantity xyz:comparator ?quantityComparator }
-    FILTER (!REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+    BIND (STR(?value) AS ?number)
+    BIND (REPLACE(REPLACE(?number, "^[+-]", ""), "[eE].*$", "") AS ?mantissa)
+    BIND (IF(CONTAINS(?mantissa, "."), STRBEFORE(?mantissa, "."), ?mantissa) AS ?whole)
+    BIND (STRLEN(?whole) + IF(REGEX(?number, "[eE]"), xsd:integer(REPLACE(?number, "^[^eE]*[eE]", "")), 0) AS ?point)
+    FILTER ((!REGEX(?number, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+        || COALESCE(?point + 20 < 0 || ?point - STRLEN(CONCAT(?whole, STRAFTER(?mantissa, "."))) > 20, true))
       && (?quantityMember = xyz:quantity || EXISTS {
         ?quantity xyz:system "http://unitsofmeasure.org" ; xyz:code ?timeUnit .
         FILTER (?timeUnit IN ("s", "min", "h", "d", "wk", "mo", "a"))
       }))
+    BIND (?quantityStep AS ?step)
+  }
+  UNION
+  {
+    VALUES (?quantityMember ?quantityStep ?gap) {
+      (xyz:quantity "/quantity" fhirr4:medicationDispenseQuantityNotCarried)
+      (xyz:daysSupply "/daysSupply" fhirr4:dispenseDaysSupplyNotCarried)
+    }
+    ?resource ?quantityMember ?quantity .
+    FILTER NOT EXISTS { ?quantity xyz:value ?quantityStated }
+    FILTER NOT EXISTS { ?quantity xyz:comparator ?quantityComparator }
+    FILTER (?quantityMember = xyz:quantity || EXISTS {
+      ?quantity xyz:system "http://unitsofmeasure.org" ; xyz:code ?timeUnit .
+      FILTER (?timeUnit IN ("s", "min", "h", "d", "wk", "mo", "a"))
+    })
+    OPTIONAL { ?quantity xyz:code ?absentCode }
+    OPTIONAL { ?quantity xyz:unit ?absentUnit }
+    BIND (COALESCE(?absentCode, ?absentUnit) AS ?value)
+    FILTER (BOUND(?value))
     BIND (?quantityStep AS ?step)
   }
   UNION
@@ -122,8 +148,10 @@ WHERE {
     OPTIONAL { ?quantity xyz:code ?daysCode }
     OPTIONAL { ?quantity xyz:unit ?daysUnit }
     OPTIONAL { ?quantity xyz:value ?daysValue }
-    BIND (COALESCE(?daysCode, ?daysUnit, ?daysValue) AS ?value)
-    FILTER (BOUND(?value))
+    OPTIONAL { ?quantity xyz:system ?daysSystem }
+    FILTER (BOUND(?daysCode) || BOUND(?daysUnit) || BOUND(?daysValue))
+    BIND (IF(BOUND(?daysCode) && ?daysCode IN ("s", "min", "h", "d", "wk", "mo", "a"), COALESCE(?daysSystem, ""),
+             COALESCE(?daysCode, ?daysUnit, "")) AS ?value)
     BIND (?quantityStep AS ?step)
     BIND (fhirr4:dispenseDaysSupplyNotCarried AS ?gap)
   }
@@ -138,9 +166,15 @@ WHERE {
     ?quantity xyz:code ?value .
     FILTER NOT EXISTS { ?quantity xyz:comparator ?quantityComparator }
     FILTER NOT EXISTS { ?quantity xyz:system "http://unitsofmeasure.org" }
+    FILTER EXISTS { ?quantity xyz:value ?quantityStated }
     FILTER NOT EXISTS {
       ?quantity xyz:value ?quantityWritten .
-      FILTER (!REGEX(STR(?quantityWritten), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
+      BIND (STR(?quantityWritten) AS ?number)
+      BIND (REPLACE(REPLACE(?number, "^[+-]", ""), "[eE].*$", "") AS ?mantissa)
+      BIND (IF(CONTAINS(?mantissa, "."), STRBEFORE(?mantissa, "."), ?mantissa) AS ?whole)
+      BIND (STRLEN(?whole) + IF(REGEX(?number, "[eE]"), xsd:integer(REPLACE(?number, "^[^eE]*[eE]", "")), 0) AS ?point)
+      FILTER (!REGEX(?number, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+        || COALESCE(?point + 20 < 0 || ?point - STRLEN(CONCAT(?whole, STRAFTER(?mantissa, "."))) > 20, true))
     }
     BIND (CONCAT(?quantityStep, "/code") AS ?step)
     BIND (fhirr4:doseUnitCodeOutsideUcum AS ?gap)

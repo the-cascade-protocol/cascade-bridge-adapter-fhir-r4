@@ -185,10 +185,13 @@ quantity node, only in one of UCUM's seven units of time FHIR's `Duration`
 allows; and `dispenseRequest.validityPeriod`. A supply duration with a
 comparator is carried with it and is a finding, since a bound gives no end
 (`fhirr4:expectedSupplyDurationBound`, at the comparator); one with a comparator
-outside R4's four, one in no unit of time and one whose number is no number are
+outside R4's four, one in no unit of time and one whose number is absent, is no
+number or lies beyond twenty digits of the point are
 not carried at all, and each is a finding at the duration
 (`fhirr4:expectedSupplyDurationNotCarried`), holding the value that stopped it, so that
-it speaks for the duration's number, unit and code. A course of therapy in another system,
+it speaks for the duration's number, unit and code. Where the stopper is the unit,
+the value is its code, else its unit text; where the code is a unit of time and its
+system is not UCUM's it is that system, and where no unit is stated it is empty. A course of therapy in another system,
 after its first coding or of text alone, and `dispenseRequest.quantity`, which no
 term holds, are findings, as are the initial fill, the dispense interval and the
 performer. Any other number that is no number, a repeat frequency of 0 and a
@@ -203,8 +206,8 @@ route's codings, SNOMED CT's as IRIs and any other system's (the NCI
 Thesaurus's, which US Core's binding names) as literals typed by the system.
 A dose quantity is carried as a UCUM unit only where its system is UCUM's
 (`fhirr4:doseUnitCodeOutsideUcum`). A dose quantity with a comparator, which FHIR's
-SimpleQuantity forbids, one whose number is no decimal and every dose after the
-first of its dosage write no node: each is a finding at the dose quantity
+SimpleQuantity forbids, one whose number is absent, is no decimal or lies beyond
+twenty digits of the point, and every dose after the first of its dosage write no node: each is a finding at the dose quantity
 (`fhirr4:doseQuantityNotCarried`), holding the value that stopped it, so that it
 speaks for the quantity's number, unit and code. Every other dosage element and a
 later dosage's text are findings; the first dosage's text is the version's
@@ -250,10 +253,12 @@ unit is a UCUM unit only where its system is UCUM's
 (`fhirr4:doseUnitCodeOutsideUcum`); a days' supply is carried only in one of
 UCUM's seven units of time, as FHIR's `Duration` allows, and otherwise in none.
 A quantity or days' supply with a comparator, which `SimpleQuantity` forbids, and
-one whose number is no decimal write no node, nor does a days' supply in no unit
+one whose number is absent, is no decimal or lies beyond twenty digits of the point
+write no node, nor does a days' supply in no unit
 of time. Each is a finding at the quantity or days' supply, holding the value that
 stopped it (`fhirr4:medicationDispenseQuantityNotCarried`,
-`fhirr4:dispenseDaysSupplyNotCarried`), so that it speaks for the number, unit and
+`fhirr4:dispenseDaysSupplyNotCarried`; a days' supply stopped by its unit holds what
+a supply duration does, above), so that it speaks for the number, unit and
 code of what it drops, and a unit code outside UCUM is not a finding of its own on
 a quantity that is dropped. A time that is no date, such as
 2026-02-30 or month 13, writes none either (`fhirr4:dateNotCarried`).

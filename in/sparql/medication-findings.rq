@@ -18,16 +18,20 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # medication.rq makes no 11-digit code of, whether the medication's own or the
 # referenced Medication's, every userSelected that marks no selected code, every
 # dosage text but the first, every dose
-# quantity of a dosage after its first, a dose quantity with a comparator or in no decimal form, a course of therapy's coding outside
+# quantity of a dosage after its first, a dose quantity with a comparator or a number absent, in no decimal form or beyond
+# twenty digits of the point, a course of therapy's coding outside
 # FHIR's three codes or after the first of them, an expected supply duration in
-# no unit of time, whose number is in no decimal form or whose comparator is none
+# no unit of time, whose number is absent, in no decimal form or beyond twenty
+# digits of the point, or whose comparator is none
 # of R4's four, and its comparator, a bound the exposure derivation reads no end
 # from, a prescription's, a use's or
 # a bound's date that matches no form of FHIR's date and dateTime, a dose
 # quantity's unit code outside UCUM, and a number or a period unit the
 # structure of a dosage or the supply states in a form no predicate takes. A
 # duration that is none is reported at the duration, holding the value that
-# stopped it, so that one finding speaks for its unit, code and number too. A
+# stopped it (the unit's system where its code is a unit of time and the system
+# is not UCUM's, nothing where it states no unit), so that one finding speaks
+# for its unit, code and number too. A
 # reference resolves as medication-table.rq says, and a Medication's codes are
 # reported only where a reference resolves to it: resource-type-findings.rq
 # reports one nothing resolves to. A MedicationDispense states a Medication
@@ -241,8 +245,10 @@ WHERE {
     OPTIONAL { ?duration xyz:code ?durationCode }
     OPTIONAL { ?duration xyz:unit ?durationUnit }
     OPTIONAL { ?duration xyz:value ?durationValue }
-    BIND (COALESCE(?durationCode, ?durationUnit, ?durationValue) AS ?value)
-    FILTER (BOUND(?value))
+    OPTIONAL { ?duration xyz:system ?durationSystem }
+    FILTER (BOUND(?durationCode) || BOUND(?durationUnit) || BOUND(?durationValue))
+    BIND (IF(BOUND(?durationCode) && ?durationCode IN ("s", "min", "h", "d", "wk", "mo", "a"), COALESCE(?durationSystem, ""),
+             COALESCE(?durationCode, ?durationUnit, "")) AS ?value)
     BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
     BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
   }
@@ -281,9 +287,15 @@ WHERE {
     {
       ?doseQuantity xyz:code ?value .
       FILTER NOT EXISTS { ?doseQuantity xyz:system "http://unitsofmeasure.org" }
+      FILTER EXISTS { ?doseQuantity xyz:value ?doseStated }
       FILTER NOT EXISTS {
         ?doseQuantity xyz:value ?doseWritten .
-        FILTER (!REGEX(STR(?doseWritten), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
+        BIND (STR(?doseWritten) AS ?doseNumber)
+        BIND (REPLACE(REPLACE(?doseNumber, "^[+-]", ""), "[eE].*$", "") AS ?doseMantissa)
+        BIND (IF(CONTAINS(?doseMantissa, "."), STRBEFORE(?doseMantissa, "."), ?doseMantissa) AS ?doseWhole)
+        BIND (STRLEN(?doseWhole) + IF(REGEX(?doseNumber, "[eE]"), xsd:integer(REPLACE(?doseNumber, "^[^eE]*[eE]", "")), 0) AS ?dosePoint)
+        FILTER (!REGEX(?doseNumber, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+          || COALESCE(?dosePoint + 20 < 0 || ?dosePoint - STRLEN(CONCAT(?doseWhole, STRAFTER(?doseMantissa, "."))) > 20, true))
       }
       BIND ("/code" AS ?doseLeaf)
       BIND (fhirr4:doseUnitCodeOutsideUcum AS ?gap)
@@ -291,7 +303,27 @@ WHERE {
     UNION
     {
       ?doseQuantity xyz:value ?value .
-      FILTER (!REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
+      BIND (STR(?value) AS ?doseNumber)
+      BIND (REPLACE(REPLACE(?doseNumber, "^[+-]", ""), "[eE].*$", "") AS ?doseMantissa)
+      BIND (IF(CONTAINS(?doseMantissa, "."), STRBEFORE(?doseMantissa, "."), ?doseMantissa) AS ?doseWhole)
+      BIND (STRLEN(?doseWhole) + IF(REGEX(?doseNumber, "[eE]"), xsd:integer(REPLACE(?doseNumber, "^[^eE]*[eE]", "")), 0) AS ?dosePoint)
+      FILTER (!REGEX(?doseNumber, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+        || COALESCE(?dosePoint + 20 < 0 || ?dosePoint - STRLEN(CONCAT(?doseWhole, STRAFTER(?doseMantissa, "."))) > 20, true))
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?doseQuantity xyz:code ?value .
+      FILTER NOT EXISTS { ?doseQuantity xyz:value ?doseAbsent }
+      BIND ("" AS ?doseLeaf)
+      BIND (fhirr4:doseQuantityNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?doseQuantity xyz:unit ?value .
+      FILTER NOT EXISTS { ?doseQuantity xyz:code ?doseAbsentCode }
+      FILTER NOT EXISTS { ?doseQuantity xyz:value ?doseAbsent }
       BIND ("" AS ?doseLeaf)
       BIND (fhirr4:doseQuantityNotCarried AS ?gap)
     }
@@ -345,8 +377,25 @@ WHERE {
       ?supplyDuration xyz:system "http://unitsofmeasure.org" ;
         xyz:code ?supplyUnit ;
         xyz:value ?value .
+      BIND (STR(?value) AS ?supplyNumber)
+      BIND (REPLACE(REPLACE(?supplyNumber, "^[+-]", ""), "[eE].*$", "") AS ?supplyMantissa)
+      BIND (IF(CONTAINS(?supplyMantissa, "."), STRBEFORE(?supplyMantissa, "."), ?supplyMantissa) AS ?supplyWhole)
+      BIND (STRLEN(?supplyWhole) + IF(REGEX(?supplyNumber, "[eE]"), xsd:integer(REPLACE(?supplyNumber, "^[^eE]*[eE]", "")), 0) AS ?supplyPoint)
       FILTER (?supplyUnit IN ("s", "min", "h", "d", "wk", "mo", "a")
-        && !REGEX(STR(?value), "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$"))
+        && (!REGEX(?supplyNumber, "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([eE][+-]?[0-9]+)?$")
+          || COALESCE(?supplyPoint + 20 < 0 || ?supplyPoint - STRLEN(CONCAT(?supplyWhole, STRAFTER(?supplyMantissa, "."))) > 20, true)))
+      BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
+      BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
+    }
+    UNION
+    {
+      ?supplyDurationAbsent xyz:system "http://unitsofmeasure.org" ;
+        xyz:code ?value .
+      ?supplyRequest xyz:expectedSupplyDuration ?supplyDurationAbsent .
+      FILTER (?value IN ("s", "min", "h", "d", "wk", "mo", "a"))
+      FILTER NOT EXISTS { ?supplyDurationAbsent xyz:value ?supplyStated }
+      OPTIONAL { ?supplyDurationAbsent xyz:comparator ?supplyAbsentComparator }
+      FILTER (!BOUND(?supplyAbsentComparator) || ?supplyAbsentComparator IN ("<", "<=", ">=", ">"))
       BIND ("/dispenseRequest/expectedSupplyDuration" AS ?step)
       BIND (fhirr4:expectedSupplyDurationNotCarried AS ?gap)
     }
