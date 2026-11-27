@@ -521,6 +521,9 @@
           "@id": "fixtures/in/allergy-reactions-after-the-first-not-carried.json"
         },
         {
+          "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json"
+        },
+        {
           "@id": "fixtures/in/condition-with-id.json"
         },
         {
@@ -552,6 +555,9 @@
         },
         {
           "@id": "fixtures/in/condition-categories-after-the-first-not-carried.json"
+        },
+        {
+          "@id": "fixtures/in/condition-category-first-without-a-carried-coding.json"
         },
         {
           "@id": "fixtures/in/immunization-with-id.json"
@@ -588,6 +594,9 @@
         },
         {
           "@id": "fixtures/in/patient-official-name-after-the-first.json"
+        },
+        {
+          "@id": "fixtures/in/patient-official-name-without-content.json"
         },
         {
           "@id": "fixtures/in/patient-telecom-not-carried.json"
@@ -1328,6 +1337,9 @@
           "@id": "fixtures/expected/allergy-reactions-after-the-first-not-carried.ttl"
         },
         {
+          "@id": "fixtures/expected/allergy-reaction-severity-after-a-reaction-without-one.ttl"
+        },
+        {
           "@id": "fixtures/findings/allergy-no-id-sulfa.ttl"
         },
         {
@@ -1335,6 +1347,9 @@
         },
         {
           "@id": "fixtures/findings/allergy-reactions-after-the-first-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/allergy-reaction-severity-after-a-reaction-without-one.ttl"
         },
         {
           "@id": "fixtures/expected/allergy-with-id.ttl"
@@ -1547,10 +1562,16 @@
           "@id": "fixtures/expected/condition-categories-after-the-first-not-carried.ttl"
         },
         {
+          "@id": "fixtures/expected/condition-category-first-without-a-carried-coding.ttl"
+        },
+        {
           "@id": "fixtures/findings/condition-no-id-narrative-breast-cancer.ttl"
         },
         {
           "@id": "fixtures/findings/condition-categories-after-the-first-not-carried.ttl"
+        },
+        {
+          "@id": "fixtures/findings/condition-category-first-without-a-carried-coding.ttl"
         },
         {
           "@id": "fixtures/expected/condition-no-id-narrative-diabetes.ttl"
@@ -2249,6 +2270,9 @@
           "@id": "fixtures/expected/patient-official-name-after-the-first.ttl"
         },
         {
+          "@id": "fixtures/expected/patient-official-name-without-content.ttl"
+        },
+        {
           "@id": "fixtures/expected/patient-telecom-not-carried.ttl"
         },
         {
@@ -2265,6 +2289,9 @@
         },
         {
           "@id": "fixtures/findings/patient-official-name-after-the-first.ttl"
+        },
+        {
+          "@id": "fixtures/findings/patient-official-name-without-content.ttl"
         },
         {
           "@id": "fixtures/findings/patient-telecom-not-carried.ttl"
@@ -3550,6 +3577,17 @@
       "description": "An AllergyIntolerance to peanut with four reactions, three of them with a severity. Authored here on 2026-11-27, for a case the conformance corpus does not hold: the severity of a reaction after the first, which was dropped with no finding."
     },
     {
+      "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json",
+      "@type": "File",
+      "name": "An AllergyIntolerance whose first reaction has no severity",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "An AllergyIntolerance to peanut with three reactions, the first without a severity, the second moderate and the third severe. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a severity on a later reaction when the first reaction has none, which was left unwritten and reported as a repeat."
+    },
+    {
       "@id": "fixtures/in/condition-with-id.json",
       "@type": "File",
       "name": "Condition with an id: essential hypertension",
@@ -3697,6 +3735,17 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A Condition with four categories: problem-list-item and encounter-diagnosis of FHIR's condition-category, a SNOMED CT coding, and text alone. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a category after the first, which was dropped with no finding."
+    },
+    {
+      "@id": "fixtures/in/condition-category-first-without-a-carried-coding.json",
+      "@type": "File",
+      "name": "A Condition whose first category has no condition-category coding",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A Condition with three categories, the first coded in SNOMED, the second problem-list-item and the third encounter-diagnosis in the condition-category system. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a category with a condition-category coding after one without, which was left unwritten and reported as a repeat."
     },
     {
       "@id": "fixtures/in/immunization-with-id.json",
@@ -3861,6 +3910,17 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A Patient with a nickname, an official name with two given names and a second official name. Authored here on 2026-11-27, for a case the conformance corpus does not hold: the official name when it is not the first, which was left unwritten for the first name."
+    },
+    {
+      "@id": "fixtures/in/patient-official-name-without-content.json",
+      "@type": "File",
+      "name": "A Patient whose official name holds nothing",
+      "encodingFormat": "application/fhir+json",
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A Patient with a usual name, family Usable and given U, and an official name whose only given name is blank. Authored here on 2026-11-27, for a case the conformance corpus does not hold: an official name with nothing in it beside a usable one, which shadowed the usable name and left the Patient without a name."
     },
     {
       "@id": "fixtures/in/patient-telecom-not-carried.json",
@@ -6558,6 +6618,20 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/allergy-reaction-severity-after-a-reaction-without-one.ttl",
+      "@type": "File",
+      "name": "Expected graph for allergy-reaction-severity-after-a-reaction-without-one",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/findings/allergy-no-id-sulfa.ttl",
       "@type": "File",
       "name": "Expected findings for allergy-no-id-sulfa",
@@ -6592,6 +6666,20 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/allergy-reactions-after-the-first-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/allergy-reaction-severity-after-a-reaction-without-one.ttl",
+      "@type": "File",
+      "name": "Expected findings for allergy-reaction-severity-after-a-reaction-without-one",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json"
       },
       "dateCreated": "2026-11-27",
       "license": {
@@ -7580,6 +7668,20 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/condition-category-first-without-a-carried-coding.ttl",
+      "@type": "File",
+      "name": "Expected graph for condition-category-first-without-a-carried-coding",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/condition-category-first-without-a-carried-coding.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/findings/condition-no-id-narrative-breast-cancer.ttl",
       "@type": "File",
       "name": "Expected findings for condition-no-id-narrative-breast-cancer",
@@ -7600,6 +7702,20 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/condition-categories-after-the-first-not-carried.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/condition-category-first-without-a-carried-coding.ttl",
+      "@type": "File",
+      "name": "Expected findings for condition-category-first-without-a-carried-coding",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/condition-category-first-without-a-carried-coding.json"
       },
       "dateCreated": "2026-11-27",
       "license": {
@@ -10632,6 +10748,20 @@
       "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
     },
     {
+      "@id": "fixtures/expected/patient-official-name-without-content.ttl",
+      "@type": "File",
+      "name": "Expected graph for patient-official-name-without-content",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/patient-official-name-without-content.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "The records layer cascade-bridge-rs convert --out produces from the input it is about and the facts its test entry supplies, regenerated by the Bridge and committed unedited, never written by hand; its record names recomputed from each rule's inputs by cascade-vocabulary's tests/naming.py, and its version names checked against the hash of their own triples."
+    },
+    {
       "@id": "fixtures/expected/patient-telecom-not-carried.ttl",
       "@type": "File",
       "name": "Expected graph for patient-telecom-not-carried",
@@ -10708,6 +10838,20 @@
       "encodingFormat": "text/turtle",
       "about": {
         "@id": "fixtures/in/patient-official-name-after-the-first.json"
+      },
+      "dateCreated": "2026-11-27",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "cascade-bridge-rs convert --findings over the input it is about, with the facts its test entry supplies, committed unedited; each finding reviewed against in/sparql/ and the gap scheme."
+    },
+    {
+      "@id": "fixtures/findings/patient-official-name-without-content.ttl",
+      "@type": "File",
+      "name": "Expected findings for patient-official-name-without-content",
+      "encodingFormat": "text/turtle",
+      "about": {
+        "@id": "fixtures/in/patient-official-name-without-content.json"
       },
       "dateCreated": "2026-11-27",
       "license": {

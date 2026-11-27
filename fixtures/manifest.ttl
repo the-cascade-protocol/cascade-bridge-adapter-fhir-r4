@@ -13,6 +13,7 @@
     <#allergy-no-id-sulfa>
     <#allergy-categories-after-the-first-not-carried>
     <#allergy-reactions-after-the-first-not-carried>
+    <#allergy-reaction-severity-after-a-reaction-without-one>
     <#condition-with-id>
     <#condition-every-mapped-element>
     <#condition-with-id-meta-fetch-a>
@@ -24,6 +25,7 @@
     <#condition-no-id-narrative-diabetes>
     <#condition-no-id-narrative-breast-cancer>
     <#condition-categories-after-the-first-not-carried>
+    <#condition-category-first-without-a-carried-coding>
     <#immunization-with-id>
     <#immunization-every-mapped-element>
     <#immunization-no-id-2024>
@@ -38,6 +40,7 @@
     <#patient-second-given-name-not-carried>
     <#patient-second-name-not-carried>
     <#patient-official-name-after-the-first>
+    <#patient-official-name-without-content>
     <#patient-telecom-not-carried>
     <#patient-blank-first-given-name>
     <#patient-deceased-date>
@@ -341,6 +344,19 @@
     bridge:expectedFindings <findings/allergy-reactions-after-the-first-not-carried.ttl>
   ] .
 
+<#allergy-reaction-severity-after-a-reaction-without-one> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-reaction-severity-after-a-reaction-without-one" ;
+  rdfs:comment "An AllergyIntolerance whose first reaction states no severity, and whose second and third reactions state one: the second reaction's severity is carried, as the first severity there is, and the third reaction's is a fhirr4:allergyReactionSeverityRepeated finding at it." ;
+  mf:action [
+    bridge:input <in/allergy-reaction-severity-after-a-reaction-without-one.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-reaction-severity-after-a-reaction-without-one.ttl> ;
+    bridge:expectedFindings <findings/allergy-reaction-severity-after-a-reaction-without-one.ttl>
+  ] .
+
 <#condition-with-id> a bridge:IsomorphicConversionTest ;
   mf:name "condition-with-id" ;
   mf:action [
@@ -474,6 +490,19 @@
   mf:result [
     bridge:expectedGraph <expected/condition-categories-after-the-first-not-carried.ttl> ;
     bridge:expectedFindings <findings/condition-categories-after-the-first-not-carried.ttl>
+  ] .
+
+<#condition-category-first-without-a-carried-coding> a bridge:IsomorphicConversionTest ;
+  mf:name "condition-category-first-without-a-carried-coding" ;
+  rdfs:comment "A Condition whose first category has only a SNOMED coding and whose second and third have a condition-category coding: the second category is carried, as the first that has a coding the mapping carries, and the first and third categories, which the mapping does not carry, are fhirr4:conditionOrAllergyCategoryRepeated findings at them." ;
+  mf:action [
+    bridge:input <in/condition-category-first-without-a-carried-coding.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/condition-category-first-without-a-carried-coding.ttl> ;
+    bridge:expectedFindings <findings/condition-category-first-without-a-carried-coding.ttl>
   ] .
 
 <#immunization-with-id> a bridge:IsomorphicConversionTest ;
@@ -646,6 +675,19 @@
   mf:result [
     bridge:expectedGraph <expected/patient-official-name-after-the-first.ttl> ;
     bridge:expectedFindings <findings/patient-official-name-after-the-first.ttl>
+  ] .
+
+<#patient-official-name-without-content> a bridge:IsomorphicConversionTest ;
+  mf:name "patient-official-name-without-content" ;
+  rdfs:comment "A Patient who states a usual name and then an official name that holds nothing, its only given name blank: the usual name is carried, as the name with something in it, and the official name with nothing in it is not carried and is not reported." ;
+  mf:action [
+    bridge:input <in/patient-official-name-without-content.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/patient-official-name-without-content.ttl> ;
+    bridge:expectedFindings <findings/patient-official-name-without-content.ttl>
   ] .
 
 <#patient-telecom-not-carried> a bridge:IsomorphicConversionTest ;
