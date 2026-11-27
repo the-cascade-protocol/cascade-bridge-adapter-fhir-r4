@@ -660,8 +660,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -4123,8 +4124,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -9011,8 +9013,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 
@@ -12451,8 +12454,9 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/performedPeriod/start" ;
-  bridge:verdict bridge:carried ;
+  bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernDates ;
+  bridge:namesGap fhirr4:performedPeriodStartBesideDate ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureDate ] .
 

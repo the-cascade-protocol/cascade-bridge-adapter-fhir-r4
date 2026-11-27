@@ -372,6 +372,11 @@ fhirr4:procedurePeriodEnd a skos:Concept ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 
+fhirr4:performedPeriodStartBesideDate a skos:Concept ;
+  skos:prefLabel "A procedure states a period's start beside a performed date, which FHIR allows only one of: the performed date is the procedure's date, the start is not carried, and no Cascade term carries it, whether or not it is a date FHIR allows."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:carriedWithLoss .
+
 fhirr4:encounterNotCarried a skos:Concept ;
   skos:prefLabel "A resource references the encounter it was recorded at, and no Cascade predicate carries the link."@en ;
   skos:inScheme fhirr4:gaps ;

@@ -418,7 +418,9 @@ As cascade-vocabulary says, read on 2026-10-24:
   `fhirr4:dateNotCarried`, reports each: on a patient's birth and death, an allergy's or a condition's onset or
   abatement, an immunization's occurrence, a procedure's performance, a document reference's date, a report's
   effective time and `issued`, a laboratory result's or an interpretation's time, a prescription's `authoredOn`, a
-  use's `effective[x]`, a dosage bound and a dispense's time. A birth date holds no time. A schema violation may
+  use's `effective[x]`, a dosage bound and a dispense's time. A procedure's `performedPeriod.start` is its date only
+  where it states no `performedDateTime`; beside one, readable or not, it is not carried and
+  `fhirr4:performedPeriodStartBesideDate` reports it. A birth date holds no time. A schema violation may
   report the same date as well. The test is looser than FHIR in two ways: a time to the minute is accepted, as above,
   though FHIR asks for seconds (it needs its zone), and a date alone is accepted where FHIR
   types the field `instant` and asks for a time, such as `issued`.
