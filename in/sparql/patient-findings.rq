@@ -10,9 +10,9 @@ PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 
 # What patient.rq leaves behind: a gender that is no code of FHIR's administrative
-# gender; each name after the first, at the name; each given name of the first name
-# that is not blank and is not the one carried, at the given name; and each contact
-# point, at the contact point.
+# gender; each name but the one carried, the first whose use is official, else the
+# first, at the name; each given name of that name that is not blank and is not the one
+# carried, at the given name; and each contact point, at the contact point.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -56,7 +56,18 @@ WHERE {
   UNION
   {
     ?resource xyz:name ?names . ?names ?nameSlot ?name .
-    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)) && ?nameSlot != rdf:_1)
+    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)))
+    FILTER (!((EXISTS { ?name xyz:use "official" }
+               && NOT EXISTS {
+                 ?names ?earlierNameSlot ?earlierName . ?earlierName xyz:use "official" .
+                 FILTER (STRSTARTS(STR(?earlierNameSlot), STR(rdf:_))
+                         && xsd:integer(STRAFTER(STR(?earlierNameSlot), "#_")) < xsd:integer(STRAFTER(STR(?nameSlot), "#_")))
+               })
+              || (?nameSlot = rdf:_1
+                  && NOT EXISTS {
+                    ?names ?anyNameSlot ?official . ?official xyz:use "official" .
+                    FILTER (STRSTARTS(STR(?anyNameSlot), STR(rdf:_)))
+                  })))
     OPTIONAL { ?name xyz:text ?nameText }
     OPTIONAL { ?name xyz:family ?nameFamily }
     BIND (COALESCE(?nameText, ?nameFamily) AS ?value)
@@ -65,7 +76,20 @@ WHERE {
   }
   UNION
   {
-    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:given ?given . ?given ?givenSlot ?value .
+    ?resource xyz:name ?names . ?names ?nameSlot ?name .
+    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)))
+    FILTER ((EXISTS { ?name xyz:use "official" }
+             && NOT EXISTS {
+               ?names ?earlierNameSlot ?earlierName . ?earlierName xyz:use "official" .
+               FILTER (STRSTARTS(STR(?earlierNameSlot), STR(rdf:_))
+                       && xsd:integer(STRAFTER(STR(?earlierNameSlot), "#_")) < xsd:integer(STRAFTER(STR(?nameSlot), "#_")))
+             })
+            || (?nameSlot = rdf:_1
+                && NOT EXISTS {
+                  ?names ?anyNameSlot ?official . ?official xyz:use "official" .
+                  FILTER (STRSTARTS(STR(?anyNameSlot), STR(rdf:_)))
+                }))
+    ?name xyz:given ?given . ?given ?givenSlot ?value .
     FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_)) && REPLACE(STR(?value), "^\\s+|\\s+$", "") != "")
     FILTER EXISTS {
       ?given ?earlierSlot ?earlier .
@@ -73,7 +97,7 @@ WHERE {
               && xsd:integer(STRAFTER(STR(?earlierSlot), "#_")) < xsd:integer(STRAFTER(STR(?givenSlot), "#_"))
               && REPLACE(STR(?earlier), "^\\s+|\\s+$", "") != "")
     }
-    BIND (CONCAT("/name/0/given/", STR(xsd:integer(STRAFTER(STR(?givenSlot), "#_")) - 1)) AS ?step)
+    BIND (CONCAT("/name/", STR(xsd:integer(STRAFTER(STR(?nameSlot), "#_")) - 1), "/given/", STR(xsd:integer(STRAFTER(STR(?givenSlot), "#_")) - 1)) AS ?step)
     BIND (fhirr4:patientNameRepeated AS ?gap)
   }
   UNION

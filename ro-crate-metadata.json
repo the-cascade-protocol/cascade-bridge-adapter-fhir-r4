@@ -232,6 +232,9 @@
           "@id": "in/sparql/category-text-findings.rq"
         },
         {
+          "@id": "in/sparql/allergy-and-condition-findings.rq"
+        },
+        {
           "@id": "in/sparql/observation-component-findings.rq"
         },
         {
@@ -429,6 +432,9 @@
         },
         {
           "@id": "in/sparql/category-text-findings.rq"
+        },
+        {
+          "@id": "in/sparql/allergy-and-condition-findings.rq"
         },
         {
           "@id": "in/sparql/observation-component-findings.rq"
@@ -2918,7 +2924,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "What a Patient says, written on the version record.rq names: the first name it states, its birth date, its gender where it is one of the four codes of administrative-gender, and its death: cascade:deceased from deceasedBoolean, and a deceasedDateTime as the date of death with cascade:deceased true."
+      "description": "What a Patient says, written on the version record.rq names: the first name whose use is official, else the first, its birth date, its gender where it is one of the four codes of administrative-gender, and its death: cascade:deceased from deceasedBoolean, and a deceasedDateTime as the date of death with cascade:deceased true."
     },
     {
       "@id": "in/sparql/medication.rq",
@@ -3178,7 +3184,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A finding for each Patient whose gender is not one of the four codes of FHIR's administrative gender, which patient.rq does not carry."
+      "description": "A finding for each Patient whose gender is not one of the four codes of FHIR's administrative gender, each name but the one patient.rq carries, each given name of it that is not the one carried, and each contact point, which patient.rq does not carry."
     },
     {
       "@id": "in/sparql/reference-display-findings.rq",
@@ -3199,6 +3205,16 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "A finding for each category text of a condition, a diagnostic report, a medication request or statement, a procedure or a note or document that has no coding beside it, which no Cascade predicate carries."
+    },
+    {
+      "@id": "in/sparql/allergy-and-condition-findings.rq",
+      "@type": "File",
+      "name": "Findings: an allergy's and a condition's repeats",
+      "encodingFormat": "application/sparql-query",
+      "license": {
+        "@id": "https://spdx.org/licenses/Apache-2.0"
+      },
+      "description": "A finding for each category of an allergy or a condition after the first, fhirr4:conditionOrAllergyCategoryRepeated, and for the severity of each reaction of an allergy after the first, fhirr4:allergyReactionSeverityRepeated, which allergy-intolerance.rq and condition.rq do not carry as the vocabulary holds one of each."
     },
     {
       "@id": "in/sparql/observation-component-findings.rq",
@@ -3268,7 +3284,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "Reports, for an Observation lab-result-table.rq calls a lab result, fhirr4:labResultPeriodEnd for the end of its effectivePeriod, fhirr4:codingNotCarried for each coding of its code with no system, a system coding-system-table.rq gives no row, or no code, fhirr4:labResultRangeRepeated for each value of a reference range after the first, fhirr4:labResultInterpretationNotCarried for each flag in a system other than v3 ObservationInterpretation or with no code, fhirr4:performerCarriedOnlyAsOneOrganizationRecord for each performer reference of a result from a server whose performers name more than one Organization, at paths the source accounting carries for the other kinds or where they hold one value."
+      "description": "Reports, for an Observation lab-result-table.rq calls a lab result, fhirr4:effectivePeriodEndNotCarried for the end of its effectivePeriod, fhirr4:codingNotCarried for each coding of its code with no system, a system coding-system-table.rq gives no row, or no code, fhirr4:labResultRangeRepeated for each value of a reference range after the first, fhirr4:labResultInterpretationNotCarried for each flag in a system other than v3 ObservationInterpretation or with no code, fhirr4:performerCarriedOnlyAsOneOrganizationRecord for each performer reference of a result from a server whose performers name more than one Organization, at paths the source accounting carries for the other kinds or where they hold one value."
     },
     {
       "@id": "in/sparql/absent-reason-findings.rq",

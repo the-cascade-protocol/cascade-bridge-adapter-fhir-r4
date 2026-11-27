@@ -6,9 +6,9 @@ PREFIX bridge:   <https://ns.cascadeprotocol.org/bridge/v1-draft#>
 PREFIX cascade:  <https://ns.cascadeprotocol.org/cascade#>
 PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
 
-# Only the first name a Patient states is carried, and of it the first given name that
-# is not blank: the vocabulary holds one of each, and writes no blank name.
-# patient-findings.rq reports the rest.
+# Only one name a Patient states is carried, the first whose use is official, else the first,
+# and of it the first given name that is not blank: the vocabulary holds one of each, and
+# writes no blank name. patient-findings.rq reports the rest.
 # A birth date is typed by the precision FHIR wrote it to: a year is an
 # xsd:gYear, a year and month an xsd:gYearMonth, a day an xsd:date. A gender is
 # carried only as one of the four codes its required binding allows; any other
@@ -48,27 +48,42 @@ WHERE {
   BIND (IRI(CONCAT("urn:cascade:version-at:", SHA256(CONCAT(?recordSelector, ?topStep, ?containedStep)))) AS ?version)
 
   {
-    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:family ?o .
-    FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
-    BIND (foaf:familyName AS ?p)
-  }
-  UNION
-  {
-    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:given ?given . ?given ?givenSlot ?o .
-    FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_)) && REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
-    FILTER NOT EXISTS {
-      ?given ?earlierSlot ?earlier .
-      FILTER (STRSTARTS(STR(?earlierSlot), STR(rdf:_))
-              && xsd:integer(STRAFTER(STR(?earlierSlot), "#_")) < xsd:integer(STRAFTER(STR(?givenSlot), "#_"))
-              && REPLACE(STR(?earlier), "^\\s+|\\s+$", "") != "")
+    ?resource xyz:name ?names . ?names ?nameSlot ?name .
+    FILTER (STRSTARTS(STR(?nameSlot), STR(rdf:_)))
+    FILTER ((EXISTS { ?name xyz:use "official" }
+             && NOT EXISTS {
+               ?names ?earlierNameSlot ?earlierName . ?earlierName xyz:use "official" .
+               FILTER (STRSTARTS(STR(?earlierNameSlot), STR(rdf:_))
+                       && xsd:integer(STRAFTER(STR(?earlierNameSlot), "#_")) < xsd:integer(STRAFTER(STR(?nameSlot), "#_")))
+             })
+            || (?nameSlot = rdf:_1
+                && NOT EXISTS {
+                  ?names ?anyNameSlot ?official . ?official xyz:use "official" .
+                  FILTER (STRSTARTS(STR(?anyNameSlot), STR(rdf:_)))
+                }))
+    {
+      ?name xyz:family ?o .
+      FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+      BIND (foaf:familyName AS ?p)
     }
-    BIND (foaf:givenName AS ?p)
-  }
-  UNION
-  {
-    ?resource xyz:name ?names . ?names rdf:_1 ?name . ?name xyz:text ?o .
-    FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
-    BIND (foaf:name AS ?p)
+    UNION
+    {
+      ?name xyz:given ?given . ?given ?givenSlot ?o .
+      FILTER (STRSTARTS(STR(?givenSlot), STR(rdf:_)) && REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+      FILTER NOT EXISTS {
+        ?given ?earlierSlot ?earlier .
+        FILTER (STRSTARTS(STR(?earlierSlot), STR(rdf:_))
+                && xsd:integer(STRAFTER(STR(?earlierSlot), "#_")) < xsd:integer(STRAFTER(STR(?givenSlot), "#_"))
+                && REPLACE(STR(?earlier), "^\\s+|\\s+$", "") != "")
+      }
+      BIND (foaf:givenName AS ?p)
+    }
+    UNION
+    {
+      ?name xyz:text ?o .
+      FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+      BIND (foaf:name AS ?p)
+    }
   }
   UNION
   {

@@ -2097,7 +2097,7 @@
 
 <#variant-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;
   mf:name "variant-effective-period-end-not-carried" ;
-  rdfs:comment "A genetic variant Observation whose effective period states only an end: the end is the time it was collected or resulted, which no Cascade term carries, so it is a fhirr4:variantTimeNotCarried finding at the end." ;
+  rdfs:comment "A genetic variant Observation whose effective period states only an end: the end is the time it was collected or resulted, which no Cascade term carries, so it is a fhirr4:effectivePeriodEndNotCarried finding at the end." ;
   mf:action [
     bridge:input <in/variant-effective-period-end-not-carried.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
@@ -2175,7 +2175,7 @@
 
 <#diagnostic-report-effective-period-end-not-carried> a bridge:IsomorphicConversionTest ;
   mf:name "diagnostic-report-effective-period-end-not-carried" ;
-  rdfs:comment "A DiagnosticReport whose effective period states a start and an end: the start is the report's effective time, and the end is carried by no Cascade term, so it is a fhirr4:diagnosticReportPeriodEnd finding at the end." ;
+  rdfs:comment "A DiagnosticReport whose effective period states a start and an end: the start is the report's effective time, and the end is carried by no Cascade term, so it is a fhirr4:effectivePeriodEndNotCarried finding at the end." ;
   mf:action [
     bridge:input <in/diagnostic-report-effective-period-end-not-carried.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
