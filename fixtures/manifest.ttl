@@ -189,6 +189,12 @@
     <#medication-dispense-times-absent-for-reason>
     <#bundle-medication-dispense-supply-not-carried>
     <#bundle-medication-dispense-quantity-dropped-whole>
+    <#medication-dispense-quantity-without-a-value>
+    <#medication-dispense-days-supply-without-a-value>
+    <#medication-request-dose-quantity-without-a-value>
+    <#medication-request-supply-duration-without-a-value>
+    <#bundle-medication-supply-numbers-out-of-range>
+    <#bundle-medication-supply-reason-held-in-the-value>
     <#medication-dispense-prescription-without-server>
     <#bundle-medication-dispense-repeated-id-and-patient-not-held>
     <#medication-dispense-codings-not-carried>
@@ -2391,6 +2397,84 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-medication-dispense-quantity-dropped-whole.ttl> ;
     bridge:expectedFindings <findings/bundle-medication-dispense-quantity-dropped-whole.ttl>
+  ] .
+
+<#medication-dispense-quantity-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-quantity-without-a-value" ;
+  rdfs:comment "A MedicationDispense whose quantity states a unit and a UCUM code and no number: it is dropped whole, with one finding at the quantity holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-dispense-quantity-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-quantity-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-quantity-without-a-value.ttl>
+  ] .
+
+<#medication-dispense-days-supply-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-dispense-days-supply-without-a-value" ;
+  rdfs:comment "A MedicationDispense whose days' supply states a unit and the UCUM code d and no number: it is dropped whole, with one finding at the days' supply holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-dispense-days-supply-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-dispense-days-supply-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-dispense-days-supply-without-a-value.ttl>
+  ] .
+
+<#medication-request-dose-quantity-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-dose-quantity-without-a-value" ;
+  rdfs:comment "A MedicationRequest whose dose quantity states a unit and a UCUM code and no number: it is dropped whole, with one finding at the dose quantity holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-request-dose-quantity-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-dose-quantity-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-request-dose-quantity-without-a-value.ttl>
+  ] .
+
+<#medication-request-supply-duration-without-a-value> a bridge:IsomorphicConversionTest ;
+  mf:name "medication-request-supply-duration-without-a-value" ;
+  rdfs:comment "A MedicationRequest whose expected supply duration states a unit and the UCUM code d and no number: it is dropped whole, with one finding at the duration holding its unit code." ;
+  mf:action [
+    bridge:input <in/medication-request-supply-duration-without-a-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/medication-request-supply-duration-without-a-value.ttl> ;
+    bridge:expectedFindings <findings/medication-request-supply-duration-without-a-value.ttl>
+  ] .
+
+<#bundle-medication-supply-numbers-out-of-range> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-supply-numbers-out-of-range" ;
+  rdfs:comment "A Bundle of a MedicationDispense and a MedicationRequest whose supply numbers lie beyond twenty digits of the point, 1e30 and 1e-30, which pass FHIR's decimal form: the dispense's quantity and days' supply, the request's dose quantity and expected supply duration are each dropped whole, with one finding at the quantity holding the number." ;
+  mf:action [
+    bridge:input <in/bundle-medication-supply-numbers-out-of-range.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-supply-numbers-out-of-range.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-supply-numbers-out-of-range.ttl>
+  ] .
+
+<#bundle-medication-supply-reason-held-in-the-value> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-medication-supply-reason-held-in-the-value" ;
+  rdfs:comment "A Bundle of two MedicationDispenses and two MedicationRequests whose days' supply or supply duration is dropped for its unit, each finding holding what shows the reason: a number with the time code d in a system that is not UCUM holds that system, and a number with no unit holds nothing." ;
+  mf:action [
+    bridge:input <in/bundle-medication-supply-reason-held-in-the-value.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-medication-supply-reason-held-in-the-value.ttl> ;
+    bridge:expectedFindings <findings/bundle-medication-supply-reason-held-in-the-value.ttl>
   ] .
 
 <#medication-dispense-codings-not-carried> a bridge:IsomorphicConversionTest ;
