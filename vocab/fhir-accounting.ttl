@@ -433,7 +433,7 @@
   bridge:sourcePath "/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -443,7 +443,7 @@
   bridge:sourcePath "/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
@@ -1114,7 +1114,7 @@
   bridge:sourcePath "/contained/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -1124,7 +1124,7 @@
   bridge:sourcePath "/contained/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
@@ -8794,7 +8794,7 @@
   bridge:sourcePath "/resource/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -8804,7 +8804,7 @@
   bridge:sourcePath "/resource/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
@@ -9452,7 +9452,7 @@
   bridge:sourcePath "/resource/contained/component/valueCodeableConcept/coding/code" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:clinvarVariationId ] ,
@@ -9462,7 +9462,7 @@
   bridge:sourcePath "/resource/contained/component/valueCodeableConcept/coding/display" ;
   bridge:verdict bridge:carriedInPart ;
   bridge:concern bridge:concernCodes ;
-  bridge:namesGap fhirr4:variantComponentNotCarried ;
+  bridge:namesGap fhirr4:interpretationClassification ;
   bridge:carriedAs
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:geneSymbol ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:hgvsCodingDnaExpression ] ,
