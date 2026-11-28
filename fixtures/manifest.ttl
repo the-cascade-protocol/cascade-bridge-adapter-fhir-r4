@@ -261,6 +261,8 @@
     <#bundle-condition-onsets-and-the-fhir-date-forms>
     <#bundle-last-updates-short-of-an-instant>
     <#bundle-last-updates-of-resources-nothing-maps>
+    <#documents-and-reports-contained-in-a-resource>
+    <#bundle-contained-documents-and-resources-holding-request>
   ) .
 
 <#allergy-with-id> a bridge:IsomorphicConversionTest ;
@@ -3609,4 +3611,30 @@
   mf:result [
     bridge:expectedGraph <expected/bundle-last-updates-of-resources-nothing-maps.ttl> ;
     bridge:expectedFindings <findings/bundle-last-updates-of-resources-nothing-maps.ttl>
+  ] .
+
+<#documents-and-reports-contained-in-a-resource> a bridge:IsomorphicConversionTest ;
+  mf:name "documents-and-reports-contained-in-a-resource" ;
+  rdfs:comment "A Condition that contains two DocumentReferences, a DiagnosticReport, an Organization and a MedicationAdministration with a request. The fields a contained DocumentReference and DiagnosticReport hold are carried as they are in a resource written whole, and the request of a type this release does not map is accounted as that type's element." ;
+  mf:action [
+    bridge:input <in/documents-and-reports-contained-in-a-resource.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/no-server.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/documents-and-reports-contained-in-a-resource.ttl> ;
+    bridge:expectedFindings <findings/documents-and-reports-contained-in-a-resource.ttl>
+  ] .
+
+<#bundle-contained-documents-and-resources-holding-request> a bridge:IsomorphicConversionTest ;
+  mf:name "bundle-contained-documents-and-resources-holding-request" ;
+  rdfs:comment "A Bundle whose first entry has its own request and holds the same contained set with a contained Condition whose code is absent for a reason, and whose second entry is a ClaimResponse with a request of its own and the entry's search. The entry's own members account for the entry, and a resource's members of the same name are accounted as that resource's." ;
+  mf:action [
+    bridge:input <in/bundle-contained-documents-and-resources-holding-request.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-bundle> ;
+    bridge:facts <facts/no-server.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/bundle-contained-documents-and-resources-holding-request.ttl> ;
+    bridge:expectedFindings <findings/bundle-contained-documents-and-resources-holding-request.ttl>
   ] .
