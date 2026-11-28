@@ -1,0 +1,50 @@
+{
+  "env": {
+    "os": "Ubuntu 26.04.1 LTS",
+    "runner": "github-hosted",
+    "cpus": 4,
+    "node": "24.22.3",
+    "host": "node",
+    "profile": "wasm",
+    "cpu": "AMD EPYC 9V45 96-Core Processor"
+  },
+  "commit": {
+    "cascade-bridge-adapter-fhir-r4": "be28d1231defd202aa4eb2055728323707ffdd14",
+    "cascade-vocabulary": "287ca13fc7aa6b5a529ac76d3f69f35371afceaa",
+    "cascade-bridge-rs": "40f6e1af7ff2d7a67d71a47daa687a8e051c0f5c"
+  },
+  "results": [
+    {
+      "name": "fhir-r4-lab-pull-3000/output/graph",
+      "unit": "{count}",
+      "value": 63025,
+      "kind": "output",
+      "sha256": "37ddd3ff45eedcca686486482a5dd0ea90120d791c04352fb96a41e20d5fe7ac",
+      "extra": "Distinct triples in the output graph, with a SHA-256 fingerprint of the output that is the same whenever the content is the same, whatever order the engine wrote it in and whatever it named its blank nodes."
+    },
+    {
+      "name": "fhir-r4-lab-pull-3000/output/findings",
+      "unit": "{count}",
+      "value": 90090,
+      "kind": "output",
+      "sha256": "ab1ce0f96bb2575e66e43148a630d178f3f62b49592d4c49b91ec7790db62417",
+      "extra": "Distinct triples in the findings, with a SHA-256 fingerprint of them that is the same whenever the content is the same, whatever order the engine wrote them in and whatever it named its blank nodes."
+    },
+    {
+      "name": "fhir-r4-synthea-10y-trimmed/output/graph",
+      "unit": "{count}",
+      "value": 12654,
+      "kind": "output",
+      "sha256": "7cc449ffbde5128e52fafcf8acfb64362df9b08f54ac053668923208f8175856",
+      "extra": "Distinct triples in the output graph, with a SHA-256 fingerprint of the output that is the same whenever the content is the same, whatever order the engine wrote it in and whatever it named its blank nodes."
+    },
+    {
+      "name": "fhir-r4-synthea-10y-trimmed/output/findings",
+      "unit": "{count}",
+      "value": 40099,
+      "kind": "output",
+      "sha256": "355ebc84b88375c3fc7058b60d965906f2ad0383d3bd817dc63935268d80543c",
+      "extra": "Distinct triples in the findings, with a SHA-256 fingerprint of them that is the same whenever the content is the same, whatever order the engine wrote them in and whatever it named its blank nodes."
+    }
+  ]
+}
