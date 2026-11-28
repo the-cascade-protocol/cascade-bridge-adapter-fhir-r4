@@ -62,9 +62,17 @@ field in a Bundle entry (`/resource/code/coding`), in a contained resource
 (`/contained/code/coding`) and in one a Bundle entry contains
 ([the rule](https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/main/adapter/README.md#saying-where-a-place-stands-in-each-form-of-a-path)).
 A prefixed entry is written only where the truth differs for that form, and its
-`bridge:because` says why. A path is relative to the record, so the envelopes'
-paths differ.
+`bridge:because` says why. `/contained/x` stands for `/contained/x` and for
+`/resource/contained/x`; `/resource/x` and `/resource/contained/x` stand only
+for themselves. A path is relative to the record, so the envelopes' paths
+differ.
 
+- A Bundle entry's own members (`/request`, `/fullUrl`, `/search/mode`) are
+  written bare, so their entries stand in every form for every resource type:
+  where a resource type has a member of the same name, that form needs an
+  override, as `/request` has
+  ([cascade-bridge-spec#249](https://github.com/the-cascade-protocol/cascade-bridge-spec/issues/249)
+  asks whether those members should get a form of their own).
 - The same member name holds different things under different parents
   (`display` in a `Coding` and in a `Reference`), so a verdict is settled
   against `../in/sparql/`, not against the name.
