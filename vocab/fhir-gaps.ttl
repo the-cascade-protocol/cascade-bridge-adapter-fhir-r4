@@ -141,7 +141,7 @@ fhirr4:allergyReactionSeverityRepeated a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:allergyReactionMemberNotCarried a skos:Concept ;
-  skos:prefLabel "A reaction of an allergy states a substance, an onset, a description, an exposure route or a note, and no Cascade predicate carries it: the allergen, the onset and the notes the vocabulary holds are the allergy's own."@en ;
+  skos:prefLabel "A reaction of an allergy states a substance, an onset, a description or an exposure route, and no Cascade predicate carries it: the allergen and the onset the vocabulary holds are the allergy's own."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 

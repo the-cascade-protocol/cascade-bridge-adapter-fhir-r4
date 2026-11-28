@@ -158,5 +158,12 @@ WHERE {
     ?resource xyz:note ?notes . ?notes ?noteSlot ?note . ?note xyz:text ?o .
     BIND (cascade:addedNoteText AS ?p)
   }
+  UNION
+  {
+    ?resource xyz:reaction ?reactions . ?reactions ?reactionSlot ?reaction .
+    ?reaction xyz:note ?notes . ?notes ?noteSlot ?note . ?note xyz:text ?o .
+    FILTER (REPLACE(STR(?o), "^\\s+|\\s+$", "") != "")
+    BIND (cascade:addedNoteText AS ?p)
+  }
   BIND (IF(BOUND(?writtenTime), IRI(CONCAT(STR(?version), "#padded-", STRAFTER(STR(?p), "#"))), 1/0) AS ?paddedNode)
 }
