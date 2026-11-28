@@ -599,6 +599,11 @@
   bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
+  bridge:sourcePath "/contained/contained" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "FHIR R4 rule dom-2 forbids a contained resource from holding contained resources, and the mappings read one level of contained: a path of this form is not valid FHIR, and the mappings do not read it." .
+
+[] a bridge:PathEntry ;
   bridge:sourcePath "/content/format/display" ;
   bridge:verdict bridge:redundantWith ;
   bridge:concern bridge:concernCodes ;
@@ -3171,6 +3176,16 @@
   bridge:verdict bridge:consumed .
 
 [] a bridge:PathEntry ;
+  bridge:sourcePath "/resource/fullUrl" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "No resource type in FHIR R4 has an element named fullUrl: it is a Bundle entry's own, so a resource holding one is not valid FHIR and the mappings do not read it." .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/contained/fullUrl" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "No resource type in FHIR R4 has an element named fullUrl: it is a Bundle entry's own, so a resource holding one is not valid FHIR and the mappings do not read it." .
+
+[] a bridge:PathEntry ;
   bridge:sourcePath "/gender" ;
   bridge:verdict bridge:carried ;
   bridge:concern bridge:concernIdentity ;
@@ -4158,6 +4173,16 @@
   bridge:because "The HTTP request that would create the resource in a transaction Bundle: it says nothing about the resource." .
 
 [] a bridge:PathEntry ;
+  bridge:sourcePath "/resource/request" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "An element of a resource of a type this release does not map (a Reference on a ClaimResponse, a MedicationAdministration, a Specimen and five other R4 types), not the Bundle entry's HTTP request: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/contained/request" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "An element of a resource of a type this release does not map (a Reference on a ClaimResponse, a MedicationAdministration, a Specimen and five other R4 types), not the Bundle entry's HTTP request: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+
+[] a bridge:PathEntry ;
   bridge:sourcePath "/requester" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernReferences ;
@@ -4172,6 +4197,16 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource" ;
   bridge:verdict bridge:consumed .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/resource/resource" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "An element of a resource of a type this release does not map (a CompartmentDefinition or an OperationDefinition, the only R4 types with an element named resource), not the Bundle entry's resource: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/contained/resource" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "An element of a resource of a type this release does not map (a CompartmentDefinition or an OperationDefinition, the only R4 types with an element named resource), not the Bundle entry's resource: the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/code/coding/code" ;
@@ -4889,6 +4924,16 @@
   bridge:sourcePath "/search/mode" ;
   bridge:verdict bridge:ignored ;
   bridge:because "How a search found the entry: it says nothing about the resource." .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/resource/search" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "An element of a resource of a type this release does not map (a CompartmentDefinition, the only R4 type with an element named search), not how a search found the Bundle entry: the resource yields fhirr4:resourceTypeNotMapped and no record." .
+
+[] a bridge:PathEntry ;
+  bridge:sourcePath "/contained/search" ;
+  bridge:verdict bridge:ignored ;
+  bridge:because "An element of a resource of a type this release does not map (a CompartmentDefinition, the only R4 type with an element named search), not how a search found the Bundle entry: the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/issue" ;
