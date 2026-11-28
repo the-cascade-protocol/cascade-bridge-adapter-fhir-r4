@@ -55,10 +55,15 @@ rather than to the rule that finds it.
 
 ## A verdict on a path is read, never inferred from its name
 
-The source accounting holds one `bridge:PathEntry` for each path a mapping
-reads and each path the judged inputs carry, at every place a resource stands
-in a record: the record itself, `/resource` in a Bundle entry, and `/contained`
-under either. A path is relative to the record, so the envelopes' paths differ.
+The source accounting holds one `bridge:PathEntry` for each field a mapping
+reads and each field the judged inputs carry, entered once, for its place: the
+path as a resource writes it, `/code/coding`. That entry also stands for the
+field in a Bundle entry (`/resource/code/coding`), in a contained resource
+(`/contained/code/coding`) and in one a Bundle entry contains
+([the rule](https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/main/adapter/README.md#saying-where-a-place-stands-in-each-form-of-a-path)).
+A prefixed entry is written only where the truth differs for that form, and its
+`bridge:because` says why. A path is relative to the record, so the envelopes'
+paths differ.
 
 - The same member name holds different things under different parents
   (`display` in a `Coding` and in a `Reference`), so a verdict is settled
@@ -66,7 +71,7 @@ under either. A path is relative to the record, so the envelopes' paths differ.
 - Several entries may name one gap: a gap is a kind of problem, and the paths
   that open it are as many as the source has.
 - An entry whose verdict is `carried` or `carriedInPart` names in `bridge:carriedAs` each term it becomes, one node
-  for each resource type and property, the same nodes on the four forms of a path. A term is read from the query
+  for each resource type and property. A term is read from the query
   that writes it, not from the path's name, and a node is made for a resource type only when FHIR R4 defines the
   element on it **and** a query writes the term from it. What the specification's
   [check](https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/main/adapter/validation.md) catches is not a reason to
