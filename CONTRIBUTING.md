@@ -23,8 +23,8 @@ cd cascade-bridge-adapter-fhir-r4
 The checks are the specification's, and they run in CI. To run the adapter lint yourself you need Python 3.12 and a
 checkout of [cascade-bridge-spec](https://github.com/the-cascade-protocol/cascade-bridge-spec);
 [`adapter/validation.md`](https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/main/adapter/validation.md) there gives
-the command and says what it checks. Running a mapping over a fixture is a Bridge's job: the one that must pass is
-named in [`compatibility.json`](compatibility.json), and CI runs it. [Run a Bridge](#run-a-bridge) below does the same on
+the command and says what it checks. Running a mapping over a fixture is a Bridge's job: the Bridges that must pass are
+named in [`compatibility.json`](compatibility.json), and CI runs them. [Run a Bridge](#run-a-bridge) below does the same on
 your machine.
 
 ## Run a Bridge
@@ -42,12 +42,14 @@ git fetch -q --depth 1 https://github.com/the-cascade-protocol/cascade-bridge-rs
 git checkout -q FETCH_HEAD
 gh release download "$tag" -R the-cascade-protocol/cascade-bridge-rs -p cascade-bridge.tgz
 mkdir -p package/dist && tar -xzf cascade-bridge.tgz --strip-components=1 -C package/dist
-export BRIDGE="node $PWD/hosts/node/cascade-bridge.mjs"
+bridge_dir=$(pwd -W 2>/dev/null || pwd)
+bridge() { node "$bridge_dir/hosts/node/cascade-bridge.mjs" "$@"; }
 cd ..
 ```
 
-The host is read from the commit the build was made from, so the two always match. `BRIDGE` lasts for the shell: set it
-again in a new one, and repeat the steps to take a newer build. `$BRIDGE` alone prints the usage. The release also holds
+The host is read from the commit the build was made from, so the two always match. `bridge` is a shell function, so it
+lasts for the shell: define it again in a new one, and repeat the steps to take a newer build. `bridge` alone prints the
+usage. The release also holds
 `cascade-bridge-x86_64-unknown-linux-gnu`, the executable CI runs, which takes the same arguments.
 
 ## Run the tests
@@ -58,21 +60,23 @@ repository, at `main` unless your change waits on a pull request there:
 ```sh
 git clone --depth 1 https://github.com/the-cascade-protocol/cascade-vocabulary.git
 cd cascade-bridge-adapter-fhir-r4
-$BRIDGE test . --vocabularies ../cascade-vocabulary
+bridge test . --vocabularies ../cascade-vocabulary
 ```
 
-It prints a line for each case, `passed` or `failed` with what differs, and ends with a count such as `3 failed, 254
-passed`. It takes seconds, and exits 1 when a case failed.
+It prints a line for each case, `passed` or `failed` with what differs, and ends with a count: `257 passed`, or, as an
+example of a run where cases fail, `3 failed, 254 passed`. It takes seconds, and exits 1 when a case failed.
 
 `test` runs every case; none can be named. To read one, convert its input as its entry in
 [`fixtures/manifest.ttl`](fixtures/manifest.ttl) names it (`bridge:input`, `bridge:facts`, and `bridge:envelope` from the
-`#` on), and put the result beside the entry's `bridge:expectedGraph` and `bridge:expectedFindings`:
+`#` on), and put the result beside the entry's `bridge:expectedGraph` and `bridge:expectedFindings`. An entry that is a
+`bridge:IdentityRelationTest`, a pair of conversions, is not read this way.
 
 ```sh
-$BRIDGE convert . fixtures/in/allergy-with-id.json --envelope '#envelope-resource' \
+bridge convert . fixtures/in/allergy-with-id.json --envelope '#envelope-resource' \
   --facts fixtures/facts/allergyintolerance-alg-pcn-1.ttl --vocabularies ../cascade-vocabulary \
   --out ../one.ttl --findings ../one-findings.ttl
 diff ../one.ttl fixtures/expected/allergy-with-id.ttl
+diff ../one-findings.ttl fixtures/findings/allergy-with-id.ttl
 ```
 
 The expected files are compared as graphs, so a text diff can differ only in the order of triples and the labels of
@@ -85,15 +89,18 @@ the documents hold that the accounting has not settled, most common first. It co
 The specification's [`survey`](https://github.com/the-cascade-protocol/cascade-bridge-spec/blob/main/engine/command.md#survey)
 section says what it reads and the columns of `--tsv`.
 
+**Never commit real exports, and never paste their contents into an issue.** Use exports of your own, or documents you
+may read.
+
 ```sh
-$BRIDGE survey . ~/my-exports --tsv ../survey.tsv
+bridge survey . ~/my-exports --tsv ../survey.tsv
 ```
 
-Use exports of your own, or documents you may read. Never commit them, and never paste their contents into an issue: a
-row of the survey is paths and counts, which can be quoted. Only the files directly in the folder are read. `--kind
-<Kind>` keeps one record kind and `--under <path>` a place and the places below it; in Git Bash, set
-`MSYS_NO_PATHCONV=1` first, or `--under /reaction` is rewritten as a Windows path. Over this repository's own
-`fixtures/in` it prints (cut):
+A row of the survey is paths and counts, which can be quoted. Only the files directly in the folder are read. `--kind
+<Kind>` keeps one record kind and `--under <path>` a place and the places below it. Git Bash rewrites an argument that
+begins with a slash as a Windows path, so there write `MSYS_NO_PATHCONV=1 bridge survey . fixtures/in --under /reaction`
+(the variable does nothing elsewhere). At the time of writing, over this repository's own `fixtures/in` it prints
+something like this (counts will differ; cut):
 
 ```
 Documents  239 read, 0 not read, 448 record(s)
