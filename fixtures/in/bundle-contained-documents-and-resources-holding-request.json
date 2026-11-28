@@ -1,0 +1,189 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:5c0d1e7a-3b2f-4a6e-9d41-7f8a1b2c3d4e",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "htn-with-contained-documents",
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "keeper",
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "1234567893"
+              }
+            ],
+            "name": "Kestrel Harbor Hospital"
+          },
+          {
+            "resourceType": "DocumentReference",
+            "id": "visit-note",
+            "masterIdentifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:2.16.840.1.113883.19.5.99999.1"
+            },
+            "status": "current",
+            "docStatus": "final",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11506-3",
+                  "display": "Provider-unspecified Progress note"
+                }
+              ],
+              "text": "Progress note"
+            },
+            "subject": {
+              "reference": "Patient/pat-1",
+              "display": "Ada Okonkwo"
+            },
+            "date": "2026-08-20T14:05:00Z",
+            "author": [
+              {
+                "reference": "#keeper"
+              }
+            ],
+            "custodian": {
+              "reference": "#keeper"
+            },
+            "description": "Follow-up for hypertension",
+            "content": [
+              {
+                "attachment": {
+                  "contentType": "text/plain",
+                  "data": "U2VlbiBmb3IgZm9sbG93LXVwIG9mIGh5cGVydGVuc2lvbi4=",
+                  "title": "Visit note",
+                  "url": "Binary/visit-note"
+                },
+                "format": {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+                  "code": "urn:hl7-org:sdwg:ccda-nonXMLBody:2.1"
+                }
+              }
+            ]
+          },
+          {
+            "resourceType": "DocumentReference",
+            "id": "undated-note",
+            "status": "current",
+            "_date": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ]
+            },
+            "content": [
+              {
+                "attachment": {
+                  "contentType": "application/pdf",
+                  "url": "Binary/undated-note"
+                }
+              }
+            ]
+          },
+          {
+            "resourceType": "DiagnosticReport",
+            "id": "lab-report",
+            "status": "final",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "2132-9"
+                }
+              ]
+            },
+            "subject": {
+              "reference": "Patient/pat-1"
+            },
+            "_issued": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "masked"
+                }
+              ]
+            },
+            "conclusion": "Low vitamin B12",
+            "presentedForm": [
+              {
+                "contentType": "application/pdf",
+                "title": "Vitamin B12 report",
+                "url": "Binary/b12-report"
+              }
+            ]
+          },
+          {
+            "resourceType": "Condition",
+            "id": "unnamed-problem",
+            "code": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ],
+              "text": "Unknown problem"
+            },
+            "subject": {
+              "reference": "Patient/pat-1"
+            }
+          },
+          {
+            "resourceType": "MedicationAdministration",
+            "id": "dose-given",
+            "status": "completed",
+            "request": {
+              "reference": "MedicationRequest/amlodipine-1"
+            }
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003"
+            }
+          ],
+          "text": "Hypertension"
+        },
+        "subject": {
+          "reference": "Patient/pat-1"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a4f6b21-90c3-4d57-a1e8-2b3c4d5e6f70",
+      "resource": {
+        "resourceType": "ClaimResponse",
+        "id": "claim-answer",
+        "status": "active",
+        "request": {
+          "reference": "Claim/claim-1"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
