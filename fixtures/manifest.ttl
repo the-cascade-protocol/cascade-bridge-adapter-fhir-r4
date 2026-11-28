@@ -15,6 +15,7 @@
     <#allergy-reactions-after-the-first-not-carried>
     <#allergy-reaction-members-not-carried>
     <#allergy-reaction-members-with-nothing-in-them>
+    <#allergy-reaction-notes-and-first-display-or-code>
     <#allergy-reaction-severity-after-a-reaction-without-one>
     <#condition-with-id>
     <#condition-every-mapped-element>
@@ -350,7 +351,7 @@
 
 <#allergy-reaction-members-not-carried> a bridge:IsomorphicConversionTest ;
   mf:name "allergy-reaction-members-not-carried" ;
-  rdfs:comment "An AllergyIntolerance whose first reaction states a substance, an onset, a description, an exposure route and two notes, and whose second states a description: the vocabulary has no term for any of them, so each is a fhirr4:allergyReactionMemberNotCarried finding at the member, at the note for a note, and the manifestations and the first severity are carried." ;
+  rdfs:comment "An AllergyIntolerance whose first reaction states a substance, an onset, a description, an exposure route and two notes, and whose second states a description: the vocabulary has no term for a substance, an onset, a description or an exposure route, so each is a fhirr4:allergyReactionMemberNotCarried finding at the member, the author and the time of a note are each a fhirr4:noteAuthorAndTime finding, and the manifestations, the first severity and the text of the two notes, as cascade:addedNoteText, are carried." ;
   mf:action [
     bridge:input <in/allergy-reaction-members-not-carried.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -363,7 +364,7 @@
 
 <#allergy-reaction-members-with-nothing-in-them> a bridge:IsomorphicConversionTest ;
   mf:name "allergy-reaction-members-with-nothing-in-them" ;
-  rdfs:comment "An AllergyIntolerance whose first reaction states members with nothing in them, a substance holding a coding with a system alone, a blank description, an exposure route holding a blank text and a coding with a system and a blank display, and a note with a blank text and one with an author alone: none is reported, and none keeps what the second reaction states from being reported, a substance whose text and first coding are blank and whose second coding has a display, a description, and a note after a blank one." ;
+  rdfs:comment "An AllergyIntolerance whose first reaction states members with nothing in them, a substance holding a coding with a system alone, a blank description, an exposure route holding a blank text and a coding with a system and a blank display, and a note with a blank text and one with an author alone: the author is a fhirr4:noteAuthorAndTime finding, and nothing else is reported or carried, and none keeps what the second reaction states from being reported or carried, a substance whose text and first coding are blank and whose second coding has a display, which is the finding's value, a description, and a note after a blank one, which is carried." ;
   mf:action [
     bridge:input <in/allergy-reaction-members-with-nothing-in-them.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -372,6 +373,19 @@
   mf:result [
     bridge:expectedGraph <expected/allergy-reaction-members-with-nothing-in-them.ttl> ;
     bridge:expectedFindings <findings/allergy-reaction-members-with-nothing-in-them.ttl>
+  ] .
+
+<#allergy-reaction-notes-and-first-display-or-code> a bridge:IsomorphicConversionTest ;
+  mf:name "allergy-reaction-notes-and-first-display-or-code" ;
+  rdfs:comment "An AllergyIntolerance with a note of its own, whose two reactions each state notes: all three notes are carried as cascade:addedNoteText of the allergy, and the author and the time of a reaction's note are carried nowhere, and each is a fhirr4:noteAuthorAndTime finding at it. A substance or an exposure route's finding takes its value from the first display any coding holds something in, whatever an earlier coding holds in its code, else the first code any coding holds something in." ;
+  mf:action [
+    bridge:input <in/allergy-reaction-notes-and-first-display-or-code.json> ;
+    bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
+    bridge:facts <facts/meridian.ttl>
+  ] ;
+  mf:result [
+    bridge:expectedGraph <expected/allergy-reaction-notes-and-first-display-or-code.ttl> ;
+    bridge:expectedFindings <findings/allergy-reaction-notes-and-first-display-or-code.ttl>
   ] .
 
 <#allergy-reaction-severity-after-a-reaction-without-one> a bridge:IsomorphicConversionTest ;

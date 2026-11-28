@@ -7,23 +7,24 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix pav: <http://purl.org/pav/> .
-<ni:///sha-256;R_1JLa9B4tPtTr-GvAN5H-RhZAkwyofZ51JIHgvodqI> cascade:allergenName "Penicillin" ;
+<ni:///sha-256;bxlQKqaHQju9i-GLHUhTGBt_vVUwJN_hHtEHI_4gh4E> cascade:allergenName "Penicillin" ;
 	cascade:clinicalStatus "active" ;
 	cascade:allergyType "allergy" ;
 	cascade:allergyCriticality "low" ;
 	cascade:allergyCategory "medication" ;
-	cascade:reactionManifestationText "Itching" , "Hives" .
+	cascade:reactionManifestationText "Itching" , "Hives" ;
+	cascade:addedNoteText "Second note" .
 <urn:uuid:85969617-4864-8e23-9acc-204a69539b14> a cascade:AllergyOrIntolerance ;
 	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/AllergyIntolerance/alg-penicillin-reaction-members-blank> ;
 	cascade:sourceRecordId "alg-penicillin-reaction-members-blank" .
-<ni:///sha-256;R_1JLa9B4tPtTr-GvAN5H-RhZAkwyofZ51JIHgvodqI> prov:specializationOf <urn:uuid:85969617-4864-8e23-9acc-204a69539b14> ;
+<ni:///sha-256;bxlQKqaHQju9i-GLHUhTGBt_vVUwJN_hHtEHI_4gh4E> prov:specializationOf <urn:uuid:85969617-4864-8e23-9acc-204a69539b14> ;
 	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
-_:a6406c37ef04dd35397c854e3d2c01df bridge:arrivedAs <ni:///sha-256;R_1JLa9B4tPtTr-GvAN5H-RhZAkwyofZ51JIHgvodqI> ;
-	oa:hasSelector _:c6df116fef5c11294e4023a940c151ec ;
+_:740ddcf124ba795b4a6e467d23b75412 bridge:arrivedAs <ni:///sha-256;bxlQKqaHQju9i-GLHUhTGBt_vVUwJN_hHtEHI_4gh4E> ;
+	oa:hasSelector _:b8c86c4ac8e0ebdd95360cdcf4a78b0a ;
 	oa:hasSource <ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> ;
 	prov:wasDerivedFrom <ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> ;
 	prov:wasGeneratedBy _:cc4833ac78a3f7904e421dbe9188985c .
-_:c6df116fef5c11294e4023a940c151ec a oa:FragmentSelector ;
+_:b8c86c4ac8e0ebdd95360cdcf4a78b0a a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
 <ni:///sha-256;hDbLSuEruEuk7y-IE6yPFlxrBMBlmdaLU-hh-ZzwJkU> cascade:serverBaseUrl "https://fhir.meridian.example/api/FHIR/R4" ;

@@ -141,7 +141,7 @@ fhirr4:allergyReactionSeverityRepeated a skos:Concept ;
   sh:resultSeverity sh:Warning .
 
 fhirr4:allergyReactionMemberNotCarried a skos:Concept ;
-  skos:prefLabel "A reaction of an allergy states a substance, an onset, a description, an exposure route or a note, and no Cascade predicate carries it: the allergen, the onset and the notes the vocabulary holds are the allergy's own."@en ;
+  skos:prefLabel "A reaction of an allergy states a substance, an onset, a description or an exposure route, and no Cascade predicate carries it: the allergen and the onset the vocabulary holds are the allergy's own."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 
@@ -455,5 +455,10 @@ fhirr4:categoryTextNotCarried a skos:Concept ;
 
 fhirr4:observationComponentDataNotCarried a skos:Concept ;
   skos:prefLabel "An Observation's component carries a code or a coded answer, a string, a quantity with its comparator, unit, code and code system, a range's bounds, or text, and no Cascade predicate carries it."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
+fhirr4:noteAuthorAndTime a skos:Concept ;
+  skos:prefLabel "A note carries who wrote it, as a string or a reference to a person or an organization, and when it was written, and no Cascade predicate carries either."@en ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .

@@ -4303,55 +4303,55 @@
   bridge:sourcePath "/contained/reaction/description" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/exposureRoute/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/manifestation" ;
@@ -4390,75 +4390,75 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernText .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference/display" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference/identifier" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference/identifier/system" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference/identifier/value" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference/reference" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorReference/type" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/authorString" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/text" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:carried ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:carriedAs
+    [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:addedNoteText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/note/time" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/onset" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/severity" ;
@@ -4471,49 +4471,49 @@
   bridge:sourcePath "/contained/reaction/substance" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reaction/substance/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/reasonCode" ;
@@ -4997,45 +4997,45 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/period" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/period/end" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/period/start" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/rank" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/system" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/use" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/telecom/value" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/contained/text" ;
@@ -8341,55 +8341,55 @@
   bridge:sourcePath "/reaction/description" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/exposureRoute/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/manifestation" ;
@@ -8428,75 +8428,75 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernText .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference/display" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference/identifier" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference/identifier/system" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference/identifier/value" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference/reference" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorReference/type" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/authorString" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/text" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:carried ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:carriedAs
+    [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:addedNoteText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/note/time" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/onset" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/severity" ;
@@ -8509,49 +8509,49 @@
   bridge:sourcePath "/reaction/substance" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reaction/substance/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/reasonCode" ;
@@ -13029,55 +13029,55 @@
   bridge:sourcePath "/resource/contained/reaction/description" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/exposureRoute/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/manifestation" ;
@@ -13116,75 +13116,75 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernText .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference/display" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference/identifier" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference/identifier/system" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference/identifier/value" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference/reference" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorReference/type" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/authorString" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/text" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:carried ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:carriedAs
+    [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:addedNoteText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/note/time" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/onset" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/severity" ;
@@ -13197,49 +13197,49 @@
   bridge:sourcePath "/resource/contained/reaction/substance" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reaction/substance/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/reasonCode" ;
@@ -13723,45 +13723,45 @@
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/period" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/period/end" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/period/start" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/rank" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/system" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/use" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/telecom/value" ;
   bridge:verdict bridge:ignored ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/contained/text" ;
@@ -17063,55 +17063,55 @@
   bridge:sourcePath "/resource/reaction/description" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/exposureRoute/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/manifestation" ;
@@ -17150,75 +17150,75 @@
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernText .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference/display" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference/identifier" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "Holds no value of its own: what it holds is accounted for at its members." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference/identifier/system" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference/identifier/value" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference/reference" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorReference/type" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernReferences ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/authorString" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/text" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:carried ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:carriedAs
+    [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:addedNoteText ] .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/note/time" ;
-  bridge:verdict bridge:ignored ;
+  bridge:verdict bridge:noHome ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:namesGap fhirr4:noteAuthorAndTime .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/onset" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/severity" ;
@@ -17231,49 +17231,49 @@
   bridge:sourcePath "/resource/reaction/substance" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/coding" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/coding/code" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/coding/display" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/coding/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/coding/userSelected" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/coding/version" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernCodes ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reaction/substance/text" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernText ;
-  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, at the note for a note's part, where it holds something." .
+  bridge:because "A member of a reaction of an allergy, or part of one, which no Cascade predicate carries and allergy-and-condition-findings.rq reports as fhirr4:allergyReactionMemberNotCarried at the member, where it holds something." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/reasonCode" ;
@@ -17741,49 +17741,49 @@
   bridge:sourcePath "/resource/telecom" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/period" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/period/end" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/period/start" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/rank" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/use" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/telecom/value" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/resource/text" ;
@@ -18420,49 +18420,49 @@
   bridge:sourcePath "/telecom" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/period" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/period/end" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/period/start" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernDates ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/rank" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/system" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/use" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/telecom/value" ;
   bridge:verdict bridge:ignored ;
   bridge:concern bridge:concernIdentity ;
-  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which organization-telecom-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
+  bridge:because "A contact point of a patient, which patient-findings.rq reports as fhirr4:patientTelecomNotCarried at each one, or of an Organization a mapping reads, which resource-type-findings.rq reports as fhirr4:organizationTelecomNotCarried at each one with a value; of a resource of a type this release does not map, the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/text" ;

@@ -7,7 +7,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix pav: <http://purl.org/pav/> .
-<ni:///sha-256;g2u-CclQoiCvvDfRcbd63TSs6kl-kC3KshBW2Hf21lo> cascade:allergenName "Penicillin" ;
+<ni:///sha-256;bPxruFN5r3SHNBGtJSEZ2SNHyat2bvjvPGIKN7Ac5SA> cascade:allergenName "Penicillin" ;
 	cascade:allergenCode <https://ns.cascadeprotocol.org/codes/rxnorm/7980> ;
 	cascade:clinicalStatus "active" ;
 	cascade:allergyType "allergy" ;
@@ -15,18 +15,19 @@
 	cascade:allergyCategory "medication" ;
 	cascade:onsetDate "2015-06-01"^^xsd:date ;
 	cascade:reactionManifestationText "Itching" , "Hives" ;
-	cascade:allergySeverity "mild" .
+	cascade:allergySeverity "mild" ;
+	cascade:addedNoteText "Antihistamine given" , "Stopped the course at once" .
 <urn:uuid:a605022f-83e1-82fd-abab-7479b10eb74f> a cascade:AllergyOrIntolerance ;
 	cascade:sourceUrl <https://fhir.meridian.example/api/FHIR/R4/AllergyIntolerance/alg-penicillin-reaction-members> ;
 	cascade:sourceRecordId "alg-penicillin-reaction-members" .
-<ni:///sha-256;g2u-CclQoiCvvDfRcbd63TSs6kl-kC3KshBW2Hf21lo> prov:specializationOf <urn:uuid:a605022f-83e1-82fd-abab-7479b10eb74f> ;
+<ni:///sha-256;bPxruFN5r3SHNBGtJSEZ2SNHyat2bvjvPGIKN7Ac5SA> prov:specializationOf <urn:uuid:a605022f-83e1-82fd-abab-7479b10eb74f> ;
 	cascade:patient <urn:uuid:7883c5a4-6c61-837c-9bf7-dbe1b37d89ff> .
-_:7df756b376aa1f4a709f823b8f755f47 bridge:arrivedAs <ni:///sha-256;g2u-CclQoiCvvDfRcbd63TSs6kl-kC3KshBW2Hf21lo> ;
-	oa:hasSelector _:8dc4eb4788bdac7b53a01694e299f32d ;
+_:43c3e140d74dc43c21c8705f39fe5932 bridge:arrivedAs <ni:///sha-256;bPxruFN5r3SHNBGtJSEZ2SNHyat2bvjvPGIKN7Ac5SA> ;
+	oa:hasSelector _:17836fba6080fedb22d3c63aecf5fee6 ;
 	oa:hasSource <ni:///sha-256;o0vxg32HmbaM6Nzrsbl7lXcnaGp_7FygcGZsJKsazbw> ;
 	prov:wasDerivedFrom <ni:///sha-256;o0vxg32HmbaM6Nzrsbl7lXcnaGp_7FygcGZsJKsazbw> ;
 	prov:wasGeneratedBy _:4c8a66d25d215bdf28ccc5a891e3a4a8 .
-_:8dc4eb4788bdac7b53a01694e299f32d a oa:FragmentSelector ;
+_:17836fba6080fedb22d3c63aecf5fee6 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
 <ni:///sha-256;o0vxg32HmbaM6Nzrsbl7lXcnaGp_7FygcGZsJKsazbw> cascade:serverBaseUrl "https://fhir.meridian.example/api/FHIR/R4" ;
