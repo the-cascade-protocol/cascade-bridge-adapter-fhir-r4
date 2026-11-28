@@ -103,6 +103,11 @@
             "subject": {
               "reference": "Patient/pat-1"
             },
+            "basedOn": [
+              {
+                "reference": "ServiceRequest/b12-order"
+              }
+            ],
             "_issued": {
               "extension": [
                 {
@@ -175,6 +180,13 @@
             "resourceType": "Condition",
             "id": "unnamed-problem",
             "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
+                }
+              ],
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",

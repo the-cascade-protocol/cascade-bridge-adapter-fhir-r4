@@ -853,7 +853,7 @@
 
 <#documentreference-contained-custodian> a bridge:IsomorphicConversionTest ;
   mf:name "documentreference-contained-custodian" ;
-  rdfs:comment "A DocumentReference's custodian keeps the document it describes, not the file read: it names no organization, and its contained Organization is a resource of a type not mapped." ;
+  rdfs:comment "A DocumentReference's custodian keeps the document it describes, not the file read: it names no organization and is reported as not carried, and its contained Organization is a resource of a type not mapped." ;
   mf:action [
     bridge:input <in/documentreference-contained-custodian.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
@@ -3615,7 +3615,7 @@
 
 <#documents-and-reports-contained-in-a-resource> a bridge:IsomorphicConversionTest ;
   mf:name "documents-and-reports-contained-in-a-resource" ;
-  rdfs:comment "A Condition that contains two DocumentReferences, a DiagnosticReport with a result, a conclusion code and an attachment's data, a lab result the report names, an Organization and a MedicationAdministration with a request. The fields a contained DocumentReference and DiagnosticReport hold are carried as they are in a resource written whole, and the request of a type this release does not map is accounted as that type's element." ;
+  rdfs:comment "A Condition that contains two DocumentReferences, a DiagnosticReport with a request it is based on, a result, a conclusion code and an attachment's data, a lab result the report names, an Organization and a MedicationAdministration with a request. The fields a contained DocumentReference and DiagnosticReport hold are carried as they are in a resource written whole, and the request of a type this release does not map is accounted as that type's element." ;
   mf:action [
     bridge:input <in/documents-and-reports-contained-in-a-resource.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;

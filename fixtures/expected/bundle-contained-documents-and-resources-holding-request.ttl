@@ -8,144 +8,144 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix pav: <http://purl.org/pav/> .
-<ni:///sha-256;ACGNXQNqgCho-UiTG6rvfk5CnkxzoMVA_h5Pp1p3MA4> cascade:valueAbsentForReason <ni:///sha-256;ACGNXQNqgCho-UiTG6rvfk5CnkxzoMVA_h5Pp1p3MA4#absent-conditionCode> .
-<ni:///sha-256;ACGNXQNqgCho-UiTG6rvfk5CnkxzoMVA_h5Pp1p3MA4#absent-conditionCode> cascade:absentValueProperty cascade:conditionCode ;
+<ni:///sha-256;-CRR63s4xiMzMp1VaE_hrU7cZyOPLZSjKZvP1rU2ozk> cascade:valueAbsentForReason <ni:///sha-256;-CRR63s4xiMzMp1VaE_hrU7cZyOPLZSjKZvP1rU2ozk#absent-conditionCode> .
+<ni:///sha-256;-CRR63s4xiMzMp1VaE_hrU7cZyOPLZSjKZvP1rU2ozk#absent-conditionCode> cascade:absentValueProperty cascade:conditionCode ;
 	cascade:absentReasonCode <https://ns.cascadeprotocol.org/codes/data-absent-reason/unknown> .
-<ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg> cascade:valueAbsentForReason <ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg#absent-reportIssuedTime> .
-<ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg#absent-reportIssuedTime> cascade:absentValueProperty cascade:reportIssuedTime ;
+<ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM> cascade:valueAbsentForReason <ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM#absent-reportIssuedTime> .
+<ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM#absent-reportIssuedTime> cascade:absentValueProperty cascade:reportIssuedTime ;
 	cascade:absentReasonCode <https://ns.cascadeprotocol.org/codes/data-absent-reason/masked> .
-<ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas> cascade:valueAbsentForReason <ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas#absent-noteOrDocumentDate> .
-<ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas#absent-noteOrDocumentDate> cascade:absentValueProperty cascade:noteOrDocumentDate ;
+<ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI> cascade:valueAbsentForReason <ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI#absent-noteOrDocumentDate> .
+<ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI#absent-noteOrDocumentDate> cascade:absentValueProperty cascade:noteOrDocumentDate ;
 	cascade:absentReasonCode <https://ns.cascadeprotocol.org/codes/data-absent-reason/unknown> .
-<ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg> cascade:attachment <ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg#attachment-1> .
-<ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg#attachment-1> cascade:attachmentContentType "application/pdf" ;
+<ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM> cascade:attachment <ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM#attachment-1> .
+<ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM#attachment-1> cascade:attachmentContentType "application/pdf" ;
 	cascade:attachmentTitle "Vitamin B12 report" ;
 	cascade:attachmentUrl "Binary/b12-report"^^xsd:anyURI .
-<ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas> cascade:attachment <ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas#attachment-1> .
-<ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas#attachment-1> cascade:attachmentContentType "application/pdf" ;
+<ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI> cascade:attachment <ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI#attachment-1> .
+<ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI#attachment-1> cascade:attachmentContentType "application/pdf" ;
 	cascade:attachmentUrl "Binary/undated-note"^^xsd:anyURI .
-<ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4> cascade:attachment <ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4#attachment-1> .
-<ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4#attachment-1> cascade:attachmentContentType "text/plain" ;
+<ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4> cascade:attachment <ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4#attachment-1> .
+<ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4#attachment-1> cascade:attachmentContentType "text/plain" ;
 	cascade:attachmentTitle "Visit note" ;
 	cascade:attachmentUrl "Binary/visit-note"^^xsd:anyURI .
-<ni:///sha-256;oA0fF77Ag5-DF1jMNKFJ50crU2SvZMvjv7bg8sMTEXc> cascade:conditionName "Hypertension" ;
+<ni:///sha-256;TGzXrViENFAWYFkoFDkvoBRU-eXPrz3BUFfpwOLwg5c> cascade:conditionName "Hypertension" ;
 	cascade:conditionCode <http://snomed.info/id/38341003> ;
 	cascade:clinicalStatus "active" .
-<ni:///sha-256;ACGNXQNqgCho-UiTG6rvfk5CnkxzoMVA_h5Pp1p3MA4> cascade:conditionName "Unknown problem" .
-<ni:///sha-256;G60zxlZr-XdwwyHv9Izyi7ueasYcQoYIyJMVDo-Uue4> cascade:testCode <http://loinc.org/rdf/2132-9> ;
-	cascade:resultQuantity <ni:///sha-256;G60zxlZr-XdwwyHv9Izyi7ueasYcQoYIyJMVDo-Uue4#value> .
-<ni:///sha-256;G60zxlZr-XdwwyHv9Izyi7ueasYcQoYIyJMVDo-Uue4#value> cascade:decimalValue "180"^^xsd:decimal ;
+<ni:///sha-256;-CRR63s4xiMzMp1VaE_hrU7cZyOPLZSjKZvP1rU2ozk> cascade:conditionName "Unknown problem" .
+<ni:///sha-256;RddJQ-YCmILSjHQGrzmWFrRvsZslzhY83cZQWNfdpJE> cascade:testCode <http://loinc.org/rdf/2132-9> ;
+	cascade:resultQuantity <ni:///sha-256;RddJQ-YCmILSjHQGrzmWFrRvsZslzhY83cZQWNfdpJE#value> .
+<ni:///sha-256;RddJQ-YCmILSjHQGrzmWFrRvsZslzhY83cZQWNfdpJE#value> cascade:decimalValue "180"^^xsd:decimal ;
 	cascade:writtenValue "180" ;
 	cascade:ucumUnit "pg/mL" ;
 	cascade:unitText "pg/mL" .
-<ni:///sha-256;G60zxlZr-XdwwyHv9Izyi7ueasYcQoYIyJMVDo-Uue4> cascade:testName "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma" ;
+<ni:///sha-256;RddJQ-YCmILSjHQGrzmWFrRvsZslzhY83cZQWNfdpJE> cascade:testName "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma" ;
 	cascade:resultValueKind cascade:QuantityResultValue ;
 	cascade:workflowStatus "final" .
-<ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4> cascade:narrativeText "Seen for follow-up of hypertension." .
-<ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas> cascade:workflowStatus "current" .
-<ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4> cascade:noteOrDocumentTypeName "Progress note" ;
+<ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4> cascade:narrativeText "Seen for follow-up of hypertension." .
+<ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI> cascade:workflowStatus "current" .
+<ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4> cascade:noteOrDocumentTypeName "Progress note" ;
 	cascade:noteOrDocumentTitle "Follow-up for hypertension" ;
 	cascade:noteOrDocumentMasterIdentifier "urn:oid:2.16.840.1.113883.19.5.99999.1"^^<urn:ietf:rfc:3986> ;
 	cascade:noteOrDocumentContentStatus "final" ;
 	cascade:workflowStatus "current" ;
 	cascade:noteOrDocumentDate "2026-08-20T14:05:00Z"^^xsd:dateTime ;
 	cascade:noteOrDocumentTypeCode <http://loinc.org/rdf/11506-3> .
-<urn:uuid:c0b13650-956b-88be-9e9d-c4655bfa84f3> a cascade:ProblemOrDiagnosis ;
+<urn:uuid:0b312aeb-57f7-88c7-a6be-8f7a5640e00b> a cascade:ProblemOrDiagnosis ;
 	cascade:sourceRecordId "htn-with-contained-documents" .
-<ni:///sha-256;oA0fF77Ag5-DF1jMNKFJ50crU2SvZMvjv7bg8sMTEXc> prov:specializationOf <urn:uuid:c0b13650-956b-88be-9e9d-c4655bfa84f3> .
-_:9635beac43b6b103a607c2a53f4e6b48 bridge:arrivedAs <ni:///sha-256;oA0fF77Ag5-DF1jMNKFJ50crU2SvZMvjv7bg8sMTEXc> .
-<urn:uuid:b929be97-13b1-81a3-b209-a34f56d511a2> a cascade:ProblemOrDiagnosis ;
+<ni:///sha-256;TGzXrViENFAWYFkoFDkvoBRU-eXPrz3BUFfpwOLwg5c> prov:specializationOf <urn:uuid:0b312aeb-57f7-88c7-a6be-8f7a5640e00b> .
+_:2ffe9209f12ce65664e6bff5120ab504 bridge:arrivedAs <ni:///sha-256;TGzXrViENFAWYFkoFDkvoBRU-eXPrz3BUFfpwOLwg5c> .
+<urn:uuid:a09f91e4-2a86-82e1-b8ee-c8047134ec9e> a cascade:ProblemOrDiagnosis ;
 	cascade:sourceRecordId "unnamed-problem" .
-<ni:///sha-256;ACGNXQNqgCho-UiTG6rvfk5CnkxzoMVA_h5Pp1p3MA4> prov:specializationOf <urn:uuid:b929be97-13b1-81a3-b209-a34f56d511a2> .
-_:44503f1b4aeb2b1c1dfd3b031ab57b30 bridge:arrivedAs <ni:///sha-256;ACGNXQNqgCho-UiTG6rvfk5CnkxzoMVA_h5Pp1p3MA4> ;
-	oa:hasSelector _:bafbbe43c12439b68659b8fd5137105d .
-_:bafbbe43c12439b68659b8fd5137105d a oa:FragmentSelector ;
+<ni:///sha-256;-CRR63s4xiMzMp1VaE_hrU7cZyOPLZSjKZvP1rU2ozk> prov:specializationOf <urn:uuid:a09f91e4-2a86-82e1-b8ee-c8047134ec9e> .
+_:7e892d6c02d94cee4dd6e8951abd4f68 bridge:arrivedAs <ni:///sha-256;-CRR63s4xiMzMp1VaE_hrU7cZyOPLZSjKZvP1rU2ozk> ;
+	oa:hasSelector _:cd118ec547ee28984618797e7c7c2ea7 .
+_:cd118ec547ee28984618797e7c7c2ea7 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0/resource/contained/5" .
-<urn:uuid:d0b286fe-56db-8901-9231-019768b99cf9> a cascade:LaboratoryTestResult ;
+<urn:uuid:93a4e6d2-5a0d-839e-ac04-f2a1354f404e> a cascade:LaboratoryTestResult ;
 	cascade:sourceRecordId "b12" .
-<ni:///sha-256;G60zxlZr-XdwwyHv9Izyi7ueasYcQoYIyJMVDo-Uue4> prov:specializationOf <urn:uuid:d0b286fe-56db-8901-9231-019768b99cf9> .
-_:415578259258d2e909450311f37dd87f bridge:arrivedAs <ni:///sha-256;G60zxlZr-XdwwyHv9Izyi7ueasYcQoYIyJMVDo-Uue4> ;
-	oa:hasSelector _:b13efcf1ef1f45883312cf95b82db4b2 .
-_:b13efcf1ef1f45883312cf95b82db4b2 a oa:FragmentSelector ;
+<ni:///sha-256;RddJQ-YCmILSjHQGrzmWFrRvsZslzhY83cZQWNfdpJE> prov:specializationOf <urn:uuid:93a4e6d2-5a0d-839e-ac04-f2a1354f404e> .
+_:4268ae65ecbc2d34a68ea784b7b86835 bridge:arrivedAs <ni:///sha-256;RddJQ-YCmILSjHQGrzmWFrRvsZslzhY83cZQWNfdpJE> ;
+	oa:hasSelector _:a5c6fedff583e0288b976aa38b34f166 .
+_:a5c6fedff583e0288b976aa38b34f166 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0/resource/contained/4" .
-<urn:uuid:f0e2b728-d570-810e-93a2-b86ed9a258e4> a cascade:DiagnosticReport ;
+<urn:uuid:dc8c26b4-7191-8681-ab58-78f705709718> a cascade:DiagnosticReport ;
 	cascade:sourceRecordId "lab-report" .
-<ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg> prov:specializationOf <urn:uuid:f0e2b728-d570-810e-93a2-b86ed9a258e4> .
-_:69af0c3e0b4ea60a86dd81a045cb5c44 bridge:arrivedAs <ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg> ;
-	oa:hasSelector _:b5f29b6098901f4a3ce16bb673c173fc .
-_:b5f29b6098901f4a3ce16bb673c173fc a oa:FragmentSelector ;
+<ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM> prov:specializationOf <urn:uuid:dc8c26b4-7191-8681-ab58-78f705709718> .
+_:8a5cdf8c290ac29e48433017cde78ebf bridge:arrivedAs <ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM> ;
+	oa:hasSelector _:d0ed34c6609983276dc19de758f8ff7b .
+_:d0ed34c6609983276dc19de758f8ff7b a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0/resource/contained/3" .
-<urn:uuid:6f9b160f-325c-8542-98b0-07c80506f989> a cascade:ClinicalNoteOrDocument ;
+<urn:uuid:f5a8af0a-a451-88f9-9173-97941c62582e> a cascade:ClinicalNoteOrDocument ;
 	cascade:sourceRecordId "undated-note" .
-<ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas> prov:specializationOf <urn:uuid:6f9b160f-325c-8542-98b0-07c80506f989> .
-_:2aa73a5438c510fddb56d5502aabf72b bridge:arrivedAs <ni:///sha-256;M3_RxB8oS6X75lQuDxkHEYuny0wxBQguXXQSc5vgcas> ;
-	oa:hasSelector _:b83f9dab24294fdd752a72303f0a4f3c .
-_:b83f9dab24294fdd752a72303f0a4f3c a oa:FragmentSelector ;
+<ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI> prov:specializationOf <urn:uuid:f5a8af0a-a451-88f9-9173-97941c62582e> .
+_:87675cee0c1fee307de4ea84cbe430a0 bridge:arrivedAs <ni:///sha-256;h0xOp3NVveEBAlU_hsFtmVIXQvtNie6S7Zrn2zzOejI> ;
+	oa:hasSelector _:f4bc62d22bad98809119bb583025d338 .
+_:f4bc62d22bad98809119bb583025d338 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0/resource/contained/2" .
-<urn:uuid:a0232f43-bcc9-89a0-9a86-839a6c53ad38> a cascade:ClinicalNoteOrDocument ;
+<urn:uuid:ca5c65f1-89f4-84ca-814a-d586a38c2ea7> a cascade:ClinicalNoteOrDocument ;
 	cascade:sourceRecordId "visit-note" .
-<ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4> prov:specializationOf <urn:uuid:a0232f43-bcc9-89a0-9a86-839a6c53ad38> .
-_:39ac1ea57aa30b898e6a2fddf3753cb4 bridge:arrivedAs <ni:///sha-256;UwmmnVxKD19n42KBOMsu_YDgQ-258GapLy_arFmM5V4> ;
-	oa:hasSelector _:d8e984dd20a3529d566a0833a26515f6 .
-_:d8e984dd20a3529d566a0833a26515f6 a oa:FragmentSelector ;
+<ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4> prov:specializationOf <urn:uuid:ca5c65f1-89f4-84ca-814a-d586a38c2ea7> .
+_:a5212d3f57426253188bba96a6deb1ae bridge:arrivedAs <ni:///sha-256;F1D9CZHiN7l_65W0Eo2ieoTUSN4rwCIhvdzd8WGWzc4> ;
+	oa:hasSelector _:faac7fe63c9dd14baf648b5dd146eef2 .
+_:faac7fe63c9dd14baf648b5dd146eef2 a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0/resource/contained/1" .
-<ni:///sha-256;5Qm62wo_ZBpaj-D60_ne7u8PoIZmZBHPljLuaGYywsg> obo:RO_0002351 <urn:uuid:d0b286fe-56db-8901-9231-019768b99cf9> ;
+<ni:///sha-256;HEzblYEIsKUlD-axEtqyp5n5ka_0lTOOyVHe4bKn5tM> obo:RO_0002351 <urn:uuid:93a4e6d2-5a0d-839e-ac04-f2a1354f404e> ;
 	cascade:reportConclusion "Low vitamin B12" ;
 	cascade:workflowStatus "final" ;
 	cascade:reportCode <http://loinc.org/rdf/2132-9> ;
 	cascade:reportConclusionCode <http://snomed.info/id/190634004> .
-_:2aa73a5438c510fddb56d5502aabf72b oa:hasSource <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasDerivedFrom <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasGeneratedBy _:5c5b796e7b70aec2e4b7ffd7749c217e .
-_:39ac1ea57aa30b898e6a2fddf3753cb4 oa:hasSource <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasDerivedFrom <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasGeneratedBy _:5c5b796e7b70aec2e4b7ffd7749c217e .
-_:44503f1b4aeb2b1c1dfd3b031ab57b30 oa:hasSource <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasDerivedFrom <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasGeneratedBy _:5c5b796e7b70aec2e4b7ffd7749c217e .
-_:9635beac43b6b103a607c2a53f4e6b48 oa:hasSelector _:4c11dfe5e0136b661f19138ac559a260 ;
-	oa:hasSource <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasDerivedFrom <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasGeneratedBy _:5c5b796e7b70aec2e4b7ffd7749c217e .
-_:415578259258d2e909450311f37dd87f oa:hasSource <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasDerivedFrom <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasGeneratedBy _:5c5b796e7b70aec2e4b7ffd7749c217e .
-_:69af0c3e0b4ea60a86dd81a045cb5c44 oa:hasSource <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasDerivedFrom <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:wasGeneratedBy _:5c5b796e7b70aec2e4b7ffd7749c217e .
-_:4c11dfe5e0136b661f19138ac559a260 a oa:FragmentSelector ;
+_:2ffe9209f12ce65664e6bff5120ab504 oa:hasSelector _:d2acc8fe0cc35a1ce4805f6d99c4c3ce ;
+	oa:hasSource <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasDerivedFrom <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasGeneratedBy _:65cc8626bf73a27696bb7ed4d8c91e5d .
+_:4268ae65ecbc2d34a68ea784b7b86835 oa:hasSource <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasDerivedFrom <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasGeneratedBy _:65cc8626bf73a27696bb7ed4d8c91e5d .
+_:7e892d6c02d94cee4dd6e8951abd4f68 oa:hasSource <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasDerivedFrom <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasGeneratedBy _:65cc8626bf73a27696bb7ed4d8c91e5d .
+_:a5212d3f57426253188bba96a6deb1ae oa:hasSource <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasDerivedFrom <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasGeneratedBy _:65cc8626bf73a27696bb7ed4d8c91e5d .
+_:8a5cdf8c290ac29e48433017cde78ebf oa:hasSource <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasDerivedFrom <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasGeneratedBy _:65cc8626bf73a27696bb7ed4d8c91e5d .
+_:87675cee0c1fee307de4ea84cbe430a0 oa:hasSource <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasDerivedFrom <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:wasGeneratedBy _:65cc8626bf73a27696bb7ed4d8c91e5d .
+_:d2acc8fe0cc35a1ce4805f6d99c4c3ce a oa:FragmentSelector ;
 	dct:conformsTo <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/entry/0" .
-<ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
-	prov:wasGeneratedBy _:4b3f74bf12138389f62860d4570bbd58 ;
-	prov:wasAttributedTo _:632d500016a0535bfc5b9851d857a7aa ;
+<ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> pav:retrievedOn "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+	prov:wasGeneratedBy _:5f1dfa57f5653c1f2e345838e0eabf26 ;
+	prov:wasAttributedTo _:ff8389860f8d32306c6ec4805d79aaa5 ;
 	cascade:authenticatedPatient "Patient/eM5vN8qTz2Hc4Rk7Jw0Pb3" ;
 	cascade:authenticatedAsProxy false ;
 	cascade:sourceFormatVersion "4.0.1" .
-_:b280b26f825ee9bcc66196e0a171270a prov:agent _:632d500016a0535bfc5b9851d857a7aa ;
+_:4d5658e39961ad59b1bf4689054cbb96 prov:agent _:ff8389860f8d32306c6ec4805d79aaa5 ;
 	prov:hadRole cascade:AuthorRole .
-_:4b3f74bf12138389f62860d4570bbd58 prov:qualifiedAssociation _:b280b26f825ee9bcc66196e0a171270a .
-_:a11cd17be7dcf6239ee099dc088e86ea prov:agent _:2d083d0d657f3eed3beaec6913a6e607 ;
+_:5f1dfa57f5653c1f2e345838e0eabf26 prov:qualifiedAssociation _:4d5658e39961ad59b1bf4689054cbb96 .
+_:fb0c74739ad8cf53ad3b704df8233c96 prov:agent _:712d85a2ba91f961cc65e6b14fadaf1a ;
 	prov:hadRole cascade:TransmitterRole .
-_:4b3f74bf12138389f62860d4570bbd58 prov:qualifiedAssociation _:a11cd17be7dcf6239ee099dc088e86ea .
-_:632d500016a0535bfc5b9851d857a7aa <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
-_:2d083d0d657f3eed3beaec6913a6e607 <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
-_:5c5b796e7b70aec2e4b7ffd7749c217e <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
+_:5f1dfa57f5653c1f2e345838e0eabf26 prov:qualifiedAssociation _:fb0c74739ad8cf53ad3b704df8233c96 .
+_:ff8389860f8d32306c6ec4805d79aaa5 <http://www.w3.org/2000/01/rdf-schema#label> "Meridian Health System" .
+_:712d85a2ba91f961cc65e6b14fadaf1a <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health" .
+_:65cc8626bf73a27696bb7ed4d8c91e5d <http://www.w3.org/2000/01/rdf-schema#label> "Apple Health export" ;
 	prov:startedAtTime "2026-09-01T10:00:04Z"^^xsd:dateTime .
-<ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> a prov:Entity .
-_:5c5b796e7b70aec2e4b7ffd7749c217e a prov:Activity ;
-	prov:used <ni:///sha-256;wqljCSjvnAlV--79LiPisOz9jfkiagUeewLuzFJZ3T4> ;
-	prov:qualifiedAssociation _:446386882c7f89d3b64b2a27e2c272b4 .
-_:446386882c7f89d3b64b2a27e2c272b4 prov:hadPlan _:a36107dce5e39daca93a9f7a7badc4d4 .
-_:a36107dce5e39daca93a9f7a7badc4d4 a prov:Plan ;
+<ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> a prov:Entity .
+_:65cc8626bf73a27696bb7ed4d8c91e5d a prov:Activity ;
+	prov:used <ni:///sha-256;0TpFEcB17HtCx0oonXIYpONs9Q4H2QbEtHgAAHDPa6Q> ;
+	prov:qualifiedAssociation _:5714e08afc42b2da8304e8f4f5117a7e .
+_:5714e08afc42b2da8304e8f4f5117a7e prov:hadPlan _:6f3a4a71f6972feca6623c9ebe47db2f .
+_:6f3a4a71f6972feca6623c9ebe47db2f a prov:Plan ;
 	<http://www.w3.org/2000/01/rdf-schema#label> "fhir-r4" ;
 	pav:version "0.1.0" .
-_:446386882c7f89d3b64b2a27e2c272b4 prov:agent _:acb96b915db7c6f976e17acd698b391e .
-_:acb96b915db7c6f976e17acd698b391e a prov:SoftwareAgent ;
+_:5714e08afc42b2da8304e8f4f5117a7e prov:agent _:5795381c5a0f0c20e4768ce84a0e76cc .
+_:5795381c5a0f0c20e4768ce84a0e76cc a prov:SoftwareAgent ;
 	<http://www.w3.org/2000/01/rdf-schema#label> "Cascade Bridge for Rust" ;
 	pav:version "0.1.0" .

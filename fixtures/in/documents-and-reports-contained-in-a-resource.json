@@ -97,6 +97,11 @@
       "subject": {
         "reference": "Patient/pat-1"
       },
+      "basedOn": [
+        {
+          "reference": "ServiceRequest/b12-order"
+        }
+      ],
       "_issued": {
         "extension": [
           {
