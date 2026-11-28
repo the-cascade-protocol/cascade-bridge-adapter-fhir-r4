@@ -17,7 +17,10 @@ PREFIX fhirr4:  <https://ns.cascadeprotocol.org/adapter/fhir-r4/v1-draft#>
 # text/html data the Bridge decodes; a text attachment after the first
 # narrative-text.rq carries, at its data; and each performer's or author's
 # reference from which report-and-note-performer.rq attributes the version to
-# no organization, for any reason, as lab-result-findings.rq reports a lab result's.
+# no organization, for any reason, as lab-result-findings.rq reports a lab result's; and a
+# DocumentReference's custodian, at the custodian, whatever the reference or the display it
+# holds, since the vocabulary has no term for who keeps a document. A Composition's custodian
+# is read by organization-table.rq and is not reported here.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -163,7 +166,17 @@ WHERE {
     BIND ("/reference" AS ?part)
     BIND (fhirr4:performerCarriedOnlyAsOneOrganizationRecord AS ?gap)
   }
-  FILTER (?gap = fhirr4:documentReferenceToCcdaDocument || ?resourceType = "DiagnosticReport" || ?isNote)
+  UNION
+  {
+    ?resource xyz:resourceType "DocumentReference" ; xyz:custodian ?custodian .
+    OPTIONAL { ?custodian xyz:reference ?custodianReference }
+    OPTIONAL { ?custodian xyz:display ?custodianDisplay }
+    BIND (COALESCE(?custodianReference, ?custodianDisplay) AS ?value)
+    BIND (fhirr4:documentReferenceCustodianNotCarried AS ?gap)
+  }
+  FILTER (?gap IN (fhirr4:documentReferenceToCcdaDocument, fhirr4:documentReferenceCustodianNotCarried)
+          || ?resourceType = "DiagnosticReport" || ?isNote)
   BIND (IF(?gap = fhirr4:documentReferenceToCcdaDocument, ?resourceStep,
-           CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1), ?part)) AS ?pointer)
+           IF(?gap = fhirr4:documentReferenceCustodianNotCarried, CONCAT(?resourceStep, "/custodian"),
+              CONCAT(?resourceStep, ?list, STR(xsd:integer(STRAFTER(STR(?slot), "#_")) - 1), ?part))) AS ?pointer)
 }

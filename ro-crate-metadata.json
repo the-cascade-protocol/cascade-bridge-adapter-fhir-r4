@@ -4217,7 +4217,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A DocumentReference whose custodian is an Organization it contains, holding the NPI the custodian of bundle-document-custodian-and-authors holds: a DocumentReference's custodian keeps the document it describes, so it names no organization. Authored here on 2026-10-24, for a case the conformance corpus does not hold."
+      "description": "A DocumentReference whose custodian is an Organization it contains, holding the NPI the custodian of bundle-document-custodian-and-authors holds: a DocumentReference's custodian keeps the document it describes, so it names no organization, and is reported as not carried. Authored here on 2026-10-24, for a case the conformance corpus does not hold."
     },
     {
       "@id": "fixtures/in/diagnostic-report-pdf-only.json",
@@ -6524,7 +6524,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A Condition in the resource envelope that contains an Organization, a DocumentReference with every element the mapping reads, a DocumentReference whose date is absent for a reason, a DiagnosticReport whose issued time is absent for a reason, with a conclusion and a presentedForm, and a MedicationAdministration, a type this release does not map, whose request is a Reference. Authored here on 2026-11-27, for a case the conformance corpus does not hold."
+      "description": "A Condition in the resource envelope that contains an Organization, a DocumentReference with every element the mapping reads, a DocumentReference whose date is absent for a reason, a DiagnosticReport whose issued time is absent for a reason, with a request it is based on, a result naming a contained lab result, a conclusion, a conclusion code and a presentedForm with its data, that lab result, and a MedicationAdministration, a type this release does not map, whose request is a Reference. Authored here on 2026-11-27, for a case the conformance corpus does not hold."
     },
     {
       "@id": "fixtures/in/bundle-contained-documents-and-resources-holding-request.json",
@@ -6535,7 +6535,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A transaction Bundle of two entries: a Condition, under its own entry request, that contains an Organization, two DocumentReferences, a DiagnosticReport, a Condition whose code is absent for a reason and a MedicationAdministration with a request; and a ClaimResponse, a type this release does not map, whose request is a Reference, under the entry's own search. Authored here on 2026-11-27, for a case the conformance corpus does not hold."
+      "description": "A transaction Bundle of two entries: a Condition, under its own entry request, that contains an Organization, two DocumentReferences, a DiagnosticReport with a request it is based on, a result naming a contained lab result, a conclusion code and a presentedForm with its data, that lab result, a Condition whose code is absent for a reason, written as a coding and as the extension, and a MedicationAdministration with a request; and a ClaimResponse, a type this release does not map, whose request is a Reference, under the entry's own search. Authored here on 2026-11-27, for a case the conformance corpus does not hold."
     },
     {
       "@id": "bench/manifest.json",

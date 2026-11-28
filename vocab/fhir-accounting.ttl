@@ -706,48 +706,6 @@
   bridge:because "A reference's display, which reference-display-findings.rq reports as fhirr4:referenceDisplay." .
 
 [] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/basedOn" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/basedOn/reference" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/conclusionCode" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernCodes ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/conclusionCode/coding" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernCodes ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/conclusionCode/coding/code" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernCodes ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/conclusionCode/coding/display" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernCodes ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/conclusionCode/coding/system" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernCodes ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
   bridge:sourcePath "/contained/id" ;
   bridge:verdict bridge:carried ;
   bridge:carriedAs
@@ -777,40 +735,6 @@
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:GeneticVariantFinding ; bridge:asProperty cascade:sourceUrl ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceRecordId ] ,
     [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:VariantInterpretation ; bridge:asProperty cascade:sourceUrl ] .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/presentedForm" ;
-  bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/presentedForm/contentType" ;
-  bridge:verdict bridge:ignored ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/presentedForm/data" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernText ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/result" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/result/display" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/contained/result/reference" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/context" ;
@@ -4215,48 +4139,6 @@
   bridge:because "An element of a resource of a type this release does not map (a CompartmentDefinition or an OperationDefinition, the only R4 types with an element named resource), not the Bundle entry's resource: the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
 [] a bridge:PathEntry ;
-  bridge:sourcePath "/resource/contained/code/coding/code" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCode ] ,
-    [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureCode ] ,
-    [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:LaboratoryTestResult ; bridge:asProperty cascade:testCode ] ,
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:LaboratoryTestResult ; bridge:asProperty cascade:testCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCode ] ,
-    [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:allergenCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:rxNormCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ndcCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:medicationCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:rxNormCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ndcCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:medicationCodeInOtherSystem ] .
-
-[] a bridge:PathEntry ;
-  bridge:sourcePath "/resource/contained/code/coding/system" ;
-  bridge:verdict bridge:carried ;
-  bridge:concern bridge:concernCodes ;
-  bridge:carriedAs
-    [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCode ] ,
-    [ bridge:inSourceRecordType "Condition" ; bridge:inRecordClass cascade:ProblemOrDiagnosis ; bridge:asProperty cascade:conditionCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureCode ] ,
-    [ bridge:inSourceRecordType "Procedure" ; bridge:inRecordClass cascade:MedicalProcedure ; bridge:asProperty cascade:procedureCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:LaboratoryTestResult ; bridge:asProperty cascade:testCode ] ,
-    [ bridge:inSourceRecordType "Observation" ; bridge:inRecordClass cascade:LaboratoryTestResult ; bridge:asProperty cascade:testCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCode ] ,
-    [ bridge:inSourceRecordType "DiagnosticReport" ; bridge:inRecordClass cascade:DiagnosticReport ; bridge:asProperty cascade:reportCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "AllergyIntolerance" ; bridge:inRecordClass cascade:AllergyOrIntolerance ; bridge:asProperty cascade:allergenCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:rxNormCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:ndcCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:PrescribedOrReportedMedication ; bridge:asProperty cascade:medicationCodeInOtherSystem ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:rxNormCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:ndcCode ] ,
-    [ bridge:inSourceRecordType "Medication" ; bridge:inRecordClass cascade:MedicationDispense ; bridge:asProperty cascade:medicationCodeInOtherSystem ] .
-
-[] a bridge:PathEntry ;
   bridge:sourcePath "/resourceType" ;
   bridge:verdict bridge:consumed .
 
@@ -4962,6 +4844,11 @@
   bridge:verdict bridge:ignored ;
   bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
+# A consumed entry gives no bridge:because. A Composition's custodian is read by
+# organization-table.rq as the custodian of the file read. A DocumentReference's keeps the
+# document it describes and nothing reads it: report-and-note-findings.rq reports it as
+# fhirr4:documentReferenceCustodianNotCarried. bridge:noHome naming that gap by
+# bridge:adapterReportsGap would owe a finding at a Composition's custodian too.
 [] a bridge:PathEntry ;
   bridge:sourcePath "/custodian" ;
   bridge:verdict bridge:consumed ;
