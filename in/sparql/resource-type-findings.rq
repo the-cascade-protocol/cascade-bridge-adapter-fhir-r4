@@ -16,7 +16,9 @@ PREFIX cascade: <https://ns.cascadeprotocol.org/cascade#>
 # read where it is from a server, or where a document's custodian or author, or a
 # Diagnostic Implication's performer, resolves to it, as organization-table.rq
 # says, and has an identifier organization.rq names it by, so only another is
-# reported.
+# reported whole. Each contact point with a value that is not blank of an
+# Organization that is read is reported at the contact point instead: no Cascade
+# predicate carries one.
 
 CONSTRUCT {
   [] a oa:Annotation ;
@@ -28,7 +30,7 @@ CONSTRUCT {
         rdf:value ?pointer
       ]
     ] ;
-    oa:hasBody fhirr4:resourceTypeNotMapped ;
+    oa:hasBody ?gap ;
     oa:motivatedBy oa:classifying ;
     sh:value ?value .
 }
@@ -52,44 +54,59 @@ WHERE {
   }
   BIND (COALESCE(?contained, ?top) AS ?resource)
   BIND (CONCAT(?topStep, ?containedStep) AS ?resourcePointer)
-  ?resource xyz:resourceType ?value .
-  FILTER (?value NOT IN ("AllergyIntolerance", "Condition", "Immunization", "Procedure", "Patient",
-                        "MedicationRequest", "MedicationStatement", "MedicationDispense", "Observation",
-                        "DiagnosticReport", "DocumentReference"))
+  ?resource xyz:resourceType ?type .
   BIND (CONCAT(?recordSelector, ?resourcePointer) AS ?medicationPointer)
-  FILTER (?value != "Medication" || NOT EXISTS {
-    ?resolving fhirr4:medicationReferenceFrom ?from ;
-      fhirr4:medicationReferenceTo ?key ;
-      fhirr4:medicationScope ?scope .
-    ?held fhirr4:medicationAt ?medicationPointer ;
-      fhirr4:medicationKey ?key ;
-      fhirr4:medicationScope ?scope .
-    FILTER NOT EXISTS {
-      ?rival fhirr4:medicationAt ?rivalPointer ;
-        fhirr4:medicationKey ?key ;
-        fhirr4:medicationScope ?scope .
-      FILTER (?rivalPointer != ?medicationPointer)
-    }
-  })
-  FILTER (?value != "Organization" || NOT EXISTS {
-    ?serverOrganization fhirr4:organizationAt ?medicationPointer ;
-      fhirr4:organizationIdOnServer ?organizationId .
-  } && (NOT EXISTS {
-    ?organizationReference fhirr4:organizationReferenceFrom ?organizationFrom ;
-      fhirr4:organizationReferenceTo ?organizationKey ;
-      fhirr4:organizationScope ?organizationScope .
-    ?heldOrganization fhirr4:organizationAt ?medicationPointer ;
-      fhirr4:organizationKey ?organizationKey ;
-      fhirr4:organizationScope ?organizationScope .
-    FILTER NOT EXISTS {
-      ?rivalOrganization fhirr4:organizationAt ?rivalOrganizationPointer ;
-        fhirr4:organizationKey ?organizationKey ;
-        fhirr4:organizationScope ?organizationScope .
-      FILTER (?rivalOrganizationPointer != ?medicationPointer)
-    }
-  } || NOT EXISTS {
-    ?namedOrganization fhirr4:organizationAt ?medicationPointer ;
-      fhirr4:organizationIdentifierSystem ?organizationIdentifierSystem .
-  }))
-  BIND (?resourcePointer AS ?pointer)
+  BIND (IF(?type = "Organization",
+           EXISTS {
+             ?serverOrganization fhirr4:organizationAt ?medicationPointer ;
+               fhirr4:organizationIdOnServer ?organizationId .
+           } || (EXISTS {
+             ?organizationReference fhirr4:organizationReferenceFrom ?organizationFrom ;
+               fhirr4:organizationReferenceTo ?organizationKey ;
+               fhirr4:organizationScope ?organizationScope .
+             ?heldOrganization fhirr4:organizationAt ?medicationPointer ;
+               fhirr4:organizationKey ?organizationKey ;
+               fhirr4:organizationScope ?organizationScope .
+             FILTER NOT EXISTS {
+               ?rivalOrganization fhirr4:organizationAt ?rivalOrganizationPointer ;
+                 fhirr4:organizationKey ?organizationKey ;
+                 fhirr4:organizationScope ?organizationScope .
+               FILTER (?rivalOrganizationPointer != ?medicationPointer)
+             }
+           } && EXISTS {
+             ?namedOrganization fhirr4:organizationAt ?medicationPointer ;
+               fhirr4:organizationIdentifierSystem ?organizationIdentifierSystem .
+           }),
+           false) AS ?organizationIsRead)
+  OPTIONAL {
+    ?resource xyz:telecom ?contactPoints . ?contactPoints ?contactSlot ?contactPoint .
+    FILTER (STRSTARTS(STR(?contactSlot), STR(rdf:_)) && ?organizationIsRead)
+    ?contactPoint xyz:value ?contactValue .
+    FILTER (REPLACE(STR(?contactValue), "^\\s+|\\s+$", "") != "")
+  }
+  BIND (IF(?organizationIsRead,
+           IF(BOUND(?contactValue), fhirr4:organizationTelecomNotCarried, 1/0),
+           IF(?type NOT IN ("AllergyIntolerance", "Condition", "Immunization", "Procedure", "Patient",
+                            "MedicationRequest", "MedicationStatement", "MedicationDispense", "Observation",
+                            "DiagnosticReport", "DocumentReference")
+              && (?type != "Medication" || NOT EXISTS {
+                    ?resolving fhirr4:medicationReferenceFrom ?from ;
+                      fhirr4:medicationReferenceTo ?key ;
+                      fhirr4:medicationScope ?scope .
+                    ?held fhirr4:medicationAt ?medicationPointer ;
+                      fhirr4:medicationKey ?key ;
+                      fhirr4:medicationScope ?scope .
+                    FILTER NOT EXISTS {
+                      ?rival fhirr4:medicationAt ?rivalPointer ;
+                        fhirr4:medicationKey ?key ;
+                        fhirr4:medicationScope ?scope .
+                      FILTER (?rivalPointer != ?medicationPointer)
+                    }
+                  }),
+              fhirr4:resourceTypeNotMapped, 1/0)) AS ?gap)
+  FILTER (BOUND(?gap))
+  BIND (IF(?organizationIsRead, ?contactValue, ?type) AS ?value)
+  BIND (IF(?organizationIsRead,
+           CONCAT(?resourcePointer, "/telecom/", STR(xsd:integer(STRAFTER(STR(?contactSlot), "#_")) - 1)),
+           ?resourcePointer) AS ?pointer)
 }

@@ -278,9 +278,6 @@
         },
         {
           "@id": "in/sparql/identifier-and-address-findings.rq"
-        },
-        {
-          "@id": "in/sparql/organization-telecom-findings.rq"
         }
       ],
       "bridge:table": [
@@ -483,9 +480,6 @@
         },
         {
           "@id": "in/sparql/identifier-and-address-findings.rq"
-        },
-        {
-          "@id": "in/sparql/organization-telecom-findings.rq"
         },
         {
           "@id": "vocab/fhir-accounting.ttl"
@@ -3207,12 +3201,12 @@
     {
       "@id": "in/sparql/resource-type-findings.rq",
       "@type": "File",
-      "name": "Findings: a resource of a type this release does not map",
+      "name": "Findings: a resource of a type this release does not map, and an Organization's contact points",
       "encodingFormat": "application/sparql-query",
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "A finding for each resource, the record's own or one it contains, whose type is not one of the types this release maps."
+      "description": "A finding for each resource, the record's own or one it contains, whose type is not one of the types this release maps; and, for an Organization a mapping reads, fhirr4:organizationTelecomNotCarried at each of its contact points with a value, which no Cascade predicate carries."
     },
     {
       "@id": "in/sparql/document-version-findings.rq",
@@ -3413,16 +3407,6 @@
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
       "description": "Reports fhirr4:duplicateOrganizationNotCarried for an Organization organization.rq makes a record whose version another Organization of the document gives, as organization.rq picks it, when it holds a name, an identifier or an address that version lacks, as organization-table.rq lists them. Its value is the identifier the record is named by, typed by its system."
-    },
-    {
-      "@id": "in/sparql/organization-telecom-findings.rq",
-      "@type": "File",
-      "name": "Findings: an Organization's contact points",
-      "encodingFormat": "application/sparql-query",
-      "license": {
-        "@id": "https://spdx.org/licenses/Apache-2.0"
-      },
-      "description": "Reports fhirr4:organizationTelecomNotCarried at each contact point with a value of an Organization a mapping reads, which no Cascade predicate carries; an Organization no mapping reads is reported whole by resource-type-findings.rq."
     },
     {
       "@id": "in/sparql/report-and-note-findings.rq",
