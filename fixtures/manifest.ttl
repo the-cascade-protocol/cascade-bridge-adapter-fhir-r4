@@ -3615,7 +3615,7 @@
 
 <#documents-and-reports-contained-in-a-resource> a bridge:IsomorphicConversionTest ;
   mf:name "documents-and-reports-contained-in-a-resource" ;
-  rdfs:comment "A Condition that contains two DocumentReferences, a DiagnosticReport, an Organization and a MedicationAdministration with a request. The fields a contained DocumentReference and DiagnosticReport hold are carried as they are in a resource written whole, and the request of a type this release does not map is accounted as that type's element." ;
+  rdfs:comment "A Condition that contains two DocumentReferences, a DiagnosticReport with a result, a conclusion code and an attachment's data, a lab result the report names, an Organization and a MedicationAdministration with a request. The fields a contained DocumentReference and DiagnosticReport hold are carried as they are in a resource written whole, and the request of a type this release does not map is accounted as that type's element." ;
   mf:action [
     bridge:input <in/documents-and-reports-contained-in-a-resource.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;
