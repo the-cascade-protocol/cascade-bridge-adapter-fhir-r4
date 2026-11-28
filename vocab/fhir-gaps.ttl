@@ -458,6 +458,11 @@ fhirr4:observationComponentDataNotCarried a skos:Concept ;
   skos:inScheme fhirr4:gaps ;
   skos:broader bridge:noPredicate .
 
+fhirr4:documentReferenceCustodianNotCarried a skos:Concept ;
+  skos:prefLabel "A DocumentReference names the organization that keeps the document it describes, and no Cascade term carries it: cascade:CustodianRole is the role of the organization that kept the file read, not of one that keeps a document it describes."@en ;
+  skos:inScheme fhirr4:gaps ;
+  skos:broader bridge:noPredicate .
+
 fhirr4:noteAuthorAndTime a skos:Concept ;
   skos:prefLabel "A note carries who wrote it, as a string or a reference to a person or an organization, and when it was written, and no Cascade predicate carries either."@en ;
   skos:inScheme fhirr4:gaps ;

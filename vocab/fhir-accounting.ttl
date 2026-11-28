@@ -4844,17 +4844,20 @@
   bridge:verdict bridge:ignored ;
   bridge:because "An element of a resource of a type this release does not map: the resource yields fhirr4:resourceTypeNotMapped and no record." .
 
+# A consumed entry gives no bridge:because. A Composition's custodian is read by
+# organization-table.rq as the custodian of the file read. A DocumentReference's keeps the
+# document it describes and nothing reads it: report-and-note-findings.rq reports it as
+# fhirr4:documentReferenceCustodianNotCarried. bridge:noHome naming that gap by
+# bridge:adapterReportsGap would owe a finding at a Composition's custodian too.
 [] a bridge:PathEntry ;
   bridge:sourcePath "/custodian" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "Read only from a Composition, whose custodian organization-table.rq reads as the custodian of the file read; a DocumentReference's custodian keeps the document it describes, not the file read, and nothing reads it." .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernReferences .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/custodian/reference" ;
-  bridge:verdict bridge:ignored ;
-  bridge:concern bridge:concernReferences ;
-  bridge:because "Read only from a Composition, whose custodian organization-table.rq reads as the custodian of the file read; a DocumentReference's custodian keeps the document it describes, not the file read, and nothing reads it." .
+  bridge:verdict bridge:consumed ;
+  bridge:concern bridge:concernReferences .
 
 [] a bridge:PathEntry ;
   bridge:sourcePath "/author" ;
