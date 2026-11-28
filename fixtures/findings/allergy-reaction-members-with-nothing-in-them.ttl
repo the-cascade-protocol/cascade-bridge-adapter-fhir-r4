@@ -2,47 +2,33 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-_:f9d678e0a50d42a7a3bbb68035593a92 a oa:FragmentSelector ;
+_:f3b29a9e8b094681c55ae6fe50800d2c a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:b9220774e9453d0af591cabc6c775a9c oa:hasSource <../in/allergy-reaction-members-with-nothing-in-them.json> .
-_:f9d678e0a50d42a7a3bbb68035593a92 oa:refinedBy _:b1398fd0b94b5af133120a381292ac3 .
-_:b1398fd0b94b5af133120a381292ac3 a oa:FragmentSelector ;
+_:beee62679b73f643b1730b2170169ae0 oa:hasSource <../in/allergy-reaction-members-with-nothing-in-them.json> .
+_:f3b29a9e8b094681c55ae6fe50800d2c oa:refinedBy _:a9cda5983abeec2cf3f418eb0b051fc .
+_:a9cda5983abeec2cf3f418eb0b051fc a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/reaction/1/description" .
-_:b9220774e9453d0af591cabc6c775a9c oa:hasSelector _:f9d678e0a50d42a7a3bbb68035593a92 .
-_:aa7619a930e08127637ef1b4c76804f9 oa:hasTarget _:b9220774e9453d0af591cabc6c775a9c .
-_:ae7ee500db4e884f88275f547beb1f8a a oa:FragmentSelector ;
+_:beee62679b73f643b1730b2170169ae0 oa:hasSelector _:f3b29a9e8b094681c55ae6fe50800d2c .
+_:d4588577e367f188a5ba28c61f4bf537 oa:hasTarget _:beee62679b73f643b1730b2170169ae0 .
+_:a6496537b1f654c6770355deea1fe07 a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "" .
-_:c8bb3861570a4d7653bba6b32d033aa8 oa:hasSource <../in/allergy-reaction-members-with-nothing-in-them.json> .
-_:ae7ee500db4e884f88275f547beb1f8a oa:refinedBy _:cfcaf39983c21d477c24be654432c509 .
-_:cfcaf39983c21d477c24be654432c509 a oa:FragmentSelector ;
+_:c6653dc0ca079de6436d58b79a6f1587 oa:hasSource <../in/allergy-reaction-members-with-nothing-in-them.json> .
+_:a6496537b1f654c6770355deea1fe07 oa:refinedBy _:da63ff1a35344bc7e7c06ad79178a70e .
+_:da63ff1a35344bc7e7c06ad79178a70e a oa:FragmentSelector ;
 	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
 	rdf:value "/reaction/1/substance" .
-_:c8bb3861570a4d7653bba6b32d033aa8 oa:hasSelector _:ae7ee500db4e884f88275f547beb1f8a .
-_:e918c3f7ccd344b538b4f4965a68dd43 oa:hasTarget _:c8bb3861570a4d7653bba6b32d033aa8 .
-_:cc11b3a27b39f7736927914229182067 a oa:FragmentSelector ;
-	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "" .
-_:dbe3a575c62843fe994331cffa31e5b oa:hasSource <../in/allergy-reaction-members-with-nothing-in-them.json> .
-_:cc11b3a27b39f7736927914229182067 oa:refinedBy _:eb01592ce819e15251743d9771611f62 .
-_:eb01592ce819e15251743d9771611f62 a oa:FragmentSelector ;
-	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
-	rdf:value "/reaction/1/note/1" .
-_:dbe3a575c62843fe994331cffa31e5b oa:hasSelector _:cc11b3a27b39f7736927914229182067 .
-_:f7b2715a9a9f0ee8dcdca2bccd56a3e8 oa:hasTarget _:dbe3a575c62843fe994331cffa31e5b .
-_:aa7619a930e08127637ef1b4c76804f9 sh:resultSeverity sh:Info .
-_:e918c3f7ccd344b538b4f4965a68dd43 sh:resultSeverity sh:Info .
-_:f7b2715a9a9f0ee8dcdca2bccd56a3e8 sh:resultSeverity sh:Info .
-_:aa7619a930e08127637ef1b4c76804f9 a oa:Annotation ;
+_:c6653dc0ca079de6436d58b79a6f1587 oa:hasSelector _:a6496537b1f654c6770355deea1fe07 .
+_:ae869fc49dac855cac147d2da8845bf1 oa:hasTarget _:c6653dc0ca079de6436d58b79a6f1587 .
+_:d4588577e367f188a5ba28c61f4bf537 sh:resultSeverity sh:Info .
+_:ae869fc49dac855cac147d2da8845bf1 sh:resultSeverity sh:Info .
+_:d4588577e367f188a5ba28c61f4bf537 a oa:Annotation ;
 	oa:hasBody fhirr4:allergyReactionMemberNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Itching of the arms the next morning" .
-_:e918c3f7ccd344b538b4f4965a68dd43 a oa:Annotation ;
-	oa:hasBody fhirr4:allergyReactionMemberNotCarried ;
-	oa:motivatedBy oa:classifying .
-_:f7b2715a9a9f0ee8dcdca2bccd56a3e8 a oa:Annotation ;
+_:ae869fc49dac855cac147d2da8845bf1 a oa:Annotation ;
 	oa:hasBody fhirr4:allergyReactionMemberNotCarried ;
 	oa:motivatedBy oa:classifying ;
-	sh:value "Second note" .
+	sh:value "Penicillin" .
