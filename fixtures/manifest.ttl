@@ -377,7 +377,7 @@
 
 <#allergy-reaction-notes-and-first-display-or-code> a bridge:IsomorphicConversionTest ;
   mf:name "allergy-reaction-notes-and-first-display-or-code" ;
-  rdfs:comment "An AllergyIntolerance with a note of its own, whose two reactions each state notes: all three notes are carried as cascade:addedNoteText of the allergy, and an author of a note is carried nowhere. A substance or an exposure route's finding takes its value from the first display any coding holds something in, whatever an earlier coding holds in its code, else the first code any coding holds something in." ;
+  rdfs:comment "An AllergyIntolerance with a note of its own, whose two reactions each state notes: all three notes are carried as cascade:addedNoteText of the allergy, and the author and the time of a reaction's note are carried nowhere, and each is a fhirr4:noteAuthorAndTime finding at it. A substance or an exposure route's finding takes its value from the first display any coding holds something in, whatever an earlier coding holds in its code, else the first code any coding holds something in." ;
   mf:action [
     bridge:input <in/allergy-reaction-notes-and-first-display-or-code.json> ;
     bridge:envelope <../ro-crate-metadata.json#envelope-resource> ;

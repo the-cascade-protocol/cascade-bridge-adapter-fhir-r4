@@ -3652,7 +3652,7 @@
       "license": {
         "@id": "https://spdx.org/licenses/Apache-2.0"
       },
-      "description": "An AllergyIntolerance to penicillin with a note and two reactions, the first with a substance whose first coding has a code alone and whose second a display, an exposure route whose first coding has a blank display and whose second a display, and two notes, one with an author, the second with a substance whose first coding has a blank display and whose second and third have a code, and a note. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a reaction's note beside the allergy's own, and a value taken from a later coding when the first holds nothing in the part that is read first."
+      "description": "An AllergyIntolerance to penicillin with a note and two reactions, the first with a substance whose first coding has a code alone and whose second a display, an exposure route whose first coding has a blank display and whose second a display, and two notes, one with an author and a time, the second with a substance whose first coding has a blank display and whose second and third have a code, and a note. Authored here on 2026-11-27, for a case the conformance corpus does not hold: a reaction's note beside the allergy's own, and a value taken from a later coding when the first holds nothing in the part that is read first."
     },
     {
       "@id": "fixtures/in/allergy-reaction-severity-after-a-reaction-without-one.json",

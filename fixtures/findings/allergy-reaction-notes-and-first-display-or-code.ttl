@@ -47,3 +47,33 @@ _:c3de0f5f0ecc2962f3099672946880f5 a oa:Annotation ;
 	oa:hasBody fhirr4:allergyReactionMemberNotCarried ;
 	oa:motivatedBy oa:classifying ;
 	sh:value "Penicillin G benzathine" .
+_:e0a1000000000000000000000000a001 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+_:e0a1000000000000000000000000a002 oa:hasSource <../in/allergy-reaction-notes-and-first-display-or-code.json> .
+_:e0a1000000000000000000000000a001 oa:refinedBy _:e0a1000000000000000000000000a003 .
+_:e0a1000000000000000000000000a003 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/reaction/0/note/0/authorString" .
+_:e0a1000000000000000000000000a002 oa:hasSelector _:e0a1000000000000000000000000a001 .
+_:e0a1000000000000000000000000a004 oa:hasTarget _:e0a1000000000000000000000000a002 ;
+	sh:resultSeverity sh:Info ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:noteAuthorAndTime ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "/reaction/0/note/0/authorString" .
+_:e0a1000000000000000000000000b001 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "" .
+_:e0a1000000000000000000000000b002 oa:hasSource <../in/allergy-reaction-notes-and-first-display-or-code.json> .
+_:e0a1000000000000000000000000b001 oa:refinedBy _:e0a1000000000000000000000000b003 .
+_:e0a1000000000000000000000000b003 a oa:FragmentSelector ;
+	<http://purl.org/dc/terms/conformsTo> <https://www.rfc-editor.org/rfc/rfc6901> ;
+	rdf:value "/reaction/0/note/0/time" .
+_:e0a1000000000000000000000000b002 oa:hasSelector _:e0a1000000000000000000000000b001 .
+_:e0a1000000000000000000000000b004 oa:hasTarget _:e0a1000000000000000000000000b002 ;
+	sh:resultSeverity sh:Info ;
+	a oa:Annotation ;
+	oa:hasBody fhirr4:noteAuthorAndTime ;
+	oa:motivatedBy oa:classifying ;
+	sh:value "/reaction/0/note/0/time" .
